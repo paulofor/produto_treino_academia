@@ -3,6 +3,8 @@
 import {
 	CargaPlanejada,
 	ExecucaoItemSerie,
+	SerieTreino,
+	Exercicio,
 } from '../index';
 
 declare var Object: any;
@@ -11,6 +13,8 @@ export interface ItemSerieInterface {
   "ordemExecucao"?: number;
 	"cargaPlanejada"?: CargaPlanejada;
 	"execucaoItemSerie"?: ExecucaoItemSerie;
+	"listaSerieTreino"?: SerieTreino[];
+	"listaExercicio"?: Exercicio[];
 }
 
 export class ItemSerie implements ItemSerieInterface {
@@ -18,6 +22,8 @@ export class ItemSerie implements ItemSerieInterface {
 	"ordemExecucao"?: number;
 	"cargaPlanejada"?: CargaPlanejada;
 	"execucaoItemSerie"?: ExecucaoItemSerie;
+	"listaSerieTreinos"?: SerieTreino[];
+	"listaExercicios"?: Exercicio[];
   constructor(data?: ItemSerieInterface) {
     Object.assign(this, data);
   }

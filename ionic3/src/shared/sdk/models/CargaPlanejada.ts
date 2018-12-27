@@ -1,6 +1,7 @@
 
 /* tslint:disable */
 import {
+	ItemSerie,
 } from '../index';
 
 declare var Object: any;
@@ -12,6 +13,7 @@ export interface CargaPlanejadaInterface {
   "quantidadeRepeticao"?: number;
   "ativa"?: string;
   "ordemRepeticao"?: number;
+	"listaItemSerie"?: ItemSerie[];
 }
 
 export class CargaPlanejada implements CargaPlanejadaInterface {
@@ -22,6 +24,7 @@ export class CargaPlanejada implements CargaPlanejadaInterface {
 	"quantidadeRepeticao"?: number;
 	"ativa"?: string;
 	"ordemRepeticao"?: number;
+	"listaItemSeries"?: ItemSerie[];
   constructor(data?: CargaPlanejadaInterface) {
     Object.assign(this, data);
   }

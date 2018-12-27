@@ -1,6 +1,9 @@
 
 /* tslint:disable */
 import {
+	DiaTreino,
+	ItemSerie,
+	Exercicio,
 } from '../index';
 
 declare var Object: any;
@@ -12,6 +15,9 @@ export interface ExecucaoItemSerieInterface {
   "sucessoRepeticoes"?: string;
   "numeroSerie"?: number;
   "quantidadeRepeticao"?: number;
+	"listaDiaTreino"?: DiaTreino[];
+	"listaItemSerie"?: ItemSerie[];
+	"listaExercicio"?: Exercicio[];
 }
 
 export class ExecucaoItemSerie implements ExecucaoItemSerieInterface {
@@ -22,6 +28,9 @@ export class ExecucaoItemSerie implements ExecucaoItemSerieInterface {
 	"sucessoRepeticoes"?: string;
 	"numeroSerie"?: number;
 	"quantidadeRepeticao"?: number;
+	"listaDiaTreinos"?: DiaTreino[];
+	"listaItemSeries"?: ItemSerie[];
+	"listaExercicios"?: Exercicio[];
   constructor(data?: ExecucaoItemSerieInterface) {
     Object.assign(this, data);
   }
