@@ -52,13 +52,14 @@ import { RealTime } from './services/core/real.time';
 import { UserApi } from './services/custom/User';
 import { ContainerApi } from './services/custom/Container';
 
-import { GrupoTreinoApi } from './services/custom/GrupoTreino';
-import { SerieApi } from './services/custom/Serie';
+import { GrupoMuscularApi } from './services/custom/GrupoMuscular';
+import { SerieTreinoApi } from './services/custom/SerieTreino';
 import { ExercicioApi } from './services/custom/Exercicio';
-import { ExecucaoApi } from './services/custom/Execucao';
+import { ExecucaoItemSerieApi } from './services/custom/ExecucaoItemSerie';
 import { CargaPlanejadaApi } from './services/custom/CargaPlanejada';
 import { DiaTreinoApi } from './services/custom/DiaTreino';
 import { ItemSerieApi } from './services/custom/ItemSerie';
+import { RegistroPesoApi } from './services/custom/RegistroPeso';
 
 /**
 * @module SDKBrowserModule
@@ -93,19 +94,21 @@ export class SDKBrowserModule {
         UserApi,
         ContainerApi,
 	
-		GrupoTreinoApi,
+		GrupoMuscularApi,
 	
-		SerieApi,
+		SerieTreinoApi,
 	
 		ExercicioApi,
 	
-		ExecucaoApi,
+		ExecucaoItemSerieApi,
 	
 		CargaPlanejadaApi,
 	
 		DiaTreinoApi,
 	
 		ItemSerieApi,
+	
+		RegistroPesoApi,
 	
         internalStorageProvider,
         { provide: SDKStorage, useClass: StorageBrowser }

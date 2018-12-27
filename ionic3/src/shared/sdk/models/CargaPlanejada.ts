@@ -1,17 +1,27 @@
 
 /* tslint:disable */
 import {
- 
 } from '../index';
 
 declare var Object: any;
 export interface CargaPlanejadaInterface {
-  "id": number;
-
+  "id"?: number;
+  "valorCarga"?: number;
+  "dataInicio"?: Date;
+  "dataFinal"?: Date;
+  "quantidadeRepeticao"?: number;
+  "ativa"?: string;
+  "ordemRepeticao"?: number;
 }
 
 export class CargaPlanejada implements CargaPlanejadaInterface {
-  "id": number;
+	"id"?: number;
+	"valorCarga"?: number;
+	"dataInicio"?: Date;
+	"dataFinal"?: Date;
+	"quantidadeRepeticao"?: number;
+	"ativa"?: string;
+	"ordemRepeticao"?: number;
   constructor(data?: CargaPlanejadaInterface) {
     Object.assign(this, data);
   }
@@ -24,7 +34,7 @@ export class CargaPlanejada implements CargaPlanejadaInterface {
   }
   /**
   * @method factory
-  * @author Paulo 
+  * @author Gerador Java 
   * @license MIT
   * This method creates an instance of CargaPlanejada for dynamic purposes.
   **/
@@ -33,7 +43,7 @@ export class CargaPlanejada implements CargaPlanejadaInterface {
   }
   /**
   * @method getModelDefinition
-  * @author Paulo
+  * @author Gerador Java
   * @license MIT
   * This method returns an object that represents some of the model
   * definitions.
@@ -48,6 +58,30 @@ export class CargaPlanejada implements CargaPlanejadaInterface {
 		
         "id" : {
         	name : "id",
+        	type : "number"
+        },
+        "valorCarga" : {
+        	name : "valorCarga",
+        	type : "number"
+        },
+        "dataInicio" : {
+        	name : "dataInicio",
+        	type : "Date"
+        },
+        "dataFinal" : {
+        	name : "dataFinal",
+        	type : "Date"
+        },
+        "quantidadeRepeticao" : {
+        	name : "quantidadeRepeticao",
+        	type : "number"
+        },
+        "ativa" : {
+        	name : "ativa",
+        	type : "string"
+        },
+        "ordemRepeticao" : {
+        	name : "ordemRepeticao",
         	type : "number"
         },
       },

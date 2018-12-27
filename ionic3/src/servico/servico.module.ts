@@ -6,13 +6,14 @@ import { SDKBrowserModule, SDKModels, LoopBackAuth, InternalStorage } from '../s
 import { HttpClientModule } from '@angular/common/http';
 import { SocketDriver } from '../shared/sdk/sockets/socket.driver';
 
-import { GrupoTreinoApi } from '../shared/sdk';
-import { SerieApi } from '../shared/sdk';
+import { GrupoMuscularApi } from '../shared/sdk';
+import { SerieTreinoApi } from '../shared/sdk';
 import { ExercicioApi } from '../shared/sdk';
-import { ExecucaoApi } from '../shared/sdk';
+import { ExecucaoItemSerieApi } from '../shared/sdk';
 import { CargaPlanejadaApi } from '../shared/sdk';
 import { DiaTreinoApi } from '../shared/sdk';
 import { ItemSerieApi } from '../shared/sdk';
+import { RegistroPesoApi } from '../shared/sdk';
 
 
 @NgModule({
@@ -26,13 +27,14 @@ import { ItemSerieApi } from '../shared/sdk';
 		SDKModels,
 		LoopBackAuth,
 		InternalStorage,
-		GrupoTreinoApi,
-		SerieApi,
+		GrupoMuscularApi,
+		SerieTreinoApi,
 		ExercicioApi,
-		ExecucaoApi,
+		ExecucaoItemSerieApi,
 		CargaPlanejadaApi,
 		DiaTreinoApi,
 		ItemSerieApi,
+		RegistroPesoApi,
 	],
 	declarations: 
 	[

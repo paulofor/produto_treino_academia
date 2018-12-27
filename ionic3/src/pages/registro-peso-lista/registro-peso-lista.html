@@ -1,0 +1,21 @@
+
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Titulo</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of currentItems">
+      <button ion-item (click)="openItem(item)">
+        <h2>{{item.nome}}</h2>
+      </button>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>

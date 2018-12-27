@@ -10,9 +10,9 @@ import { LoopBackFilter,  } from '../../models/BaseModels';
 import { ErrorHandler } from '../core/error.service';
 import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Execucao } from '../../models/Execucao';
+import { GrupoMuscular } from '../../models/GrupoMuscular';
 import { SocketConnection } from '../../sockets/socket.connections';
-import { EXECUCAO } from '../../../../dados/execucao';
+import { GRUPOMUSCULAR } from '../../../../dados/grupoMuscular';
 //import { of } from 'rxjs';
 //Versao Ionic
 import { of } from 'rxjs/observable/of';
@@ -21,7 +21,7 @@ import { of } from 'rxjs/observable/of';
  * Api services for the `Aplicacao` model.
  */
 @Injectable()
-export class ExecucaoApi extends BaseLoopBackApi {
+export class GrupoMuscularApi extends BaseLoopBackApi {
 
   constructor(
     @Inject(HttpClient) protected http: HttpClient,
@@ -36,7 +36,7 @@ export class ExecucaoApi extends BaseLoopBackApi {
   public patchOrCreate(data: any = {}, customHeaders?: Function): Observable<any> {
     let _method: string = "PATCH";
     let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
-    "/execucaos";
+    "/grupoMusculars";
     let _routeParams: any = {};
     let _postBody: any = {
       data: data
@@ -67,7 +67,7 @@ export class ExecucaoApi extends BaseLoopBackApi {
   public patchAttributes(id: any, data: any = {}, customHeaders?: Function): Observable<any> {
     let _method: string = "PATCH";
     let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
-    "/execucaos/:id";
+    "/grupoMusculars/:id";
     let _routeParams: any = {
       id: id
     };
@@ -84,13 +84,13 @@ export class ExecucaoApi extends BaseLoopBackApi {
    * i.e. `Aplicacao`.
    */
   public getModelName() {
-    return "Execucao";
+    return "GrupoMuscular";
   }
   
-  obtemPrimeiro(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<Execucao> {
-    return of(EXECUCAO[0]);
+  obtemPrimeiro(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<GrupoMuscular> {
+    return of(GRUPOMUSCULAR[0]);
   }
-  obtemLista(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<Execucao[]> {
-    return of(EXECUCAO);
+  obtemLista(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<GrupoMuscular[]> {
+    return of(GRUPOMUSCULAR);
   }
 }

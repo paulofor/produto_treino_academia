@@ -1,11 +1,12 @@
 
-export * from './GrupoTreino';
-export * from './Serie';
+export * from './GrupoMuscular';
+export * from './SerieTreino';
 export * from './Exercicio';
-export * from './Execucao';
+export * from './ExecucaoItemSerie';
 export * from './CargaPlanejada';
 export * from './DiaTreino';
 export * from './ItemSerie';
+export * from './RegistroPeso';
 export * from './Container';
 export * from './SDKModels';
 export * from './logger.service';

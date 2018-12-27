@@ -1,23 +1,22 @@
 
 /* tslint:disable */
 import {
-	ExecucaoItemSerie,
 } from '../index';
 
 declare var Object: any;
-export interface DiaTreinoInterface {
+export interface RegistroPesoInterface {
   "id"?: number;
   "data"?: Date;
-  "concluido"?: string;
-	"execucaoItemSerie"?: ExecucaoItemSerie;
+  "valor"?: number;
+  "obs"?: string;
 }
 
-export class DiaTreino implements DiaTreinoInterface {
+export class RegistroPeso implements RegistroPesoInterface {
 	"id"?: number;
 	"data"?: Date;
-	"concluido"?: string;
-	"execucaoItemSerie"?: ExecucaoItemSerie;
-  constructor(data?: DiaTreinoInterface) {
+	"valor"?: number;
+	"obs"?: string;
+  constructor(data?: RegistroPesoInterface) {
     Object.assign(this, data);
   }
   /**
@@ -25,16 +24,16 @@ export class DiaTreino implements DiaTreinoInterface {
    * i.e. `GanhoDorCanvasMySql`.
    */
   public static getModelName() {
-    return "DiaTreino";
+    return "RegistroPeso";
   }
   /**
   * @method factory
   * @author Gerador Java 
   * @license MIT
-  * This method creates an instance of DiaTreino for dynamic purposes.
+  * This method creates an instance of RegistroPeso for dynamic purposes.
   **/
-  public static factory(data: DiaTreinoInterface): DiaTreino{
-    return new DiaTreino(data);
+  public static factory(data: RegistroPesoInterface): RegistroPeso{
+    return new RegistroPeso(data);
   }
   /**
   * @method getModelDefinition
@@ -45,9 +44,9 @@ export class DiaTreino implements DiaTreinoInterface {
   **/
   public static getModelDefinition() {
     return {
-      name: 'DiaTreino',
-      plural: 'DiaTreinos',
-      path: 'DiaTreinos',
+      name: 'RegistroPeso',
+      plural: 'RegistroPesos',
+      path: 'RegistroPesos',
       idName: 'id',
       properties: {
 		
@@ -59,8 +58,12 @@ export class DiaTreino implements DiaTreinoInterface {
         	name : "data",
         	type : "Date"
         },
-        "concluido" : {
-        	name : "concluido",
+        "valor" : {
+        	name : "valor",
+        	type : "number"
+        },
+        "obs" : {
+        	name : "obs",
         	type : "string"
         },
       },

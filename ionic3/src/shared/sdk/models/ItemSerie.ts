@@ -1,17 +1,23 @@
 
 /* tslint:disable */
 import {
- 
+	CargaPlanejada,
+	ExecucaoItemSerie,
 } from '../index';
 
 declare var Object: any;
 export interface ItemSerieInterface {
-  "id": number;
-
+  "id"?: number;
+  "ordemExecucao"?: number;
+	"cargaPlanejada"?: CargaPlanejada;
+	"execucaoItemSerie"?: ExecucaoItemSerie;
 }
 
 export class ItemSerie implements ItemSerieInterface {
-  "id": number;
+	"id"?: number;
+	"ordemExecucao"?: number;
+	"cargaPlanejada"?: CargaPlanejada;
+	"execucaoItemSerie"?: ExecucaoItemSerie;
   constructor(data?: ItemSerieInterface) {
     Object.assign(this, data);
   }
@@ -24,7 +30,7 @@ export class ItemSerie implements ItemSerieInterface {
   }
   /**
   * @method factory
-  * @author Paulo 
+  * @author Gerador Java 
   * @license MIT
   * This method creates an instance of ItemSerie for dynamic purposes.
   **/
@@ -33,7 +39,7 @@ export class ItemSerie implements ItemSerieInterface {
   }
   /**
   * @method getModelDefinition
-  * @author Paulo
+  * @author Gerador Java
   * @license MIT
   * This method returns an object that represents some of the model
   * definitions.
@@ -48,6 +54,10 @@ export class ItemSerie implements ItemSerieInterface {
 		
         "id" : {
         	name : "id",
+        	type : "number"
+        },
+        "ordemExecucao" : {
+        	name : "ordemExecucao",
         	type : "number"
         },
       },

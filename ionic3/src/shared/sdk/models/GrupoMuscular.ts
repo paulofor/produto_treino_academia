@@ -1,23 +1,23 @@
 
 /* tslint:disable */
 import {
-	ExecucaoItemSerie,
+	Exercicio,
 } from '../index';
 
 declare var Object: any;
-export interface DiaTreinoInterface {
+export interface GrupoMuscularInterface {
+  "nome"?: string;
   "id"?: number;
-  "data"?: Date;
-  "concluido"?: string;
-	"execucaoItemSerie"?: ExecucaoItemSerie;
+  "imagem"?: string;
+	"exercicio"?: Exercicio;
 }
 
-export class DiaTreino implements DiaTreinoInterface {
+export class GrupoMuscular implements GrupoMuscularInterface {
+	"nome"?: string;
 	"id"?: number;
-	"data"?: Date;
-	"concluido"?: string;
-	"execucaoItemSerie"?: ExecucaoItemSerie;
-  constructor(data?: DiaTreinoInterface) {
+	"imagem"?: string;
+	"exercicio"?: Exercicio;
+  constructor(data?: GrupoMuscularInterface) {
     Object.assign(this, data);
   }
   /**
@@ -25,16 +25,16 @@ export class DiaTreino implements DiaTreinoInterface {
    * i.e. `GanhoDorCanvasMySql`.
    */
   public static getModelName() {
-    return "DiaTreino";
+    return "GrupoMuscular";
   }
   /**
   * @method factory
   * @author Gerador Java 
   * @license MIT
-  * This method creates an instance of DiaTreino for dynamic purposes.
+  * This method creates an instance of GrupoMuscular for dynamic purposes.
   **/
-  public static factory(data: DiaTreinoInterface): DiaTreino{
-    return new DiaTreino(data);
+  public static factory(data: GrupoMuscularInterface): GrupoMuscular{
+    return new GrupoMuscular(data);
   }
   /**
   * @method getModelDefinition
@@ -45,22 +45,22 @@ export class DiaTreino implements DiaTreinoInterface {
   **/
   public static getModelDefinition() {
     return {
-      name: 'DiaTreino',
-      plural: 'DiaTreinos',
-      path: 'DiaTreinos',
+      name: 'GrupoMuscular',
+      plural: 'GrupoMusculars',
+      path: 'GrupoMusculars',
       idName: 'id',
       properties: {
 		
+        "nome" : {
+        	name : "nome",
+        	type : "string"
+        },
         "id" : {
         	name : "id",
         	type : "number"
         },
-        "data" : {
-        	name : "data",
-        	type : "Date"
-        },
-        "concluido" : {
-        	name : "concluido",
+        "imagem" : {
+        	name : "imagem",
         	type : "string"
         },
       },

@@ -10,9 +10,9 @@ import { LoopBackFilter,  } from '../../models/BaseModels';
 import { ErrorHandler } from '../core/error.service';
 import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Serie } from '../../models/Serie';
+import { SerieTreino } from '../../models/SerieTreino';
 import { SocketConnection } from '../../sockets/socket.connections';
-import { SERIE } from '../../../../dados/serie';
+import { SERIETREINO } from '../../../../dados/serieTreino';
 //import { of } from 'rxjs';
 //Versao Ionic
 import { of } from 'rxjs/observable/of';
@@ -21,7 +21,7 @@ import { of } from 'rxjs/observable/of';
  * Api services for the `Aplicacao` model.
  */
 @Injectable()
-export class SerieApi extends BaseLoopBackApi {
+export class SerieTreinoApi extends BaseLoopBackApi {
 
   constructor(
     @Inject(HttpClient) protected http: HttpClient,
@@ -36,7 +36,7 @@ export class SerieApi extends BaseLoopBackApi {
   public patchOrCreate(data: any = {}, customHeaders?: Function): Observable<any> {
     let _method: string = "PATCH";
     let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
-    "/series";
+    "/serieTreinos";
     let _routeParams: any = {};
     let _postBody: any = {
       data: data
@@ -67,7 +67,7 @@ export class SerieApi extends BaseLoopBackApi {
   public patchAttributes(id: any, data: any = {}, customHeaders?: Function): Observable<any> {
     let _method: string = "PATCH";
     let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
-    "/series/:id";
+    "/serieTreinos/:id";
     let _routeParams: any = {
       id: id
     };
@@ -84,13 +84,13 @@ export class SerieApi extends BaseLoopBackApi {
    * i.e. `Aplicacao`.
    */
   public getModelName() {
-    return "Serie";
+    return "SerieTreino";
   }
   
-  obtemPrimeiro(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<Serie> {
-    return of(SERIE[0]);
+  obtemPrimeiro(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<SerieTreino> {
+    return of(SERIETREINO[0]);
   }
-  obtemLista(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<Serie[]> {
-    return of(SERIE);
+  obtemLista(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<SerieTreino[]> {
+    return of(SERIETREINO);
   }
 }

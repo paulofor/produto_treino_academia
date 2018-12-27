@@ -1,23 +1,29 @@
 
 /* tslint:disable */
 import {
- 
+	ItemSerie,
+	ExecucaoItemSerie,
 } from '../index';
 
 declare var Object: any;
 export interface ExercicioInterface {
-  "id": number;
-  "nome": string;
-  "carga": number;
-  "repeticoes": number;
-
+  "id"?: number;
+  "descricao"?: string;
+  "imagem"?: string;
+  "titulo"?: string;
+  "subtitulo"?: string;
+	"itemSerie"?: ItemSerie;
+	"execucaoItemSerie"?: ExecucaoItemSerie;
 }
 
 export class Exercicio implements ExercicioInterface {
-  "id": number;
-  "nome": string;
-  "carga": number;
-  "repeticoes": number;
+	"id"?: number;
+	"descricao"?: string;
+	"imagem"?: string;
+	"titulo"?: string;
+	"subtitulo"?: string;
+	"itemSerie"?: ItemSerie;
+	"execucaoItemSerie"?: ExecucaoItemSerie;
   constructor(data?: ExercicioInterface) {
     Object.assign(this, data);
   }
@@ -30,7 +36,7 @@ export class Exercicio implements ExercicioInterface {
   }
   /**
   * @method factory
-  * @author Paulo 
+  * @author Gerador Java 
   * @license MIT
   * This method creates an instance of Exercicio for dynamic purposes.
   **/
@@ -39,7 +45,7 @@ export class Exercicio implements ExercicioInterface {
   }
   /**
   * @method getModelDefinition
-  * @author Paulo
+  * @author Gerador Java
   * @license MIT
   * This method returns an object that represents some of the model
   * definitions.
@@ -56,17 +62,21 @@ export class Exercicio implements ExercicioInterface {
         	name : "id",
         	type : "number"
         },
-        "nome" : {
-        	name : "nome",
+        "descricao" : {
+        	name : "descricao",
         	type : "string"
         },
-        "carga" : {
-        	name : "carga",
-        	type : "number"
+        "imagem" : {
+        	name : "imagem",
+        	type : "string"
         },
-        "repeticoes" : {
-        	name : "repeticoes",
-        	type : "number"
+        "titulo" : {
+        	name : "titulo",
+        	type : "string"
+        },
+        "subtitulo" : {
+        	name : "subtitulo",
+        	type : "string"
         },
       },
       relations: {
