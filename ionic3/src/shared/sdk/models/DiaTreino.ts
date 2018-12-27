@@ -7,19 +7,19 @@ import {
 
 declare var Object: any;
 export interface DiaTreinoInterface {
-  "id"?: number;
-  "data"?: Date;
-  "concluido"?: string;
-	"execucaoItemSerie"?: ExecucaoItemSerie;
-	"listaSerieTreino"?: SerieTreino[];
-}
-
-export class DiaTreino implements DiaTreinoInterface {
 	"id"?: number;
 	"data"?: Date;
 	"concluido"?: string;
-	"execucaoItemSerie"?: ExecucaoItemSerie;
-	"listaSerieTreinos"?: SerieTreino[];
+	execucaoItemSerie?: ExecucaoItemSerie;
+	listaSerieTreino?: SerieTreino[];
+}
+
+export class DiaTreino implements DiaTreinoInterface {
+	id?: number;
+	data?: Date;
+	concluido?: string;
+	execucaoItemSerie?: ExecucaoItemSerie;
+	listaSerieTreino?: SerieTreino[];
   constructor(data?: DiaTreinoInterface) {
     Object.assign(this, data);
   }

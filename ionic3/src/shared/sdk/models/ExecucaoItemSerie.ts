@@ -8,19 +8,6 @@ import {
 
 declare var Object: any;
 export interface ExecucaoItemSerieInterface {
-  "id"?: number;
-  "dataHoraInicio"?: Date;
-  "dataHoraFinalizacao"?: Date;
-  "cargaUtilizada"?: number;
-  "sucessoRepeticoes"?: string;
-  "numeroSerie"?: number;
-  "quantidadeRepeticao"?: number;
-	"listaDiaTreino"?: DiaTreino[];
-	"listaItemSerie"?: ItemSerie[];
-	"listaExercicio"?: Exercicio[];
-}
-
-export class ExecucaoItemSerie implements ExecucaoItemSerieInterface {
 	"id"?: number;
 	"dataHoraInicio"?: Date;
 	"dataHoraFinalizacao"?: Date;
@@ -28,9 +15,22 @@ export class ExecucaoItemSerie implements ExecucaoItemSerieInterface {
 	"sucessoRepeticoes"?: string;
 	"numeroSerie"?: number;
 	"quantidadeRepeticao"?: number;
-	"listaDiaTreinos"?: DiaTreino[];
-	"listaItemSeries"?: ItemSerie[];
-	"listaExercicios"?: Exercicio[];
+	listaDiaTreino?: DiaTreino[];
+	listaItemSerie?: ItemSerie[];
+	listaExercicio?: Exercicio[];
+}
+
+export class ExecucaoItemSerie implements ExecucaoItemSerieInterface {
+	id?: number;
+	dataHoraInicio?: Date;
+	dataHoraFinalizacao?: Date;
+	cargaUtilizada?: number;
+	sucessoRepeticoes?: string;
+	numeroSerie?: number;
+	quantidadeRepeticao?: number;
+	listaDiaTreino?: DiaTreino[];
+	listaItemSerie?: ItemSerie[];
+	listaExercicio?: Exercicio[];
   constructor(data?: ExecucaoItemSerieInterface) {
     Object.assign(this, data);
   }

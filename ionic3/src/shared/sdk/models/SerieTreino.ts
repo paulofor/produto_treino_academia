@@ -7,23 +7,23 @@ import {
 
 declare var Object: any;
 export interface SerieTreinoInterface {
-  "id"?: number;
-  "dataCriacao"?: Date;
-  "ativa"?: string;
-  "dataUltimaExecucao"?: Date;
-  "qtdeExecucao"?: number;
-	"itemSerie"?: ItemSerie;
-	"diaTreino"?: DiaTreino;
-}
-
-export class SerieTreino implements SerieTreinoInterface {
 	"id"?: number;
 	"dataCriacao"?: Date;
 	"ativa"?: string;
 	"dataUltimaExecucao"?: Date;
 	"qtdeExecucao"?: number;
-	"itemSerie"?: ItemSerie;
-	"diaTreino"?: DiaTreino;
+	itemSerie?: ItemSerie;
+	diaTreino?: DiaTreino;
+}
+
+export class SerieTreino implements SerieTreinoInterface {
+	id?: number;
+	dataCriacao?: Date;
+	ativa?: string;
+	dataUltimaExecucao?: Date;
+	qtdeExecucao?: number;
+	itemSerie?: ItemSerie;
+	diaTreino?: DiaTreino;
   constructor(data?: SerieTreinoInterface) {
     Object.assign(this, data);
   }

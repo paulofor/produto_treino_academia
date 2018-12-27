@@ -6,17 +6,6 @@ import {
 
 declare var Object: any;
 export interface CargaPlanejadaInterface {
-  "id"?: number;
-  "valorCarga"?: number;
-  "dataInicio"?: Date;
-  "dataFinal"?: Date;
-  "quantidadeRepeticao"?: number;
-  "ativa"?: string;
-  "ordemRepeticao"?: number;
-	"listaItemSerie"?: ItemSerie[];
-}
-
-export class CargaPlanejada implements CargaPlanejadaInterface {
 	"id"?: number;
 	"valorCarga"?: number;
 	"dataInicio"?: Date;
@@ -24,7 +13,18 @@ export class CargaPlanejada implements CargaPlanejadaInterface {
 	"quantidadeRepeticao"?: number;
 	"ativa"?: string;
 	"ordemRepeticao"?: number;
-	"listaItemSeries"?: ItemSerie[];
+	listaItemSerie?: ItemSerie[];
+}
+
+export class CargaPlanejada implements CargaPlanejadaInterface {
+	id?: number;
+	valorCarga?: number;
+	dataInicio?: Date;
+	dataFinal?: Date;
+	quantidadeRepeticao?: number;
+	ativa?: string;
+	ordemRepeticao?: number;
+	listaItemSerie?: ItemSerie[];
   constructor(data?: CargaPlanejadaInterface) {
     Object.assign(this, data);
   }

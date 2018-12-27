@@ -6,17 +6,17 @@ import {
 
 declare var Object: any;
 export interface GrupoMuscularInterface {
-  "nome"?: string;
-  "id"?: number;
-  "imagem"?: string;
-	"exercicio"?: Exercicio;
-}
-
-export class GrupoMuscular implements GrupoMuscularInterface {
 	"nome"?: string;
 	"id"?: number;
 	"imagem"?: string;
-	"exercicio"?: Exercicio;
+	exercicio?: Exercicio;
+}
+
+export class GrupoMuscular implements GrupoMuscularInterface {
+	nome?: string;
+	id?: number;
+	imagem?: string;
+	exercicio?: Exercicio;
   constructor(data?: GrupoMuscularInterface) {
     Object.assign(this, data);
   }

@@ -8,25 +8,25 @@ import {
 
 declare var Object: any;
 export interface ExercicioInterface {
-  "id"?: number;
-  "descricao"?: string;
-  "imagem"?: string;
-  "titulo"?: string;
-  "subtitulo"?: string;
-	"itemSerie"?: ItemSerie;
-	"execucaoItemSerie"?: ExecucaoItemSerie;
-	"listaGrupoMuscular"?: GrupoMuscular[];
-}
-
-export class Exercicio implements ExercicioInterface {
 	"id"?: number;
 	"descricao"?: string;
 	"imagem"?: string;
 	"titulo"?: string;
 	"subtitulo"?: string;
-	"itemSerie"?: ItemSerie;
-	"execucaoItemSerie"?: ExecucaoItemSerie;
-	"listaGrupoMusculars"?: GrupoMuscular[];
+	itemSerie?: ItemSerie;
+	execucaoItemSerie?: ExecucaoItemSerie;
+	listaGrupoMuscular?: GrupoMuscular[];
+}
+
+export class Exercicio implements ExercicioInterface {
+	id?: number;
+	descricao?: string;
+	imagem?: string;
+	titulo?: string;
+	subtitulo?: string;
+	itemSerie?: ItemSerie;
+	execucaoItemSerie?: ExecucaoItemSerie;
+	listaGrupoMuscular?: GrupoMuscular[];
   constructor(data?: ExercicioInterface) {
     Object.assign(this, data);
   }
