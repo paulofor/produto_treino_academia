@@ -8,12 +8,14 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ServicoModule } from '../servico/servico.module';
 import { ExercicioListaPage } from '../pages/exercicio-lista/exercicio-lista';
+import { SerieTreinoDetalhePage } from '../pages/serie-treino-detalhe/serie-treino-detalhe';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ExercicioListaPage
+    ExercicioListaPage,
+    SerieTreinoDetalhePage
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,8 @@ import { ExercicioListaPage } from '../pages/exercicio-lista/exercicio-lista';
   entryComponents: [
     MyApp,
     HomePage,
-    ExercicioListaPage
+    ExercicioListaPage,
+    SerieTreinoDetalhePage
 
   ],
   providers: [

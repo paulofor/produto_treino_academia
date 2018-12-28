@@ -16,16 +16,27 @@ export class SerieTreinoDetalhePage {
   item: SerieTreino;
 
   constructor(public navCtrl: NavController, public srv: SerieTreinoApi, public modalCtrl: ModalController) {
-    this.srv.obtemPrimeiro()
-      .subscribe((result:SerieTreino) => {
-        this.item = result;
-      })
+
+  }
+
+  ionViewWillEnter() {
+    console.log('ionViewWillEnter SerieTreinoDetalhePage');
+    this.carregaLista();
   }
 
   /**
    * The view loaded, let's query our items for the list
    */
+  carregaLista() {
+    this.srv.obtemPrimeiro()
+      .subscribe((result: SerieTreino) => {
+        console.log('Result', JSON.stringify(result));
+        this.item = result;
+      });
+  }
+
   ionViewDidLoad() {
+    console.log('ionViewDidLoad SerieTreinoDetalhePage');
   }
 
   addItem() {
@@ -34,8 +45,8 @@ export class SerieTreinoDetalhePage {
   }
   openItem(item) {
   }
-  
- 
+
+
   /* 
   addItem() {
     let addModal = this.modalCtrl.create('TelaCriar');
@@ -55,5 +66,5 @@ export class SerieTreinoDetalhePage {
     });
   }
   */
-  
+
 }
