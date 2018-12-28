@@ -5,18 +5,20 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { SerieTreinoDetalhePage } from '../pages/serie-treino-detalhe/serie-treino-detalhe';
+import { RegistroPesoListaPage } from '../pages/registro-peso-lista/registro-peso-lista';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = SerieTreinoDetalhePage;
+  //rootPage:any = SerieTreinoDetalhePage;
+  rootPage:any = RegistroPesoListaPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      statusBar.overlaysWebView(true);
-      statusBar.styleLightContent();
+      //statusBar.overlaysWebView(true);
+      //statusBar.styleLightContent();
       statusBar.styleDefault();
       splashScreen.hide();
     });

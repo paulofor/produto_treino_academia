@@ -8,23 +8,29 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ServicoModule } from '../servico/servico.module';
 import { SerieTreinoDetalhePage } from '../pages/serie-treino-detalhe/serie-treino-detalhe';
+import { RegistroPesoListaPage } from '../pages/registro-peso-lista/registro-peso-lista';
+import { ExercicioDetalhePage } from '../pages/exercicio-detalhe/exercicio-detalhe';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    SerieTreinoDetalhePage
+    SerieTreinoDetalhePage,
+    RegistroPesoListaPage,
+    ExercicioDetalhePage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp, {statusbarPadding: true}),
+    IonicModule.forRoot(MyApp),
     ServicoModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    SerieTreinoDetalhePage
+    SerieTreinoDetalhePage,
+    RegistroPesoListaPage,
+    ExercicioDetalhePage
 
   ],
   providers: [

@@ -2,7 +2,7 @@
 
 <ion-header *ngIf="listaItem">
   <ion-navbar color="primary">
-    <ion-title>Titulo</ion-title>
+    <ion-title>Registros de Peso</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -10,7 +10,7 @@
 	<ng-container *ngIf="listaItem">
    	<ion-list>
       <ion-item *ngFor="let item of listaItem">
-
+        <span >{{item.data  | date: 'dd/MM/yyyy'}}</span><span style="float:right;">{{ item.valor | number : '1.2-2'}} Kg </span>
       </ion-item>
     </ion-list>
 	</ng-container>
