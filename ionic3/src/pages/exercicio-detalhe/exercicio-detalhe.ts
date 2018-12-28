@@ -1,9 +1,5 @@
-
-
-
 import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController } from 'ionic-angular';
-
 
 import { Exercicio, ExercicioApi } from '../../shared/sdk';
 
@@ -16,44 +12,24 @@ export class ExercicioDetalhePage {
   item: Exercicio;
 
   constructor(public navCtrl: NavController, public srv: ExercicioApi, public modalCtrl: ModalController) {
-    this.srv.obtemPrimeiro()
-      .subscribe((result:Exercicio) => {
-        this.item = result;
-      })
   }
 
-  /**
-   * The view loaded, let's query our items for the list
-   */
+  ionViewWillEnter() {
+    console.log('ionViewWillEnter ExercicioDetalhePage');
+    this.carregaItem();
+  }
+
   ionViewDidLoad() {
-  }
-
-  addItem() {
-  }
-  deleteItem(item) {
-  }
-  openItem(item) {
+  	console.log('ionViewDidLoad ExercicioDetalhePage');
   }
   
- 
-  /* 
-  addItem() {
-    let addModal = this.modalCtrl.create('TelaCriar');
-    addModal.onDidDismiss(item => {
-      if (item) {
-        this.items.add(item);
-      }
-    })
-    addModal.present();
+  carregaItem() {
+    this.srv.obtemPrimeiro()
+      .subscribe((result: Exercicio) => {
+        console.log('Result', JSON.stringify(result));
+        this.item = result;
+      });
   }
-  deleteItem(item) {
-    this.items.delete(item);
-  }
-  openItem(item: Item) {
-    this.navCtrl.push('TelaDetalhe', {
-      item: item
-    });
-  }
-  */
+
   
 }

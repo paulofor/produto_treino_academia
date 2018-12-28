@@ -13,47 +13,27 @@ import { RegistroPeso, RegistroPesoApi } from '../../shared/sdk';
   templateUrl: 'registro-peso-lista.html'
 })
 export class RegistroPesoListaPage {
-  currentItems: RegistroPeso[];
+  listaItem: RegistroPeso[];
 
   constructor(public navCtrl: NavController, public srv: RegistroPesoApi, public modalCtrl: ModalController) {
-    this.srv.obtemLista()
-      .subscribe((result:RegistroPeso[]) => {
-        this.currentItems = result;
-      })
   }
 
-  /**
-   * The view loaded, let's query our items for the list
-   */
+  ionViewWillEnter() {
+    console.log('ionViewWillEnter RegistroPesoListaPage');
+    this.carregaLista();
+  }
+
   ionViewDidLoad() {
-  }
-
-  addItem() {
-  }
-  deleteItem(item) {
-  }
-  openItem(item) {
+  	console.log('ionViewDidLoad RegistroPesoListaPage');
   }
   
- 
-  /* 
-  addItem() {
-    let addModal = this.modalCtrl.create('TelaCriar');
-    addModal.onDidDismiss(item => {
-      if (item) {
-        this.items.add(item);
-      }
-    })
-    addModal.present();
+  carregaLista() {
+    this.srv.obtemLista()
+      .subscribe((result: RegistroPeso[]) => {
+        console.log('Result', JSON.stringify(result));
+        this.listaItem = result;
+      });
   }
-  deleteItem(item) {
-    this.items.delete(item);
-  }
-  openItem(item: Item) {
-    this.navCtrl.push('TelaDetalhe', {
-      item: item
-    });
-  }
-  */
+
   
 }

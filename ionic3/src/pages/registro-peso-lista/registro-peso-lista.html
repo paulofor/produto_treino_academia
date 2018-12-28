@@ -1,21 +1,17 @@
 
 
-<ion-header>
-
-  <ion-navbar>
+<ion-header *ngIf="listaItem">
+  <ion-navbar color="primary">
     <ion-title>Titulo</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+	<ng-container *ngIf="listaItem">
+   	<ion-list>
+      <ion-item *ngFor="let item of listaItem">
 
-  <ion-list>
-    <ion-item-sliding *ngFor="let item of currentItems">
-      <button ion-item (click)="openItem(item)">
-        <h2>{{item.nome}}</h2>
-      </button>
-    </ion-item-sliding>
-  </ion-list>
-
+      </ion-item>
+    </ion-list>
+	</ng-container>
 </ion-content>
