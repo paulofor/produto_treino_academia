@@ -12,8 +12,8 @@ export interface SerieTreinoInterface {
 	"ativa"?: string;
 	"dataUltimaExecucao"?: Date;
 	"qtdeExecucao"?: number;
-	itemSerie?: ItemSerie;
-	diaTreino?: DiaTreino;
+	listaItemSerie?: ItemSerie[];
+	listaDiaTreino?: DiaTreino[];
 }
 
 export class SerieTreino implements SerieTreinoInterface {
@@ -22,8 +22,8 @@ export class SerieTreino implements SerieTreinoInterface {
 	ativa?: string;
 	dataUltimaExecucao?: Date;
 	qtdeExecucao?: number;
-	itemSerie?: ItemSerie;
-	diaTreino?: DiaTreino;
+	listaItemSerie?: ItemSerie[];
+	listaDiaTreino?: DiaTreino[];
   constructor(data?: SerieTreinoInterface) {
     Object.assign(this, data);
   }

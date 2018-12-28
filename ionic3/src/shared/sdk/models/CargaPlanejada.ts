@@ -13,7 +13,7 @@ export interface CargaPlanejadaInterface {
 	"quantidadeRepeticao"?: number;
 	"ativa"?: string;
 	"ordemRepeticao"?: number;
-	listaItemSerie?: ItemSerie[];
+	itemSerie?: ItemSerie;
 }
 
 export class CargaPlanejada implements CargaPlanejadaInterface {
@@ -24,7 +24,7 @@ export class CargaPlanejada implements CargaPlanejadaInterface {
 	quantidadeRepeticao?: number;
 	ativa?: string;
 	ordemRepeticao?: number;
-	listaItemSerie?: ItemSerie[];
+	itemSerie?: ItemSerie;
   constructor(data?: CargaPlanejadaInterface) {
     Object.assign(this, data);
   }

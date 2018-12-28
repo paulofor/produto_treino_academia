@@ -13,9 +13,9 @@ export interface ExercicioInterface {
 	"imagem"?: string;
 	"titulo"?: string;
 	"subtitulo"?: string;
-	itemSerie?: ItemSerie;
-	execucaoItemSerie?: ExecucaoItemSerie;
-	listaGrupoMuscular?: GrupoMuscular[];
+	grupoMuscular?: GrupoMuscular;
+	listaItemSerie?: ItemSerie[];
+	listaExecucaoItemSerie?: ExecucaoItemSerie[];
 }
 
 export class Exercicio implements ExercicioInterface {
@@ -24,9 +24,9 @@ export class Exercicio implements ExercicioInterface {
 	imagem?: string;
 	titulo?: string;
 	subtitulo?: string;
-	itemSerie?: ItemSerie;
-	execucaoItemSerie?: ExecucaoItemSerie;
-	listaGrupoMuscular?: GrupoMuscular[];
+	grupoMuscular?: GrupoMuscular;
+	listaItemSerie?: ItemSerie[];
+	listaExecucaoItemSerie?: ExecucaoItemSerie[];
   constructor(data?: ExercicioInterface) {
     Object.assign(this, data);
   }

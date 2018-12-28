@@ -15,9 +15,9 @@ export interface ExecucaoItemSerieInterface {
 	"sucessoRepeticoes"?: string;
 	"numeroSerie"?: number;
 	"quantidadeRepeticao"?: number;
-	listaDiaTreino?: DiaTreino[];
-	listaItemSerie?: ItemSerie[];
-	listaExercicio?: Exercicio[];
+	diaTreino?: DiaTreino;
+	itemSerie?: ItemSerie;
+	exercicio?: Exercicio;
 }
 
 export class ExecucaoItemSerie implements ExecucaoItemSerieInterface {
@@ -28,9 +28,9 @@ export class ExecucaoItemSerie implements ExecucaoItemSerieInterface {
 	sucessoRepeticoes?: string;
 	numeroSerie?: number;
 	quantidadeRepeticao?: number;
-	listaDiaTreino?: DiaTreino[];
-	listaItemSerie?: ItemSerie[];
-	listaExercicio?: Exercicio[];
+	diaTreino?: DiaTreino;
+	itemSerie?: ItemSerie;
+	exercicio?: Exercicio;
   constructor(data?: ExecucaoItemSerieInterface) {
     Object.assign(this, data);
   }

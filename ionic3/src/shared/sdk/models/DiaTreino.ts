@@ -10,16 +10,16 @@ export interface DiaTreinoInterface {
 	"id"?: number;
 	"data"?: Date;
 	"concluido"?: string;
-	execucaoItemSerie?: ExecucaoItemSerie;
-	listaSerieTreino?: SerieTreino[];
+	serieTreino?: SerieTreino;
+	listaExecucaoItemSerie?: ExecucaoItemSerie[];
 }
 
 export class DiaTreino implements DiaTreinoInterface {
 	id?: number;
 	data?: Date;
 	concluido?: string;
-	execucaoItemSerie?: ExecucaoItemSerie;
-	listaSerieTreino?: SerieTreino[];
+	serieTreino?: SerieTreino;
+	listaExecucaoItemSerie?: ExecucaoItemSerie[];
   constructor(data?: DiaTreinoInterface) {
     Object.assign(this, data);
   }

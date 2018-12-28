@@ -11,19 +11,19 @@ declare var Object: any;
 export interface ItemSerieInterface {
 	"id"?: number;
 	"ordemExecucao"?: number;
-	cargaPlanejada?: CargaPlanejada;
-	execucaoItemSerie?: ExecucaoItemSerie;
-	listaSerieTreino?: SerieTreino[];
-	listaExercicio?: Exercicio[];
+	serieTreino?: SerieTreino;
+	exercicio?: Exercicio;
+	listaCargaPlanejada?: CargaPlanejada[];
+	listaExecucaoItemSerie?: ExecucaoItemSerie[];
 }
 
 export class ItemSerie implements ItemSerieInterface {
 	id?: number;
 	ordemExecucao?: number;
-	cargaPlanejada?: CargaPlanejada;
-	execucaoItemSerie?: ExecucaoItemSerie;
-	listaSerieTreino?: SerieTreino[];
-	listaExercicio?: Exercicio[];
+	serieTreino?: SerieTreino;
+	exercicio?: Exercicio;
+	listaCargaPlanejada?: CargaPlanejada[];
+	listaExecucaoItemSerie?: ExecucaoItemSerie[];
   constructor(data?: ItemSerieInterface) {
     Object.assign(this, data);
   }

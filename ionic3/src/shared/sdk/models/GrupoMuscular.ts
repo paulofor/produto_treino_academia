@@ -9,14 +9,14 @@ export interface GrupoMuscularInterface {
 	"nome"?: string;
 	"id"?: number;
 	"imagem"?: string;
-	exercicio?: Exercicio;
+	listaExercicio?: Exercicio[];
 }
 
 export class GrupoMuscular implements GrupoMuscularInterface {
 	nome?: string;
 	id?: number;
 	imagem?: string;
-	exercicio?: Exercicio;
+	listaExercicio?: Exercicio[];
   constructor(data?: GrupoMuscularInterface) {
     Object.assign(this, data);
   }
