@@ -11,6 +11,7 @@ declare var Object: any;
 export interface ItemSerieInterface {
 	"id"?: number;
 	"ordemExecucao"?: number;
+	"parametros"?: string;
 	serieTreino?: SerieTreino;
 	exercicio?: Exercicio;
 	listaCargaPlanejada?: CargaPlanejada[];
@@ -20,6 +21,7 @@ export interface ItemSerieInterface {
 export class ItemSerie implements ItemSerieInterface {
 	id?: number;
 	ordemExecucao?: number;
+	parametros?: string;
 	serieTreino?: SerieTreino;
 	exercicio?: Exercicio;
 	listaCargaPlanejada?: CargaPlanejada[];
@@ -65,6 +67,10 @@ export class ItemSerie implements ItemSerieInterface {
         "ordemExecucao" : {
         	name : "ordemExecucao",
         	type : "number"
+        },
+        "parametros" : {
+        	name : "parametros",
+        	type : "string"
         },
       },
       relations: {
