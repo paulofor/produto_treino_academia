@@ -1,7 +1,6 @@
 
 
 import { NgModule } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
 import { IonicPageModule } from 'ionic-angular';
 
 import { ExercicioDetalhePage } from './exercicio-detalhe';
@@ -11,8 +10,7 @@ import { ExercicioDetalhePage } from './exercicio-detalhe';
     ExercicioDetalhePage,
   ],
   imports: [
-    IonicPageModule.forChild(ExercicioDetalhePage),
-    TranslateModule.forChild()
+    IonicPageModule.forChild(ExercicioDetalhePage)
   ],
   exports: [
     ExercicioDetalhePage

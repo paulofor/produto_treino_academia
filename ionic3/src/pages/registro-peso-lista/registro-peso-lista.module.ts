@@ -1,7 +1,6 @@
 
 
 import { NgModule } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
 import { IonicPageModule } from 'ionic-angular';
 
 import { RegistroPesoListaPage } from './registro-peso-lista';
@@ -11,8 +10,7 @@ import { RegistroPesoListaPage } from './registro-peso-lista';
     RegistroPesoListaPage,
   ],
   imports: [
-    IonicPageModule.forChild(RegistroPesoListaPage),
-    TranslateModule.forChild()
+    IonicPageModule.forChild(RegistroPesoListaPage)
   ],
   exports: [
     RegistroPesoListaPage
