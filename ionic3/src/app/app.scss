@@ -14,3 +14,37 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.botao-compra {
+    position: fixed;
+    bottom: 20px;
+}
+.quadro {
+    height: 100%;
+    padding: 0px;
+}
+.linha30 {
+    height: 30%;
+    
+}
+.linha20 {
+    height: 20%;
+    
+}
+.linha10 {
+    height: 10%;
+}
+.linha25 {
+    height: 25%;
+}
+.linha15 {
+    height: 15%;
+}
+.linha50 {
+    height: 50%;
+}
+.linha60 {
+    height: 60%;
+}
+.noFundo {
+    bottom: 0;
+}
