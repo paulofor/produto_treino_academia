@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Screenshot } from '@ionic-native/screenshot';
 /**
  * Generated class for the CadastroExercicioPage page.
  *
@@ -15,11 +15,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CadastroExercicioPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private screenshot: Screenshot) {
+    this.screenshot.save('jpg', 80, 'myscreenshot.jpg');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CadastroExercicioPage');
+    
   }
 
 }

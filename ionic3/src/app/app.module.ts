@@ -16,6 +16,7 @@ import { ListaExercicioExecucaoPage } from '../pages/lista-exercicio-execucao/li
 import { GraficoExecucaoExercicioPage } from '../pages/grafico-execucao-exercicio/grafico-execucao-exercicio';
 import { SerieTreinoApi } from '../shared/sdk/index';
 import { ServicoModule } from '../servico/servico.module';
+import { Screenshot } from '@ionic-native/screenshot';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ServicoModule } from '../servico/servico.module';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    SerieTreinoApi
+    SerieTreinoApi,
+    Screenshot
   ]
 })
 export class AppModule {}
