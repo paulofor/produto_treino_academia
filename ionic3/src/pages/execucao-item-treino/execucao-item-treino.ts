@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Screenshot } from '@ionic-native/screenshot';
 
 /**
  * Generated class for the ExecucaoItemTreinoPage page.
@@ -15,11 +16,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ExecucaoItemTreinoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private screenshot: Screenshot) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ExecucaoItemTreinoPage');
+  }
+
+  testaFoto() {
+    this.screenshot.save('jpg', 80, 'CadastroExercicioPage');
   }
 
 }

@@ -6,6 +6,7 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
 
 import { RegistroPeso, RegistroPesoApi } from '../../shared/sdk';
+import { Screenshot } from '@ionic-native/screenshot';
 
 @IonicPage()
 @Component({
@@ -15,7 +16,8 @@ import { RegistroPeso, RegistroPesoApi } from '../../shared/sdk';
 export class RegistroPesoListaPage {
   listaItem: RegistroPeso[];
 
-  constructor(public navCtrl: NavController, public srv: RegistroPesoApi, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public srv: RegistroPesoApi, 
+    public modalCtrl: ModalController, private screenshot: Screenshot) {
   }
 
   ionViewWillEnter() {
@@ -35,5 +37,8 @@ export class RegistroPesoListaPage {
       });
   }
 
+  testaFoto() {
+    this.screenshot.save('jpg', 80, 'CadastroExercicioPage');
+  }
   
 }

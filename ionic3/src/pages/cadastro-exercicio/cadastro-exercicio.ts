@@ -16,12 +16,10 @@ import { Screenshot } from '@ionic-native/screenshot';
 export class CadastroExercicioPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private screenshot: Screenshot) {
-    this.screenshot.save('jpg', 80, 'myscreenshot.jpg');
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CadastroExercicioPage');
-    
+  testaFoto() {
+    this.screenshot.save('jpg', 80, 'CadastroExercicioPage');
   }
 
 }

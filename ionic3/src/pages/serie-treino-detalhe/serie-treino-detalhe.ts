@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
 import { SerieTreino, SerieTreinoApi } from '../../shared/sdk';
+import { Screenshot } from '@ionic-native/screenshot';
 
 @IonicPage()
 @Component({
@@ -11,7 +12,8 @@ import { SerieTreino, SerieTreinoApi } from '../../shared/sdk';
 export class SerieTreinoDetalhePage {
   item: SerieTreino;
 
-  constructor(public navCtrl: NavController, public srv: SerieTreinoApi, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public srv: SerieTreinoApi, 
+    public modalCtrl: ModalController, private screenshot: Screenshot) {
   }
 
   ionViewWillEnter() {
@@ -31,5 +33,7 @@ export class SerieTreinoDetalhePage {
       });
   }
 
-  
+  testaFoto() {
+    this.screenshot.save('jpg', 80, 'CadastroExercicioPage');
+  }
 }

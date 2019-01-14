@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Screenshot } from '@ionic-native/screenshot';
 
 /**
  * Generated class for the CriaSeriePage page.
@@ -15,11 +16,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CriaSeriePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private screenshot: Screenshot) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CriaSeriePage');
   }
 
+  testaFoto() {
+    this.screenshot.save('jpg', 80, 'CadastroExercicioPage');
+  }
 }
