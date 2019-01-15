@@ -24,7 +24,7 @@ export class ExecucaoItemTreinoPage {
   }
 
   testaFoto() {
-    this.screenshot.save('jpg', 80, 'CadastroExercicioPage');
+    this.screenshot.save('jpg', 80, 'ExecucaoItemTreinoPage');
   }
 
 }

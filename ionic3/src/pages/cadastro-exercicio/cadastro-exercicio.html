@@ -8,6 +8,11 @@
 
 <ion-header>
   <ion-navbar color="primary">
+    <ion-buttons left>
+      <button ion-button icon-only (click)="viewCtrl.dismiss()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title (click)="testaFoto()" style="text-align:center;">Cadastro de Exercício</ion-title>
   </ion-navbar>
 </ion-header>

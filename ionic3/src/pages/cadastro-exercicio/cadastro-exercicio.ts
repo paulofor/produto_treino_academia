@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
 /**
  * Generated class for the CadastroExercicioPage page.
@@ -15,7 +15,8 @@ import { Screenshot } from '@ionic-native/screenshot';
 })
 export class CadastroExercicioPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private screenshot: Screenshot) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, 
+    private screenshot: Screenshot, public viewCtrl: ViewController) {
   }
 
   testaFoto() {

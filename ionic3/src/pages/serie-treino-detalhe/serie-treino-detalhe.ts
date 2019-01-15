@@ -34,6 +34,6 @@ export class SerieTreinoDetalhePage {
   }
 
   testaFoto() {
-    this.screenshot.save('jpg', 80, 'CadastroExercicioPage');
+    this.screenshot.save('jpg', 80, 'SerieTreinoDetalhePage');
   }
 }
