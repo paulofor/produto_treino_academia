@@ -20,7 +20,7 @@ export class CadastroExercicioPage {
   }
 
   testaFoto() {
-    this.screenshot.save('jpg', 80, 'CadastroExercicioPage');
+    this.screenshot.save('jpg', 100, 'CadastroExercicioPage');
   }
 
 }

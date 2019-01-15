@@ -24,6 +24,6 @@ export class GraficoExecucaoExercicioPage {
   }
 
   testaFoto() {
-    this.screenshot.save('jpg', 80, 'GraficoExecucaoExercicioPage');
+    this.screenshot.save('jpg', 100, 'GraficoExecucaoExercicioPage');
   }
 }

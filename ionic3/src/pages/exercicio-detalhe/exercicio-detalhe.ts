@@ -33,6 +33,6 @@ export class ExercicioDetalhePage {
   }
 
   testaFoto() {
-    this.screenshot.save('jpg', 80, 'ExercicioDetalhePage');
+    this.screenshot.save('jpg', 100, 'ExercicioDetalhePage');
   }
 }

@@ -24,7 +24,7 @@ export class ListaExercicioExecucaoPage {
   }
 
   testaFoto() {
-    this.screenshot.save('jpg', 80, 'ListaExercicioExecucaoPage');
+    this.screenshot.save('jpg', 100, 'ListaExercicioExecucaoPage');
   }
 
 }

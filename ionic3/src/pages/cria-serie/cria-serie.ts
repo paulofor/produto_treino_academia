@@ -24,6 +24,6 @@ export class CriaSeriePage {
   }
 
   testaFoto() {
-    this.screenshot.save('jpg', 80, 'CriaSeriePage');
+    this.screenshot.save('jpg', 100, 'CriaSeriePage');
   }
 }

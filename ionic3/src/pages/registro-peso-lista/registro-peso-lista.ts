@@ -38,7 +38,7 @@ export class RegistroPesoListaPage {
   }
 
   testaFoto() {
-    this.screenshot.save('jpg', 80, 'RegistroPesoListaPage');
+    this.screenshot.save('jpg', 100, 'RegistroPesoListaPage');
   }
   
 }

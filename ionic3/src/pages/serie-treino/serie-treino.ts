@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, ViewController } from 'ionic-angular';
 import { SerieTreino, SerieTreinoApi } from '../../shared/sdk/index';
 import { Screenshot } from '@ionic-native/screenshot';
 
@@ -20,7 +20,7 @@ export class SerieTreinoPage {
   item: SerieTreino;
 
   constructor(public navCtrl: NavController, public srv: SerieTreinoApi, 
-    public modalCtrl: ModalController, private screenshot: Screenshot) {
+    public modalCtrl: ModalController, private screenshot: Screenshot,  public viewCtrl: ViewController) {
   }
 
   ionViewWillEnter() {
@@ -41,6 +41,6 @@ export class SerieTreinoPage {
   }
 
   testaFoto() {
-    this.screenshot.save('jpg', 80, 'SerieTreinoPage');
+    this.screenshot.save('jpg', 100, 'SerieTreinoPage');
   }
 }

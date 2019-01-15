@@ -4,7 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+
 import { ExecucaoItemTreinoPage } from '../pages/execucao-item-treino/execucao-item-treino';
 import { CadastroExercicioPage } from '../pages/cadastro-exercicio/cadastro-exercicio';
 import { CriaSeriePage } from '../pages/cria-serie/cria-serie';
@@ -27,14 +27,12 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
-      { title: 'Série Treino', component: SerieTreinoPage },
-      { title: 'Execucao Item Treiono', component: ExecucaoItemTreinoPage },
-      { title: 'Cadastro Exercicio', component: CadastroExercicioPage },
-      { title: 'Cria Serie', component: CriaSeriePage },
-      { title: 'Lista Exercicio', component: ListaExercicioExecucaoPage },
-      { title: 'Grafico Execucao Exercicio', component: GraficoExecucaoExercicioPage }
+      { title: 'Uso Treino - Série Treino', component: SerieTreinoPage },
+      { title: 'Uso Treino - Execucao Item Treino', component: ExecucaoItemTreinoPage },
+      { title: 'Monta Série - Cadastro Exercicio', component: CadastroExercicioPage },
+      { title: 'Monta Série - Cria Serie', component: CriaSeriePage },
+      { title: 'Acompanhamento - Lista Exercicio', component: ListaExercicioExecucaoPage },
+      { title: 'Acompanhamento -Grafico Execucao Exercicio', component: GraficoExecucaoExercicioPage }
     ];
 
   }
@@ -51,6 +49,6 @@ export class MyApp {
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    this.nav.push(page.component);
   }
 }
