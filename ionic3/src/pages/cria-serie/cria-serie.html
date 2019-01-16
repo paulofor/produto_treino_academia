@@ -12,7 +12,7 @@
 -->
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title (click)="testaFoto()" style="text-align:center;">Nova Série</ion-title>
+    <ion-title (click)="testaFoto()" >Nova Série</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -25,7 +25,7 @@
         <ion-list>
           <ion-item>
             <h4>Supino </h4>
-            <h4>ChestRepetições: 10</h4>
+            <h4>Carga: 10 Repetições: 10</h4>
           </ion-item>
           <ion-item>
             <h4>Supino </h4>
@@ -52,12 +52,20 @@
             </ion-select>
           </ion-item>
           <ion-item>
-              <ion-label>Exercício</ion-label>
-              <ion-select>
-                <ion-option value="f">Supino</ion-option>
-                <ion-option value="m">Male</ion-option>
-              </ion-select>
-            </ion-item>
+            <ion-label>Exercício</ion-label>
+            <ion-select>
+              <ion-option value="f">Supino</ion-option>
+              <ion-option value="m">Male</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label>Carga</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Repetições</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
           <button ion-button type="submit" block>Adicionar</button>
 
 
