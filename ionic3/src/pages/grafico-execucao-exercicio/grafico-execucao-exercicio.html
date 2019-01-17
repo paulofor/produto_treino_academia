@@ -5,17 +5,39 @@
 </ion-header>
 
 <ion-content padding>
-  <div>
-    <div style="display: block">
-      <canvas baseChart
-              [datasets]="barChartData"
-              [labels]="barChartLabels"
-              [options]="barChartOptions"
-              [legend]="barChartLegend"
-              [chartType]="barChartType"
-              (chartHover)="chartHovered($event)"
-              (chartClick)="chartClicked($event)"></canvas>
-    </div>
-    <button (click)="randomize()">Update</button>
-  </div>
+
 </ion-content>
+
+
+
+<ion-grid class="quadro">
+
+  <ion-row class="linha40">
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <p>Execuções: 10</p>
+          <p>Execuções: 10</p>
+          <p>Execuções: 10</p>
+        </ion-card-header>
+        <ion-card-content>
+          
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row class="linha60">
+    <ion-col>
+      <div>
+        <div style="display: block">
+          <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+            [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+        </div>
+        <button (click)="randomize()">Update</button>
+      </div>
+    </ion-col>
+  </ion-row>
+
+</ion-grid>
