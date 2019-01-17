@@ -28,6 +28,7 @@
     "@ionic/storage": "2.2.0",
     "@ngx-translate/core": "8.0.0",
     "@ngx-translate/http-loader": "^2.0.0",
+    "chart.js": "^2.7.3",
     "com.darktalker.cordova.screenshot": "0.1.6",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",

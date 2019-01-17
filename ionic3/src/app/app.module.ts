@@ -17,6 +17,8 @@ import { SerieTreinoApi } from '../shared/sdk/index';
 import { ServicoModule } from '../servico/servico.module';
 import { Screenshot } from '@ionic-native/screenshot';
 
+import { ChartsModule } from 'ng2-charts';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -31,7 +33,8 @@ import { Screenshot } from '@ionic-native/screenshot';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    ServicoModule
+    ServicoModule,
+    ChartsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
