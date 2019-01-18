@@ -35,12 +35,13 @@
 
     <ion-row >
       <ion-col >
-            <canvas  baseChart 
+            <canvas id="cv01" baseChart height="300"
             [datasets]="barChartData" 
             [labels]="barChartLabels" 
             [options]="barChartOptions" 
             [legend]="barChartLegend"
-            [chartType]="barChartType" (chartHover)="chartHovered($event)" ></canvas>
+            [chartType]="barChartType"  ></canvas>
+            <img id="img1"/>
       </ion-col>
     </ion-row>
 

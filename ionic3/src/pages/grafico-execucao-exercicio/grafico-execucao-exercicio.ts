@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
+import { Element } from '@angular/compiler';
 
 /**
  * Generated class for the GraficoExecucaoExercicioPage page.
@@ -24,9 +25,25 @@ export class GraficoExecucaoExercicioPage {
   }
 
   testaFoto() {
-    const imageMask = document.createElement('img');
-    imageMask.classList.add('image-mask');
-    imageMask.src = canvas.toDataURL('png');
+    var cv01:HTMLCanvasElement =  <HTMLCanvasElement>document.getElementById('cv01');
+    console.log('cv01: ' , JSON.stringify(cv01));
+    var dataURL = cv01.toDataURL();
+    console.log(dataURL);
+    var img1:HTMLImageElement = <HTMLImageElement>document.getElementById('img1');
+    cv01.hidden = true;
+    img1.src = cv01.toDataURL('png');
+    this.screenshot.save('jpg', 100, 'GraficoExecucaoExercicioPage');
+  }
+
+
+  testaFotoFunciona() {
+    var cv01 =  document.getElementById('cv01');
+    console.log('cv01: ' , JSON.stringify(cv01));
+    var dataURL = cv01.toDataURL();
+    console.log(dataURL);
+    var img1 = document.getElementById('img1');
+    cv01.hide();
+    img1.src = cv01.toDataURL('png');
     this.screenshot.save('jpg', 100, 'GraficoExecucaoExercicioPage');
   }
 
