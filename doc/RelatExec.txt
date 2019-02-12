@@ -1,0 +1,27 @@
+(12-02-2019) - Aumentar atratividade de página
+
+Olhando os resultados dos anuncios, estou buscando me aproximar do conceito de treino racionalizado. com planejamento, controle e resultado.
+
+Fiz uma página nova, nova imagem.
+
+
+Acho que os textos estão bons talvez mais capricho nas telas, trabalhar com pouco nos protótipos.
+
+Analisar as telas:
+
+
+Passo1 -> Aprimorar forms ( tela de cadastro exercício )
+
+. deixar alguns itens já preenchidos.
+
+<ion-item>
+    <ion-label floating>Email</ion-label>
+    <ion-input [formControl]="credentialsForm.controls['email']"
+        type="email"></ion-input>
+  </ion-item>
+
+https://robferguson.org/blog/2017/11/19/ionic-3-and-forms/
+
+
+
+

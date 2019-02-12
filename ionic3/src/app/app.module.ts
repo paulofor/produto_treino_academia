@@ -18,6 +18,7 @@ import { ServicoModule } from '../servico/servico.module';
 import { Screenshot } from '@ionic-native/screenshot';
 
 import { ChartsModule } from 'ng2-charts';
+import { ImageResizer } from '@ionic-native/image-resizer';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { ChartsModule } from 'ng2-charts';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     SerieTreinoApi,
-    Screenshot
+    Screenshot,
+    ImageResizer
   ]
 })
 export class AppModule {}
