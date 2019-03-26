@@ -20,7 +20,9 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any }>;
+
+  public theme: String = 'green-and-blue-theme';
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
@@ -51,4 +53,6 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.push(page.component);
   }
+
+
 }

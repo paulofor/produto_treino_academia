@@ -1,3 +1,8 @@
 page-cadastro-exercicio {
-
+    .item-input .label , .input-has-focus .label[floating]{
+        color: white; //label color
+    }
+    .item-select .label{
+        color: white; //label color
+    }
 }

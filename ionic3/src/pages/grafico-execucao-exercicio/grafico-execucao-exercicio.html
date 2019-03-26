@@ -34,14 +34,15 @@
 
 
     <ion-row >
-      <ion-col >
-            <canvas id="cv01" baseChart height="300"
+      <ion-col id="item">
+            <canvas id="cv01" baseChart height="250" 
             [datasets]="barChartData" 
             [labels]="barChartLabels" 
             [options]="barChartOptions" 
             [legend]="barChartLegend"
-            [chartType]="barChartType"  ></canvas>
-            <img id="img1"/>
+            [chartType]="barChartType" ></canvas>
+            <img id="img1" height="250"  />
+            
       </ion-col>
     </ion-row>
 
