@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar color="titulo">
+    <ion-title (click)="testaFoto()">SerieListaExecucaoPage</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="quadroBase">
+  <ng-container *ngIf="listaItem">
+    <ion-list>
+      <ion-item *ngFor="let item of listaItem">
+        <ion-label>{{item.exercicio.titulo}}</ion-label>
+        <ion-label>{{item.exercicio.subtitulo}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ng-container>
+</ion-content>
