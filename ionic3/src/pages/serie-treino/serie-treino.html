@@ -6,13 +6,13 @@
 
 </ion-header>
 
-<ion-content padding>
+<ion-content padding >
   <ng-container *ngIf="item">
-    <ion-list>
-      <ion-item *ngFor="let itemSerie of item.listaItemSerie">
-        <h2>{{itemSerie.exercicio.titulo}}</h2>
-        <h3>{{itemSerie.exercicio.subtitulo}}</h3>
-        <h4>{{itemSerie.parametros}}</h4>
+    <ion-list >
+      <ion-item *ngFor="let itemSerie of item.listaItemSerie" >
+        <ion-label>{{itemSerie.exercicio.titulo}}</ion-label>
+        <ion-label>{{itemSerie.exercicio.subtitulo}}</ion-label>
+        <ion-label>{{itemSerie.parametros}}</ion-label>
       </ion-item>
     </ion-list>
   </ng-container>

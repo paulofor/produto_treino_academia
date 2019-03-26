@@ -32,3 +32,19 @@ ion-menu {
   }
 
 }
+
+ion-content {
+  @include linear-gradient(left,$blue-skies);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+
+  div.scroll-content {
+    color: white;
+
+    ion-list .item {
+      color: white;
+      background: transparent;
+    }
+  }
+}
