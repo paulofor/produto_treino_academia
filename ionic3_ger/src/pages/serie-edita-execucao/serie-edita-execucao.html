@@ -1,12 +1,25 @@
-
-<ion-header >
+<ion-header>
   <ion-navbar color="titulo">
-    <ion-title (click)="testaFoto()">SerieEditaExecucaoPage</ion-title>
+    <ion-title (click)="testaFoto()">Execução (2 de 8)</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="quadroBase">
-	<ng-container *ngIf="item">
+  <ng-container *ngIf="item">
+    <ion-card>
+      <div class="card-title">{{item.exercicio.titulo}}</div>
+      <div class="card-subtitle">{{item.exercicio.subtitulo}}</div>
+    </ion-card>
 
-	</ng-container>
+    <ion-card>
+      <ion-list>
+        <ion-item *ngFor="let item2 of item.listaCargaPlanejada">
+          <h2>Repetições: {{item2.quantidadeRepeticao}}</h2>
+          <h3>Carga: {{item2.valorCarga}}</h3>
+          <button ion-button item-end>iniciar</button>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+
+  </ng-container>
 </ion-content>

@@ -93,4 +93,7 @@ export class RegistroPesoApi extends BaseLoopBackApi {
   obtemLista(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<RegistroPeso[]> {
     return of(REGISTROPESO);
   }
+  obtemElemento(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<ItemSerie> {
+    return of(REGISTROPESO[filter.where.id]);
+  }
 }

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
 
-import { ExecucaoItemSerie, ExecucaoItemSerieApi } from '../../shared/sdk';
+import { ItemSerie, ItemSerieApi } from '../../shared/sdk';
 
 @IonicPage()
 @Component({
@@ -10,9 +10,9 @@ import { ExecucaoItemSerie, ExecucaoItemSerieApi } from '../../shared/sdk';
   templateUrl: 'serie-edita-execucao.html'
 })
 export class SerieEditaExecucaoPage {
-  item: ExecucaoItemSerie;
+  item: ItemSerie;
 
-  constructor(public navCtrl: NavController, public srv: ExecucaoItemSerieApi, 
+  constructor(public navCtrl: NavController, public srv: ItemSerieApi, 
   				private screenshot: Screenshot, public modalCtrl: ModalController) {
   }
 
@@ -26,8 +26,9 @@ export class SerieEditaExecucaoPage {
   }
   
   carregaItem() {
-    this.srv.obtemPrimeiro()
-      .subscribe((result: ExecucaoItemSerie) => {
+    var filtro = { 'where' : { 'id' : 1 }} ;
+    this.srv.obtemElemento(filtro)
+      .subscribe((result: ItemSerie) => {
         console.log('Result', JSON.stringify(result));
         this.item = result;
       });

@@ -93,4 +93,7 @@ export class DiaTreinoApi extends BaseLoopBackApi {
   obtemLista(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<DiaTreino[]> {
     return of(DIATREINO);
   }
+  obtemElemento(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<ItemSerie> {
+    return of(DIATREINO[filter.where.id]);
+  }
 }
