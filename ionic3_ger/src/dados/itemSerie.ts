@@ -12,8 +12,10 @@ export const  ITEMSERIE : ItemSerie[] = [
         ],
         'exercicio': {
             'titulo': 'Voador de Frente',
-            'subtitulo': 'Pectoral'
-        }
+            'subtitulo': 'Pectoral',
+            'listaExecucaoItemSerie' : [ {} ],
+        },
+
     },
 
     {
@@ -25,7 +27,8 @@ export const  ITEMSERIE : ItemSerie[] = [
         ],
         'exercicio': {
             'titulo': 'Remada Alta em Pé',
-            'subtitulo': 'no puxador baixo'
+            'subtitulo': 'no puxador baixo',
+            'listaExecucaoItemSerie' : [],
         }
     },
 
