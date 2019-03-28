@@ -6,10 +6,13 @@
 
 <ion-content padding class="quadroBase">
   <ng-container *ngIf="item">
+    
     <ion-card>
-      <div class="card-title">{{item.exercicio.titulo}}</div>
-      <div class="card-subtitle">{{item.exercicio.subtitulo}}</div>
+      <div class="card-title" padding>{{item.exercicio.titulo}}</div>
+      <div class="card-subtitle" padding>{{item.exercicio.subtitulo}}</div>
+      <div class="card-subtitle" padding>{{item.parametros}}</div>
     </ion-card>
+
 
     <ion-card>
       <ion-list>

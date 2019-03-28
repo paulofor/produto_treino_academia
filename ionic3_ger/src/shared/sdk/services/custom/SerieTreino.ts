@@ -93,7 +93,7 @@ export class SerieTreinoApi extends BaseLoopBackApi {
   obtemLista(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<SerieTreino[]> {
     return of(SERIETREINO);
   }
-  obtemElemento(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<ItemSerie> {
+  obtemElemento(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<SerieTreino> {
     return of(SERIETREINO[filter.where.id]);
   }
 }

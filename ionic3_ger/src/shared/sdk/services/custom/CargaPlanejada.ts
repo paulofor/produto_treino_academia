@@ -93,7 +93,7 @@ export class CargaPlanejadaApi extends BaseLoopBackApi {
   obtemLista(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<CargaPlanejada[]> {
     return of(CARGAPLANEJADA);
   }
-  obtemElemento(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<ItemSerie> {
+  obtemElemento(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<CargaPlanejada> {
     return of(CARGAPLANEJADA[filter.where.id]);
   }
 }

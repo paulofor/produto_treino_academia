@@ -93,7 +93,7 @@ export class GrupoMuscularApi extends BaseLoopBackApi {
   obtemLista(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<GrupoMuscular[]> {
     return of(GRUPOMUSCULAR);
   }
-  obtemElemento(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<ItemSerie> {
+  obtemElemento(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<GrupoMuscular> {
     return of(GRUPOMUSCULAR[filter.where.id]);
   }
 }

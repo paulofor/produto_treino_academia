@@ -1,19 +1,7 @@
 
 import { ItemSerie } from "../shared/sdk/models";
 
-export const ITEMSERIESIMPLES : ItemSerie =    {
-    'parametros': 'posição do banco: 2',
-    'listaCargaPlanejada': [
-        { 'ordemRepeticao': 1, 'quantidadeRepeticao': 10, 'valorCarga': 30 },
-        { 'ordemRepeticao': 2, 'quantidadeRepeticao': 10, 'valorCarga': 30 },
-        { 'ordemRepeticao': 3, 'quantidadeRepeticao': 10, 'valorCarga': 30 }
-    ],
-    'exercicio': {
-        'titulo': 'Voador de Frente',
-        'subtitulo': 'Pectoral',
-        'listaExecucaoItemSerie' : []
-    }
-}
+
 
 export const  ITEMSERIE : ItemSerie[] = [
 
@@ -32,6 +20,20 @@ export const  ITEMSERIE : ItemSerie[] = [
     },
 
     {
+        'parametros': 'posição do banco: 5',
+        'listaCargaPlanejada': [
+            { 'ordemRepeticao': 1, 'quantidadeRepeticao': 12, 'valorCarga': 10 },
+            { 'ordemRepeticao': 2, 'quantidadeRepeticao': 12, 'valorCarga': 10 },
+            { 'ordemRepeticao': 3, 'quantidadeRepeticao': 12, 'valorCarga': 10 }
+        ],
+        'exercicio': {
+            'titulo': 'Puxada Aberta pela Frente',
+            'subtitulo': 'Pulley Alto',
+            'listaExecucaoItemSerie' : []
+        }
+    },
+
+    {
         'parametros': '',
         'listaCargaPlanejada': [
             { 'ordemRepeticao': 1, 'quantidadeRepeticao': 10, 'valorCarga': 10 },
@@ -45,19 +47,7 @@ export const  ITEMSERIE : ItemSerie[] = [
         }
     },
 
-    {
-        'parametros': 'posição do banco: 5',
-        'listaCargaPlanejada': [
-            { 'ordemRepeticao': 1, 'quantidadeRepeticao': 12, 'valorCarga': 10 },
-            { 'ordemRepeticao': 2, 'quantidadeRepeticao': 12, 'valorCarga': 10 },
-            { 'ordemRepeticao': 3, 'quantidadeRepeticao': 12, 'valorCarga': 10 }
-        ],
-        'exercicio': {
-            'titulo': 'Puxada Aberta pela Frente',
-            'subtitulo': 'Pulley Alto',
-            'listaExecucaoItemSerie' : []
-        }
-    },
+    
 
     {
         'parametros': 'posição do banco: 2',
