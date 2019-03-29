@@ -7,17 +7,19 @@ import { Screenshot } from '@ionic-native/screenshot';
 
 
 import { ItemSerie, ItemSerieApi } from '../../shared/sdk';
+import { SerieListaExecucaoPageBase } from './serie-lista-execucao-base';
 
 @IonicPage()
 @Component({
   selector: 'page-serie-lista-execucao',
   templateUrl: 'serie-lista-execucao.html'
 })
-export class SerieListaExecucaoPage {
-  listaItem: ItemSerie[];
+export class SerieListaExecucaoPage extends SerieListaExecucaoPageBase {
 
-  constructor(public navCtrl: NavController, public srv: ItemSerieApi, 
-  				 private screenshot: Screenshot, public modalCtrl: ModalController) {
+
+  constructor(protected navCtrl: NavController, protected srv: ItemSerieApi,
+    protected screenshot: Screenshot) {
+    super(navCtrl, srv, screenshot);
   }
 
   ionViewWillEnter() {
@@ -26,20 +28,11 @@ export class SerieListaExecucaoPage {
   }
 
   ionViewDidLoad() {
-  	console.log('ionViewDidLoad SerieListaExecucaoPage');
-  }
-  
-  carregaLista() {
-    this.srv.obtemLista()
-      .subscribe((result: ItemSerie[]) => {
-        console.log('Result', JSON.stringify(result));
-        this.listaItem = result;
-      });
-  }
-  
-  testaFoto() {
-    this.screenshot.save('jpg', 100, 'SerieListaExecucaoPage');
+    console.log('ionViewDidLoad SerieListaExecucaoPage');
   }
 
-  
+
+
+
+
 }
