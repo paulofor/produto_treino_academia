@@ -22,10 +22,7 @@ export class SerieListaExecucaoPage extends SerieListaExecucaoPageBase {
     super(navCtrl, srv, screenshot);
   }
 
-  ionViewWillEnter() {
-    console.log('ionViewWillEnter SerieListaExecucaoPage');
-    this.carregaLista();
-  }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SerieListaExecucaoPage');

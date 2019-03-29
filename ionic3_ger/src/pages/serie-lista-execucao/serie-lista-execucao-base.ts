@@ -11,6 +11,11 @@ export abstract class SerieListaExecucaoPageBase {
 
     }
 
+    ionViewWillEnter() {
+        console.log('ionViewWillEnter SerieListaExecucaoPage');
+        this.carregaLista();
+      }
+
     protected carregaLista() {
         this.srv.obtemLista()
             .subscribe((result: ItemSerie[]) => {
