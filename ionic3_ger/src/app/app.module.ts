@@ -8,9 +8,13 @@ import { SDKBrowserModule, SDKModels, LoopBackAuth, InternalStorage } from '../s
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Screenshot } from '@ionic-native/screenshot';
+import { ChartsModule } from 'ng2-charts';
 import { SerieListaExecucaoPage } from '../pages/serie-lista-execucao/serie-lista-execucao';
 import { SerieEditaExecucaoPage } from '../pages/serie-edita-execucao/serie-edita-execucao';
 import { CadastraItemSeriePage } from '../pages/cadastra-item-serie/cadastra-item-serie';
+import { ExercicioGraficoExecucaoPage } from '../pages/exercicio-grafico-execucao/exercicio-grafico-execucao';
+import { ExercicioUltimasExecucoesPage } from '../pages/exercicio-ultimas-execucoes/exercicio-ultimas-execucoes';
+import { ExercicioCadastroPage } from '../pages/exercicio-cadastro/exercicio-cadastro';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -34,13 +38,19 @@ import { RegistroPesoApi } from '../shared/sdk';
 	
     CadastraItemSeriePage,
 	
+    ExercicioGraficoExecucaoPage,
+	
+    ExercicioUltimasExecucoesPage,
+	
+    ExercicioCadastroPage,
+	
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule,
-    SDKBrowserModule.forRoot()
-    
+    SDKBrowserModule.forRoot(),
+    ChartsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -51,6 +61,12 @@ import { RegistroPesoApi } from '../shared/sdk';
     SerieEditaExecucaoPage,
 	
     CadastraItemSeriePage,
+	
+    ExercicioGraficoExecucaoPage,
+	
+    ExercicioUltimasExecucoesPage,
+	
+    ExercicioCadastroPage,
 	
   ],
   providers: [

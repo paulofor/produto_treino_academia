@@ -8,6 +8,9 @@ import { HomePage } from '../pages/home/home';
 import { SerieListaExecucaoPage } from '../pages/serie-lista-execucao/serie-lista-execucao';
 import { SerieEditaExecucaoPage } from '../pages/serie-edita-execucao/serie-edita-execucao';
 import { CadastraItemSeriePage } from '../pages/cadastra-item-serie/cadastra-item-serie';
+import { ExercicioGraficoExecucaoPage } from '../pages/exercicio-grafico-execucao/exercicio-grafico-execucao';
+import { ExercicioUltimasExecucoesPage } from '../pages/exercicio-ultimas-execucoes/exercicio-ultimas-execucoes';
+import { ExercicioCadastroPage } from '../pages/exercicio-cadastro/exercicio-cadastro';
 
 
 @Component({
@@ -31,6 +34,12 @@ export class MyApp {
       { title: 'SerieEditaExecucao' , component: SerieEditaExecucaoPage},
 	
       { title: 'CadastraItemSerie' , component: CadastraItemSeriePage},
+	
+      { title: 'ExercicioGraficoExecucao' , component: ExercicioGraficoExecucaoPage},
+	
+      { title: 'ExercicioUltimasExecucoes' , component: ExercicioUltimasExecucoesPage},
+	
+      { title: 'ExercicioCadastro' , component: ExercicioCadastroPage},
 	
      ];
 

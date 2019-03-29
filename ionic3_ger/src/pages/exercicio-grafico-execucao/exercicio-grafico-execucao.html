@@ -1,0 +1,52 @@
+
+<ion-header >
+  <ion-navbar color="titulo">
+    <ion-title (click)="testaFoto()">Gráfico De Execução</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="quadroBase">
+
+  <ion-grid >
+
+    <ion-row >
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <h2>Puxada Aberta pela Frente</h2>
+            <h2>Pulley Alto</h2>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row >
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <p>Execuções no Ano: 3</p>
+            <p>Execuções nos 6 meses: 48</p>
+            <p>Data mais recente: 10/01/2019</p>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row >
+      <ion-col id="item">
+          <ion-card>
+            <canvas id="cv01" baseChart height="250" 
+            [datasets]="barChartData" 
+            [labels]="barChartLabels" 
+            [options]="barChartOptions" 
+            [legend]="barChartLegend"
+            [chartType]="barChartType" ></canvas>
+            <img id="img1" height="250"  />
+          </ion-card>  
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
