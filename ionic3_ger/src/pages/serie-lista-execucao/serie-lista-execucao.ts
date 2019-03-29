@@ -4,10 +4,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
-
+import { SerieListaExecucaoPageBase } from './serie-lista-execucao-base';
 
 import { ItemSerie, ItemSerieApi } from '../../shared/sdk';
-import { SerieListaExecucaoPageBase } from './serie-lista-execucao-base';
 
 @IonicPage()
 @Component({
@@ -17,19 +16,22 @@ import { SerieListaExecucaoPageBase } from './serie-lista-execucao-base';
 export class SerieListaExecucaoPage extends SerieListaExecucaoPageBase {
 
 
+
   constructor(protected navCtrl: NavController, protected srv: ItemSerieApi,
     protected screenshot: Screenshot) {
     super(navCtrl, srv, screenshot);
   }
 
-
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SerieListaExecucaoPage');
+  ionViewWillEnter() {
+    console.log('ionViewWillEnter SerieListaExecucaoPage');
+    this.carregaListaPrototipo();
   }
 
+  ionViewDidLoad() {
+  	console.log('ionViewDidLoad SerieListaExecucaoPage');
+  }
+  
+ 
 
-
-
-
+  
 }

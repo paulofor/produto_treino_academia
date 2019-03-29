@@ -6,20 +6,20 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
 
 
-import { ItemSerie, ItemSerieApi } from '../../shared/sdk';
+import { ExecucaoItemSerie, ExecucaoItemSerieApi } from '../../shared/sdk';
 
 
-export abstract class SerieListaExecucaoPageBase {
-  protected listaItem: ItemSerie[];
+export abstract class ExercicioUltimasExecucoesPageBase {
+  protected listaItem: ExecucaoItemSerie[];
 
-  constructor(protected navCtrl: NavController, protected srv: ItemSerieApi, 
+  constructor(protected navCtrl: NavController, protected srv: ExecucaoItemSerieApi, 
   				 protected screenshot: Screenshot) {
   }
 
   
   protected carregaLista() {
-    this.srv.SerieListaExecucaoLoad()
-      .subscribe((result: ItemSerie[]) => {
+    this.srv.ExercicioUltimasExecucoesLoad()
+      .subscribe((result: ExecucaoItemSerie[]) => {
         console.log('Result', JSON.stringify(result));
         this.listaItem = result;
       });
@@ -27,15 +27,15 @@ export abstract class SerieListaExecucaoPageBase {
   
    
   protected carregaListaPrototipo() {
-    this.srv.SerieListaExecucaoLoad()
-      .subscribe((result: ItemSerie[]) => {
+    this.srv.ExercicioUltimasExecucoesLoad()
+      .subscribe((result: ExecucaoItemSerie[]) => {
         console.log('Result-Prototipo', JSON.stringify(result));
         this.listaItem = result;
       });
   }
   
   protected testaFoto() {
-    this.screenshot.save('jpg', 100, 'SerieListaExecucaoPage');
+    this.screenshot.save('jpg', 100, 'ExercicioUltimasExecucoesPage');
   }
 
   
