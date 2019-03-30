@@ -16,7 +16,8 @@ import { ITEMSERIE } from '../../../../dados/itemSerie';
 //import { of } from 'rxjs';
 //Versao Ionic
 import { of } from 'rxjs/observable/of';
-
+import {ITEMSERIE_SERIEEDITAEXECUCAOPAGE} from  '../../../../dados/itemSerie';
+import {ITEMSERIE_CADASTRAITEMSERIEPAGE} from  '../../../../dados/itemSerie';
 /**
  * Api services for the `Aplicacao` model.
  */
@@ -96,4 +97,12 @@ export class ItemSerieApi extends BaseLoopBackApi {
   obtemElemento(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<ItemSerie> {
     return of(ITEMSERIE[filter.where.id]);
   }
+
+	getSerieEditaExecucaoPageLoad(filter: LoopBackFilter = {}) : Observable<ItemSerie> {
+		return of (ITEMSERIE_SERIEEDITAEXECUCAOPAGE);
+	}
+	getCadastraItemSeriePageLoad(filter: LoopBackFilter = {}) : Observable<ItemSerie> {
+		return of (ITEMSERIE_CADASTRAITEMSERIEPAGE);
+	}
+  
 }

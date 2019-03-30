@@ -6,7 +6,7 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
 import { ExercicioUltimasExecucoesPageBase } from './exercicio-ultimas-execucoes-base';
 
-import { ExecucaoItemSerie, ExecucaoItemSerieApi } from '../../shared/sdk';
+import { Exercicio, ExercicioApi } from '../../shared/sdk';
 
 @IonicPage()
 @Component({
@@ -17,14 +17,14 @@ export class ExercicioUltimasExecucoesPage extends ExercicioUltimasExecucoesPage
 
 
 
-  constructor(protected navCtrl: NavController, protected srv: ExecucaoItemSerieApi,
+  constructor(protected navCtrl: NavController, protected srv: ExercicioApi,
     protected screenshot: Screenshot) {
     super(navCtrl, srv, screenshot);
   }
 
   ionViewWillEnter() {
     console.log('ionViewWillEnter ExercicioUltimasExecucoesPage');
-    this.carregaListaPrototipo();
+    this.carregaPrototipo();
   }
 
   ionViewDidLoad() {

@@ -6,31 +6,33 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
 
 
-import { ExecucaoItemSerie, ExecucaoItemSerieApi } from '../../shared/sdk';
+import { Exercicio, ExercicioApi } from '../../shared/sdk';
 
 
 export abstract class ExercicioUltimasExecucoesPageBase {
-  protected listaItem: ExecucaoItemSerie[];
 
-  constructor(protected navCtrl: NavController, protected srv: ExecucaoItemSerieApi, 
+  protected item: Exercicio;
+
+  constructor(protected navCtrl: NavController, protected srv: ExercicioApi, 
   				 protected screenshot: Screenshot) {
   }
 
+  //protected abstract getLista();
   
-  protected carregaLista() {
-    this.srv.ExercicioUltimasExecucoesLoad()
-      .subscribe((result: ExecucaoItemSerie[]) => {
+  protected carrega() {
+    this.srv.getExercicioUltimasExecucoesPageLoad()
+      .subscribe((result: Exercicio) => {
         console.log('Result', JSON.stringify(result));
-        this.listaItem = result;
+        this.item = result;
       });
   }
   
    
-  protected carregaListaPrototipo() {
-    this.srv.ExercicioUltimasExecucoesLoad()
-      .subscribe((result: ExecucaoItemSerie[]) => {
+  protected carregaPrototipo() {
+    this.srv.getExercicioUltimasExecucoesPageLoad()
+      .subscribe((result: Exercicio) => {
         console.log('Result-Prototipo', JSON.stringify(result));
-        this.listaItem = result;
+        this.item = result;
       });
   }
   

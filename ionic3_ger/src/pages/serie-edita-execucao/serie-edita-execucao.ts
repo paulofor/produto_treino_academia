@@ -27,7 +27,7 @@ export class SerieEditaExecucaoPage {
   
   carregaItem() {
     var filtro = { 'where' : { 'id' : 1 }} ;
-    this.srv.obtemElemento(filtro)
+    this.srv.getSerieEditaExecucaoPageLoad(filtro)
       .subscribe((result: ItemSerie) => {
         console.log('Result', JSON.stringify(result));
         this.item = result;

@@ -16,7 +16,9 @@ import { EXERCICIO } from '../../../../dados/exercicio';
 //import { of } from 'rxjs';
 //Versao Ionic
 import { of } from 'rxjs/observable/of';
-
+import {EXERCICIO_EXERCICIOGRAFICOEXECUCAOPAGE} from  '../../../../dados/exercicio';
+import {EXERCICIO_EXERCICIOULTIMASEXECUCOESPAGE} from  '../../../../dados/exercicio';
+import {EXERCICIO_EXERCICIOCADASTROPAGE} from  '../../../../dados/exercicio';
 /**
  * Api services for the `Aplicacao` model.
  */
@@ -96,4 +98,15 @@ export class ExercicioApi extends BaseLoopBackApi {
   obtemElemento(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<Exercicio> {
     return of(EXERCICIO[filter.where.id]);
   }
+
+	getExercicioGraficoExecucaoPageLoad(filter: LoopBackFilter = {}) : Observable<Exercicio> {
+		return of (EXERCICIO_EXERCICIOGRAFICOEXECUCAOPAGE);
+	}
+	getExercicioUltimasExecucoesPageLoad(filter: LoopBackFilter = {}) : Observable<Exercicio> {
+		return of (EXERCICIO_EXERCICIOULTIMASEXECUCOESPAGE);
+	}
+	getExercicioCadastroPageLoad(filter: LoopBackFilter = {}) : Observable<Exercicio> {
+		return of (EXERCICIO_EXERCICIOCADASTROPAGE);
+	}
+  
 }

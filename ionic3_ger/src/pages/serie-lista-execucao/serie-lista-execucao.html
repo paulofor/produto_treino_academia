@@ -5,13 +5,13 @@
 </ion-header>
 
 <ion-content padding class="quadroBase">
-  <ng-container *ngIf="listaItem">
+  <ng-container *ngIf="item">
     <ion-list>
-      <ion-item *ngFor="let item of listaItem">
-        <h2>{{item.exercicio.titulo}}</h2>
-        <h3>{{item.exercicio.subtitulo}}</h3>
-        <button *ngIf="item.exercicio.listaExecucaoItemSerie.length==0" ion-button item-end>inciar</button>
-        <p *ngIf="item.exercicio.listaExecucaoItemSerie.length>0" item-end>concluido</p>
+      <ion-item *ngFor="let exec of item.serieTreino.listaItemSerie">
+        <h2>{{exec.exercicio.titulo}}</h2>
+        <h3>{{exec.exercicio.subtitulo}}</h3>
+        <button *ngIf="exec.exercicio.listaExecucaoItemSerie.length==0" ion-button item-end>inciar</button>
+        <p *ngIf="exec.exercicio.listaExecucaoItemSerie.length>0" item-end>concluido</p>
       </ion-item>
     </ion-list>
   </ng-container>

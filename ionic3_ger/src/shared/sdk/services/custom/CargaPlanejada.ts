@@ -16,7 +16,6 @@ import { CARGAPLANEJADA } from '../../../../dados/cargaPlanejada';
 //import { of } from 'rxjs';
 //Versao Ionic
 import { of } from 'rxjs/observable/of';
-
 /**
  * Api services for the `Aplicacao` model.
  */
@@ -96,4 +95,6 @@ export class CargaPlanejadaApi extends BaseLoopBackApi {
   obtemElemento(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<CargaPlanejada> {
     return of(CARGAPLANEJADA[filter.where.id]);
   }
+
+  
 }
