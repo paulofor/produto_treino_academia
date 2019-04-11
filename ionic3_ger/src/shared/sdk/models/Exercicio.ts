@@ -4,6 +4,7 @@ import {
 	ItemSerie,
 	ExecucaoItemSerie,
 	GrupoMuscular,
+	DiaTreino,
 } from '../index';
 
 declare var Object: any;
@@ -16,6 +17,7 @@ export interface ExercicioInterface {
 	grupoMuscular?: GrupoMuscular;
 	listaItemSerie?: ItemSerie[];
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
+	listaDiaTreino?: DiaTreino[];
 }
 
 export class Exercicio implements ExercicioInterface {
@@ -27,6 +29,7 @@ export class Exercicio implements ExercicioInterface {
 	grupoMuscular?: GrupoMuscular;
 	listaItemSerie?: ItemSerie[];
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
+	listaDiaTreino?: DiaTreino[];
   constructor(data?: ExercicioInterface) {
     Object.assign(this, data);
   }

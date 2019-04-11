@@ -16,7 +16,6 @@ import { GRUPOMUSCULAR } from '../../../../dados/grupoMuscular';
 //import { of } from 'rxjs';
 //Versao Ionic
 import { of } from 'rxjs/observable/of';
-
 /**
  * Api services for the `Aplicacao` model.
  */
@@ -96,4 +95,6 @@ export class GrupoMuscularApi extends BaseLoopBackApi {
   obtemElemento(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<GrupoMuscular> {
     return of(GRUPOMUSCULAR[filter.where.id]);
   }
+
+  
 }

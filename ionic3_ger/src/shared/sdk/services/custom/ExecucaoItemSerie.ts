@@ -16,7 +16,6 @@ import { EXECUCAOITEMSERIE } from '../../../../dados/execucaoItemSerie';
 //import { of } from 'rxjs';
 //Versao Ionic
 import { of } from 'rxjs/observable/of';
-
 /**
  * Api services for the `Aplicacao` model.
  */
@@ -96,4 +95,6 @@ export class ExecucaoItemSerieApi extends BaseLoopBackApi {
   obtemElemento(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<ExecucaoItemSerie> {
     return of(EXECUCAOITEMSERIE[filter.where.id]);
   }
+
+  
 }

@@ -6,31 +6,33 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
 
 
-import { ItemSerie, ItemSerieApi } from '../../shared/sdk';
+import { DiaTreino, DiaTreinoApi } from '../../shared/sdk';
 
 
 export abstract class SerieListaExecucaoPageBase {
-  protected listaItem: ItemSerie[];
 
-  constructor(protected navCtrl: NavController, protected srv: ItemSerieApi, 
+  protected item: DiaTreino;
+
+  constructor(protected navCtrl: NavController, protected srv: DiaTreinoApi, 
   				 protected screenshot: Screenshot) {
   }
 
+  //protected abstract getLista();
   
-  protected carregaLista() {
-    this.srv.SerieListaExecucaoLoad()
-      .subscribe((result: ItemSerie[]) => {
+  protected carrega() {
+    this.srv.getSerieListaExecucaoPageLoad()
+      .subscribe((result: DiaTreino) => {
         console.log('Result', JSON.stringify(result));
-        this.listaItem = result;
+        this.item = result;
       });
   }
   
    
-  protected carregaListaPrototipo() {
-    this.srv.SerieListaExecucaoLoad()
-      .subscribe((result: ItemSerie[]) => {
+  protected carregaPrototipo() {
+    this.srv.getSerieListaExecucaoPageLoad()
+      .subscribe((result: DiaTreino) => {
         console.log('Result-Prototipo', JSON.stringify(result));
-        this.listaItem = result;
+        this.item = result;
       });
   }
   

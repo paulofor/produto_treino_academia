@@ -3,6 +3,7 @@
 import {
 	ExecucaoItemSerie,
 	SerieTreino,
+	Exercicio,
 } from '../index';
 
 declare var Object: any;
@@ -12,6 +13,7 @@ export interface DiaTreinoInterface {
 	"concluido"?: string;
 	serieTreino?: SerieTreino;
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
+	listaExercicio?: Exercicio[];
 }
 
 export class DiaTreino implements DiaTreinoInterface {
@@ -20,6 +22,7 @@ export class DiaTreino implements DiaTreinoInterface {
 	concluido?: string;
 	serieTreino?: SerieTreino;
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
+	listaExercicio?: Exercicio[];
   constructor(data?: DiaTreinoInterface) {
     Object.assign(this, data);
   }
