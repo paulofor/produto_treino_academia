@@ -2,29 +2,30 @@ import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
 
-import { Exercicio, ExercicioApi } from '../../shared/sdk';
+import { Exercicio, ExercicioApi, GrupoMuscularApi, DiaTreinoApi, UsuarioApi } from '../../shared/sdk';
+import { ExercicioCadastroPagePageBase } from './exercicio-cadastro-base';
 
 @IonicPage()
 @Component({
   selector: 'page-exercicio-cadastro',
   templateUrl: 'exercicio-cadastro.html'
 })
-export class ExercicioCadastroPage {
+export class ExercicioCadastroPage extends ExercicioCadastroPagePageBase {
+
+  protected inicializacao() {
+    this.carregaGrupoMuscular();
+  }
   item: Exercicio;
 
-  constructor(public navCtrl: NavController, public srv: ExercicioApi, 
-  				private screenshot: Screenshot, public modalCtrl: ModalController) {
+  constructor(
+    public srv: ExercicioApi,
+    public srvGrupoMuscular: GrupoMuscularApi,
+    public srvDiaTreino: DiaTreinoApi,
+    public srvUsuario: UsuarioApi,
+  ) {
+    super(srv, srvGrupoMuscular, srvDiaTreino, srvUsuario);
   }
 
-  ionViewWillEnter() {
-    console.log('ionViewWillEnter ExercicioCadastroPage');
-    this.carregaItem();
-  }
-
-  ionViewDidLoad() {
-  	console.log('ionViewDidLoad ExercicioCadastroPage');
-  }
-  
   carregaItem() {
     this.srv.obtemPrimeiro()
       .subscribe((result: Exercicio) => {
@@ -33,8 +34,6 @@ export class ExercicioCadastroPage {
       });
   }
 
-  testaFoto() {
-    this.screenshot.save('jpg', 100, 'ExercicioCadastroPage');
-  }
-  
+
+
 }

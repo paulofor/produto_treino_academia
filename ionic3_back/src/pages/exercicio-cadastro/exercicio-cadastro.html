@@ -1,22 +1,20 @@
-
-<ion-header >
+<ion-header>
   <ion-navbar color="titulo">
     <ion-title (click)="testaFoto()">ExercicioCadastroPage</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="quadroBase">
- <ion-card>
+  <ion-card>
     <form>
-    
+
       <ion-item>
         <ion-label floating>Grupo Muscular</ion-label>
-        <ion-select>
-          <ion-option value="f">Peitoral</ion-option>
-          <ion-option value="m">Male</ion-option>
+        <ion-select [(ngModel)]="exercicio.idGrupoMuscular">
+          <ion-option *ngFor="item of listaGrupoMuscular" value="{{item.id}}">{{item.nome}}</ion-option>
         </ion-select>
       </ion-item>
-     
+
       <ion-item>
         <ion-label floating>Carga</ion-label>
         <ion-input type="text"></ion-input>
