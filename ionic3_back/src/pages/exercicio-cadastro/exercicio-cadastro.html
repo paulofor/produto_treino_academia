@@ -11,7 +11,7 @@
       <ion-item>
         <ion-label floating>Grupo Muscular</ion-label>
         <ion-select [(ngModel)]="exercicio.idGrupoMuscular">
-          <ion-option *ngFor="item of listaGrupoMuscular" value="{{item.id}}">{{item.nome}}</ion-option>
+          <ion-option *ngFor="let item of listaGrupoMuscular" value="{{item.id}}">{{item.nome}}</ion-option>
         </ion-select>
       </ion-item>
 

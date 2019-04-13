@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+
 
 import { Exercicio, ExercicioApi } from '../../shared/sdk';
 import { GrupoMuscular, GrupoMuscularApi } from '../../shared/sdk';
@@ -34,6 +34,7 @@ export abstract class ExercicioCadastroPagePageBase {
 	protected carregaGrupoMuscular() {
 		this.srvGrupoMuscular.find()
 			.subscribe((result: GrupoMuscular[]) => {
+				console.log('ListaGrupoMuscular:' , result);
 				this.listaGrupoMuscular = result;
 			})
 	}

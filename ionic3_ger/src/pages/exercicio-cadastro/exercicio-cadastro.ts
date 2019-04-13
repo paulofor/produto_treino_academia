@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
 
-import { Exercicio, ExercicioApi } from '../../shared/sdk';
+import { Exercicio, ExercicioApi, GrupoMuscular } from '../../shared/sdk';
 
 @IonicPage()
 @Component({
@@ -11,6 +11,10 @@ import { Exercicio, ExercicioApi } from '../../shared/sdk';
 })
 export class ExercicioCadastroPage {
   item: Exercicio;
+
+  listaGrupoMuscular : GrupoMuscular[] = []
+
+  
 
   constructor(public navCtrl: NavController, public srv: ExercicioApi, 
   				private screenshot: Screenshot, public modalCtrl: ModalController) {

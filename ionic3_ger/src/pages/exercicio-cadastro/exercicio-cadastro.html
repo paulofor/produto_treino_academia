@@ -12,8 +12,7 @@
       <ion-item>
         <ion-label floating>Grupo Muscular</ion-label>
         <ion-select>
-          <ion-option value="f">Peitoral</ion-option>
-          <ion-option value="m">Male</ion-option>
+          <ion-option *ngFor="let item of listaGrupoMuscular" value="{{item.id}}">{{item.nome}}</ion-option>
         </ion-select>
       </ion-item>
      
