@@ -5,22 +5,32 @@
 </ion-header>
 
 <ion-content padding class="quadroBase">
-  <ion-card>
-    <form>
+  <ion-card *ngIf="item && listaGrupoMuscular">
+    <form (ngSubmit)="submit()">
 
       <ion-item>
         <ion-label floating>Grupo Muscular</ion-label>
-        <ion-select [(ngModel)]="exercicio.idGrupoMuscular">
-          <ion-option *ngFor="let item of listaGrupoMuscular" value="{{item.id}}">{{item.nome}}</ion-option>
+        <ion-select [(ngModel)]="item.grupoMuscularId" name="grupoMuscularId">
+          <ion-option *ngFor="let grupo of listaGrupoMuscular" value="{{grupo.id}}">{{grupo.nome}}</ion-option>
         </ion-select>
       </ion-item>
 
       <ion-item>
-        <ion-label floating>Carga</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-label floating>Título</ion-label>
+        <ion-input [(ngModel)]="item.titulo" name="titulo"></ion-input>
       </ion-item>
 
-      <button ion-button type="submit" block>Adicionar</button>
+      <ion-item>
+        <ion-label floating>Subtítulo</ion-label>
+        <ion-input [(ngModel)]="item.subtitulo" name="subtitulo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Descrição</ion-label>
+        <ion-textarea [(ngModel)]="item.descricao" name="descricao"></ion-textarea>
+      </ion-item>
+
+      <button ion-button type="submit" block>Enviar</button>
     </form>
   </ion-card>
 </ion-content>

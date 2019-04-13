@@ -13,7 +13,9 @@ export interface ItemSerieInterface {
 	"ordemExecucao"?: number;
 	"parametros"?: string;
 	serieTreino?: SerieTreino;
+	serieTreinoId? : number;
 	exercicio?: Exercicio;
+	exercicioId? : number;
 	listaCargaPlanejada?: CargaPlanejada[];
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
 }
@@ -23,7 +25,9 @@ export class ItemSerie implements ItemSerieInterface {
 	ordemExecucao?: number;
 	parametros?: string;
 	serieTreino?: SerieTreino;
+	serieTreinoId? : number;
 	exercicio?: Exercicio;
+	exercicioId? : number;
 	listaCargaPlanejada?: CargaPlanejada[];
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
   constructor(data?: ItemSerieInterface) {
@@ -54,9 +58,9 @@ export class ItemSerie implements ItemSerieInterface {
   **/
   public static getModelDefinition() {
     return {
-      name: 'ItemSerie',
-      plural: 'ItemSeries',
-      path: 'ItemSeries',
+      name: 'TreinoAcademia_ItemSerie',
+      plural: 'TreinoAcademia_ItemSeries',
+      path: 'TreinoAcademia_ItemSeries',
       idName: 'id',
       properties: {
 		

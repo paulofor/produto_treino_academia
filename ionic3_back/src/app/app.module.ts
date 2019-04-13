@@ -15,6 +15,7 @@ import { CadastraItemSeriePage } from '../pages/cadastra-item-serie/cadastra-ite
 import { ExercicioGraficoExecucaoPage } from '../pages/exercicio-grafico-execucao/exercicio-grafico-execucao';
 import { ExercicioUltimasExecucoesPage } from '../pages/exercicio-ultimas-execucoes/exercicio-ultimas-execucoes';
 import { ExercicioCadastroPage } from '../pages/exercicio-cadastro/exercicio-cadastro';
+import { ListaExercicioPage } from '../pages/lista-exercicio/lista-exercicio';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -45,6 +46,8 @@ import { UsuarioApi } from '../shared/sdk';
 	
     ExercicioCadastroPage,
 	
+    ListaExercicioPage,
+	
   ],
   imports: [
     BrowserModule,
@@ -68,6 +71,8 @@ import { UsuarioApi } from '../shared/sdk';
     ExercicioUltimasExecucoesPage,
 	
     ExercicioCadastroPage,
+	
+    ListaExercicioPage,
 	
   ],
   providers: [

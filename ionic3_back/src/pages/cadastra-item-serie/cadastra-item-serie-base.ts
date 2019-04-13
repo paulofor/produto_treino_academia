@@ -28,6 +28,7 @@ export abstract class CadastraItemSeriePagePageBase {
 	protected carregaSerieTreino(){
 		this.srvSerieTreino.find()
       		.subscribe((result:SerieTreino[]) => {
+        		console.log('listaSerieTreino:' , result);
         		this.listaSerieTreino = result;
       	})
 	}
@@ -44,6 +45,7 @@ export abstract class CadastraItemSeriePagePageBase {
 	protected carregaExercicio(){
 		this.srvExercicio.find()
       		.subscribe((result:Exercicio[]) => {
+        		console.log('listaExercicio:' , result);
         		this.listaExercicio = result;
       	})
 	}
@@ -56,5 +58,10 @@ export abstract class CadastraItemSeriePagePageBase {
       	})
 	}
 
-  
+	protected submit() {
+    	this.srv.upsert(this.item)
+      		.subscribe((resultado) => {
+        	console.log('Resultado-Submit: ' , resultado);
+      	})
+	}
 }

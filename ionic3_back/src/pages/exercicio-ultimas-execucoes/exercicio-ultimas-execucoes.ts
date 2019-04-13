@@ -6,7 +6,7 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
 import { ExercicioUltimasExecucoesPageBase } from './exercicio-ultimas-execucoes-base';
 
-import { Exercicio, ExercicioApi } from '../../shared/sdk';
+import { Exercicio, ExercicioApi, LoopBackFilter } from '../../shared/sdk';
 
 @IonicPage()
 @Component({
@@ -15,12 +15,11 @@ import { Exercicio, ExercicioApi } from '../../shared/sdk';
 })
 export class ExercicioUltimasExecucoesPage extends ExercicioUltimasExecucoesPageBase {
 
+	protected getFiltro():LoopBackFilter {
+    	return {};
+	}
 
 
-  constructor(protected navCtrl: NavController, protected srv: ExercicioApi,
-    protected screenshot: Screenshot) {
-    super(navCtrl, srv, screenshot);
-  }
 
   ionViewWillEnter() {
     console.log('ionViewWillEnter ExercicioUltimasExecucoesPage');

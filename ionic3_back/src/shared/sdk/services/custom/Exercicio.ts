@@ -19,6 +19,7 @@ import { of } from 'rxjs/observable/of';
 import {EXERCICIO_EXERCICIOGRAFICOEXECUCAOPAGE} from  '../../../../dados/exercicio';
 import {EXERCICIO_EXERCICIOULTIMASEXECUCOESPAGE} from  '../../../../dados/exercicio';
 import {EXERCICIO_EXERCICIOCADASTROPAGE} from  '../../../../dados/exercicio';
+import {EXERCICIO_LISTAEXERCICIOPAGE} from  '../../../../dados/exercicio';
 /**
  * Api services for the `Aplicacao` model.
  */
@@ -107,6 +108,9 @@ export class ExercicioApi extends BaseLoopBackApi {
 	}
 	getExercicioCadastroPageLoad(filter: LoopBackFilter = {}) : Observable<Exercicio> {
 		return of (EXERCICIO_EXERCICIOCADASTROPAGE);
+	}
+	getListaExercicioPageLoad(filter: LoopBackFilter = {}) : Observable<Exercicio> {
+		return of (EXERCICIO_LISTAEXERCICIOPAGE);
 	}
   
 }

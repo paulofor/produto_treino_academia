@@ -12,10 +12,12 @@ import { ExercicioCadastroPagePageBase } from './exercicio-cadastro-base';
 })
 export class ExercicioCadastroPage extends ExercicioCadastroPagePageBase {
 
+
   protected inicializacao() {
     this.carregaGrupoMuscular();
+    this.item = new Exercicio();
   }
-  item: Exercicio;
+
 
   constructor(
     public srv: ExercicioApi,
@@ -24,14 +26,6 @@ export class ExercicioCadastroPage extends ExercicioCadastroPagePageBase {
     public srvUsuario: UsuarioApi,
   ) {
     super(srv, srvGrupoMuscular, srvDiaTreino, srvUsuario);
-  }
-
-  carregaItem() {
-    this.srv.obtemPrimeiro()
-      .subscribe((result: Exercicio) => {
-        console.log('Result', JSON.stringify(result));
-        this.item = result;
-      });
   }
 
 

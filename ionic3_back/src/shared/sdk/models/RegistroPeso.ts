@@ -11,6 +11,7 @@ export interface RegistroPesoInterface {
 	"valor"?: number;
 	"obs"?: string;
 	usuario?: Usuario;
+	usuarioId? : number;
 }
 
 export class RegistroPeso implements RegistroPesoInterface {
@@ -19,6 +20,7 @@ export class RegistroPeso implements RegistroPesoInterface {
 	valor?: number;
 	obs?: string;
 	usuario?: Usuario;
+	usuarioId? : number;
   constructor(data?: RegistroPesoInterface) {
     Object.assign(this, data);
   }
@@ -47,9 +49,9 @@ export class RegistroPeso implements RegistroPesoInterface {
   **/
   public static getModelDefinition() {
     return {
-      name: 'RegistroPeso',
-      plural: 'RegistroPesos',
-      path: 'RegistroPesos',
+      name: 'TreinoAcademia_RegistroPeso',
+      plural: 'TreinoAcademia_RegistroPesos',
+      path: 'TreinoAcademia_RegistroPesos',
       idName: 'id',
       properties: {
 		

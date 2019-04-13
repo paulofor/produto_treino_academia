@@ -10,3 +10,4 @@ export const EXERCICIO_EXERCICIOULTIMASEXECUCOESPAGE : Exercicio = {};
 
 export const EXERCICIO_EXERCICIOCADASTROPAGE : Exercicio = {};
 
+export const EXERCICIO_LISTAEXERCICIOPAGE : Exercicio = {};

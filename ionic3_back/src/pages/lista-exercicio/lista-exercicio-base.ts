@@ -1,28 +1,28 @@
 
-import { DiaTreino, DiaTreinoApi } from '../../shared/sdk';
+import { Exercicio, ExercicioApi } from '../../shared/sdk';
 import { LoopBackFilter } from '../../shared/sdk';
 import { NavController } from 'ionic-angular';
 import { Page } from 'ionic-angular/umd/navigation/nav-util';
 
-export abstract class SerieListaExecucaoPageBase {
+export abstract class ListaExercicioPageBase {
 
-	protected listaItem: DiaTreino[];
+	protected listaItem: Exercicio[];
 	//protected abstract inicializacao();
 	protected abstract getFiltro(): LoopBackFilter;
 	protected abstract getPageEdicao(): Page;
 
-	constructor(public navCtrl: NavController, protected srv: DiaTreinoApi) {
+	constructor(public navCtrl: NavController, protected srv: ExercicioApi) {
 	}
 
 	ionViewWillEnter() {
-    	console.log('ionViewWillEnter SerieListaExecucaoPage');
+    	console.log('ionViewWillEnter ListaExercicioPage');
     	//this.inicializacao();
     	this.carregaLista();
   	}
   	
   	carregaLista() {
   		this.srv.find(this.getFiltro())
-  			.subscribe((resultado: DiaTreino[]) => {
+  			.subscribe((resultado: Exercicio[]) => {
   				console.log('ListaItem:' , resultado);
   				this.listaItem = resultado;
   			})

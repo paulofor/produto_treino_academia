@@ -17,9 +17,13 @@ export interface ExecucaoItemSerieInterface {
 	"numeroSerie"?: number;
 	"quantidadeRepeticao"?: number;
 	diaTreino?: DiaTreino;
+	diaTreinoId? : number;
 	itemSerie?: ItemSerie;
+	itemSerieId? : number;
 	exercicio?: Exercicio;
+	exercicioId? : number;
 	usuario?: Usuario;
+	usuarioId? : number;
 }
 
 export class ExecucaoItemSerie implements ExecucaoItemSerieInterface {
@@ -31,9 +35,13 @@ export class ExecucaoItemSerie implements ExecucaoItemSerieInterface {
 	numeroSerie?: number;
 	quantidadeRepeticao?: number;
 	diaTreino?: DiaTreino;
+	diaTreinoId? : number;
 	itemSerie?: ItemSerie;
+	itemSerieId? : number;
 	exercicio?: Exercicio;
+	exercicioId? : number;
 	usuario?: Usuario;
+	usuarioId? : number;
   constructor(data?: ExecucaoItemSerieInterface) {
     Object.assign(this, data);
   }
@@ -62,9 +70,9 @@ export class ExecucaoItemSerie implements ExecucaoItemSerieInterface {
   **/
   public static getModelDefinition() {
     return {
-      name: 'ExecucaoItemSerie',
-      plural: 'ExecucaoItemSeries',
-      path: 'ExecucaoItemSeries',
+      name: 'TreinoAcademia_ExecucaoItemSerie',
+      plural: 'TreinoAcademia_ExecucaoItemSeries',
+      path: 'TreinoAcademia_ExecucaoItemSeries',
       idName: 'id',
       properties: {
 		

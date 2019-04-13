@@ -11,6 +11,7 @@ import { CadastraItemSeriePage } from '../pages/cadastra-item-serie/cadastra-ite
 import { ExercicioGraficoExecucaoPage } from '../pages/exercicio-grafico-execucao/exercicio-grafico-execucao';
 import { ExercicioUltimasExecucoesPage } from '../pages/exercicio-ultimas-execucoes/exercicio-ultimas-execucoes';
 import { ExercicioCadastroPage } from '../pages/exercicio-cadastro/exercicio-cadastro';
+import { ListaExercicioPage } from '../pages/lista-exercicio/lista-exercicio';
 
 
 @Component({
@@ -40,6 +41,8 @@ export class MyApp {
       { title: 'ExercicioUltimasExecucoes' , component: ExercicioUltimasExecucoesPage},
 	
       { title: 'ExercicioCadastro' , component: ExercicioCadastroPage},
+	
+      { title: 'ListaExercicio' , component: ListaExercicioPage},
 	
      ];
 

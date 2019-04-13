@@ -1,44 +1,36 @@
 
-
-
-import { Component } from '@angular/core';
-import { IonicPage, ModalController, NavController } from 'ionic-angular';
-import { Screenshot } from '@ionic-native/screenshot';
-
-
 import { Exercicio, ExercicioApi } from '../../shared/sdk';
-
+import { LoopBackFilter } from '../../shared/sdk';
+import { NavController } from 'ionic-angular';
+import { Page } from 'ionic-angular/umd/navigation/nav-util';
 
 export abstract class ExercicioUltimasExecucoesPageBase {
 
-  protected item: Exercicio;
+	protected listaItem: Exercicio[];
+	//protected abstract inicializacao();
+	protected abstract getFiltro(): LoopBackFilter;
+	protected abstract getPageEdicao(): Page;
 
-  constructor(protected navCtrl: NavController, protected srv: ExercicioApi, 
-  				 protected screenshot: Screenshot) {
-  }
+	constructor(public navCtrl: NavController, protected srv: ExercicioApi) {
+	}
 
-  //protected abstract getLista();
+	ionViewWillEnter() {
+    	console.log('ionViewWillEnter ExercicioUltimasExecucoesPage');
+    	//this.inicializacao();
+    	this.carregaLista();
+  	}
+  	
+  	carregaLista() {
+  		this.srv.find(this.getFiltro())
+  			.subscribe((resultado: Exercicio[]) => {
+  				console.log('ListaItem:' , resultado);
+  				this.listaItem = resultado;
+  			})
+  	}
   
-  protected carrega() {
-    this.srv.getExercicioUltimasExecucoesPageLoad()
-      .subscribe((result: Exercicio) => {
-        console.log('Result', JSON.stringify(result));
-        this.item = result;
-      });
-  }
-  
-   
-  protected carregaPrototipo() {
-    this.srv.getExercicioUltimasExecucoesPageLoad()
-      .subscribe((result: Exercicio) => {
-        console.log('Result-Prototipo', JSON.stringify(result));
-        this.item = result;
-      });
-  }
-  
-  protected testaFoto() {
-    this.screenshot.save('jpg', 100, 'ExercicioUltimasExecucoesPage');
-  }
-
-  
+	protected alterar(item: Exercicio) {
+		this.navCtrl.push(this.getPageEdicao(), {
+      		item: item
+		});
+  	}
 }

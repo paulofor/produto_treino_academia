@@ -16,7 +16,9 @@ export interface ExercicioInterface {
 	"titulo"?: string;
 	"subtitulo"?: string;
 	grupoMuscular?: GrupoMuscular;
+	grupoMuscularId? : number;
 	usuario?: Usuario;
+	usuarioId? : number;
 	listaItemSerie?: ItemSerie[];
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
 	listaDiaTreino?: DiaTreino[];
@@ -29,7 +31,9 @@ export class Exercicio implements ExercicioInterface {
 	titulo?: string;
 	subtitulo?: string;
 	grupoMuscular?: GrupoMuscular;
+	grupoMuscularId? : number;
 	usuario?: Usuario;
+	usuarioId? : number;
 	listaItemSerie?: ItemSerie[];
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
 	listaDiaTreino?: DiaTreino[];
@@ -61,9 +65,9 @@ export class Exercicio implements ExercicioInterface {
   **/
   public static getModelDefinition() {
     return {
-      name: 'Exercicio',
-      plural: 'Exercicios',
-      path: 'Exercicios',
+      name: 'TreinoAcademia_Exercicio',
+      plural: 'TreinoAcademia_Exercicios',
+      path: 'TreinoAcademia_Exercicios',
       idName: 'id',
       properties: {
 		

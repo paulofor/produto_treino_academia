@@ -62,9 +62,9 @@ export class Usuario implements UsuarioInterface {
   **/
   public static getModelDefinition() {
     return {
-      name: 'Usuario',
-      plural: 'Usuarios',
-      path: 'Usuarios',
+      name: 'TreinoAcademia_Usuario',
+      plural: 'TreinoAcademia_Usuarios',
+      path: 'TreinoAcademia_Usuarios',
       idName: 'id',
       properties: {
 		

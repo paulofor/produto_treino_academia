@@ -45,9 +45,9 @@ export class GrupoMuscular implements GrupoMuscularInterface {
   **/
   public static getModelDefinition() {
     return {
-      name: 'GrupoMuscular',
-      plural: 'GrupoMusculars',
-      path: 'GrupoMusculars',
+      name: 'TreinoAcademia_GrupoMuscular',
+      plural: 'TreinoAcademia_GrupoMusculars',
+      path: 'TreinoAcademia_GrupoMusculars',
       idName: 'id',
       properties: {
 		

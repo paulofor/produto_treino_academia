@@ -6,7 +6,7 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
 import { SerieListaExecucaoPageBase } from './serie-lista-execucao-base';
 
-import { DiaTreino, DiaTreinoApi } from '../../shared/sdk';
+import { DiaTreino, DiaTreinoApi, LoopBackFilter } from '../../shared/sdk';
 
 @IonicPage()
 @Component({
@@ -16,22 +16,18 @@ import { DiaTreino, DiaTreinoApi } from '../../shared/sdk';
 export class SerieListaExecucaoPage extends SerieListaExecucaoPageBase {
 
 
-
-  constructor(protected navCtrl: NavController, protected srv: DiaTreinoApi,
-    protected screenshot: Screenshot) {
-    super(navCtrl, srv, screenshot);
+  protected getFiltro(): LoopBackFilter {
+    return {};
   }
 
-  ionViewWillEnter() {
-    console.log('ionViewWillEnter SerieListaExecucaoPage');
-    this.carregaPrototipo();
+
+
+  constructor(protected srv: DiaTreinoApi) {
+    super(srv);
   }
 
-  ionViewDidLoad() {
-  	console.log('ionViewDidLoad SerieListaExecucaoPage');
-  }
-  
- 
 
-  
+
+
+
 }

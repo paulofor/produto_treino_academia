@@ -13,7 +13,9 @@ export interface DiaTreinoInterface {
 	"data"?: Date;
 	"concluido"?: string;
 	serieTreino?: SerieTreino;
+	serieTreinoId? : number;
 	usuario?: Usuario;
+	usuarioId? : number;
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
 	listaExercicio?: Exercicio[];
 }
@@ -23,7 +25,9 @@ export class DiaTreino implements DiaTreinoInterface {
 	data?: Date;
 	concluido?: string;
 	serieTreino?: SerieTreino;
+	serieTreinoId? : number;
 	usuario?: Usuario;
+	usuarioId? : number;
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
 	listaExercicio?: Exercicio[];
   constructor(data?: DiaTreinoInterface) {
@@ -54,9 +58,9 @@ export class DiaTreino implements DiaTreinoInterface {
   **/
   public static getModelDefinition() {
     return {
-      name: 'DiaTreino',
-      plural: 'DiaTreinos',
-      path: 'DiaTreinos',
+      name: 'TreinoAcademia_DiaTreino',
+      plural: 'TreinoAcademia_DiaTreinos',
+      path: 'TreinoAcademia_DiaTreinos',
       idName: 'id',
       properties: {
 		

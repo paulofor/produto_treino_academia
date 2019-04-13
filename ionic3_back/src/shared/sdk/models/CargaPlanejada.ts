@@ -15,7 +15,9 @@ export interface CargaPlanejadaInterface {
 	"ativa"?: string;
 	"ordemRepeticao"?: number;
 	itemSerie?: ItemSerie;
+	itemSerieId? : number;
 	usuario?: Usuario;
+	usuarioId? : number;
 }
 
 export class CargaPlanejada implements CargaPlanejadaInterface {
@@ -27,7 +29,9 @@ export class CargaPlanejada implements CargaPlanejadaInterface {
 	ativa?: string;
 	ordemRepeticao?: number;
 	itemSerie?: ItemSerie;
+	itemSerieId? : number;
 	usuario?: Usuario;
+	usuarioId? : number;
   constructor(data?: CargaPlanejadaInterface) {
     Object.assign(this, data);
   }
@@ -56,9 +60,9 @@ export class CargaPlanejada implements CargaPlanejadaInterface {
   **/
   public static getModelDefinition() {
     return {
-      name: 'CargaPlanejada',
-      plural: 'CargaPlanejadas',
-      path: 'CargaPlanejadas',
+      name: 'TreinoAcademia_CargaPlanejada',
+      plural: 'TreinoAcademia_CargaPlanejadas',
+      path: 'TreinoAcademia_CargaPlanejadas',
       idName: 'id',
       properties: {
 		

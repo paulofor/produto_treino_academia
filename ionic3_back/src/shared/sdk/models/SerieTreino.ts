@@ -14,6 +14,7 @@ export interface SerieTreinoInterface {
 	"dataUltimaExecucao"?: Date;
 	"qtdeExecucao"?: number;
 	usuario?: Usuario;
+	usuarioId? : number;
 	listaItemSerie?: ItemSerie[];
 	listaDiaTreino?: DiaTreino[];
 }
@@ -25,6 +26,7 @@ export class SerieTreino implements SerieTreinoInterface {
 	dataUltimaExecucao?: Date;
 	qtdeExecucao?: number;
 	usuario?: Usuario;
+	usuarioId? : number;
 	listaItemSerie?: ItemSerie[];
 	listaDiaTreino?: DiaTreino[];
   constructor(data?: SerieTreinoInterface) {
@@ -55,9 +57,9 @@ export class SerieTreino implements SerieTreinoInterface {
   **/
   public static getModelDefinition() {
     return {
-      name: 'SerieTreino',
-      plural: 'SerieTreinos',
-      path: 'SerieTreinos',
+      name: 'TreinoAcademia_SerieTreino',
+      plural: 'TreinoAcademia_SerieTreinos',
+      path: 'TreinoAcademia_SerieTreinos',
       idName: 'id',
       properties: {
 		
