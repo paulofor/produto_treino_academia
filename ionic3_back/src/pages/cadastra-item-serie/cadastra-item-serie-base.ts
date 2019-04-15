@@ -1,6 +1,7 @@
 import { ItemSerie, ItemSerieApi } from '../../shared/sdk';
 import { SerieTreino, SerieTreinoApi } from '../../shared/sdk';
 import { Exercicio, ExercicioApi } from '../../shared/sdk';
+import { NavParams, NavController } from 'ionic-angular';
 
 export abstract class CadastraItemSeriePagePageBase {
   
@@ -8,16 +9,26 @@ export abstract class CadastraItemSeriePagePageBase {
   
   protected abstract inicializacao();
 
-  constructor(	
+  constructor(	public navParams: NavParams,
+  				public navCtrl: NavController,
 				public srv: ItemSerieApi, 
 				public srvSerieTreino : SerieTreinoApi,
 				public srvExercicio : ExercicioApi,
   				) {
   }
 
+
+  private inicializaItem() {
+	this.item = this.navParams.get('item');
+	console.log('Item: ', this.item);
+	if (!this.item) this.item = new ItemSerie();
+  }
+
+
   ionViewWillEnter() {
     console.log('ionViewWillEnter CadastraItemSeriePage');
     this.inicializacao();
+    this.inicializaItem();
   }
 
   ionViewDidLoad() {
@@ -61,7 +72,9 @@ export abstract class CadastraItemSeriePagePageBase {
 	protected submit() {
     	this.srv.upsert(this.item)
       		.subscribe((resultado) => {
-        	console.log('Resultado-Submit: ' , resultado);
+        		console.log('Resultado-Submit: ' , resultado);
+				console.log('navCtrl:' , this.navCtrl);
+				this.navCtrl.pop();
       	})
 	}
 }

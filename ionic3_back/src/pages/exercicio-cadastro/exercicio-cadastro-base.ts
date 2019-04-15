@@ -2,6 +2,7 @@ import { Exercicio, ExercicioApi } from '../../shared/sdk';
 import { GrupoMuscular, GrupoMuscularApi } from '../../shared/sdk';
 import { DiaTreino, DiaTreinoApi } from '../../shared/sdk';
 import { Usuario, UsuarioApi } from '../../shared/sdk';
+import { NavParams, NavController } from 'ionic-angular';
 
 export abstract class ExercicioCadastroPagePageBase {
   
@@ -9,7 +10,8 @@ export abstract class ExercicioCadastroPagePageBase {
   
   protected abstract inicializacao();
 
-  constructor(	
+  constructor(	public navParams: NavParams,
+  				public navCtrl: NavController,
 				public srv: ExercicioApi, 
 				public srvGrupoMuscular : GrupoMuscularApi,
 				public srvDiaTreino : DiaTreinoApi,
@@ -17,9 +19,18 @@ export abstract class ExercicioCadastroPagePageBase {
   				) {
   }
 
+
+  private inicializaItem() {
+	this.item = this.navParams.get('item');
+	console.log('Item: ', this.item);
+	if (!this.item) this.item = new Exercicio();
+  }
+
+
   ionViewWillEnter() {
     console.log('ionViewWillEnter ExercicioCadastroPage');
     this.inicializacao();
+    this.inicializaItem();
   }
 
   ionViewDidLoad() {
@@ -80,7 +91,9 @@ export abstract class ExercicioCadastroPagePageBase {
 	protected submit() {
     	this.srv.upsert(this.item)
       		.subscribe((resultado) => {
-        	console.log('Resultado-Submit: ' , resultado);
+        		console.log('Resultado-Submit: ' , resultado);
+				console.log('navCtrl:' , this.navCtrl);
+				this.navCtrl.pop();
       	})
 	}
 }

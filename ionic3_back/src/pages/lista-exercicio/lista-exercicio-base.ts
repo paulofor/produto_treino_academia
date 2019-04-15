@@ -33,4 +33,8 @@ export abstract class ListaExercicioPageBase {
       		item: item
 		});
   	}
+  	
+  	protected novo() {
+		this.navCtrl.push(this.getPageEdicao());
+	}
 }

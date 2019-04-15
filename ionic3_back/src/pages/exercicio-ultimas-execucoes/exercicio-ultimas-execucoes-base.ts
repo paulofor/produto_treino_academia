@@ -33,4 +33,8 @@ export abstract class ExercicioUltimasExecucoesPageBase {
       		item: item
 		});
   	}
+  	
+  	protected novo() {
+		this.navCtrl.push(this.getPageEdicao());
+	}
 }

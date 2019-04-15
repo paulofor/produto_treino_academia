@@ -7,6 +7,7 @@ import { Screenshot } from '@ionic-native/screenshot';
 import { ExercicioUltimasExecucoesPageBase } from './exercicio-ultimas-execucoes-base';
 
 import { Exercicio, ExercicioApi, LoopBackFilter } from '../../shared/sdk';
+import { Page } from 'ionic-angular/navigation/nav-util';
 
 @IonicPage()
 @Component({
@@ -15,21 +16,21 @@ import { Exercicio, ExercicioApi, LoopBackFilter } from '../../shared/sdk';
 })
 export class ExercicioUltimasExecucoesPage extends ExercicioUltimasExecucoesPageBase {
 
+
+	constructor(public navCtrl: NavController, protected srv: ExercicioApi) {
+    super(navCtrl,srv);
+	}
+
+  protected getPageEdicao(): Page {
+    throw new Error("Method not implemented.");
+  }
+
 	protected getFiltro():LoopBackFilter {
     	return {};
 	}
 
 
 
-  ionViewWillEnter() {
-    console.log('ionViewWillEnter ExercicioUltimasExecucoesPage');
-    this.carregaPrototipo();
-  }
-
-  ionViewDidLoad() {
-  	console.log('ionViewDidLoad ExercicioUltimasExecucoesPage');
-  }
-  
  
 
   

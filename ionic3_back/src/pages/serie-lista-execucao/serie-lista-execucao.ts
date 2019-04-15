@@ -7,6 +7,7 @@ import { Screenshot } from '@ionic-native/screenshot';
 import { SerieListaExecucaoPageBase } from './serie-lista-execucao-base';
 
 import { DiaTreino, DiaTreinoApi, LoopBackFilter } from '../../shared/sdk';
+import { Page } from 'ionic-angular/navigation/nav-util';
 
 @IonicPage()
 @Component({
@@ -16,15 +17,22 @@ import { DiaTreino, DiaTreinoApi, LoopBackFilter } from '../../shared/sdk';
 export class SerieListaExecucaoPage extends SerieListaExecucaoPageBase {
 
 
+  constructor(public navCtrl: NavController, protected srv: DiaTreinoApi) {
+    super(navCtrl,srv);
+	}
+  
+  protected getPageEdicao(): Page {
+    throw new Error("Method not implemented.");
+  }
+
+
   protected getFiltro(): LoopBackFilter {
     return {};
   }
 
 
 
-  constructor(protected srv: DiaTreinoApi) {
-    super(srv);
-  }
+  
 
 
 

@@ -27,14 +27,9 @@ export class ListaExercicioPage extends ListaExercicioPageBase {
   }
 
   constructor(public navCtrl: NavController, protected srv: ExercicioApi) {
-    super(srv);
+    super(navCtrl, srv);
   }
 
-  alterar(item: Exercicio) {
-    this.navCtrl.push(this.getPageEdicao(), {
-      item: item
-    });
-  }
 
 
 

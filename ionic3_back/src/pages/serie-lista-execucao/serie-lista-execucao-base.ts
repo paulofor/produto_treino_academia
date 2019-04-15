@@ -28,9 +28,13 @@ export abstract class SerieListaExecucaoPageBase {
   			})
   	}
   
-	protected alterar(item: Exercicio) {
+	protected alterar(item: DiaTreino) {
 		this.navCtrl.push(this.getPageEdicao(), {
       		item: item
 		});
   	}
+  	
+  	protected novo() {
+		this.navCtrl.push(this.getPageEdicao());
+	}
 }
