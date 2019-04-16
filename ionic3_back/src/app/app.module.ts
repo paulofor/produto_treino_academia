@@ -16,6 +16,7 @@ import { ExercicioGraficoExecucaoPage } from '../pages/exercicio-grafico-execuca
 import { ExercicioUltimasExecucoesPage } from '../pages/exercicio-ultimas-execucoes/exercicio-ultimas-execucoes';
 import { ExercicioCadastroPage } from '../pages/exercicio-cadastro/exercicio-cadastro';
 import { ListaExercicioPage } from '../pages/lista-exercicio/lista-exercicio';
+import { ListaSerieTreinoPage } from '../pages/lista-serie-treino/lista-serie-treino';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -48,6 +49,8 @@ import { UsuarioApi } from '../shared/sdk';
 	
     ListaExercicioPage,
 	
+    ListaSerieTreinoPage,
+	
   ],
   imports: [
     BrowserModule,
@@ -73,6 +76,8 @@ import { UsuarioApi } from '../shared/sdk';
     ExercicioCadastroPage,
 	
     ListaExercicioPage,
+	
+    ListaSerieTreinoPage,
 	
   ],
   providers: [

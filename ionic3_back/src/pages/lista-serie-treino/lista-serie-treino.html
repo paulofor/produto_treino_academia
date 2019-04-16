@@ -1,0 +1,21 @@
+
+
+<ion-header>
+  <ion-navbar color="titulo">
+    <ion-title>ListaSerieTreinoPage</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="quadroBase">
+  <ng-container *ngIf="listaItem">
+    <ion-list>
+      <ion-item *ngFor="let item of listaItem">
+        <h2>{{item.nome}}</h2>
+        <button ion-button clear item-end (click)="alterar(item)">alterar</button>
+      </ion-item>
+    </ion-list>
+    <ion-fab right bottom>
+      <button ion-fab mini (click)="novo()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+  </ng-container>
+</ion-content>

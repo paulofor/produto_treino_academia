@@ -16,6 +16,7 @@ import { SERIETREINO } from '../../../../dados/serieTreino';
 //import { of } from 'rxjs';
 //Versao Ionic
 import { of } from 'rxjs/observable/of';
+import {SERIETREINO_LISTASERIETREINOPAGE} from  '../../../../dados/serieTreino';
 /**
  * Api services for the `Aplicacao` model.
  */
@@ -96,5 +97,8 @@ export class SerieTreinoApi extends BaseLoopBackApi {
     return of(SERIETREINO[filter.where.id]);
   }
 
+	getListaSerieTreinoPageLoad(filter: LoopBackFilter = {}) : Observable<SerieTreino> {
+		return of (SERIETREINO_LISTASERIETREINOPAGE);
+	}
   
 }
