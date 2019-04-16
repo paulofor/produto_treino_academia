@@ -13,6 +13,7 @@ import { ExercicioUltimasExecucoesPage } from '../pages/exercicio-ultimas-execuc
 import { ExercicioCadastroPage } from '../pages/exercicio-cadastro/exercicio-cadastro';
 import { ListaExercicioPage } from '../pages/lista-exercicio/lista-exercicio';
 import { ListaSerieTreinoPage } from '../pages/lista-serie-treino/lista-serie-treino';
+import { EditaItemSeriePage } from '../pages/edita-item-serie/edita-item-serie';
 
 
 @Component({
@@ -31,21 +32,17 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
 	
-      { title: 'SerieListaExecucao' , component: SerieListaExecucaoPage},
+      { title: 'SerieListaExecu' , component: SerieListaExecucaoPage},
 	
-      { title: 'SerieEditaExecucao' , component: SerieEditaExecucaoPage},
+      { title: 'SerieEditaExecu' , component: SerieEditaExecucaoPage},
 	
-      { title: 'CadastraItemSerie' , component: CadastraItemSeriePage},
+      { title: 'ExercicioGrafic' , component: ExercicioGraficoExecucaoPage},
 	
-      { title: 'ExercicioGraficoExecucao' , component: ExercicioGraficoExecucaoPage},
+      { title: 'ExercicioUltima' , component: ExercicioUltimasExecucoesPage},
 	
-      { title: 'ExercicioUltimasExecucoes' , component: ExercicioUltimasExecucoesPage},
+      { title: 'Exercicios*' , component: ListaExercicioPage},
 	
-      { title: 'ExercicioCadastro' , component: ExercicioCadastroPage},
-	
-      { title: 'ListaExercicio' , component: ListaExercicioPage},
-	
-      { title: 'ListaSerieTreino' , component: ListaSerieTreinoPage},
+      { title: 'Series*' , component: ListaSerieTreinoPage},
 	
      ];
 

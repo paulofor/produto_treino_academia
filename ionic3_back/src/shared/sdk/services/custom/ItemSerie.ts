@@ -18,6 +18,7 @@ import { ITEMSERIE } from '../../../../dados/itemSerie';
 import { of } from 'rxjs/observable/of';
 import {ITEMSERIE_SERIEEDITAEXECUCAOPAGE} from  '../../../../dados/itemSerie';
 import {ITEMSERIE_CADASTRAITEMSERIEPAGE} from  '../../../../dados/itemSerie';
+import {ITEMSERIE_EDITAITEMSERIEPAGE} from  '../../../../dados/itemSerie';
 /**
  * Api services for the `Aplicacao` model.
  */
@@ -103,6 +104,9 @@ export class ItemSerieApi extends BaseLoopBackApi {
 	}
 	getCadastraItemSeriePageLoad(filter: LoopBackFilter = {}) : Observable<ItemSerie> {
 		return of (ITEMSERIE_CADASTRAITEMSERIEPAGE);
+	}
+	getEditaItemSeriePageLoad(filter: LoopBackFilter = {}) : Observable<ItemSerie> {
+		return of (ITEMSERIE_EDITAITEMSERIEPAGE);
 	}
   
 }

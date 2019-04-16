@@ -1,28 +1,21 @@
 
-<ion-header >
+
+<ion-header>
   <ion-navbar color="titulo">
-    <ion-title (click)="testaFoto()">CadastraItemSeriePage</ion-title>
+    <ion-title>CadastraItemSeriePage</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="quadroBase">
- <ion-card>
-    <form>
-    
-      <ion-item>
-        <ion-label floating>Grupo Muscular</ion-label>
-        <ion-select>
-          <ion-option value="f">Peitoral</ion-option>
-          <ion-option value="m">Male</ion-option>
-        </ion-select>
+  <ng-container *ngIf="listaItem">
+    <ion-list>
+      <ion-item *ngFor="let item of listaItem">
+        <h2>{{item.nome}}</h2>
+        <button ion-button clear item-end (click)="alterar(item)">alterar</button>
       </ion-item>
-     
-      <ion-item>
-        <ion-label floating>Carga</ion-label>
-        <ion-input type="text"></ion-input>
-      </ion-item>
-
-      <button ion-button type="submit" block>Adicionar</button>
-    </form>
-  </ion-card>
+    </ion-list>
+    <ion-fab right bottom>
+      <button ion-fab mini (click)="novo()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+  </ng-container>
 </ion-content>

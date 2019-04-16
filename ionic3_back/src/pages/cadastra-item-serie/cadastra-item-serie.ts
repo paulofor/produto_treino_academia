@@ -1,40 +1,29 @@
-import { Component } from '@angular/core';
-import { IonicPage, ModalController, NavController } from 'ionic-angular';
-import { Screenshot } from '@ionic-native/screenshot';
 
-import { ItemSerie, ItemSerieApi } from '../../shared/sdk';
+import { Component } from '@angular/core';
+import { IonicPage, NavController } from 'ionic-angular';
+import { Page } from 'ionic-angular/navigation/nav-util';
+import { CadastraItemSeriePageBase } from './cadastra-item-serie-base';
+import { ItemSerieApi, LoopBackFilter } from '../../shared/sdk';
+
 
 @IonicPage()
 @Component({
   selector: 'page-cadastra-item-serie',
   templateUrl: 'cadastra-item-serie.html'
 })
-export class CadastraItemSeriePage {
-  item: ItemSerie;
+export class CadastraItemSeriePage extends CadastraItemSeriePageBase {
 
-  constructor(public navCtrl: NavController, public srv: ItemSerieApi, 
-  				private screenshot: Screenshot, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, protected srv: ItemSerieApi) {
+    super(navCtrl, srv);
   }
 
-  ionViewWillEnter() {
-    console.log('ionViewWillEnter CadastraItemSeriePage');
-    this.carregaItem();
+
+  protected getPageEdicao(): Page {
+    throw new Error("CadastraItemSeriePage.getPageEdicao() nao implementado.");
   }
 
-  ionViewDidLoad() {
-  	console.log('ionViewDidLoad CadastraItemSeriePage');
-  }
-  
-  carregaItem() {
-    this.srv.obtemPrimeiro()
-      .subscribe((result: ItemSerie) => {
-        console.log('Result', JSON.stringify(result));
-        this.item = result;
-      });
-  }
-
-  testaFoto() {
-    this.screenshot.save('jpg', 100, 'CadastraItemSeriePage');
+  protected getFiltro(): LoopBackFilter {
+    return {};
   }
   
 }

@@ -19,7 +19,7 @@ export class ListaSerieTreinoPage extends ListaSerieTreinoPageBase {
 
 
   protected getPageEdicao(): Page {
-    throw new Error("Method not implemented.");
+    throw new Error("ListaSerieTreinoPage.getPageEdicao() nao implementado.");
   }
 
   protected getFiltro(): LoopBackFilter {
