@@ -96,5 +96,6 @@ export class GrupoMuscularApi extends BaseLoopBackApi {
     return of(GRUPOMUSCULAR[filter.where.id]);
   }
 
+
   
 }

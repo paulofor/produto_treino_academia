@@ -100,5 +100,6 @@ export class SerieTreinoApi extends BaseLoopBackApi {
 	getListaSerieTreinoPageLoad(filter: LoopBackFilter = {}) : Observable<SerieTreino> {
 		return of (SERIETREINO_LISTASERIETREINOPAGE);
 	}
+
   
 }

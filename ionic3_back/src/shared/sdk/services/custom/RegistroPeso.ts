@@ -96,5 +96,6 @@ export class RegistroPesoApi extends BaseLoopBackApi {
     return of(REGISTROPESO[filter.where.id]);
   }
 
+
   
 }

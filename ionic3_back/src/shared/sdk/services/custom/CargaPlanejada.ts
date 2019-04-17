@@ -96,5 +96,6 @@ export class CargaPlanejadaApi extends BaseLoopBackApi {
     return of(CARGAPLANEJADA[filter.where.id]);
   }
 
+
   
 }

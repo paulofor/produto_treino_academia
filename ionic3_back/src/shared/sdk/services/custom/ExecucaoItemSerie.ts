@@ -96,5 +96,6 @@ export class ExecucaoItemSerieApi extends BaseLoopBackApi {
     return of(EXECUCAOITEMSERIE[filter.where.id]);
   }
 
+
   
 }

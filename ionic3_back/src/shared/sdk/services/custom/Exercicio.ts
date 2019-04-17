@@ -112,5 +112,20 @@ export class ExercicioApi extends BaseLoopBackApi {
 	getListaExercicioPageLoad(filter: LoopBackFilter = {}) : Observable<Exercicio> {
 		return of (EXERCICIO_LISTAEXERCICIOPAGE);
 	}
+
+	submitExercicioCadastroPage(item : Exercicio , customHeaders?: Function) : Observable<Exercicio> {
+		let _method: string = "POST";
+		let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    		"/Exercicio/:id/projetoCanvasMySqls/";
+    	let _routeParams: any = {
+      		id: 0,
+    	};
+    	let _postBody: any = {
+      		data: item
+    	};
+    	let _urlParams: any = {};
+    	let result = this.request(_method, _url, _routeParams, _urlParams, _postBody, null, customHeaders);
+    	return result;
+	}
   
 }

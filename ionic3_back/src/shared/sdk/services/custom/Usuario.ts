@@ -96,5 +96,6 @@ export class UsuarioApi extends BaseLoopBackApi {
     return of(USUARIO[filter.where.id]);
   }
 
+
   
 }

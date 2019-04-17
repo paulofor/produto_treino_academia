@@ -5,3 +5,7 @@ export const  DIATREINO : DiaTreino[] = [
 ]
 
 export const DIATREINO_SERIELISTAEXECUCAOPAGE : DiaTreino = {}
+
+export const DIATREINO_EXECUTATREINOPAGE : DiaTreino = {}
+
+

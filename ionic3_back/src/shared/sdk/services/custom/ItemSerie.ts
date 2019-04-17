@@ -19,6 +19,7 @@ import { of } from 'rxjs/observable/of';
 import {ITEMSERIE_SERIEEDITAEXECUCAOPAGE} from  '../../../../dados/itemSerie';
 import {ITEMSERIE_CADASTRAITEMSERIEPAGE} from  '../../../../dados/itemSerie';
 import {ITEMSERIE_EDITAITEMSERIEPAGE} from  '../../../../dados/itemSerie';
+import {ITEMSERIE_CRIASERIEPAGE} from  '../../../../dados/itemSerie';
 /**
  * Api services for the `Aplicacao` model.
  */
@@ -107,6 +108,38 @@ export class ItemSerieApi extends BaseLoopBackApi {
 	}
 	getEditaItemSeriePageLoad(filter: LoopBackFilter = {}) : Observable<ItemSerie> {
 		return of (ITEMSERIE_EDITAITEMSERIEPAGE);
+	}
+	getCriaSeriePageLoad(filter: LoopBackFilter = {}) : Observable<ItemSerie> {
+		return of (ITEMSERIE_CRIASERIEPAGE);
+	}
+
+	submitEditaItemSeriePage(item : ItemSerie , customHeaders?: Function) : Observable<ItemSerie> {
+		let _method: string = "POST";
+		let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    		"/ItemSerie/:id/projetoCanvasMySqls/";
+    	let _routeParams: any = {
+      		id: 0,
+    	};
+    	let _postBody: any = {
+      		data: item
+    	};
+    	let _urlParams: any = {};
+    	let result = this.request(_method, _url, _routeParams, _urlParams, _postBody, null, customHeaders);
+    	return result;
+	}
+	submitCriaSeriePage(item : ItemSerie , customHeaders?: Function) : Observable<ItemSerie> {
+		let _method: string = "POST";
+		let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    		"/ItemSerie/:id/projetoCanvasMySqls/";
+    	let _routeParams: any = {
+      		id: 0,
+    	};
+    	let _postBody: any = {
+      		data: item
+    	};
+    	let _urlParams: any = {};
+    	let result = this.request(_method, _url, _routeParams, _urlParams, _postBody, null, customHeaders);
+    	return result;
 	}
   
 }

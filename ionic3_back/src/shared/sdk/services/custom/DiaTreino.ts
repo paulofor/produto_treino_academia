@@ -17,6 +17,7 @@ import { DIATREINO } from '../../../../dados/diaTreino';
 //Versao Ionic
 import { of } from 'rxjs/observable/of';
 import {DIATREINO_SERIELISTAEXECUCAOPAGE} from  '../../../../dados/diaTreino';
+import {DIATREINO_EXECUTATREINOPAGE} from  '../../../../dados/diaTreino';
 /**
  * Api services for the `Aplicacao` model.
  */
@@ -100,5 +101,9 @@ export class DiaTreinoApi extends BaseLoopBackApi {
 	getSerieListaExecucaoPageLoad(filter: LoopBackFilter = {}) : Observable<DiaTreino> {
 		return of (DIATREINO_SERIELISTAEXECUCAOPAGE);
 	}
+	getExecutaTreinoPageLoad(filter: LoopBackFilter = {}) : Observable<DiaTreino> {
+		return of (DIATREINO_EXECUTATREINOPAGE);
+	}
+
   
 }
