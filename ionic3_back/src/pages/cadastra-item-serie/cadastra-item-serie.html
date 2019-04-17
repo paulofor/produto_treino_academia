@@ -2,7 +2,7 @@
 
 <ion-header>
   <ion-navbar color="titulo">
-    <ion-title>CadastraItemSeriePage</ion-title>
+    <ion-title>Série</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -14,8 +14,32 @@
         <button ion-button clear item-end (click)="alterar(item)">alterar</button>
       </ion-item>
     </ion-list>
-    <ion-fab right bottom>
-      <button ion-fab mini (click)="novo()"><ion-icon name="add"></ion-icon></button>
-    </ion-fab>
+
   </ng-container>
+
+  <ion-card *ngIf="listaExercicio">
+    <form>
+      <ion-item>
+        <ion-label floating>Escolha Exercício</ion-label>
+        <ion-select>
+          <ion-option *ngFor="let item of listaExercicio" value="{{item.id}}">{{item.titulo}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-list-header>
+        Header
+      </ion-list-header>
+      <ion-item>
+        <ion-label floating>Carga</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label floating>Quantidade</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      
+    </form>
+   
+  </ion-card>
 </ion-content>

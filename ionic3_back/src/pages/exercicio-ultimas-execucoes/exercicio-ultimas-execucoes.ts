@@ -16,14 +16,16 @@ import { Page } from 'ionic-angular/navigation/nav-util';
 })
 export class ExercicioUltimasExecucoesPage extends ExercicioUltimasExecucoesPageBase {
 
+	protected inicializacao() {
+		
+	}
+
 
 	constructor(public navCtrl: NavController, protected srv: ExercicioApi) {
     super(navCtrl,srv);
 	}
 
-  protected getPageEdicao(): Page {
-    throw new Error("Method not implemented.");
-  }
+
 
 	protected getFiltro():LoopBackFilter {
     	return {};

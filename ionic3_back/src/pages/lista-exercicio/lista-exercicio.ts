@@ -17,24 +17,21 @@ import { ExercicioCadastroPage } from '../exercicio-cadastro/exercicio-cadastro'
 })
 export class ListaExercicioPage extends ListaExercicioPageBase {
 
+  protected inicializacao() {
+  }
+
 
 
   protected getFiltro() {
     return {};
   }
-  protected getPageEdicao(): Page {
-    return ExercicioCadastroPage;
-  }
+
 
   constructor(public navCtrl: NavController, protected srv: ExercicioApi) {
     super(navCtrl,srv);
   }
 
-  alterar(item: Exercicio) {
-    this.navCtrl.push(this.getPageEdicao(), {
-      item: item
-    });
-  }
+
 
 
 

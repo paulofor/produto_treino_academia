@@ -3,20 +3,28 @@ import { Exercicio, ExercicioApi } from '../../shared/sdk';
 import { LoopBackFilter } from '../../shared/sdk';
 import { NavController } from 'ionic-angular';
 import { Page } from 'ionic-angular/umd/navigation/nav-util';
+import { ExercicioCadastroPage } from '../exercicio-cadastro/exercicio-cadastro';
+
 
 export abstract class ListaExercicioPageBase {
 
 	protected listaItem: Exercicio[];
-	//protected abstract inicializacao();
+	protected abstract inicializacao();
 	protected abstract getFiltro(): LoopBackFilter;
-	protected abstract getPageEdicao(): Page;
+	
+	 
+	getPageEdicao(): Page {
+		
+    	return ExercicioCadastroPage;
+    	
+  	}
 
 	constructor(public navCtrl: NavController, protected srv: ExercicioApi) {
 	}
 
 	ionViewWillEnter() {
     	console.log('ionViewWillEnter ListaExercicioPage');
-    	//this.inicializacao();
+    	this.inicializacao();
     	this.carregaLista();
   	}
   	

@@ -16,14 +16,14 @@ import { Page } from 'ionic-angular/navigation/nav-util';
 })
 export class SerieListaExecucaoPage extends SerieListaExecucaoPageBase {
 
+  protected inicializacao() {
+  }
+
 
   constructor(public navCtrl: NavController, protected srv: DiaTreinoApi) {
     super(navCtrl,srv);
 	}
   
-  protected getPageEdicao(): Page {
-    throw new Error("Method not implemented.");
-  }
 
 
   protected getFiltro(): LoopBackFilter {

@@ -12,15 +12,14 @@ import { SerieTreinoApi, LoopBackFilter } from '../../shared/sdk';
   templateUrl: 'lista-serie-treino.html'
 })
 export class ListaSerieTreinoPage extends ListaSerieTreinoPageBase {
+  protected inicializacao() {
+   
+  }
 
   constructor(public navCtrl: NavController, protected srv: SerieTreinoApi) {
     super(navCtrl, srv);
   }
 
-
-  protected getPageEdicao(): Page {
-    throw new Error("ListaSerieTreinoPage.getPageEdicao() nao implementado.");
-  }
 
   protected getFiltro(): LoopBackFilter {
     return {};
