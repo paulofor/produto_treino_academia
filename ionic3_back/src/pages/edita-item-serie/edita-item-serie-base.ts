@@ -21,8 +21,9 @@ export abstract class EditaItemSeriePageBase {
 
   private inicializaItem() {
 	this.item = this.navParams.get('item');
-	console.log('Item: ', this.item);
+	console.log('EditaItemSeriePageBase:ItemParametro: ', this.item);
 	if (!this.item) this.item = this.criaItem();
+	console.log('EditaItemSeriePageBase:ItemCriado: ', this.item);
   }
 
 
@@ -74,6 +75,15 @@ export abstract class EditaItemSeriePageBase {
     	this.srv.submitEditaItemSeriePage(this.item)
       		.subscribe((resultado) => {
         		console.log('Resultado-SubmitEditaItemSeriePage: ' , resultado);
+				this.navCtrl.pop();
+      	})
+	}
+	
+	protected submit() {
+		console.log('EditaItemSeriePageBase:Submit-Item:' , this.item);
+    	this.srv.submitEditaItemSeriePage(this.item)
+      		.subscribe((resultado) => {
+        		console.log('EditaItemSeriePageBase:Submit-Result: ' , resultado);
 				this.navCtrl.pop();
       	})
 	}

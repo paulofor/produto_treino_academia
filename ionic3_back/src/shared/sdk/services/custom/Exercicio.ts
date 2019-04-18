@@ -113,15 +113,14 @@ export class ExercicioApi extends BaseLoopBackApi {
 		return of (EXERCICIO_LISTAEXERCICIOPAGE);
 	}
 
-	submitExercicioCadastroPage(item : Exercicio , customHeaders?: Function) : Observable<Exercicio> {
+	public submitExercicioCadastroPage(item : any , customHeaders?: Function) : Observable<Exercicio> {
 		let _method: string = "POST";
 		let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     		"/TreinoAcademia_Exercicios/submitExercicioCadastroPage";
     	let _routeParams: any = {};
-    	let _postBody: any = {
-      		data: item
-    	};
+    	let _postBody: any = {};
     	let _urlParams: any = {};
+    	if (typeof item !== 'undefined' && item !== null) _urlParams.item = item;
     	let result = this.request(_method, _url, _routeParams, _urlParams, _postBody, null, customHeaders);
     	return result;
 	}

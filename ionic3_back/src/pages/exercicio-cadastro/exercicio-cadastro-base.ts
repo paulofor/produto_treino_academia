@@ -23,8 +23,9 @@ export abstract class ExercicioCadastroPageBase {
 
   private inicializaItem() {
 	this.item = this.navParams.get('item');
-	console.log('Item: ', this.item);
+	console.log('ExercicioCadastroPageBase:ItemParametro: ', this.item);
 	if (!this.item) this.item = this.criaItem();
+	console.log('ExercicioCadastroPageBase:ItemCriado: ', this.item);
   }
 
 
@@ -93,6 +94,15 @@ export abstract class ExercicioCadastroPageBase {
     	this.srv.submitExercicioCadastroPage(this.item)
       		.subscribe((resultado) => {
         		console.log('Resultado-SubmitExercicioCadastroPage: ' , resultado);
+				this.navCtrl.pop();
+      	})
+	}
+	
+	protected submit() {
+		console.log('ExercicioCadastroPageBase:Submit-Item:' , this.item);
+    	this.srv.submitExercicioCadastroPage(this.item)
+      		.subscribe((resultado) => {
+        		console.log('ExercicioCadastroPageBase:Submit-Result: ' , resultado);
 				this.navCtrl.pop();
       	})
 	}

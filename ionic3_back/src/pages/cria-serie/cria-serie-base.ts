@@ -21,8 +21,9 @@ export abstract class CriaSeriePageBase {
 
   private inicializaItem() {
 	this.item = this.navParams.get('item');
-	console.log('Item: ', this.item);
+	console.log('CriaSeriePageBase:ItemParametro: ', this.item);
 	if (!this.item) this.item = this.criaItem();
+	console.log('CriaSeriePageBase:ItemCriado: ', this.item);
   }
 
 
@@ -74,6 +75,15 @@ export abstract class CriaSeriePageBase {
     	this.srv.submitCriaSeriePage(this.item)
       		.subscribe((resultado) => {
         		console.log('Resultado-SubmitCriaSeriePage: ' , resultado);
+				this.navCtrl.pop();
+      	})
+	}
+	
+	protected submit() {
+		console.log('CriaSeriePageBase:Submit-Item:' , this.item);
+    	this.srv.submitCriaSeriePage(this.item)
+      		.subscribe((resultado) => {
+        		console.log('CriaSeriePageBase:Submit-Result: ' , resultado);
 				this.navCtrl.pop();
       	})
 	}

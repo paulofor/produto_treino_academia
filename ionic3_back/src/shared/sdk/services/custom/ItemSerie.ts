@@ -113,27 +113,25 @@ export class ItemSerieApi extends BaseLoopBackApi {
 		return of (ITEMSERIE_CRIASERIEPAGE);
 	}
 
-	submitEditaItemSeriePage(item : ItemSerie , customHeaders?: Function) : Observable<ItemSerie> {
+	public submitEditaItemSeriePage(item : any , customHeaders?: Function) : Observable<ItemSerie> {
 		let _method: string = "POST";
 		let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     		"/TreinoAcademia_ItemSeries/submitEditaItemSeriePage";
     	let _routeParams: any = {};
-    	let _postBody: any = {
-      		data: item
-    	};
+    	let _postBody: any = {};
     	let _urlParams: any = {};
+    	if (typeof item !== 'undefined' && item !== null) _urlParams.item = item;
     	let result = this.request(_method, _url, _routeParams, _urlParams, _postBody, null, customHeaders);
     	return result;
 	}
-	submitCriaSeriePage(item : ItemSerie , customHeaders?: Function) : Observable<ItemSerie> {
+	public submitCriaSeriePage(item : any , customHeaders?: Function) : Observable<ItemSerie> {
 		let _method: string = "POST";
 		let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
     		"/TreinoAcademia_ItemSeries/submitCriaSeriePage";
     	let _routeParams: any = {};
-    	let _postBody: any = {
-      		data: item
-    	};
+    	let _postBody: any = {};
     	let _urlParams: any = {};
+    	if (typeof item !== 'undefined' && item !== null) _urlParams.item = item;
     	let result = this.request(_method, _url, _routeParams, _urlParams, _postBody, null, customHeaders);
     	return result;
 	}
