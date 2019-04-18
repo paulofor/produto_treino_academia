@@ -3,11 +3,12 @@ import { SerieTreino, SerieTreinoApi } from '../../shared/sdk';
 import { Exercicio, ExercicioApi } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
 
-export abstract class EditaItemSeriePagePageBase {
+export abstract class EditaItemSeriePageBase {
   
   protected item: ItemSerie;
   
-  protected abstract inicializacao();
+  protected abstract inicializacaoComplementos();
+  protected abstract criaItem() : ItemSerie;
 
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
@@ -21,13 +22,13 @@ export abstract class EditaItemSeriePagePageBase {
   private inicializaItem() {
 	this.item = this.navParams.get('item');
 	console.log('Item: ', this.item);
-	if (!this.item) this.item = new ItemSerie();
+	if (!this.item) this.item = this.criaItem();
   }
 
 
   ionViewWillEnter() {
     console.log('ionViewWillEnter EditaItemSeriePage');
-    this.inicializacao();
+    this.inicializacaoComplementos();
     this.inicializaItem();
   }
 
@@ -70,10 +71,9 @@ export abstract class EditaItemSeriePagePageBase {
 	}
 
 	protected submit() {
-    	this.srv.upsert(this.item)
+    	this.srv.submitEditaItemSeriePage(this.item)
       		.subscribe((resultado) => {
-        		console.log('Resultado-Submit: ' , resultado);
-				console.log('navCtrl:' , this.navCtrl);
+        		console.log('Resultado-SubmitEditaItemSeriePage: ' , resultado);
 				this.navCtrl.pop();
       	})
 	}

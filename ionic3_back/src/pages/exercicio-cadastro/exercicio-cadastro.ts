@@ -3,19 +3,25 @@ import { IonicPage, ModalController, NavController, NavParams } from 'ionic-angu
 import { Screenshot } from '@ionic-native/screenshot';
 
 import { Exercicio, ExercicioApi, GrupoMuscularApi, DiaTreinoApi, UsuarioApi } from '../../shared/sdk';
-import { ExercicioCadastroPagePageBase } from './exercicio-cadastro-base';
+import { ExercicioCadastroPageBase } from './exercicio-cadastro-base';
 
 @IonicPage()
 @Component({
   selector: 'page-exercicio-cadastro',
   templateUrl: 'exercicio-cadastro.html'
 })
-export class ExercicioCadastroPage extends ExercicioCadastroPagePageBase {
+export class ExercicioCadastroPage extends ExercicioCadastroPageBase {
 
 
-  protected inicializacao() {
+  protected inicializacaoComplementos() {
     this.carregaGrupoMuscular();
   }
+  protected criaItem(): Exercicio {
+    return new Exercicio();
+  }
+
+
+ 
 
 
   constructor(

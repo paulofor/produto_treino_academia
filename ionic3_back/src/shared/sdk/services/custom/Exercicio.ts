@@ -116,10 +116,8 @@ export class ExercicioApi extends BaseLoopBackApi {
 	submitExercicioCadastroPage(item : Exercicio , customHeaders?: Function) : Observable<Exercicio> {
 		let _method: string = "POST";
 		let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
-    		"/Exercicio/:id/projetoCanvasMySqls/";
-    	let _routeParams: any = {
-      		id: 0,
-    	};
+    		"/TreinoAcademia_Exercicios/submitExercicioCadastroPage";
+    	let _routeParams: any = {};
     	let _postBody: any = {
       		data: item
     	};

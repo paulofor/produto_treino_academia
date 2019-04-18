@@ -4,11 +4,12 @@ import { DiaTreino, DiaTreinoApi } from '../../shared/sdk';
 import { Usuario, UsuarioApi } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
 
-export abstract class ExercicioCadastroPagePageBase {
+export abstract class ExercicioCadastroPageBase {
   
   protected item: Exercicio;
   
-  protected abstract inicializacao();
+  protected abstract inicializacaoComplementos();
+  protected abstract criaItem() : Exercicio;
 
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
@@ -23,13 +24,13 @@ export abstract class ExercicioCadastroPagePageBase {
   private inicializaItem() {
 	this.item = this.navParams.get('item');
 	console.log('Item: ', this.item);
-	if (!this.item) this.item = new Exercicio();
+	if (!this.item) this.item = this.criaItem();
   }
 
 
   ionViewWillEnter() {
     console.log('ionViewWillEnter ExercicioCadastroPage');
-    this.inicializacao();
+    this.inicializacaoComplementos();
     this.inicializaItem();
   }
 
@@ -89,10 +90,9 @@ export abstract class ExercicioCadastroPagePageBase {
 	}
 
 	protected submit() {
-    	this.srv.upsert(this.item)
+    	this.srv.submitExercicioCadastroPage(this.item)
       		.subscribe((resultado) => {
-        		console.log('Resultado-Submit: ' , resultado);
-				console.log('navCtrl:' , this.navCtrl);
+        		console.log('Resultado-SubmitExercicioCadastroPage: ' , resultado);
 				this.navCtrl.pop();
       	})
 	}

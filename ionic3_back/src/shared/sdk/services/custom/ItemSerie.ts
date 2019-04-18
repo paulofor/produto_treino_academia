@@ -116,10 +116,8 @@ export class ItemSerieApi extends BaseLoopBackApi {
 	submitEditaItemSeriePage(item : ItemSerie , customHeaders?: Function) : Observable<ItemSerie> {
 		let _method: string = "POST";
 		let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
-    		"/ItemSerie/:id/projetoCanvasMySqls/";
-    	let _routeParams: any = {
-      		id: 0,
-    	};
+    		"/TreinoAcademia_ItemSeries/submitEditaItemSeriePage";
+    	let _routeParams: any = {};
     	let _postBody: any = {
       		data: item
     	};
@@ -130,10 +128,8 @@ export class ItemSerieApi extends BaseLoopBackApi {
 	submitCriaSeriePage(item : ItemSerie , customHeaders?: Function) : Observable<ItemSerie> {
 		let _method: string = "POST";
 		let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
-    		"/ItemSerie/:id/projetoCanvasMySqls/";
-    	let _routeParams: any = {
-      		id: 0,
-    	};
+    		"/TreinoAcademia_ItemSeries/submitCriaSeriePage";
+    	let _routeParams: any = {};
     	let _postBody: any = {
       		data: item
     	};
