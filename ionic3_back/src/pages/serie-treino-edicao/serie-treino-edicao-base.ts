@@ -13,7 +13,9 @@ export abstract class SerieTreinoEdicaoPageBase {
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
 				public srv: SerieTreinoApi) {
-  } 
+	} 
+	
+	mensagemErro: string;
   
   private inicializaItem() {
 	this.item = this.navParams.get('item');
@@ -24,13 +26,13 @@ export abstract class SerieTreinoEdicaoPageBase {
 			console.log('SerieTreinoEdicaoPageBase:Id: ' , id);
 			console.log('Filtro: ' , JSON.stringify(this.filtroLoadId()));
 			this.srv.findById(id, this.filtroLoadId())
-				.subscribe(
-					res => {
-						console.log('SerieTreinoEdicaoPageBase:LoadId: ' , res),
-							(					error: any) => {
-						console.log('SerieTreinoEdicaoPageBase:LoadId(Erro): ' , error)
-					}
-				})
+			.subscribe(
+				result => console.log('result',result), 
+				errmes => {
+					console.log('Erro:' , JSON.stringify(errmes));
+					
+				}
+				);
 		} 
 	}
   }
