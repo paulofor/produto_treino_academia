@@ -9,6 +9,7 @@ export abstract class CriaSeriePageBase {
   
   protected abstract inicializacaoComplementos();
   protected abstract criaItem() : ItemSerie;
+  protected abstract criaItemRel(item:ItemSerie) : ItemSerie;
   protected abstract executaNavegacao(navCtrl: NavController, result: ItemSerie);
   protected abstract filtroLoadId() : LoopBackFilter;
 

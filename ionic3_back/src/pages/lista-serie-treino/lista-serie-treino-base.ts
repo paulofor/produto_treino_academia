@@ -3,7 +3,7 @@ import { SerieTreino, SerieTreinoApi } from '../../shared/sdk';
 import { LoopBackFilter } from '../../shared/sdk';
 import { NavController } from 'ionic-angular';
 import { Page } from 'ionic-angular/umd/navigation/nav-util';
-import { CadastraItemSeriePage } from '../cadastra-item-serie/cadastra-item-serie';
+import { SerieTreinoEdicaoPage } from '../serie-treino-edicao/serie-treino-edicao';
 
 
 export abstract class ListaSerieTreinoPageBase {
@@ -15,7 +15,7 @@ export abstract class ListaSerieTreinoPageBase {
 	 
 	getPageEdicao(): Page {
 		
-    	return CadastraItemSeriePage;
+    	return SerieTreinoEdicaoPage;
     	
   	}
 
@@ -29,9 +29,11 @@ export abstract class ListaSerieTreinoPageBase {
   	}
   	
   	carregaLista() {
+  		console.log('ListaSerieTreinoPageBase:filtro: ' , JSON.stringify(this.getFiltro()));
+		console.log('SerieTreino.find');
   		this.srv.find(this.getFiltro())
   			.subscribe((resultado: SerieTreino[]) => {
-  				console.log('ListaItem:' , resultado);
+  				console.log('ListaSerieTreinoPageBase:LoadLista:' , JSON.stringify(resultado));
   				this.listaItem = resultado;
   			})
   	}
@@ -41,7 +43,11 @@ export abstract class ListaSerieTreinoPageBase {
       		item: item
 		});
   	}
-  	
+  	protected alterarId(item: SerieTreino) {
+		this.navCtrl.push(this.getPageEdicao(), {
+      		id: item.id
+		});
+  	}
   	protected novo() {
 		this.navCtrl.push(this.getPageEdicao());
 	}

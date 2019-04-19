@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController, NavParams } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
 
-import { SerieTreino, SerieTreinoApi, LoopBackFilter } from '../../shared/sdk';
+import { SerieTreino, SerieTreinoApi, LoopBackFilter, ItemSerie } from '../../shared/sdk';
 import { SerieTreinoEdicaoPageBase } from './serie-treino-edicao-base';
+import { CriaSeriePage } from '../cria-serie/cria-serie';
 
 @IonicPage()
 @Component({
@@ -37,7 +38,13 @@ export class SerieTreinoEdicaoPage extends SerieTreinoEdicaoPageBase {
   }
 
 
-
+  novoRelacionado() {
+    var novoRel: ItemSerie = new ItemSerie();
+    novoRel.serieTreinoId = this.item.id;
+    this.navCtrl.push(CriaSeriePage, {
+      itemRel : novoRel
+    })
+  }
 
 
 }

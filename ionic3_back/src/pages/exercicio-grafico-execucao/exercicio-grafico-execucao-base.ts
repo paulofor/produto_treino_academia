@@ -28,7 +28,7 @@ export abstract class ExercicioGraficoExecucaoPageBase {
 					.subscribe(
 						(result: Exercicio) => {
 							this.item = result;
-							console.log('ExercicioGraficoExecucaoPageBase:LoadId: ' , this.item)
+							console.log('ExercicioGraficoExecucaoPageBase.item: ' , JSON.stringify(this.item))
 						},
 						(erro: any) => console.log('ExercicioGraficoExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)

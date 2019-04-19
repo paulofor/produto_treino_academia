@@ -29,9 +29,11 @@ export abstract class ListaExercicioPageBase {
   	}
   	
   	carregaLista() {
+  		console.log('ListaExercicioPageBase:filtro: ' , JSON.stringify(this.getFiltro()));
+		console.log('Exercicio.find');
   		this.srv.find(this.getFiltro())
   			.subscribe((resultado: Exercicio[]) => {
-  				console.log('ListaItem:' , resultado);
+  				console.log('ListaExercicioPageBase:LoadLista:' , JSON.stringify(resultado));
   				this.listaItem = resultado;
   			})
   	}
@@ -41,7 +43,11 @@ export abstract class ListaExercicioPageBase {
       		item: item
 		});
   	}
-  	
+  	protected alterarId(item: Exercicio) {
+		this.navCtrl.push(this.getPageEdicao(), {
+      		id: item.id
+		});
+  	}
   	protected novo() {
 		this.navCtrl.push(this.getPageEdicao());
 	}

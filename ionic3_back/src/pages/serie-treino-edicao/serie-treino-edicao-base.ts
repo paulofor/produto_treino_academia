@@ -28,7 +28,7 @@ export abstract class SerieTreinoEdicaoPageBase {
 					.subscribe(
 						(result: SerieTreino) => {
 							this.item = result;
-							console.log('SerieTreinoEdicaoPageBase:LoadId: ' , this.item)
+							console.log('SerieTreinoEdicaoPageBase.item: ' , JSON.stringify(this.item))
 						},
 						(erro: any) => console.log('SerieTreinoEdicaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)

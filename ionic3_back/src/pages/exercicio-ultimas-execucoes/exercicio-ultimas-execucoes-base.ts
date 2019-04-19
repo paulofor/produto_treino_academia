@@ -28,9 +28,11 @@ export abstract class ExercicioUltimasExecucoesPageBase {
   	}
   	
   	carregaLista() {
+  		console.log('ExercicioUltimasExecucoesPageBase:filtro: ' , JSON.stringify(this.getFiltro()));
+		console.log('Exercicio.find');
   		this.srv.find(this.getFiltro())
   			.subscribe((resultado: Exercicio[]) => {
-  				console.log('ListaItem:' , resultado);
+  				console.log('ExercicioUltimasExecucoesPageBase:LoadLista:' , JSON.stringify(resultado));
   				this.listaItem = resultado;
   			})
   	}
@@ -40,7 +42,11 @@ export abstract class ExercicioUltimasExecucoesPageBase {
       		item: item
 		});
   	}
-  	
+  	protected alterarId(item: Exercicio) {
+		this.navCtrl.push(this.getPageEdicao(), {
+      		id: item.id
+		});
+  	}
   	protected novo() {
 		this.navCtrl.push(this.getPageEdicao());
 	}

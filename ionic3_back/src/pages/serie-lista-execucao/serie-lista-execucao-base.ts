@@ -28,9 +28,11 @@ export abstract class SerieListaExecucaoPageBase {
   	}
   	
   	carregaLista() {
+  		console.log('SerieListaExecucaoPageBase:filtro: ' , JSON.stringify(this.getFiltro()));
+		console.log('DiaTreino.find');
   		this.srv.find(this.getFiltro())
   			.subscribe((resultado: DiaTreino[]) => {
-  				console.log('ListaItem:' , resultado);
+  				console.log('SerieListaExecucaoPageBase:LoadLista:' , JSON.stringify(resultado));
   				this.listaItem = resultado;
   			})
   	}
@@ -40,7 +42,11 @@ export abstract class SerieListaExecucaoPageBase {
       		item: item
 		});
   	}
-  	
+  	protected alterarId(item: DiaTreino) {
+		this.navCtrl.push(this.getPageEdicao(), {
+      		id: item.id
+		});
+  	}
   	protected novo() {
 		this.navCtrl.push(this.getPageEdicao());
 	}

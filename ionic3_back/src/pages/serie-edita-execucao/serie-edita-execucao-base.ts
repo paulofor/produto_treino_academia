@@ -28,7 +28,7 @@ export abstract class SerieEditaExecucaoPageBase {
 					.subscribe(
 						(result: ItemSerie) => {
 							this.item = result;
-							console.log('SerieEditaExecucaoPageBase:LoadId: ' , this.item)
+							console.log('SerieEditaExecucaoPageBase.item: ' , JSON.stringify(this.item))
 						},
 						(erro: any) => console.log('SerieEditaExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)

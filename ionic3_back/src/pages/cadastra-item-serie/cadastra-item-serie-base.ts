@@ -29,9 +29,11 @@ export abstract class CadastraItemSeriePageBase {
   	}
   	
   	carregaLista() {
+  		console.log('CadastraItemSeriePageBase:filtro: ' , JSON.stringify(this.getFiltro()));
+		console.log('ItemSerie.find');
   		this.srv.find(this.getFiltro())
   			.subscribe((resultado: ItemSerie[]) => {
-  				console.log('ListaItem:' , resultado);
+  				console.log('CadastraItemSeriePageBase:LoadLista:' , JSON.stringify(resultado));
   				this.listaItem = resultado;
   			})
   	}
@@ -41,7 +43,11 @@ export abstract class CadastraItemSeriePageBase {
       		item: item
 		});
   	}
-  	
+  	protected alterarId(item: ItemSerie) {
+		this.navCtrl.push(this.getPageEdicao(), {
+      		id: item.id
+		});
+  	}
   	protected novo() {
 		this.navCtrl.push(this.getPageEdicao());
 	}
