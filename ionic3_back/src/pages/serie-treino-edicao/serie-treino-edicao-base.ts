@@ -23,6 +23,7 @@ export abstract class SerieTreinoEdicaoPageBase {
 		if (id) {
 			console.log('SerieTreinoEdicaoPageBase:Id: ' , id);
 			console.log('SerieTreinoEdicaoPageBase:filtro: ' , JSON.stringify(this.filtroLoadId()));
+			console.log('SerieTreino.findById');
 			this.srv.findById(id, this.filtroLoadId())
 					.subscribe(
 						(result: SerieTreino) => {

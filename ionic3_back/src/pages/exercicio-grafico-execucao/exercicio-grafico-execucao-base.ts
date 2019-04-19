@@ -23,6 +23,7 @@ export abstract class ExercicioGraficoExecucaoPageBase {
 		if (id) {
 			console.log('ExercicioGraficoExecucaoPageBase:Id: ' , id);
 			console.log('ExercicioGraficoExecucaoPageBase:filtro: ' , JSON.stringify(this.filtroLoadId()));
+			console.log('Exercicio.findById');
 			this.srv.findById(id, this.filtroLoadId())
 					.subscribe(
 						(result: Exercicio) => {

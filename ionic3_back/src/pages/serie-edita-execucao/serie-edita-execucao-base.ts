@@ -23,6 +23,7 @@ export abstract class SerieEditaExecucaoPageBase {
 		if (id) {
 			console.log('SerieEditaExecucaoPageBase:Id: ' , id);
 			console.log('SerieEditaExecucaoPageBase:filtro: ' , JSON.stringify(this.filtroLoadId()));
+			console.log('ItemSerie.findById');
 			this.srv.findById(id, this.filtroLoadId())
 					.subscribe(
 						(result: ItemSerie) => {
