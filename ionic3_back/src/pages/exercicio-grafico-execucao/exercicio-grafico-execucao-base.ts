@@ -22,18 +22,19 @@ export abstract class ExercicioGraficoExecucaoPageBase {
 		var id = this.navParams.get('id');
 		if (id) {
 			console.log('ExercicioGraficoExecucaoPageBase:Id: ' , id);
+			console.log('ExercicioGraficoExecucaoPageBase:filtro: ' , JSON.stringify(this.filtroLoadId()));
 			this.srv.findById(id, this.filtroLoadId())
-				.subscribe(
-					(result:Exercicio) => {
-						this.item = result;
-						console.log('ExercicioGraficoExecucaoPageBase:LoadId: ' , this.item),
-					(error:any) => {
-						console.log('ExercicioGraficoExecucaoPageBase:LoadId(Erro): ' , error)
-					}
-				})
+					.subscribe(
+						(result: Exercicio) => {
+							this.item = result;
+							console.log('ExercicioGraficoExecucaoPageBase:LoadId: ' , this.item)
+						},
+						(erro: any) => console.log('ExercicioGraficoExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
+					)
+			}
 		} 
-	}
   }
+
   
   ionViewWillEnter() {
     console.log('ionViewWillEnter ExercicioGraficoExecucaoPage');

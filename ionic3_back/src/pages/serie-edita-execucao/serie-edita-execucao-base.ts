@@ -22,18 +22,19 @@ export abstract class SerieEditaExecucaoPageBase {
 		var id = this.navParams.get('id');
 		if (id) {
 			console.log('SerieEditaExecucaoPageBase:Id: ' , id);
+			console.log('SerieEditaExecucaoPageBase:filtro: ' , JSON.stringify(this.filtroLoadId()));
 			this.srv.findById(id, this.filtroLoadId())
-				.subscribe(
-					(result:ItemSerie) => {
-						this.item = result;
-						console.log('SerieEditaExecucaoPageBase:LoadId: ' , this.item),
-					(erro:any) => {
-						console.log('SerieEditaExecucaoPageBase:LoadId(Erro): ' , erro)
-					}
-				})
+					.subscribe(
+						(result: ItemSerie) => {
+							this.item = result;
+							console.log('SerieEditaExecucaoPageBase:LoadId: ' , this.item)
+						},
+						(erro: any) => console.log('SerieEditaExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
+					)
+			}
 		} 
-	}
   }
+
   
   ionViewWillEnter() {
     console.log('ionViewWillEnter SerieEditaExecucaoPage');

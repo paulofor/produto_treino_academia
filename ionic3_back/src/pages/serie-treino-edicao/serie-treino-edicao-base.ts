@@ -13,9 +13,7 @@ export abstract class SerieTreinoEdicaoPageBase {
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
 				public srv: SerieTreinoApi) {
-	} 
-	
-	mensagemErro: string;
+  } 
   
   private inicializaItem() {
 	this.item = this.navParams.get('item');
@@ -24,18 +22,19 @@ export abstract class SerieTreinoEdicaoPageBase {
 		var id = this.navParams.get('id');
 		if (id) {
 			console.log('SerieTreinoEdicaoPageBase:Id: ' , id);
-			console.log('Filtro: ' , JSON.stringify(this.filtroLoadId()));
+			console.log('SerieTreinoEdicaoPageBase:filtro: ' , JSON.stringify(this.filtroLoadId()));
 			this.srv.findById(id, this.filtroLoadId())
-			.subscribe(
-				result => console.log('result',result), 
-				errmes => {
-					console.log('Erro:' , JSON.stringify(errmes));
-					
-				}
-				);
+					.subscribe(
+						(result: SerieTreino) => {
+							this.item = result;
+							console.log('SerieTreinoEdicaoPageBase:LoadId: ' , this.item)
+						},
+						(erro: any) => console.log('SerieTreinoEdicaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
+					)
+			}
 		} 
-	}
   }
+
   
   ionViewWillEnter() {
     console.log('ionViewWillEnter SerieTreinoEdicaoPage');
