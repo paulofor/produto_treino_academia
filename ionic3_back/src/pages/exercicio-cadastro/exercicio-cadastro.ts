@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController, NavParams } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
 
-import { Exercicio, ExercicioApi, GrupoMuscularApi, DiaTreinoApi, UsuarioApi } from '../../shared/sdk';
+import { Exercicio, ExercicioApi, GrupoMuscularApi, DiaTreinoApi, UsuarioApi, LoopBackFilter } from '../../shared/sdk';
 import { ExercicioCadastroPageBase } from './exercicio-cadastro-base';
 
 @IonicPage()
@@ -11,6 +11,14 @@ import { ExercicioCadastroPageBase } from './exercicio-cadastro-base';
   templateUrl: 'exercicio-cadastro.html'
 })
 export class ExercicioCadastroPage extends ExercicioCadastroPageBase {
+  
+
+  protected executaNavegacao(navCtrl: NavController, result: Exercicio) {
+    navCtrl.pop();
+  }
+  protected filtroLoadId(): LoopBackFilter {
+    return {};
+  }
 
 
   protected inicializacaoComplementos() {

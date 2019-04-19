@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController, NavParams, Item } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
 
-import { ItemSerie, ItemSerieApi, Exercicio, ExecucaoItemSerie, CargaPlanejada, GrupoMuscular, GrupoMuscularApi, SerieTreinoApi, ExercicioApi } from '../../shared/sdk';
+import { ItemSerie, ItemSerieApi, Exercicio, ExecucaoItemSerie, CargaPlanejada, GrupoMuscular, GrupoMuscularApi, SerieTreinoApi, ExercicioApi, LoopBackFilter } from '../../shared/sdk';
 import { CriaSeriePageBase } from './cria-serie-base';
+import { SerieTreinoEdicaoPage } from '../serie-treino-edicao/serie-treino-edicao';
 
 @IonicPage()
 @Component({
@@ -11,6 +12,18 @@ import { CriaSeriePageBase } from './cria-serie-base';
   templateUrl: 'cria-serie.html'
 })
 export class CriaSeriePage extends CriaSeriePageBase {
+
+
+  protected filtroLoadId(): LoopBackFilter {
+    return {};
+  }
+
+
+  protected executaNavegacao(navCtrl: NavController, result: ItemSerie) {
+    navCtrl.push(SerieTreinoEdicaoPage, {
+      id: result.serieTreinoId
+    });
+  }
 
 
   protected inicializacaoComplementos() {

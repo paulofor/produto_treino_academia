@@ -16,6 +16,7 @@ import { ListaSerieTreinoPage } from '../pages/lista-serie-treino/lista-serie-tr
 import { EditaItemSeriePage } from '../pages/edita-item-serie/edita-item-serie';
 import { CriaSeriePage } from '../pages/cria-serie/cria-serie';
 import { ExecutaTreinoPage } from '../pages/executa-treino/executa-treino';
+import { SerieTreinoEdicaoPage } from '../pages/serie-treino-edicao/serie-treino-edicao';
 
 
 @Component({

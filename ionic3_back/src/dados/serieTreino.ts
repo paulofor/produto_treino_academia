@@ -5,3 +5,5 @@ export const  SERIETREINO : SerieTreino[] = [
 ]
 
 export const SERIETREINO_LISTASERIETREINOPAGE : SerieTreino = {}
+
+export const SERIETREINO_SERIETREINOEDICAOPAGE : SerieTreino = {}

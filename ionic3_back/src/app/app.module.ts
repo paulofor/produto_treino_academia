@@ -20,6 +20,7 @@ import { ListaSerieTreinoPage } from '../pages/lista-serie-treino/lista-serie-tr
 import { EditaItemSeriePage } from '../pages/edita-item-serie/edita-item-serie';
 import { CriaSeriePage } from '../pages/cria-serie/cria-serie';
 import { ExecutaTreinoPage } from '../pages/executa-treino/executa-treino';
+import { SerieTreinoEdicaoPage } from '../pages/serie-treino-edicao/serie-treino-edicao';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -60,6 +61,8 @@ import { UsuarioApi } from '../shared/sdk';
 	
     ExecutaTreinoPage,
 	
+    SerieTreinoEdicaoPage,
+	
   ],
   imports: [
     BrowserModule,
@@ -93,6 +96,8 @@ import { UsuarioApi } from '../shared/sdk';
     CriaSeriePage,
 	
     ExecutaTreinoPage,
+	
+    SerieTreinoEdicaoPage,
 	
   ],
   providers: [

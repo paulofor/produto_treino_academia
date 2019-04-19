@@ -1,4 +1,4 @@
-import { Exercicio, ExercicioApi } from '../../shared/sdk';
+import { Exercicio, ExercicioApi , LoopBackFilter } from '../../shared/sdk';
 import { GrupoMuscular, GrupoMuscularApi } from '../../shared/sdk';
 import { DiaTreino, DiaTreinoApi } from '../../shared/sdk';
 import { Usuario, UsuarioApi } from '../../shared/sdk';
@@ -10,6 +10,8 @@ export abstract class ExercicioCadastroPageBase {
   
   protected abstract inicializacaoComplementos();
   protected abstract criaItem() : Exercicio;
+  protected abstract executaNavegacao(navCtrl: NavController, result: Exercicio);
+  protected abstract filtroLoadId() : LoopBackFilter;
 
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
@@ -19,22 +21,29 @@ export abstract class ExercicioCadastroPageBase {
 				public srvUsuario : UsuarioApi,
   				) {
   }
-
-
   private inicializaItem() {
 	this.item = this.navParams.get('item');
 	console.log('ExercicioCadastroPageBase:ItemParametro: ', this.item);
-	if (!this.item) this.item = this.criaItem();
-	console.log('ExercicioCadastroPageBase:ItemCriado: ', this.item);
+	if (!this.item) {
+		var id = this.navParams.get('id');
+		if (id) {
+			console.log('ExercicioCadastroPageBase:Id: ' , id);
+			this.srv.findById(id, this.filtroLoadId())
+				.subscribe((result:Exercicio) => {
+					this.item = result;
+					console.log('ExercicioCadastroPageBase:LoadId: ' , this.item);
+				})
+		} else {
+			this.item = this.criaItem();
+			console.log('ExercicioCadastroPageBase:ItemCriado: ', this.item);
+		}
+	}
   }
-
-
   ionViewWillEnter() {
     console.log('ionViewWillEnter ExercicioCadastroPage');
     this.inicializacaoComplementos();
     this.inicializaItem();
   }
-
   ionViewDidLoad() {
   	console.log('ionViewDidLoad ExercicioCadastroPage');
   }
@@ -47,7 +56,6 @@ export abstract class ExercicioCadastroPageBase {
         		this.listaGrupoMuscular = result;
       	})
 	}
-	
 	protected listaGrupoMuscularUsuario : GrupoMuscular[];
 	protected carregaGrupoMuscularUsuario(idUsuario:number){
 		this.srvGrupoMuscular.find({'where' : {'idUsuario' : idUsuario} })
@@ -55,7 +63,6 @@ export abstract class ExercicioCadastroPageBase {
         		this.listaGrupoMuscularUsuario = result;
       	})
 	}
-
 	protected listaDiaTreino : DiaTreino[];
 	protected carregaDiaTreino(){
 		this.srvDiaTreino.find()
@@ -64,7 +71,6 @@ export abstract class ExercicioCadastroPageBase {
         		this.listaDiaTreino = result;
       	})
 	}
-	
 	protected listaDiaTreinoUsuario : DiaTreino[];
 	protected carregaDiaTreinoUsuario(idUsuario:number){
 		this.srvDiaTreino.find({'where' : {'idUsuario' : idUsuario} })
@@ -72,7 +78,6 @@ export abstract class ExercicioCadastroPageBase {
         		this.listaDiaTreinoUsuario = result;
       	})
 	}
-
 	protected listaUsuario : Usuario[];
 	protected carregaUsuario(){
 		this.srvUsuario.find()
@@ -81,7 +86,6 @@ export abstract class ExercicioCadastroPageBase {
         		this.listaUsuario = result;
       	})
 	}
-	
 	protected listaUsuarioUsuario : Usuario[];
 	protected carregaUsuarioUsuario(idUsuario:number){
 		this.srvUsuario.find({'where' : {'idUsuario' : idUsuario} })
@@ -89,15 +93,12 @@ export abstract class ExercicioCadastroPageBase {
         		this.listaUsuarioUsuario = result;
       	})
 	}
-
-
-	
 	protected submit() {
 		console.log('ExercicioCadastroPageBase:Submit-Item:' , this.item);
     	this.srv.submitExercicioCadastroPage(this.item)
-      		.subscribe((resultado) => {
+      		.subscribe((resultado:Exercicio) => {
         		console.log('ExercicioCadastroPageBase:Submit-Result: ' , resultado);
-				this.navCtrl.pop();
+				this.executaNavegacao(this.navCtrl,resultado);
       	})
 	}
 }

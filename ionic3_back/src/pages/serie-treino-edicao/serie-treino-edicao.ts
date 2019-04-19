@@ -1,0 +1,34 @@
+import { Component } from '@angular/core';
+import { IonicPage, ModalController, NavController, NavParams } from 'ionic-angular';
+import { Screenshot } from '@ionic-native/screenshot';
+
+import { SerieTreino, SerieTreinoApi, LoopBackFilter } from '../../shared/sdk';
+import { SerieTreinoEdicaoPageBase } from './serie-treino-edicao-base';
+
+@IonicPage()
+@Component({
+  selector: 'page-serie-treino-edicao',
+  templateUrl: 'serie-treino-edicao.html'
+})
+export class SerieTreinoEdicaoPage extends SerieTreinoEdicaoPageBase {
+
+
+  protected filtroLoadId(): LoopBackFilter {
+    return {
+      'include':
+        { 'relation': 'listaItemSerie', scope: { 'include': 'exercicio' } }
+    };
+  }
+
+
+  constructor(public navParams: NavParams,
+    public navCtrl: NavController,
+    public srv: SerieTreinoApi) {
+    super(navParams, navCtrl, srv);
+  }
+
+
+
+
+
+}
