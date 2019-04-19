@@ -13,10 +13,19 @@ import { SerieTreinoEdicaoPageBase } from './serie-treino-edicao-base';
 export class SerieTreinoEdicaoPage extends SerieTreinoEdicaoPageBase {
 
 
+
+
   protected filtroLoadId(): LoopBackFilter {
     return {
       'include':
-        { 'relation': 'listaItemSerie', scope: { 'include': 'exercicio' } }
+      {
+        'relation': 'listaItemSerie', scope: {
+          'include': [
+            'exercicio',
+            { 'relation': 'listaCargaPlanejada', 'order': 'ordemRepeticao' }
+          ]
+        }
+      }
     };
   }
 
