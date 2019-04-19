@@ -71,13 +71,7 @@ export abstract class CriaSeriePageBase {
       	})
 	}
 
-	protected submit() {
-    	this.srv.submitCriaSeriePage(this.item)
-      		.subscribe((resultado) => {
-        		console.log('Resultado-SubmitCriaSeriePage: ' , resultado);
-				this.navCtrl.pop();
-      	})
-	}
+
 	
 	protected submit() {
 		console.log('CriaSeriePageBase:Submit-Item:' , this.item);

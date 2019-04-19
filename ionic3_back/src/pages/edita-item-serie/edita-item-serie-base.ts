@@ -71,13 +71,7 @@ export abstract class EditaItemSeriePageBase {
       	})
 	}
 
-	protected submit() {
-    	this.srv.submitEditaItemSeriePage(this.item)
-      		.subscribe((resultado) => {
-        		console.log('Resultado-SubmitEditaItemSeriePage: ' , resultado);
-				this.navCtrl.pop();
-      	})
-	}
+
 	
 	protected submit() {
 		console.log('EditaItemSeriePageBase:Submit-Item:' , this.item);

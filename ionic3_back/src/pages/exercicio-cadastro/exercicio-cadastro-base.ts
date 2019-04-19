@@ -90,13 +90,7 @@ export abstract class ExercicioCadastroPageBase {
       	})
 	}
 
-	protected submit() {
-    	this.srv.submitExercicioCadastroPage(this.item)
-      		.subscribe((resultado) => {
-        		console.log('Resultado-SubmitExercicioCadastroPage: ' , resultado);
-				this.navCtrl.pop();
-      	})
-	}
+
 	
 	protected submit() {
 		console.log('ExercicioCadastroPageBase:Submit-Item:' , this.item);
