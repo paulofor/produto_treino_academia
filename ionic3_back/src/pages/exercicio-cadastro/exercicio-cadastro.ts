@@ -11,6 +11,11 @@ import { ExercicioCadastroPageBase } from './exercicio-cadastro-base';
   templateUrl: 'exercicio-cadastro.html'
 })
 export class ExercicioCadastroPage extends ExercicioCadastroPageBase {
+
+
+  protected complementaItem(novo: Exercicio): Exercicio {
+    return novo;
+  }
   
 
   protected executaNavegacao(navCtrl: NavController, result: Exercicio) {

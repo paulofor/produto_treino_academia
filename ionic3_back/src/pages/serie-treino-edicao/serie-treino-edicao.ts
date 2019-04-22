@@ -42,7 +42,7 @@ export class SerieTreinoEdicaoPage extends SerieTreinoEdicaoPageBase {
     var novoRel: ItemSerie = new ItemSerie();
     novoRel.serieTreinoId = this.item.id;
     this.navCtrl.push(CriaSeriePage, {
-      itemRel : novoRel
+      item : novoRel
     })
   }
 

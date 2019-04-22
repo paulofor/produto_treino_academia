@@ -13,6 +13,35 @@ import { SerieTreinoEdicaoPage } from '../serie-treino-edicao/serie-treino-edica
 })
 export class CriaSeriePage extends CriaSeriePageBase {
 
+  
+  protected complementaItem(item: any) {
+    if (!item.exercicio) {
+      item.exercicio = new Exercicio();
+    }
+
+    if (!item.listaCargaPlanejada) {
+      item.listaCargaPlanejada = [];
+
+      var carga1 = new CargaPlanejada();
+      carga1.ordemRepeticao = 1;
+      item.listaCargaPlanejada.push(carga1);
+
+      var carga2 = new CargaPlanejada();
+      carga2.ordemRepeticao = 2;
+      item.listaCargaPlanejada.push(carga2);
+
+      var carga3 = new CargaPlanejada();
+      carga3.ordemRepeticao = 3;
+      item.listaCargaPlanejada.push(carga3);
+    }
+
+    if (!item.serieTreinoId) {
+      item.serieTreinoId = 0;
+    }
+
+    return item;
+  }
+
 
   protected filtroLoadId(): LoopBackFilter {
     return {};
@@ -31,28 +60,28 @@ export class CriaSeriePage extends CriaSeriePageBase {
   }
   protected criaItem(): ItemSerie {
 
-    var item:ItemSerie = new ItemSerie();
+    var item: ItemSerie = new ItemSerie();
     item.exercicio = new Exercicio();
     item.listaCargaPlanejada = [];
-  
+
     var carga1 = new CargaPlanejada();
     carga1.ordemRepeticao = 1;
     item.listaCargaPlanejada.push(carga1);
-  
+
     var carga2 = new CargaPlanejada();
     carga2.ordemRepeticao = 2;
     item.listaCargaPlanejada.push(carga2);
-  
+
     var carga3 = new CargaPlanejada();
     carga3.ordemRepeticao = 3;
     item.listaCargaPlanejada.push(carga3);
-  
+
     item.serieTreinoId = 0;
 
     return item;
   }
 
- 
+
 
   listaGrupo: GrupoMuscular[];
 
@@ -63,21 +92,21 @@ export class CriaSeriePage extends CriaSeriePageBase {
     public srvExercicio: ExercicioApi,
     public srvGrupoMuscular: GrupoMuscularApi
   ) {
-  super(navParams, navCtrl, srv, srvSerieTreino, srvExercicio);
-}
+    super(navParams, navCtrl, srv, srvSerieTreino, srvExercicio);
+  }
 
-criaItemSerie() {
+  criaItemSerie() {
 
-}
+  }
 
-carregaGrupoMuscular() {
-  this.srvGrupoMuscular.find()
-    .subscribe((result: GrupoMuscular[]) => {
-      console.log('Result: ', result);
-      this.listaGrupo = result;
-    })
-}
+  carregaGrupoMuscular() {
+    this.srvGrupoMuscular.find()
+      .subscribe((result: GrupoMuscular[]) => {
+        console.log('Result: ', result);
+        this.listaGrupo = result;
+      })
+  }
 
 
-  
+
 }

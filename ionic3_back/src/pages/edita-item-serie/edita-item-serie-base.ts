@@ -11,6 +11,7 @@ export abstract class EditaItemSeriePageBase {
   protected abstract criaItem() : ItemSerie;
   protected abstract executaNavegacao(navCtrl: NavController, result: ItemSerie);
   protected abstract filtroLoadId() : LoopBackFilter;
+  protected abstract complementaItem(novo:ItemSerie) : ItemSerie;
 
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
@@ -35,6 +36,9 @@ export abstract class EditaItemSeriePageBase {
 			this.item = this.criaItem();
 			console.log('EditaItemSeriePageBase:ItemCriado: ', this.item);
 		}
+	} else {
+		this.item = this.complementaItem(this.item);
+		console.log('EditaItemSeriePageBase:ItemComComplemento: ', this.item);
 	}
   }
   ionViewWillEnter() {
@@ -77,10 +81,10 @@ export abstract class EditaItemSeriePageBase {
       	})
 	}
 	protected submit() {
-		console.log('EditaItemSeriePageBase:Submit-Item:' , this.item);
+		console.log('EditaItemSeriePageBase:Submit-Item:' , JSON.stringify(this.item));
     	this.srv.submitEditaItemSeriePage(this.item)
       		.subscribe((resultado:ItemSerie) => {
-        		console.log('EditaItemSeriePageBase:Submit-Result: ' , resultado);
+        		console.log('EditaItemSeriePageBase:Submit-Result: ' , JSON.stringify(resultado));
 				this.executaNavegacao(this.navCtrl,resultado);
       	})
 	}

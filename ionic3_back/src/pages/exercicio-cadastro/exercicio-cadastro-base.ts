@@ -12,6 +12,7 @@ export abstract class ExercicioCadastroPageBase {
   protected abstract criaItem() : Exercicio;
   protected abstract executaNavegacao(navCtrl: NavController, result: Exercicio);
   protected abstract filtroLoadId() : LoopBackFilter;
+  protected abstract complementaItem(novo:Exercicio) : Exercicio;
 
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
@@ -37,6 +38,9 @@ export abstract class ExercicioCadastroPageBase {
 			this.item = this.criaItem();
 			console.log('ExercicioCadastroPageBase:ItemCriado: ', this.item);
 		}
+	} else {
+		this.item = this.complementaItem(this.item);
+		console.log('ExercicioCadastroPageBase:ItemComComplemento: ', this.item);
 	}
   }
   ionViewWillEnter() {
@@ -94,10 +98,10 @@ export abstract class ExercicioCadastroPageBase {
       	})
 	}
 	protected submit() {
-		console.log('ExercicioCadastroPageBase:Submit-Item:' , this.item);
+		console.log('ExercicioCadastroPageBase:Submit-Item:' , JSON.stringify(this.item));
     	this.srv.submitExercicioCadastroPage(this.item)
       		.subscribe((resultado:Exercicio) => {
-        		console.log('ExercicioCadastroPageBase:Submit-Result: ' , resultado);
+        		console.log('ExercicioCadastroPageBase:Submit-Result: ' , JSON.stringify(resultado));
 				this.executaNavegacao(this.navCtrl,resultado);
       	})
 	}
