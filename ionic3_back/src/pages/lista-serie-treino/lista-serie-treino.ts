@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 import { Page } from 'ionic-angular/navigation/nav-util';
 import { ListaSerieTreinoPageBase } from './lista-serie-treino-base';
-import { SerieTreinoApi, LoopBackFilter } from '../../shared/sdk';
+import { SerieTreinoApi, LoopBackFilter, SerieTreino } from '../../shared/sdk';
 
 
 @IonicPage()
@@ -12,6 +12,9 @@ import { SerieTreinoApi, LoopBackFilter } from '../../shared/sdk';
   templateUrl: 'lista-serie-treino.html'
 })
 export class ListaSerieTreinoPage extends ListaSerieTreinoPageBase {
+
+
+
   protected inicializacao() {
    
   }
@@ -23,6 +26,25 @@ export class ListaSerieTreinoPage extends ListaSerieTreinoPageBase {
 
   protected getFiltro(): LoopBackFilter {
     return {};
+  }
+
+  protected novo() {
+    var serieNova = new SerieTreino();
+    serieNova.dataCriacao = new Date();
+    serieNova.ativa = '1';
+    serieNova.qtdeExecucao = 0;
+    this.srv.create(serieNova)
+      .subscribe((result:SerieTreino) => {
+        this.navCtrl.push(this.getPageEdicao(), {
+            id : result.id
+        });
+      })
+		
+  }
+  
+  getSituacao(item:SerieTreino) {
+    if (item.ativa=='1') return 'ativa';
+    else return 'desativa';
   }
   
 }

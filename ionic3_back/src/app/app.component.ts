@@ -17,6 +17,7 @@ import { EditaItemSeriePage } from '../pages/edita-item-serie/edita-item-serie';
 import { CriaSeriePage } from '../pages/cria-serie/cria-serie';
 import { ExecutaTreinoPage } from '../pages/executa-treino/executa-treino';
 import { SerieTreinoEdicaoPage } from '../pages/serie-treino-edicao/serie-treino-edicao';
+import { TesteForm01Page } from '../pages/teste-form01/teste-form01';
 
 
 @Component({
@@ -35,7 +36,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
 	
-      { title: 'SerieListaExecu' , component: SerieListaExecucaoPage},
+      { title: 'SerieListaExecu' , component: TesteForm01Page},
 	
       { title: 'SerieEditaExecu' , component: SerieEditaExecucaoPage},
 	

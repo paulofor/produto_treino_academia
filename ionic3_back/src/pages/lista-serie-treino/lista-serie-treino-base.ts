@@ -8,6 +8,7 @@ import { SerieTreinoEdicaoPage } from '../serie-treino-edicao/serie-treino-edica
 
 export abstract class ListaSerieTreinoPageBase {
 
+	protected listaVazia: boolean;
 	protected listaItem: SerieTreino[];
 	protected abstract inicializacao();
 	protected abstract getFiltro(): LoopBackFilter;
@@ -34,7 +35,9 @@ export abstract class ListaSerieTreinoPageBase {
   		this.srv.find(this.getFiltro())
   			.subscribe((resultado: SerieTreino[]) => {
   				console.log('ListaSerieTreinoPageBase:LoadLista:' , JSON.stringify(resultado));
-  				this.listaItem = resultado;
+				  this.listaItem = resultado;
+				  this.listaVazia = (this.listaItem.length==0);
+				  
   			})
   	}
   

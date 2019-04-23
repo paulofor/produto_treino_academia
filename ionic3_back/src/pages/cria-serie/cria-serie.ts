@@ -49,9 +49,7 @@ export class CriaSeriePage extends CriaSeriePageBase {
 
 
   protected executaNavegacao(navCtrl: NavController, result: ItemSerie) {
-    navCtrl.push(SerieTreinoEdicaoPage, {
-      id: result.serieTreinoId
-    });
+    navCtrl.pop();
   }
 
 
@@ -107,6 +105,21 @@ export class CriaSeriePage extends CriaSeriePageBase {
       })
   }
 
-
+  alteraQuantidade(qtde: number) {
+    console.log('Qtde: ' , JSON.stringify(qtde));
+    if (qtde>this.item.listaCargaPlanejada.length) {
+      for (let i=this.item.listaCargaPlanejada.length;i<qtde;i++) {
+        var novo = new CargaPlanejada();
+        novo.ordemRepeticao = (i+1);
+        this.item.listaCargaPlanejada.push(novo);
+      }
+    }
+    if (qtde<this.item.listaCargaPlanejada.length) {
+      for (let i=this.item.listaCargaPlanejada.length;i>qtde;i--)  {
+        this.item.listaCargaPlanejada.splice(i-1,1);
+      }
+    }
+    console.log('ListaCarga:' , this.item.listaCargaPlanejada);
+  }
 
 }

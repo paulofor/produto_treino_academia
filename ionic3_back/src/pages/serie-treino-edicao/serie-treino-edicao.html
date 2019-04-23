@@ -1,24 +1,33 @@
 <ion-header>
   <ion-navbar color="titulo">
-    <ion-title>Detalhe da Série</ion-title>
+    <ion-title>Alterando Série</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="quadroBase">
   <ion-card *ngIf="item">
-    <ion-list>
+
+    <ion-item>
+      <h1>Data Criação: {{item.dataCriacao | date : 'dd/MM/yy'}}</h1>
+      <h2 *ngIf="item.listaItemSerie.length==0">Nenhum exercício</h2>
+    </ion-item>
+
+    <ion-list *ngIf="item.listaItemSerie.length>0">
       <ion-item *ngFor="let itemSerie of item.listaItemSerie">
-        <p>{{itemSerie.exercicio.titulo}}</p>
+        <h2 class="linha1">{{itemSerie.exercicio.titulo}}</h2>
         <ng-container *ngFor="let carga of itemSerie.listaCargaPlanejada">
-          <p>Carga: {{carga.valorCarga}}</p>
-          <p>Repetições: {{carga.quantidadeRepeticao}}</p>
+          <h3>Carga: {{carga.valorCarga}}</h3>
+          <h3>Repetições: {{carga.quantidadeRepeticao}}</h3>
         </ng-container>
       </ion-item>
     </ion-list>
-    <ion-fab right bottom>
-      <button ion-fab mini (click)="novoRelacionado()">
-        <ion-icon name="add"></ion-icon>
-      </button>
-    </ion-fab>
+
+
+
   </ion-card>
+  <ion-fab right bottom>
+    <button ion-fab mini (click)="novoRelacionado()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
 </ion-content>

@@ -16,14 +16,14 @@
 
       <ion-item>
         <ion-label floating>Grupo Muscular</ion-label>
-        <ion-select [(ngModel)]="item.grupoMuscularId" name="grupoMuscularId">
+        <ion-select [(ngModel)]="item.grupoMuscularId" name="grupoMuscularId" >
           <ion-option *ngFor="let grupo of listaGrupo" value="{{grupo.id}}">{{grupo.nome}}</ion-option>
         </ion-select>
       </ion-item>
 
       <ion-item>
         <ion-label floating>Execuções</ion-label>
-        <ion-select>
+        <ion-select (ionChange)="alteraQuantidade($event);">
           <ion-option>1</ion-option>
           <ion-option>2</ion-option>
           <ion-option selected>3</ion-option>

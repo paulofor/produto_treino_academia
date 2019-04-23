@@ -1,5 +1,3 @@
-
-
 <ion-header>
   <ion-navbar color="titulo">
     <ion-title>Séries</ion-title>
@@ -7,15 +5,27 @@
 </ion-header>
 
 <ion-content padding class="quadroBase">
+
   <ng-container *ngIf="listaItem">
-    <ion-list>
+
+    <ion-card *ngIf="listaItem.length==0">
+      <ion-content>Crie sua série</ion-content>
+    </ion-card>
+
+    <ion-list *ngIf="listaItem.length>0">
       <ion-item *ngFor="let item of listaItem">
-        <ion-label>{{item.dataCriacao | date : 'dd/MM/yy'}}</ion-label>
+        <h3 class="linha1">Criado em {{item.dataCriacao | date: 'dd/MM/yy'}}</h3>
+        <h3 class="linhan">Quantidade execuções {{item.qtdeExecucao}}</h3>
+        <h3 class="linhan">Última execução em {{item.dataCriacao | date: 'dd/MM/yy'}}</h3>
+        <h3 class="linhan">Situação: {{getSituacao(item)}}</h3>
         <button ion-button clear item-end (click)="alterarId(item)">alterar</button>
       </ion-item>
     </ion-list>
-    <ion-fab right bottom>
-      <button ion-button (click)="novo()">Criar Série</button>
-    </ion-fab>
+
   </ng-container>
+
+  <ion-fab right bottom>
+    <button ion-fab (click)="novo()">Criar</button>
+  </ion-fab>
+
 </ion-content>

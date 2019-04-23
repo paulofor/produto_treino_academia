@@ -16,6 +16,9 @@ import { DiaTreino, DiaTreinoApi } from '../../shared/sdk';
 export class ExecutaTreinoPage {
   listaItem: DiaTreino[];
 
+
+  filter = {"where" : {"ativa":"1"} , "order" : "dataUltimaExecucao"}
+
   constructor(public navCtrl: NavController, public srv: DiaTreinoApi, 
   				 private screenshot: Screenshot, public modalCtrl: ModalController) {
   }
