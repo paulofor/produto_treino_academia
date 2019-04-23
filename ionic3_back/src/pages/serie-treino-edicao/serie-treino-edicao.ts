@@ -13,6 +13,10 @@ import { CriaSeriePage } from '../cria-serie/cria-serie';
 })
 export class SerieTreinoEdicaoPage extends SerieTreinoEdicaoPageBase {
 
+  protected filtroLoadOne() {
+    return {};
+  }
+
 
 
 
@@ -42,7 +46,7 @@ export class SerieTreinoEdicaoPage extends SerieTreinoEdicaoPageBase {
     var novoRel: ItemSerie = new ItemSerie();
     novoRel.serieTreinoId = this.item.id;
     this.navCtrl.push(CriaSeriePage, {
-      item : novoRel
+      item: novoRel
     })
   }
 

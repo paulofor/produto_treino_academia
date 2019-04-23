@@ -33,7 +33,6 @@ import { DiaTreinoApi } from '../shared/sdk';
 import { ItemSerieApi } from '../shared/sdk';
 import { RegistroPesoApi } from '../shared/sdk';
 import { UsuarioApi } from '../shared/sdk';
-import { TesteForm01Page } from '../pages/teste-form01/teste-form01';
 
 
 @NgModule({
@@ -63,7 +62,6 @@ import { TesteForm01Page } from '../pages/teste-form01/teste-form01';
     ExecutaTreinoPage,
 	
     SerieTreinoEdicaoPage,
-    TesteForm01Page
 	
   ],
   imports: [
@@ -100,7 +98,6 @@ import { TesteForm01Page } from '../pages/teste-form01/teste-form01';
     ExecutaTreinoPage,
 	
     SerieTreinoEdicaoPage,
-    TesteForm01Page
 	
   ],
   providers: [

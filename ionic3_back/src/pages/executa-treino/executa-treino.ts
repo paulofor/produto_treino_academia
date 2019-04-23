@@ -1,48 +1,32 @@
-
-
-
 import { Component } from '@angular/core';
-import { IonicPage, ModalController, NavController } from 'ionic-angular';
+import { IonicPage, ModalController, NavController, NavParams } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
 
 
-import { DiaTreino, DiaTreinoApi } from '../../shared/sdk';
+import { DiaTreino, DiaTreinoApi, LoopBackFilter, SerieTreinoApi } from '../../shared/sdk';
+import { ExecutaTreinoPageBase } from './executa-treino-base';
 
 @IonicPage()
 @Component({
   selector: 'page-executa-treino',
   templateUrl: 'executa-treino.html'
 })
-export class ExecutaTreinoPage {
-  listaItem: DiaTreino[];
+export class ExecutaTreinoPage extends ExecutaTreinoPageBase {
 
-
-  filter = {"where" : {"ativa":"1"} , "order" : "dataUltimaExecucao"}
-
-  constructor(public navCtrl: NavController, public srv: DiaTreinoApi, 
-  				 private screenshot: Screenshot, public modalCtrl: ModalController) {
+  constructor(public navParams: NavParams,
+    public navCtrl: NavController,
+    public srv: SerieTreinoApi) {
+      super(navParams,navCtrl,srv);
   }
 
-  ionViewWillEnter() {
-    console.log('ionViewWillEnter ExecutaTreinoPage');
-    this.carregaLista();
+  protected filtroLoadOne(): LoopBackFilter {
+    return { "where": { "ativa": "1" }, "order": "dataUltimaExecucao" };
   }
 
-  ionViewDidLoad() {
-  	console.log('ionViewDidLoad ExecutaTreinoPage');
-  }
-  
-  carregaLista() {
-    this.srv.obtemLista()
-      .subscribe((result: DiaTreino[]) => {
-        console.log('Result', JSON.stringify(result));
-        this.listaItem = result;
-      });
-  }
-  
-  testaFoto() {
-    this.screenshot.save('jpg', 100, 'ExecutaTreinoPage');
+  protected filtroLoadId(): LoopBackFilter {
+    return {};
   }
 
-  
+
+
 }

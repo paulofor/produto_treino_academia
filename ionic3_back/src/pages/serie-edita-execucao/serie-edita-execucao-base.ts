@@ -8,23 +8,34 @@ export abstract class SerieEditaExecucaoPageBase {
   
   
   protected abstract filtroLoadId() : LoopBackFilter;
- 
+  protected abstract filtroLoadOne() : LoopBackFilter;
  
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
 				public srv: ItemSerieApi) {
   } 
   
-  private inicializaItem() {
-	this.item = this.navParams.get('item');
-	console.log('SerieEditaExecucaoPageBase:ItemParametro: ', this.item);
-	if (!this.item) {
-		var id = this.navParams.get('id');
-		if (id) {
+	private inicializaItem() {
+		this.item = this.navParams.get('item');
+		console.log('SerieEditaExecucaoPageBase:ItemParametro: ', this.item);
+		if (!this.item) {
+			var id = this.navParams.get('id');
 			console.log('SerieEditaExecucaoPageBase:Id: ' , id);
-			console.log('SerieEditaExecucaoPageBase:filtro: ' , JSON.stringify(this.filtroLoadId()));
-			console.log('ItemSerie.findById');
-			this.srv.findById(id, this.filtroLoadId())
+			if (id) {
+				console.log('SerieEditaExecucaoPageBase:filtro: ' , JSON.stringify(this.filtroLoadId()));
+				console.log('ItemSerie.findById');
+				this.srv.findById(id, this.filtroLoadId())
+					.subscribe(
+						(result: ItemSerie) => {
+							this.item = result;
+							console.log('SerieEditaExecucaoPageBase.item: ' , JSON.stringify(this.item))
+						},
+						(erro: any) => console.log('SerieEditaExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
+					)
+			} else  {
+				console.log('SerieEditaExecucaoPageBase:filtro: ' , JSON.stringify(this.filtroLoadOne()));
+				console.log('ItemSerie.findOne');
+				this.srv.findOne(this.filtroLoadOne())
 					.subscribe(
 						(result: ItemSerie) => {
 							this.item = result;
@@ -33,8 +44,8 @@ export abstract class SerieEditaExecucaoPageBase {
 						(erro: any) => console.log('SerieEditaExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
 			}
-		} 
-  }
+		}  
+	}
 
   
   ionViewWillEnter() {
