@@ -15,8 +15,9 @@ import { ListaExercicioPage } from '../pages/lista-exercicio/lista-exercicio';
 import { ListaSerieTreinoPage } from '../pages/lista-serie-treino/lista-serie-treino';
 import { EditaItemSeriePage } from '../pages/edita-item-serie/edita-item-serie';
 import { CriaSeriePage } from '../pages/cria-serie/cria-serie';
-import { ExecutaTreinoPage } from '../pages/executa-treino/executa-treino';
+import { InicioTreinoDiaPage } from '../pages/inicio-treino-dia/inicio-treino-dia';
 import { SerieTreinoEdicaoPage } from '../pages/serie-treino-edicao/serie-treino-edicao';
+import { ExecutaTreinoPage } from '../pages/executa-treino/executa-treino';
 
 
 @Component({
@@ -49,7 +50,7 @@ export class MyApp {
 	
       { title: 'Cria Serie*' , component: CriaSeriePage},
 	
-      { title: 'Inicia Treino*' , component: ExecutaTreinoPage},
+      { title: 'Inicia Treino*' , component: InicioTreinoDiaPage},
 	
      ];
 

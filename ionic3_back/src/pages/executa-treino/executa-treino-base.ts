@@ -1,10 +1,10 @@
-import { SerieTreino, SerieTreinoApi , LoopBackFilter } from '../../shared/sdk';
+import { DiaTreino, DiaTreinoApi , LoopBackFilter } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
 
 
 export abstract class ExecutaTreinoPageBase {
   
-  protected item: SerieTreino;
+  protected item: DiaTreino;
   
   
   protected abstract filtroLoadId() : LoopBackFilter;
@@ -12,7 +12,7 @@ export abstract class ExecutaTreinoPageBase {
  
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
-				public srv: SerieTreinoApi) {
+				public srv: DiaTreinoApi) {
   } 
   
 	private inicializaItem() {
@@ -23,10 +23,10 @@ export abstract class ExecutaTreinoPageBase {
 			console.log('ExecutaTreinoPageBase:Id: ' , id);
 			if (id) {
 				console.log('ExecutaTreinoPageBase:filtro: ' , JSON.stringify(this.filtroLoadId()));
-				console.log('SerieTreino.findById');
+				console.log('DiaTreino.findById');
 				this.srv.findById(id, this.filtroLoadId())
 					.subscribe(
-						(result: SerieTreino) => {
+						(result: DiaTreino) => {
 							this.item = result;
 							console.log('ExecutaTreinoPageBase.item: ' , JSON.stringify(this.item))
 						},
@@ -34,10 +34,10 @@ export abstract class ExecutaTreinoPageBase {
 					)
 			} else  {
 				console.log('ExecutaTreinoPageBase:filtro: ' , JSON.stringify(this.filtroLoadOne()));
-				console.log('SerieTreino.findOne');
+				console.log('DiaTreino.findOne');
 				this.srv.findOne(this.filtroLoadOne())
 					.subscribe(
-						(result: SerieTreino) => {
+						(result: DiaTreino) => {
 							this.item = result;
 							console.log('ExecutaTreinoPageBase.item: ' , JSON.stringify(this.item))
 						},
