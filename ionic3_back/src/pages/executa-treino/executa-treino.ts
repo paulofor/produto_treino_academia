@@ -15,7 +15,7 @@ export class ExecutaTreinoPage extends ExecutaTreinoPageBase {
 
   constructor(public navParams: NavParams,
     public navCtrl: NavController,
-    public srv: SerieTreinoApi) {
+    public srv: SerieTreinoApi, private srvDia: DiaTreinoApi) {
       super(navParams,navCtrl,srv);
   }
 
@@ -27,6 +27,16 @@ export class ExecutaTreinoPage extends ExecutaTreinoPageBase {
     return {};
   }
 
+  iniciaDia() {
+    var novo : DiaTreino = new DiaTreino();
+    novo.concluido = '0';
+    novo.data = new Date();
+    novo.serieTreinoId = this.item.id;
+    this.srvDia.create(novo)
+      .subscribe((novo))
+
+
+  }
 
 
 }
