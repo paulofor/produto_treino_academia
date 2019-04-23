@@ -9,6 +9,8 @@ export abstract class InicioTreinoDiaPageBase {
   
   protected abstract filtroLoadId() : LoopBackFilter;
   protected abstract filtroLoadOne() : LoopBackFilter;
+
+  protected abstract inicializaImpl();
  
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
@@ -50,7 +52,8 @@ export abstract class InicioTreinoDiaPageBase {
   
   ionViewWillEnter() {
     console.log('ionViewWillEnter InicioTreinoDiaPage');
-    this.inicializaItem();
+	this.inicializaItem();
+	this.inicializaImpl();
   }
   ionViewDidLoad() {
   	console.log('ionViewDidLoad InicioTreinoDiaPage');

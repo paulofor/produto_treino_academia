@@ -7,7 +7,7 @@ export abstract class ExecutaTreinoPageBase {
   protected item: DiaTreino;
   
   
-  protected abstract filtroLoadId() : LoopBackFilter;
+  protected abstract filtroLoadId(id:number) : LoopBackFilter;
   protected abstract filtroLoadOne() : LoopBackFilter;
  
   constructor(	public navParams: NavParams,
@@ -22,13 +22,13 @@ export abstract class ExecutaTreinoPageBase {
 			var id = this.navParams.get('id');
 			console.log('ExecutaTreinoPageBase:Id: ' , id);
 			if (id) {
-				console.log('ExecutaTreinoPageBase:filtro: ' , JSON.stringify(this.filtroLoadId()));
+				console.log('ExecutaTreinoPageBase:filtro: ' , JSON.stringify(this.filtroLoadId(id)));
 				console.log('DiaTreino.findById');
-				this.srv.findById(id, this.filtroLoadId())
+				this.srv.findById(id, this.filtroLoadId(id))
 					.subscribe(
 						(result: DiaTreino) => {
 							this.item = result;
-							console.log('ExecutaTreinoPageBase.item: ' , JSON.stringify(this.item))
+							console.log('ExecutaTreinoPageBase.item: ' , this.item)
 						},
 						(erro: any) => console.log('ExecutaTreinoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
@@ -39,7 +39,7 @@ export abstract class ExecutaTreinoPageBase {
 					.subscribe(
 						(result: DiaTreino) => {
 							this.item = result;
-							console.log('ExecutaTreinoPageBase.item: ' , JSON.stringify(this.item))
+							console.log('ExecutaTreinoPageBase.item: ' , this.item)
 						},
 						(erro: any) => console.log('ExecutaTreinoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)

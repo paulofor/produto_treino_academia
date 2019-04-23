@@ -9,3 +9,6 @@ export const SERIETREINO_LISTASERIETREINOPAGE : SerieTreino = {}
 export const SERIETREINO_SERIETREINOEDICAOPAGE : SerieTreino = {}
 
 export const SERIETREINO_EXECUTATREINOPAGE : SerieTreino = {}
+
+export const SERIETREINO_INICIOTREINODIAPAGE : SerieTreino = {}
+

@@ -1,20 +1,30 @@
 <ion-header>
   <ion-navbar color="titulo">
-    <ion-title (click)="testaFoto()">ExecutaTreinoPage</ion-title>
+    <ion-title>Executando Treino</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="quadroBase">
 
-  <ng-container *ngIf="item">
 
-    <ion-card>
-      <h2 class="linha1">23/04/2019</h2>
-      <h2 class="linhan">Série de Hoje</h2>
-      <h2 class="linhan">Quantidade Execuções:{{item.qtdeExecucao}}</h2>
-      <h2 class="linhan">Última Execução:{{item.dataUltimaExecucao | date : 'dd/MM/yyyy'}}</h2>
-      <button ion-button outline (click)="iniciaDia()">Iniciar</button>
-    </ion-card>
 
-  </ng-container>
+  <ion-card *ngIf="item">
+
+    <ion-item>
+      <h1>Data Criação: {{item.dataCriacao | date : 'dd/MM/yy'}}</h1>
+      <h2 *ngIf="item.serieTreino.listaItemSerie.length==0">Nenhum exercício</h2>
+    </ion-item>
+
+    <ion-list *ngIf="item.serieTreino.listaItemSerie.length>0">
+      <ion-item *ngFor="let itemSerie of item.serieTreino.listaItemSerie">
+        <h2 class="linha1">{{itemSerie.exercicio.titulo}}</h2>
+        <button *ngIf="itemSerie.listaExecucaoItemSerie.length==0" ion-button outline (click)="concluido(itemSerie)">executar</button>
+      </ion-item>
+    </ion-list>
+
+
+
+  </ion-card>
+
+
 </ion-content>

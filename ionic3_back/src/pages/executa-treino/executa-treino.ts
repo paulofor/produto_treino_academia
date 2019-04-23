@@ -3,7 +3,7 @@ import { IonicPage, ModalController, NavController, NavParams } from 'ionic-angu
 import { Screenshot } from '@ionic-native/screenshot';
 
 
-import { DiaTreino, DiaTreinoApi, LoopBackFilter, SerieTreinoApi } from '../../shared/sdk';
+import { DiaTreino, DiaTreinoApi, LoopBackFilter, SerieTreinoApi, ItemSerie, ExecucaoItemSerieApi, ExecucaoItemSerie } from '../../shared/sdk';
 import { ExecutaTreinoPageBase } from './executa-treino-base';
 
 @IonicPage()
@@ -15,28 +15,54 @@ export class ExecutaTreinoPage extends ExecutaTreinoPageBase {
 
   constructor(public navParams: NavParams,
     public navCtrl: NavController,
-    public srv: SerieTreinoApi, private srvDia: DiaTreinoApi) {
-      super(navParams,navCtrl,srv);
+    public srv: DiaTreinoApi, public srvExecucao: ExecucaoItemSerieApi) {
+    super(navParams, navCtrl, srv);
+
+    let index = this.navCtrl.length() - 1;
+    this.navCtrl.remove(index);
+  }
+
+
+  protected filtroLoadId(id:number): LoopBackFilter {
+    return {"include":{"relation":"serieTreino","scope":{"include":{"relation":"listaItemSerie","scope":{"include":[{"relation":"exercicio"},{"relation":"listaExecucaoItemSerie","scope":{"where":{"diaTreinoId":id}}}]}}}}};;
   }
 
   protected filtroLoadOne(): LoopBackFilter {
-    return { "where": { "ativa": "1" }, "order": "dataUltimaExecucao" };
-  }
-
-  protected filtroLoadId(): LoopBackFilter {
     return {};
   }
 
-  iniciaDia() {
-    var novo : DiaTreino = new DiaTreino();
-    novo.concluido = '0';
-    novo.data = new Date();
-    novo.serieTreinoId = this.item.id;
-    this.srvDia.create(novo)
-      .subscribe((novo))
 
-
+  protected concluido(itemSerie: ItemSerie) {
+    var execucao: ExecucaoItemSerie = new ExecucaoItemSerie();
+    execucao.diaTreinoId = this.item.id;
+    execucao.exercicioId = itemSerie.exercicioId;
+    execucao.itemSerieId = itemSerie.id;
+    execucao.dataHoraFinalizacao = new Date();
+    this.srvExecucao.create(execucao)
+      .subscribe((result) => {
+        this.carregaItem();
+      })
   }
 
+
+  carregaItem() {
+    console.log('ExecutaTreinoPageBase:filtro: ', JSON.stringify(this.filtroLoadId(this.item.id)));
+    console.log('DiaTreino.findById');
+    this.srv.findById(this.item.id, this.filtroLoadId(this.item.id))
+      .subscribe(
+        (result: DiaTreino) => {
+          this.item = result;
+          console.log('ExecutaTreinoPageBase.item: ', this.item)
+        },
+        (erro: any) => console.log('ExecutaTreinoPageBase:LoadId(Erro): ', JSON.stringify(erro))
+      )
+  }
+
+
+  getQuantidadeExecutado() : number{
+    var total = 0;
+    this.item.
+    return total;
+  }
 
 }

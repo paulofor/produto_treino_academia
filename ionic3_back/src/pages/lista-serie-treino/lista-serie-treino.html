@@ -9,7 +9,12 @@
   <ng-container *ngIf="listaItem">
 
     <ion-card *ngIf="listaItem.length==0">
-      <ion-content>Crie sua série</ion-content>
+      <ion-card-header>
+        Nenhuma série de treino encontrada
+      </ion-card-header>
+      <ion-card-content>
+        Crie sua primeira série para começar.
+      </ion-card-content>
     </ion-card>
 
     <ion-list *ngIf="listaItem.length>0">

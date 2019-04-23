@@ -1,41 +1,74 @@
 import { Component } from '@angular/core';
-import { IonicPage, ModalController, NavController } from 'ionic-angular';
+import { IonicPage, ModalController, NavController, NavParams } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
 
-import { SerieTreino, SerieTreinoApi } from '../../shared/sdk';
+import { SerieTreino, SerieTreinoApi, DiaTreinoApi, LoopBackFilter, DiaTreino } from '../../shared/sdk';
+import { InicioTreinoDiaPageBase } from './inicio-treino-dia-base';
+import { ExecutaTreinoPage } from '../executa-treino/executa-treino';
 
 @IonicPage()
 @Component({
   selector: 'page-inicio-treino-dia',
   templateUrl: 'inicio-treino-dia.html'
 })
-export class InicioTreinoDiaPage {
-  item: SerieTreino;
+export class InicioTreinoDiaPage extends InicioTreinoDiaPageBase{
 
-  constructor(public navCtrl: NavController, public srv: SerieTreinoApi, 
-  				private screenshot: Screenshot, public modalCtrl: ModalController) {
+
+
+  
+  QUATRO_HORAS = 4 * 60 * 60 * 1000;
+  
+  diaTreino : DiaTreino;
+
+  filtroDia : LoopBackFilter = {
+    "where" : {"data" :  {gt: Date.now() - this.QUATRO_HORAS} }
   }
 
-  ionViewWillEnter() {
-    console.log('ionViewWillEnter InicioTreinoDiaPage');
-    this.carregaItem();
-  }
 
-  ionViewDidLoad() {
-  	console.log('ionViewDidLoad InicioTreinoDiaPage');
+  protected inicializaImpl() {
+    this.srvDia.find(this.filtroDia)
+      .subscribe((result: DiaTreino[]) => {
+        console.log('Dia recuperado: ' , result);
+        if (result.length>0) {
+          this.navCtrl.push(ExecutaTreinoPage, {
+            id : result[0].id
+          })
+        }
+      })
   }
   
-  carregaItem() {
-    var filtro = { 'where' : { 'id' : 1 }} ;
-    this.srv.obtemElemento(filtro)
-      .subscribe((result: SerieTreino) => {
-        console.log('Result', JSON.stringify(result));
-        this.item = result;
-      });
+
+
+
+  constructor(public navParams: NavParams,
+    public navCtrl: NavController,
+    public srv: SerieTreinoApi, private srvDia: DiaTreinoApi) {
+      super(navParams,navCtrl,srv);
   }
 
-  testaFoto() {
-    this.screenshot.save('jpg', 100, 'InicioTreinoDiaPage');
+  protected filtroLoadOne(): LoopBackFilter {
+    return { "where": { "ativa": "1" }, "order": "dataUltimaExecucao" };
+  }
+
+  protected filtroLoadId(): LoopBackFilter {
+    return {};
+  }
+
+
+ 
+
+
+  iniciaDia() {
+    var novo : DiaTreino = new DiaTreino();
+    novo.concluido = '0';
+    novo.data = new Date();
+    novo.serieTreinoId = this.item.id;
+    this.srvDia.create(novo)
+      .subscribe((result: DiaTreino) => {
+        this.navCtrl.push(ExecutaTreinoPage, {
+          id : result.id
+        })
+      })
   }
   
 }
