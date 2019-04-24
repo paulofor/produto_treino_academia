@@ -1,0 +1,33 @@
+
+
+<ion-header>
+  <ion-navbar color="titulo">
+    <ion-title>Dias de Treino</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="quadroBase">
+
+  <ng-container *ngIf="listaItem">
+
+    <ion-card *ngIf="listaItem.length==0">
+      <ion-card-header>
+        Nenhum dia de treino encontrado
+      </ion-card-header>
+      <ion-card-content>
+        Volte a consultar após seu primeiro dia
+      </ion-card-content>
+    </ion-card>
+
+    <ion-list *ngIf="listaItem.length>0">
+      <ion-item *ngFor="let item of listaItem">
+        <h3 class="linha1">{{item.data | date : 'dd/MM/yyyy hh:mm'}}</h3>
+        <h3 class="linhan"></h3>
+        <button ion-button clear item-end (click)="alterarId(item)">Detalhe</button>
+      </ion-item>
+    </ion-list>
+
+  </ng-container>
+
+
+</ion-content>

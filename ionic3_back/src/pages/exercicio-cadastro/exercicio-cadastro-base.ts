@@ -4,15 +4,28 @@ import { DiaTreino, DiaTreinoApi } from '../../shared/sdk';
 import { Usuario, UsuarioApi } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
 
+// Tipo: EDITA
 export abstract class ExercicioCadastroPageBase {
   
+  // Objeto principal para a edicao
   protected item: Exercicio;
   
+  // chamar os metodos de carga de combos
   protected abstract inicializacaoComplementos();
+  
+  // se nao tiver nem parametro item nem id
   protected abstract criaItem() : Exercicio;
+  
+  // chamada apos o submit
   protected abstract executaNavegacao(navCtrl: NavController, result: Exercicio);
-  protected abstract filtroLoadId() : LoopBackFilter;
+  
+  // filtro para ser usado quando temos o parametro id
+  protected abstract filtroLoadId(id:any) : LoopBackFilter;
+  
+  // quando existe parametro item
   protected abstract complementaItem(novo:Exercicio) : Exercicio;
+
+
 
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
@@ -29,7 +42,7 @@ export abstract class ExercicioCadastroPageBase {
 		var id = this.navParams.get('id');
 		if (id) {
 			console.log('ExercicioCadastroPageBase:Id: ' , id);
-			this.srv.findById(id, this.filtroLoadId())
+			this.srv.findById(id, this.filtroLoadId(id))
 				.subscribe((result:Exercicio) => {
 					this.item = result;
 					console.log('ExercicioCadastroPageBase:LoadId: ' , this.item);

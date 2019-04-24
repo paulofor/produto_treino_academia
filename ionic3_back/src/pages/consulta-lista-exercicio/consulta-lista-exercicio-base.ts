@@ -3,10 +3,9 @@ import { Exercicio, ExercicioApi } from '../../shared/sdk';
 import { LoopBackFilter } from '../../shared/sdk';
 import { NavController } from 'ionic-angular';
 import { Page } from 'ionic-angular/umd/navigation/nav-util';
-import { ExercicioCadastroPage } from '../exercicio-cadastro/exercicio-cadastro';
 
 
-export abstract class ListaExercicioPageBase {
+export abstract class ConsultaListaExercicioPageBase {
 
 	protected listaItem: Exercicio[];
 	protected abstract inicializacao();
@@ -15,12 +14,12 @@ export abstract class ListaExercicioPageBase {
 	 
 	getPageEdicao(): Page {
 		
-    	return ExercicioCadastroPage;
+    	throw new Error("ConsultaListaExercicioPage sem tela de edicao.");
     	
   	}
   	getPageDetalhe(): Page {
 		
-    	return ExercicioCadastroPage;
+    	throw new Error("ConsultaListaExercicioPage sem tela de detalhe.");
     	
   	}
 
@@ -28,17 +27,17 @@ export abstract class ListaExercicioPageBase {
 	}
 
 	ionViewWillEnter() {
-    	console.log('ionViewWillEnter ListaExercicioPage');
+    	console.log('ionViewWillEnter ConsultaListaExercicioPage');
     	this.inicializacao();
     	this.carregaLista();
   	}
   	
   	carregaLista() {
-  		console.log('ListaExercicioPageBase:filtro: ' , JSON.stringify(this.getFiltro()));
+  		console.log('ConsultaListaExercicioPageBase:filtro: ' , JSON.stringify(this.getFiltro()));
 		console.log('Exercicio.find');
   		this.srv.find(this.getFiltro())
   			.subscribe((resultado: Exercicio[]) => {
-  				console.log('ListaExercicioPageBase:LoadLista:' , resultado);
+  				console.log('ConsultaListaExercicioPageBase:LoadLista:' , resultado);
   				this.listaItem = resultado;
   			})
   	}

@@ -17,7 +17,9 @@ import { DIATREINO } from '../../../../dados/diaTreino';
 //Versao Ionic
 import { of } from 'rxjs/observable/of';
 import {DIATREINO_SERIELISTAEXECUCAOPAGE} from  '../../../../dados/diaTreino';
+import {DIATREINO_CONSULTALISTADIATREINOPAGE} from  '../../../../dados/diaTreino';
 import {DIATREINO_EXECUTATREINOPAGE} from  '../../../../dados/diaTreino';
+import {DIATREINO_DETALHEDIATREINOPAGE} from  '../../../../dados/diaTreino';
 /**
  * Api services for the `Aplicacao` model.
  */
@@ -101,8 +103,14 @@ export class DiaTreinoApi extends BaseLoopBackApi {
 	getSerieListaExecucaoPageLoad(filter: LoopBackFilter = {}) : Observable<DiaTreino> {
 		return of (DIATREINO_SERIELISTAEXECUCAOPAGE);
 	}
+	getConsultaListaDiaTreinoPageLoad(filter: LoopBackFilter = {}) : Observable<DiaTreino> {
+		return of (DIATREINO_CONSULTALISTADIATREINOPAGE);
+	}
 	getExecutaTreinoPageLoad(filter: LoopBackFilter = {}) : Observable<DiaTreino> {
 		return of (DIATREINO_EXECUTATREINOPAGE);
+	}
+	getDetalheDiaTreinoPageLoad(filter: LoopBackFilter = {}) : Observable<DiaTreino> {
+		return of (DIATREINO_DETALHEDIATREINOPAGE);
 	}
 
   

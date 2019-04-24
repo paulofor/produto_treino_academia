@@ -13,7 +13,7 @@ import { SerieListaExecucaoPage } from '../pages/serie-lista-execucao/serie-list
 import { SerieEditaExecucaoPage } from '../pages/serie-edita-execucao/serie-edita-execucao';
 import { CadastraItemSeriePage } from '../pages/cadastra-item-serie/cadastra-item-serie';
 import { ExercicioGraficoExecucaoPage } from '../pages/exercicio-grafico-execucao/exercicio-grafico-execucao';
-import { ExercicioUltimasExecucoesPage } from '../pages/exercicio-ultimas-execucoes/exercicio-ultimas-execucoes';
+import { ConsultaListaDiaTreinoPage } from '../pages/consulta-lista-dia-treino/consulta-lista-dia-treino';
 import { ExercicioCadastroPage } from '../pages/exercicio-cadastro/exercicio-cadastro';
 import { ListaExercicioPage } from '../pages/lista-exercicio/lista-exercicio';
 import { ListaSerieTreinoPage } from '../pages/lista-serie-treino/lista-serie-treino';
@@ -22,6 +22,8 @@ import { CriaSeriePage } from '../pages/cria-serie/cria-serie';
 import { InicioTreinoDiaPage } from '../pages/inicio-treino-dia/inicio-treino-dia';
 import { SerieTreinoEdicaoPage } from '../pages/serie-treino-edicao/serie-treino-edicao';
 import { ExecutaTreinoPage } from '../pages/executa-treino/executa-treino';
+import { ConsultaListaExercicioPage } from '../pages/consulta-lista-exercicio/consulta-lista-exercicio';
+import { DetalheDiaTreinoPage } from '../pages/detalhe-dia-treino/detalhe-dia-treino';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -48,7 +50,7 @@ import { UsuarioApi } from '../shared/sdk';
 	
     ExercicioGraficoExecucaoPage,
 	
-    ExercicioUltimasExecucoesPage,
+    ConsultaListaDiaTreinoPage,
 	
     ExercicioCadastroPage,
 	
@@ -65,6 +67,10 @@ import { UsuarioApi } from '../shared/sdk';
     SerieTreinoEdicaoPage,
 	
     ExecutaTreinoPage,
+	
+    ConsultaListaExercicioPage,
+	
+    DetalheDiaTreinoPage,
 	
   ],
   imports: [
@@ -86,7 +92,7 @@ import { UsuarioApi } from '../shared/sdk';
 	
     ExercicioGraficoExecucaoPage,
 	
-    ExercicioUltimasExecucoesPage,
+    ConsultaListaDiaTreinoPage,
 	
     ExercicioCadastroPage,
 	
@@ -103,6 +109,10 @@ import { UsuarioApi } from '../shared/sdk';
     SerieTreinoEdicaoPage,
 	
     ExecutaTreinoPage,
+	
+    ConsultaListaExercicioPage,
+	
+    DetalheDiaTreinoPage,
 	
   ],
   providers: [

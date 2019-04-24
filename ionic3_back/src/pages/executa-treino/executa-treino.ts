@@ -61,7 +61,9 @@ export class ExecutaTreinoPage extends ExecutaTreinoPageBase {
 
   getQuantidadeExecutado() : number{
     var total = 0;
-    this.item.
+    this.item.serieTreino.listaItemSerie.forEach((itemSerie:ItemSerie) => {
+      if (itemSerie.listaExecucaoItemSerie.length>0) total ++;
+    })
     return total;
   }
 

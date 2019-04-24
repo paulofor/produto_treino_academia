@@ -3,15 +3,28 @@ import { SerieTreino, SerieTreinoApi } from '../../shared/sdk';
 import { Exercicio, ExercicioApi } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
 
+// Tipo: EDITA
 export abstract class CriaSeriePageBase {
   
+  // Objeto principal para a edicao
   protected item: ItemSerie;
   
+  // chamar os metodos de carga de combos
   protected abstract inicializacaoComplementos();
+  
+  // se nao tiver nem parametro item nem id
   protected abstract criaItem() : ItemSerie;
+  
+  // chamada apos o submit
   protected abstract executaNavegacao(navCtrl: NavController, result: ItemSerie);
-  protected abstract filtroLoadId() : LoopBackFilter;
+  
+  // filtro para ser usado quando temos o parametro id
+  protected abstract filtroLoadId(id:any) : LoopBackFilter;
+  
+  // quando existe parametro item
   protected abstract complementaItem(novo:ItemSerie) : ItemSerie;
+
+
 
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
@@ -27,7 +40,7 @@ export abstract class CriaSeriePageBase {
 		var id = this.navParams.get('id');
 		if (id) {
 			console.log('CriaSeriePageBase:Id: ' , id);
-			this.srv.findById(id, this.filtroLoadId())
+			this.srv.findById(id, this.filtroLoadId(id))
 				.subscribe((result:ItemSerie) => {
 					this.item = result;
 					console.log('CriaSeriePageBase:LoadId: ' , this.item);

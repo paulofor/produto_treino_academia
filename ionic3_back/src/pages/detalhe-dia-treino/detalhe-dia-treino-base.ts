@@ -2,7 +2,7 @@ import { DiaTreino, DiaTreinoApi , LoopBackFilter } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
 
 // Tipo: DETALHE
-export abstract class ExecutaTreinoPageBase {
+export abstract class DetalheDiaTreinoPageBase {
   
   protected item: DiaTreino;
   
@@ -18,31 +18,31 @@ export abstract class ExecutaTreinoPageBase {
   
 	private inicializaItem() {
 		this.item = this.navParams.get('item');
-		console.log('ExecutaTreinoPageBase:ItemParametro: ', this.item);
+		console.log('DetalheDiaTreinoPageBase:ItemParametro: ', this.item);
 		if (!this.item) {
 			var id = this.navParams.get('id');
-			console.log('ExecutaTreinoPageBase:Id: ' , id);
+			console.log('DetalheDiaTreinoPageBase:Id: ' , id);
 			if (id) {
-				console.log('ExecutaTreinoPageBase:filtro: ' , JSON.stringify(this.filtroLoadId(id)));
+				console.log('DetalheDiaTreinoPageBase:filtro: ' , JSON.stringify(this.filtroLoadId(id)));
 				console.log('DiaTreino.findById');
 				this.srv.findById(id, this.filtroLoadId(id))
 					.subscribe(
 						(result: DiaTreino) => {
 							this.item = result;
-							console.log('ExecutaTreinoPageBase.item: ' , JSON.stringify(this.item))
+							console.log('DetalheDiaTreinoPageBase.item: ' , JSON.stringify(this.item))
 						},
-						(erro: any) => console.log('ExecutaTreinoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
+						(erro: any) => console.log('DetalheDiaTreinoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
 			} else  {
-				console.log('ExecutaTreinoPageBase:filtro: ' , JSON.stringify(this.filtroLoadOne()));
+				console.log('DetalheDiaTreinoPageBase:filtro: ' , JSON.stringify(this.filtroLoadOne()));
 				console.log('DiaTreino.findOne');
 				this.srv.findOne(this.filtroLoadOne())
 					.subscribe(
 						(result: DiaTreino) => {
 							this.item = result;
-							console.log('ExecutaTreinoPageBase.item: ' , JSON.stringify(this.item))
+							console.log('DetalheDiaTreinoPageBase.item: ' , JSON.stringify(this.item))
 						},
-						(erro: any) => console.log('ExecutaTreinoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
+						(erro: any) => console.log('DetalheDiaTreinoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
 			}
 		}  
@@ -50,11 +50,11 @@ export abstract class ExecutaTreinoPageBase {
 
   
   ionViewWillEnter() {
-    console.log('ionViewWillEnter ExecutaTreinoPage');
+    console.log('ionViewWillEnter DetalheDiaTreinoPage');
     this.inicializaItem();
   }
   ionViewDidLoad() {
-  	console.log('ionViewDidLoad ExecutaTreinoPage');
+  	console.log('ionViewDidLoad DetalheDiaTreinoPage');
   }
 }
     

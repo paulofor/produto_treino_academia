@@ -18,6 +18,11 @@ export abstract class ListaSerieTreinoPageBase {
     	return SerieTreinoEdicaoPage;
     	
   	}
+  	getPageDetalhe(): Page {
+		
+    	return SerieTreinoEdicaoPage;
+    	
+  	}
 
 	constructor(public navCtrl: NavController, protected srv: SerieTreinoApi) {
 	}
@@ -33,18 +38,18 @@ export abstract class ListaSerieTreinoPageBase {
 		console.log('SerieTreino.find');
   		this.srv.find(this.getFiltro())
   			.subscribe((resultado: SerieTreino[]) => {
-  				console.log('ListaSerieTreinoPageBase:LoadLista:' , JSON.stringify(resultado));
+  				console.log('ListaSerieTreinoPageBase:LoadLista:' , resultado);
   				this.listaItem = resultado;
   			})
   	}
   
-	protected alterar(item: SerieTreino) {
+	protected detalheId(item: SerieTreino) {
 		this.navCtrl.push(this.getPageEdicao(), {
-      		item: item
+      		id: item.id
 		});
   	}
   	protected alterarId(item: SerieTreino) {
-		this.navCtrl.push(this.getPageEdicao(), {
+		this.navCtrl.push(this.getPageDetalhe(), {
       		id: item.id
 		});
   	}

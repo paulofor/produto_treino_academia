@@ -3,9 +3,10 @@ import { DiaTreino, DiaTreinoApi } from '../../shared/sdk';
 import { LoopBackFilter } from '../../shared/sdk';
 import { NavController } from 'ionic-angular';
 import { Page } from 'ionic-angular/umd/navigation/nav-util';
+import { DetalheDiaTreinoPage } from '../detalhe-dia-treino/detalhe-dia-treino';
 
 
-export abstract class SerieListaExecucaoPageBase {
+export abstract class ConsultaListaDiaTreinoPageBase {
 
 	protected listaItem: DiaTreino[];
 	protected abstract inicializacao();
@@ -14,12 +15,12 @@ export abstract class SerieListaExecucaoPageBase {
 	 
 	getPageEdicao(): Page {
 		
-    	throw new Error("SerieListaExecucaoPage sem tela de edicao.");
+    	return DetalheDiaTreinoPage;
     	
   	}
   	getPageDetalhe(): Page {
 		
-    	throw new Error("SerieListaExecucaoPage sem tela de detalhe.");
+    	return DetalheDiaTreinoPage;
     	
   	}
 
@@ -27,17 +28,17 @@ export abstract class SerieListaExecucaoPageBase {
 	}
 
 	ionViewWillEnter() {
-    	console.log('ionViewWillEnter SerieListaExecucaoPage');
+    	console.log('ionViewWillEnter ConsultaListaDiaTreinoPage');
     	this.inicializacao();
     	this.carregaLista();
   	}
   	
   	carregaLista() {
-  		console.log('SerieListaExecucaoPageBase:filtro: ' , JSON.stringify(this.getFiltro()));
+  		console.log('ConsultaListaDiaTreinoPageBase:filtro: ' , JSON.stringify(this.getFiltro()));
 		console.log('DiaTreino.find');
   		this.srv.find(this.getFiltro())
   			.subscribe((resultado: DiaTreino[]) => {
-  				console.log('SerieListaExecucaoPageBase:LoadLista:' , resultado);
+  				console.log('ConsultaListaDiaTreinoPageBase:LoadLista:' , resultado);
   				this.listaItem = resultado;
   			})
   	}

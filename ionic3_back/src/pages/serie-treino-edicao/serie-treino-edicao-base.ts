@@ -1,13 +1,14 @@
 import { SerieTreino, SerieTreinoApi , LoopBackFilter } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
 
-
+// Tipo: DETALHE
 export abstract class SerieTreinoEdicaoPageBase {
   
   protected item: SerieTreino;
   
-  
-  protected abstract filtroLoadId() : LoopBackFilter;
+  // filtro com parametro id
+  protected abstract filtroLoadId(id:any) : LoopBackFilter;
+  // filtro sem parametro id
   protected abstract filtroLoadOne() : LoopBackFilter;
  
   constructor(	public navParams: NavParams,
@@ -22,9 +23,9 @@ export abstract class SerieTreinoEdicaoPageBase {
 			var id = this.navParams.get('id');
 			console.log('SerieTreinoEdicaoPageBase:Id: ' , id);
 			if (id) {
-				console.log('SerieTreinoEdicaoPageBase:filtro: ' , JSON.stringify(this.filtroLoadId()));
+				console.log('SerieTreinoEdicaoPageBase:filtro: ' , JSON.stringify(this.filtroLoadId(id)));
 				console.log('SerieTreino.findById');
-				this.srv.findById(id, this.filtroLoadId())
+				this.srv.findById(id, this.filtroLoadId(id))
 					.subscribe(
 						(result: SerieTreino) => {
 							this.item = result;

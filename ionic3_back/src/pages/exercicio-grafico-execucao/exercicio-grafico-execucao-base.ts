@@ -1,13 +1,14 @@
 import { Exercicio, ExercicioApi , LoopBackFilter } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
 
-
+// Tipo: DETALHE
 export abstract class ExercicioGraficoExecucaoPageBase {
   
   protected item: Exercicio;
   
-  
-  protected abstract filtroLoadId() : LoopBackFilter;
+  // filtro com parametro id
+  protected abstract filtroLoadId(id:any) : LoopBackFilter;
+  // filtro sem parametro id
   protected abstract filtroLoadOne() : LoopBackFilter;
  
   constructor(	public navParams: NavParams,
@@ -22,9 +23,9 @@ export abstract class ExercicioGraficoExecucaoPageBase {
 			var id = this.navParams.get('id');
 			console.log('ExercicioGraficoExecucaoPageBase:Id: ' , id);
 			if (id) {
-				console.log('ExercicioGraficoExecucaoPageBase:filtro: ' , JSON.stringify(this.filtroLoadId()));
+				console.log('ExercicioGraficoExecucaoPageBase:filtro: ' , JSON.stringify(this.filtroLoadId(id)));
 				console.log('Exercicio.findById');
-				this.srv.findById(id, this.filtroLoadId())
+				this.srv.findById(id, this.filtroLoadId(id))
 					.subscribe(
 						(result: Exercicio) => {
 							this.item = result;

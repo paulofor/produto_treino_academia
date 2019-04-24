@@ -15,6 +15,11 @@
       <h2 *ngIf="item.serieTreino.listaItemSerie.length==0">Nenhum exercício</h2>
     </ion-item>
 
+    <ion-item>
+      <h2>Total : {{item.serieTreino.listaItemSerie.length}}</h2>
+      <h2>Executados: {{ getQuantidadeExecutado() }}</h2>
+    </ion-item>
+
     <ion-list *ngIf="item.serieTreino.listaItemSerie.length>0">
       <ion-item *ngFor="let itemSerie of item.serieTreino.listaItemSerie">
         <h2 class="linha1">{{itemSerie.exercicio.titulo}}</h2>

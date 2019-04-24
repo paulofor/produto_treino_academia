@@ -17,9 +17,9 @@ import { EXERCICIO } from '../../../../dados/exercicio';
 //Versao Ionic
 import { of } from 'rxjs/observable/of';
 import {EXERCICIO_EXERCICIOGRAFICOEXECUCAOPAGE} from  '../../../../dados/exercicio';
-import {EXERCICIO_EXERCICIOULTIMASEXECUCOESPAGE} from  '../../../../dados/exercicio';
 import {EXERCICIO_EXERCICIOCADASTROPAGE} from  '../../../../dados/exercicio';
 import {EXERCICIO_LISTAEXERCICIOPAGE} from  '../../../../dados/exercicio';
+import {EXERCICIO_CONSULTALISTAEXERCICIOPAGE} from  '../../../../dados/exercicio';
 /**
  * Api services for the `Aplicacao` model.
  */
@@ -103,14 +103,14 @@ export class ExercicioApi extends BaseLoopBackApi {
 	getExercicioGraficoExecucaoPageLoad(filter: LoopBackFilter = {}) : Observable<Exercicio> {
 		return of (EXERCICIO_EXERCICIOGRAFICOEXECUCAOPAGE);
 	}
-	getExercicioUltimasExecucoesPageLoad(filter: LoopBackFilter = {}) : Observable<Exercicio> {
-		return of (EXERCICIO_EXERCICIOULTIMASEXECUCOESPAGE);
-	}
 	getExercicioCadastroPageLoad(filter: LoopBackFilter = {}) : Observable<Exercicio> {
 		return of (EXERCICIO_EXERCICIOCADASTROPAGE);
 	}
 	getListaExercicioPageLoad(filter: LoopBackFilter = {}) : Observable<Exercicio> {
 		return of (EXERCICIO_LISTAEXERCICIOPAGE);
+	}
+	getConsultaListaExercicioPageLoad(filter: LoopBackFilter = {}) : Observable<Exercicio> {
+		return of (EXERCICIO_CONSULTALISTAEXERCICIOPAGE);
 	}
 
 	public submitExercicioCadastroPage(item : any , customHeaders?: Function) : Observable<Exercicio> {

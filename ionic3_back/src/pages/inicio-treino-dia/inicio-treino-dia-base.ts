@@ -1,16 +1,15 @@
 import { SerieTreino, SerieTreinoApi , LoopBackFilter } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
 
-
+// Tipo: DETALHE
 export abstract class InicioTreinoDiaPageBase {
   
   protected item: SerieTreino;
   
-  
-  protected abstract filtroLoadId() : LoopBackFilter;
+  // filtro com parametro id
+  protected abstract filtroLoadId(id:any) : LoopBackFilter;
+  // filtro sem parametro id
   protected abstract filtroLoadOne() : LoopBackFilter;
-
-  protected abstract inicializaImpl();
  
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
@@ -24,9 +23,9 @@ export abstract class InicioTreinoDiaPageBase {
 			var id = this.navParams.get('id');
 			console.log('InicioTreinoDiaPageBase:Id: ' , id);
 			if (id) {
-				console.log('InicioTreinoDiaPageBase:filtro: ' , JSON.stringify(this.filtroLoadId()));
+				console.log('InicioTreinoDiaPageBase:filtro: ' , JSON.stringify(this.filtroLoadId(id)));
 				console.log('SerieTreino.findById');
-				this.srv.findById(id, this.filtroLoadId())
+				this.srv.findById(id, this.filtroLoadId(id))
 					.subscribe(
 						(result: SerieTreino) => {
 							this.item = result;
@@ -52,8 +51,7 @@ export abstract class InicioTreinoDiaPageBase {
   
   ionViewWillEnter() {
     console.log('ionViewWillEnter InicioTreinoDiaPage');
-	this.inicializaItem();
-	this.inicializaImpl();
+    this.inicializaItem();
   }
   ionViewDidLoad() {
   	console.log('ionViewDidLoad InicioTreinoDiaPage');

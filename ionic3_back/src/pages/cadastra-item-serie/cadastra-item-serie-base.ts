@@ -18,6 +18,11 @@ export abstract class CadastraItemSeriePageBase {
     	return EditaItemSeriePage;
     	
   	}
+  	getPageDetalhe(): Page {
+		
+    	return EditaItemSeriePage;
+    	
+  	}
 
 	constructor(public navCtrl: NavController, protected srv: ItemSerieApi) {
 	}
@@ -33,18 +38,18 @@ export abstract class CadastraItemSeriePageBase {
 		console.log('ItemSerie.find');
   		this.srv.find(this.getFiltro())
   			.subscribe((resultado: ItemSerie[]) => {
-  				console.log('CadastraItemSeriePageBase:LoadLista:' , JSON.stringify(resultado));
+  				console.log('CadastraItemSeriePageBase:LoadLista:' , resultado);
   				this.listaItem = resultado;
   			})
   	}
   
-	protected alterar(item: ItemSerie) {
+	protected detalheId(item: ItemSerie) {
 		this.navCtrl.push(this.getPageEdicao(), {
-      		item: item
+      		id: item.id
 		});
   	}
   	protected alterarId(item: ItemSerie) {
-		this.navCtrl.push(this.getPageEdicao(), {
+		this.navCtrl.push(this.getPageDetalhe(), {
       		id: item.id
 		});
   	}
