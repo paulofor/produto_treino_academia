@@ -1,15 +1,25 @@
-
-<ion-header >
+<ion-header>
   <ion-navbar color="titulo">
-    <ion-title (click)="testaFoto()">DetalheDiaTreinoPage</ion-title>
+    <ion-title *ngIf="item">{{item.data | date : 'dd/MM/yyyy'}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="quadroBase">
   <ng-container *ngIf="item">
+
     <ion-card>
-      <div class="card-title"></div>
-      <div class="card-subtitle"></div>
+      <div class="card-title">Inicio: {{item.data | date: 'hh:mm:ss'}}</div>
+      <div class="card-subtitle">Série criada em : {{item.serieTreino.dataCriacao | date: 'dd/MM/yyyy'}}</div>
+
+      <div class="card-content">
+        <ion-list> 
+          <ion-item *ngFor="let itemSerie of item.serieTreino.listaItemSerie">
+            <h3 class="linha1">{{itemSerie.exercicio.titulo}}</h3>
+            <h3 class="linhan">{{getHoraExecucao(itemSerie.listaExecucaoItemSerie) }}</h3>
+          </ion-item>
+        </ion-list>
+      </div>
+
     </ion-card>
 
 

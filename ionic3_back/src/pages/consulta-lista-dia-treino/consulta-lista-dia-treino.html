@@ -23,7 +23,7 @@
       <ion-item *ngFor="let item of listaItem">
         <h3 class="linha1">{{item.data | date : 'dd/MM/yyyy hh:mm'}}</h3>
         <h3 class="linhan"></h3>
-        <button ion-button clear item-end (click)="alterarId(item)">Detalhe</button>
+        <button ion-button clear item-end (click)="detalheId(item)">Detalhe</button>
       </ion-item>
     </ion-list>
 

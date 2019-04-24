@@ -17,9 +17,10 @@ export class DetalheDiaTreinoPage extends DetalheDiaTreinoPageBase {
       super(navParams,navCtrl,srv);
   }
   
-  protected filtroLoadId(id: any): LoopBackFilter {
-    return {};
+  protected filtroLoadId(id:number): LoopBackFilter {
+    return {"include":{"relation":"serieTreino","scope":{"include":{"relation":"listaItemSerie","scope":{"include":[{"relation":"exercicio"},{"relation":"listaExecucaoItemSerie","scope":{"where":{"diaTreinoId":id}}}]}}}}};;
   }
+
   protected filtroLoadOne(): LoopBackFilter {
     return {};
   }

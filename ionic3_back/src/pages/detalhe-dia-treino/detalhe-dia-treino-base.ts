@@ -29,7 +29,7 @@ export abstract class DetalheDiaTreinoPageBase {
 					.subscribe(
 						(result: DiaTreino) => {
 							this.item = result;
-							console.log('DetalheDiaTreinoPageBase.item: ' , JSON.stringify(this.item))
+							console.log('DetalheDiaTreinoPageBase.item: ' , this.item)
 						},
 						(erro: any) => console.log('DetalheDiaTreinoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
@@ -40,7 +40,7 @@ export abstract class DetalheDiaTreinoPageBase {
 					.subscribe(
 						(result: DiaTreino) => {
 							this.item = result;
-							console.log('DetalheDiaTreinoPageBase.item: ' , JSON.stringify(this.item))
+							console.log('DetalheDiaTreinoPageBase.item: ' , this.item)
 						},
 						(erro: any) => console.log('DetalheDiaTreinoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
