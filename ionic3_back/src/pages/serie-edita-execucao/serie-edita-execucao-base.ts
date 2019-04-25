@@ -29,7 +29,7 @@ export abstract class SerieEditaExecucaoPageBase {
 					.subscribe(
 						(result: ItemSerie) => {
 							this.item = result;
-							console.log('SerieEditaExecucaoPageBase.item: ' , JSON.stringify(this.item))
+							console.log('SerieEditaExecucaoPageBase.item: ' , this.item)
 						},
 						(erro: any) => console.log('SerieEditaExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
@@ -40,7 +40,7 @@ export abstract class SerieEditaExecucaoPageBase {
 					.subscribe(
 						(result: ItemSerie) => {
 							this.item = result;
-							console.log('SerieEditaExecucaoPageBase.item: ' , JSON.stringify(this.item))
+							console.log('SerieEditaExecucaoPageBase.item: ' , this.item)
 						},
 						(erro: any) => console.log('SerieEditaExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
@@ -50,11 +50,11 @@ export abstract class SerieEditaExecucaoPageBase {
 
   
   ionViewWillEnter() {
-    console.log('ionViewWillEnter SerieEditaExecucaoPage');
+    console.log('ionViewWillEnter SerieEditaExecucaoPage<<DETALHE>>');
     this.inicializaItem();
   }
   ionViewDidLoad() {
-  	console.log('ionViewDidLoad SerieEditaExecucaoPage');
+  	console.log('ionViewDidLoad SerieEditaExecucaoPage<<DETALHE>>');
   }
 }
     

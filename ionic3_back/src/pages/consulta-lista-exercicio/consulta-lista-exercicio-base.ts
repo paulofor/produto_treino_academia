@@ -3,6 +3,7 @@ import { Exercicio, ExercicioApi } from '../../shared/sdk';
 import { LoopBackFilter } from '../../shared/sdk';
 import { NavController } from 'ionic-angular';
 import { Page } from 'ionic-angular/umd/navigation/nav-util';
+import { ExercicioGraficoExecucaoPage } from '../exercicio-grafico-execucao/exercicio-grafico-execucao';
 
 
 export abstract class ConsultaListaExercicioPageBase {
@@ -14,12 +15,12 @@ export abstract class ConsultaListaExercicioPageBase {
 	 
 	getPageEdicao(): Page {
 		
-    	throw new Error("ConsultaListaExercicioPage sem tela de edicao.");
+    	return ExercicioGraficoExecucaoPage;
     	
   	}
   	getPageDetalhe(): Page {
 		
-    	throw new Error("ConsultaListaExercicioPage sem tela de detalhe.");
+    	return ExercicioGraficoExecucaoPage;
     	
   	}
 

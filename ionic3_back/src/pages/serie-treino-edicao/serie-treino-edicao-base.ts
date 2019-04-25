@@ -29,7 +29,7 @@ export abstract class SerieTreinoEdicaoPageBase {
 					.subscribe(
 						(result: SerieTreino) => {
 							this.item = result;
-							console.log('SerieTreinoEdicaoPageBase.item: ' , JSON.stringify(this.item))
+							console.log('SerieTreinoEdicaoPageBase.item: ' , this.item)
 						},
 						(erro: any) => console.log('SerieTreinoEdicaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
@@ -40,7 +40,7 @@ export abstract class SerieTreinoEdicaoPageBase {
 					.subscribe(
 						(result: SerieTreino) => {
 							this.item = result;
-							console.log('SerieTreinoEdicaoPageBase.item: ' , JSON.stringify(this.item))
+							console.log('SerieTreinoEdicaoPageBase.item: ' , this.item)
 						},
 						(erro: any) => console.log('SerieTreinoEdicaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
@@ -50,11 +50,11 @@ export abstract class SerieTreinoEdicaoPageBase {
 
   
   ionViewWillEnter() {
-    console.log('ionViewWillEnter SerieTreinoEdicaoPage');
+    console.log('ionViewWillEnter SerieTreinoEdicaoPage<<DETALHE>>');
     this.inicializaItem();
   }
   ionViewDidLoad() {
-  	console.log('ionViewDidLoad SerieTreinoEdicaoPage');
+  	console.log('ionViewDidLoad SerieTreinoEdicaoPage<<DETALHE>>');
   }
 }
     

@@ -29,7 +29,7 @@ export abstract class ExercicioGraficoExecucaoPageBase {
 					.subscribe(
 						(result: Exercicio) => {
 							this.item = result;
-							console.log('ExercicioGraficoExecucaoPageBase.item: ' , JSON.stringify(this.item))
+							console.log('ExercicioGraficoExecucaoPageBase.item: ' , this.item)
 						},
 						(erro: any) => console.log('ExercicioGraficoExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
@@ -40,7 +40,7 @@ export abstract class ExercicioGraficoExecucaoPageBase {
 					.subscribe(
 						(result: Exercicio) => {
 							this.item = result;
-							console.log('ExercicioGraficoExecucaoPageBase.item: ' , JSON.stringify(this.item))
+							console.log('ExercicioGraficoExecucaoPageBase.item: ' , this.item)
 						},
 						(erro: any) => console.log('ExercicioGraficoExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
@@ -50,11 +50,11 @@ export abstract class ExercicioGraficoExecucaoPageBase {
 
   
   ionViewWillEnter() {
-    console.log('ionViewWillEnter ExercicioGraficoExecucaoPage');
+    console.log('ionViewWillEnter ExercicioGraficoExecucaoPage<<DETALHE>>');
     this.inicializaItem();
   }
   ionViewDidLoad() {
-  	console.log('ionViewDidLoad ExercicioGraficoExecucaoPage');
+  	console.log('ionViewDidLoad ExercicioGraficoExecucaoPage<<DETALHE>>');
   }
 }
     

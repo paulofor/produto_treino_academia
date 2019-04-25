@@ -29,7 +29,7 @@ export abstract class ExecutaTreinoPageBase {
 					.subscribe(
 						(result: DiaTreino) => {
 							this.item = result;
-							console.log('ExecutaTreinoPageBase.item: ' , JSON.stringify(this.item))
+							console.log('ExecutaTreinoPageBase.item: ' , this.item)
 						},
 						(erro: any) => console.log('ExecutaTreinoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
@@ -40,7 +40,7 @@ export abstract class ExecutaTreinoPageBase {
 					.subscribe(
 						(result: DiaTreino) => {
 							this.item = result;
-							console.log('ExecutaTreinoPageBase.item: ' , JSON.stringify(this.item))
+							console.log('ExecutaTreinoPageBase.item: ' , this.item)
 						},
 						(erro: any) => console.log('ExecutaTreinoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
@@ -50,11 +50,11 @@ export abstract class ExecutaTreinoPageBase {
 
   
   ionViewWillEnter() {
-    console.log('ionViewWillEnter ExecutaTreinoPage');
+    console.log('ionViewWillEnter ExecutaTreinoPage<<DETALHE>>');
     this.inicializaItem();
   }
   ionViewDidLoad() {
-  	console.log('ionViewDidLoad ExecutaTreinoPage');
+  	console.log('ionViewDidLoad ExecutaTreinoPage<<DETALHE>>');
   }
 }
     

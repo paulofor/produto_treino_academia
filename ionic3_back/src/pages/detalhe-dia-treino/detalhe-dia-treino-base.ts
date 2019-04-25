@@ -50,11 +50,11 @@ export abstract class DetalheDiaTreinoPageBase {
 
   
   ionViewWillEnter() {
-    console.log('ionViewWillEnter DetalheDiaTreinoPage');
+    console.log('ionViewWillEnter DetalheDiaTreinoPage<<DETALHE>>');
     this.inicializaItem();
   }
   ionViewDidLoad() {
-  	console.log('ionViewDidLoad DetalheDiaTreinoPage');
+  	console.log('ionViewDidLoad DetalheDiaTreinoPage<<DETALHE>>');
   }
 }
     

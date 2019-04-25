@@ -29,7 +29,7 @@ export abstract class InicioTreinoDiaPageBase {
 					.subscribe(
 						(result: SerieTreino) => {
 							this.item = result;
-							console.log('InicioTreinoDiaPageBase.item: ' , JSON.stringify(this.item))
+							console.log('InicioTreinoDiaPageBase.item: ' , this.item)
 						},
 						(erro: any) => console.log('InicioTreinoDiaPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
@@ -40,7 +40,7 @@ export abstract class InicioTreinoDiaPageBase {
 					.subscribe(
 						(result: SerieTreino) => {
 							this.item = result;
-							console.log('InicioTreinoDiaPageBase.item: ' , JSON.stringify(this.item))
+							console.log('InicioTreinoDiaPageBase.item: ' , this.item)
 						},
 						(erro: any) => console.log('InicioTreinoDiaPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
@@ -50,11 +50,11 @@ export abstract class InicioTreinoDiaPageBase {
 
   
   ionViewWillEnter() {
-    console.log('ionViewWillEnter InicioTreinoDiaPage');
+    console.log('ionViewWillEnter InicioTreinoDiaPage<<DETALHE>>');
     this.inicializaItem();
   }
   ionViewDidLoad() {
-  	console.log('ionViewDidLoad InicioTreinoDiaPage');
+  	console.log('ionViewDidLoad InicioTreinoDiaPage<<DETALHE>>');
   }
 }
     
