@@ -27,7 +27,7 @@ export abstract class SerieListaExecucaoPageBase {
 	}
 
 	ionViewWillEnter() {
-    	console.log('ionViewWillEnter SerieListaExecucaoPage');
+    	console.log('ionViewWillEnter SerieListaExecucaoPage<<LISTA_ITEM>>');
     	this.inicializacao();
     	this.carregaLista();
   	}

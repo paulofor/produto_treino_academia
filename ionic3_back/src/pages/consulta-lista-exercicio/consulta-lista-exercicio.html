@@ -2,7 +2,7 @@
 
 <ion-header>
   <ion-navbar color="titulo">
-    <ion-title>ConsultaListaExercicioPage</ion-title>
+    <ion-title>Exercícios Cadastrados</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -12,18 +12,18 @@
 
     <ion-card *ngIf="listaItem.length==0">
       <ion-card-header>
-        Nenhum ... encontrada
+        Nenhum exercício encontrado
       </ion-card-header>
       <ion-card-content>
-        Crie 
+        Crie uma série de treino completa.
       </ion-card-content>
     </ion-card>
 
     <ion-list *ngIf="listaItem.length>0">
       <ion-item *ngFor="let item of listaItem">
-        <h3 class="linha1"></h3>
+        <h3 class="linha1">{{item.titulo}}</h3>
         <h3 class="linhan"></h3>
-        <button ion-button clear item-end (click)="detalheId(item)">alterar</button>
+        <button ion-button clear item-bottom (click)="detalheId(item)">execucoes</button>
       </ion-item>
     </ion-list>
 

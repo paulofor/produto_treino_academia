@@ -28,7 +28,7 @@ export abstract class CadastraItemSeriePageBase {
 	}
 
 	ionViewWillEnter() {
-    	console.log('ionViewWillEnter CadastraItemSeriePage');
+    	console.log('ionViewWillEnter CadastraItemSeriePage<<LISTA_ITEM>>');
     	this.inicializacao();
     	this.carregaLista();
   	}

@@ -28,7 +28,7 @@ export abstract class ConsultaListaDiaTreinoPageBase {
 	}
 
 	ionViewWillEnter() {
-    	console.log('ionViewWillEnter ConsultaListaDiaTreinoPage');
+    	console.log('ionViewWillEnter ConsultaListaDiaTreinoPage<<LISTA_ITEM>>');
     	this.inicializacao();
     	this.carregaLista();
   	}

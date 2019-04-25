@@ -55,12 +55,12 @@ export abstract class CriaSeriePageBase {
 	}
   }
   ionViewWillEnter() {
-    console.log('ionViewWillEnter CriaSeriePage');
+    console.log('ionViewWillEnter CriaSeriePage<<EDITA>>');
     this.inicializacaoComplementos();
     this.inicializaItem();
   }
   ionViewDidLoad() {
-  	console.log('ionViewDidLoad CriaSeriePage');
+  	console.log('ionViewDidLoad CriaSeriePage<<EDITA>>');
   }
   
 	protected listaSerieTreino : SerieTreino[];

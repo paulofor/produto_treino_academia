@@ -57,12 +57,12 @@ export abstract class ExercicioCadastroPageBase {
 	}
   }
   ionViewWillEnter() {
-    console.log('ionViewWillEnter ExercicioCadastroPage');
+    console.log('ionViewWillEnter ExercicioCadastroPage<<EDITA>>');
     this.inicializacaoComplementos();
     this.inicializaItem();
   }
   ionViewDidLoad() {
-  	console.log('ionViewDidLoad ExercicioCadastroPage');
+  	console.log('ionViewDidLoad ExercicioCadastroPage<<EDITA>>');
   }
   
 	protected listaGrupoMuscular : GrupoMuscular[];

@@ -28,7 +28,7 @@ export abstract class ListaSerieTreinoPageBase {
 	}
 
 	ionViewWillEnter() {
-    	console.log('ionViewWillEnter ListaSerieTreinoPage');
+    	console.log('ionViewWillEnter ListaSerieTreinoPage<<LISTA_ITEM>>');
     	this.inicializacao();
     	this.carregaLista();
   	}

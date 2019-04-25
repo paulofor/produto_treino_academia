@@ -55,12 +55,12 @@ export abstract class EditaItemSeriePageBase {
 	}
   }
   ionViewWillEnter() {
-    console.log('ionViewWillEnter EditaItemSeriePage');
+    console.log('ionViewWillEnter EditaItemSeriePage<<EDITA>>');
     this.inicializacaoComplementos();
     this.inicializaItem();
   }
   ionViewDidLoad() {
-  	console.log('ionViewDidLoad EditaItemSeriePage');
+  	console.log('ionViewDidLoad EditaItemSeriePage<<EDITA>>');
   }
   
 	protected listaSerieTreino : SerieTreino[];
