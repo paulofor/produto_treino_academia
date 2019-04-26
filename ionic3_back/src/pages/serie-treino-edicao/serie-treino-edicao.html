@@ -8,8 +8,8 @@
   <ion-card *ngIf="item">
 
     <ion-item>
-      <h1>Data Criação: {{item.dataCriacao | date : 'dd/MM/yy'}}</h1>
-      <h2 *ngIf="item.listaItemSerie.length==0">Nenhum exercício</h2>
+      <h3>Criação: {{item.dataCriacao | date : 'dd/MM/yy'}}</h3>
+      <h3 *ngIf="item.listaItemSerie.length==0">Adicione exercícios</h3>
     </ion-item>
 
     <ion-list *ngIf="item.listaItemSerie.length>0">
