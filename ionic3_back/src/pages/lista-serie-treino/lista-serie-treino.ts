@@ -31,7 +31,7 @@ export class ListaSerieTreinoPage extends ListaSerieTreinoPageBase {
   protected novo() {
     var serieNova = new SerieTreino();
     serieNova.dataCriacao = new Date();
-    serieNova.ativa = '1';
+    serieNova.ativa = 1;
     serieNova.qtdeExecucao = 0;
     this.srv.create(serieNova)
       .subscribe((result:SerieTreino) => {
@@ -43,7 +43,7 @@ export class ListaSerieTreinoPage extends ListaSerieTreinoPageBase {
   }
   
   getSituacao(item:SerieTreino) {
-    if (item.ativa=='1') return 'ativa';
+    if (item.ativa==1) return 'ativa';
     else return 'desativa';
   }
   

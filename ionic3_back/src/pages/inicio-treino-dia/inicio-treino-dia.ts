@@ -60,7 +60,7 @@ export class InicioTreinoDiaPage extends InicioTreinoDiaPageBase{
 
   iniciaDia() {
     var novo : DiaTreino = new DiaTreino();
-    novo.concluido = '0';
+    novo.concluido = 0;
     novo.data = new Date();
     novo.serieTreinoId = this.item.id;
     this.srvDia.create(novo)
