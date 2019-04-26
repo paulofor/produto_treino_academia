@@ -12,7 +12,7 @@ export interface CargaPlanejadaInterface {
 	"dataInicio"?: Date;
 	"dataFinal"?: Date;
 	"quantidadeRepeticao"?: number;
-	"ativa"?: string;
+	"ativa"?: number;
 	"ordemRepeticao"?: number;
 	itemSerie?: ItemSerie;
 	itemSerieId? : number;
@@ -26,7 +26,7 @@ export class CargaPlanejada implements CargaPlanejadaInterface {
 	dataInicio?: Date;
 	dataFinal?: Date;
 	quantidadeRepeticao?: number;
-	ativa?: string;
+	ativa?: number;
 	ordemRepeticao?: number;
 	itemSerie?: ItemSerie;
 	itemSerieId? : number;
@@ -88,7 +88,7 @@ export class CargaPlanejada implements CargaPlanejadaInterface {
         },
         "ativa" : {
         	name : "ativa",
-        	type : "string"
+        	type : "number"
         },
         "ordemRepeticao" : {
         	name : "ordemRepeticao",

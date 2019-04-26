@@ -61,6 +61,7 @@ import { DiaTreinoApi } from './services/custom/DiaTreino';
 import { ItemSerieApi } from './services/custom/ItemSerie';
 import { RegistroPesoApi } from './services/custom/RegistroPeso';
 import { UsuarioApi } from './services/custom/Usuario';
+import { ExecucaoCargaApi } from './services/custom/ExecucaoCarga';
 
 /**
 * @module SDKBrowserModule
@@ -112,6 +113,8 @@ export class SDKBrowserModule {
 		RegistroPesoApi,
 	
 		UsuarioApi,
+	
+		ExecucaoCargaApi,
 	
         internalStorageProvider,
         { provide: SDKStorage, useClass: StorageBrowser }

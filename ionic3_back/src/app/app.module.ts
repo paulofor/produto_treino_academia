@@ -36,6 +36,7 @@ import { DiaTreinoApi } from '../shared/sdk';
 import { ItemSerieApi } from '../shared/sdk';
 import { RegistroPesoApi } from '../shared/sdk';
 import { UsuarioApi } from '../shared/sdk';
+import { ExecucaoCargaApi } from '../shared/sdk';
 
 
 @NgModule({
@@ -140,6 +141,8 @@ import { UsuarioApi } from '../shared/sdk';
 	RegistroPesoApi,
 	
 	UsuarioApi,
+	
+	ExecucaoCargaApi,
 	
     Screenshot
   ]

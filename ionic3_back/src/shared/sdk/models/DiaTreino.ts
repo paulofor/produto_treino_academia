@@ -11,7 +11,7 @@ declare var Object: any;
 export interface DiaTreinoInterface {
 	"id"?: number;
 	"data"?: Date;
-	"concluido"?: string;
+	"concluido"?: number;
 	serieTreino?: SerieTreino;
 	serieTreinoId? : number;
 	usuario?: Usuario;
@@ -23,7 +23,7 @@ export interface DiaTreinoInterface {
 export class DiaTreino implements DiaTreinoInterface {
 	id?: number;
 	data?: Date;
-	concluido?: string;
+	concluido?: number;
 	serieTreino?: SerieTreino;
 	serieTreinoId? : number;
 	usuario?: Usuario;
@@ -74,7 +74,7 @@ export class DiaTreino implements DiaTreinoInterface {
         },
         "concluido" : {
         	name : "concluido",
-        	type : "string"
+        	type : "number"
         },
       },
       relations: {

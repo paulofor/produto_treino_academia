@@ -10,7 +10,7 @@ declare var Object: any;
 export interface SerieTreinoInterface {
 	"id"?: number;
 	"dataCriacao"?: Date;
-	"ativa"?: string;
+	"ativa"?: number;
 	"dataUltimaExecucao"?: Date;
 	"qtdeExecucao"?: number;
 	usuario?: Usuario;
@@ -22,7 +22,7 @@ export interface SerieTreinoInterface {
 export class SerieTreino implements SerieTreinoInterface {
 	id?: number;
 	dataCriacao?: Date;
-	ativa?: string;
+	ativa?: number;
 	dataUltimaExecucao?: Date;
 	qtdeExecucao?: number;
 	usuario?: Usuario;
@@ -73,7 +73,7 @@ export class SerieTreino implements SerieTreinoInterface {
         },
         "ativa" : {
         	name : "ativa",
-        	type : "string"
+        	type : "number"
         },
         "dataUltimaExecucao" : {
         	name : "dataUltimaExecucao",

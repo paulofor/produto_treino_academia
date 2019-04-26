@@ -11,6 +11,7 @@ import { DiaTreino } from '../../models/DiaTreino';
 import { ItemSerie } from '../../models/ItemSerie';
 import { RegistroPeso } from '../../models/RegistroPeso';
 import { Usuario } from '../../models/Usuario';
+import { ExecucaoCarga } from '../../models/ExecucaoCarga';
 export interface Models { [name: string]: any }
 
 @Injectable()
@@ -26,6 +27,7 @@ export class SDKModels {
 	ItemSerie: ItemSerie,
 	RegistroPeso: RegistroPeso,
 	Usuario: Usuario,
+	ExecucaoCarga: ExecucaoCarga,
 	User: User,
     Container: Container
   };
