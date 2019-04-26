@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar color="titulo">
-    <ion-title>Executando Treino</ion-title>
+    <ion-title>Executando Série</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -11,19 +11,22 @@
   <ion-card *ngIf="item">
 
     <ion-item>
-      <h1>Data Criação: {{item.dataCriacao | date : 'dd/MM/yy'}}</h1>
-      <h2 *ngIf="item.serieTreino.listaItemSerie.length==0">Nenhum exercício</h2>
+      <h3>Série de: {{item.serieTreino.dataCriacao | date : 'dd/MM/yy'}}</h3>
+      <h3 *ngIf="item.serieTreino.listaItemSerie.length==0">Nenhum exercício nessa série</h3>
     </ion-item>
 
     <ion-item>
-      <h2>Total : {{item.serieTreino.listaItemSerie.length}}</h2>
-      <h2>Executados: {{ getQuantidadeExecutado() }}</h2>
+      <h3>Total : {{item.serieTreino.listaItemSerie.length}}</h3>
+      <h3>Executados: {{ getQuantidadeExecutado() }}</h3>
     </ion-item>
 
     <ion-list *ngIf="item.serieTreino.listaItemSerie.length>0">
       <ion-item *ngFor="let itemSerie of item.serieTreino.listaItemSerie">
         <h2 class="linha1">{{itemSerie.exercicio.titulo}}</h2>
-        <button *ngIf="itemSerie.listaExecucaoItemSerie.length==0" ion-button outline (click)="concluido(itemSerie)">executar</button>
+        <ng-container *ngFor="let carga of itemSerie.listaCargaPlanejada">
+          <h2>Carga: {{carga.valorCarga}}, Repetições: {{carga.quantidadeRepeticao}}</h2>
+        </ng-container>
+        <button *ngIf="itemSerie.listaExecucaoItemSerie.length==0" ion-button outline (click)="concluido(itemSerie)">concluir</button>
       </ion-item>
     </ion-list>
 

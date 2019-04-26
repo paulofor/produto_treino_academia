@@ -23,8 +23,32 @@ export class ExecutaTreinoPage extends ExecutaTreinoPageBase {
   }
 
 
-  protected filtroLoadId(id:number): LoopBackFilter {
-    return {"include":{"relation":"serieTreino","scope":{"include":{"relation":"listaItemSerie","scope":{"include":[{"relation":"exercicio"},{"relation":"listaExecucaoItemSerie","scope":{"where":{"diaTreinoId":id}}}]}}}}};;
+  protected filtroLoadId(id: number): LoopBackFilter {
+    return {
+      "include":
+      {
+        "relation": "serieTreino", "scope":
+        {
+          "include":
+          {
+            "relation": "listaItemSerie", "scope":
+            {
+              "include": [
+                {
+                  "relation": "exercicio"
+                },
+                {
+                  "relation": "listaExecucaoItemSerie", "scope": { "where": { "diaTreinoId": id } }
+                },
+                {
+                  "relation": "listaCargaPlanejada" , "scope" : { "order" : "ordemRepeticao" }
+                }
+              ]
+            }
+          }
+        }
+      }
+    };
   }
 
   protected filtroLoadOne(): LoopBackFilter {
@@ -59,10 +83,10 @@ export class ExecutaTreinoPage extends ExecutaTreinoPageBase {
   }
 
 
-  getQuantidadeExecutado() : number{
+  getQuantidadeExecutado(): number {
     var total = 0;
-    this.item.serieTreino.listaItemSerie.forEach((itemSerie:ItemSerie) => {
-      if (itemSerie.listaExecucaoItemSerie.length>0) total ++;
+    this.item.serieTreino.listaItemSerie.forEach((itemSerie: ItemSerie) => {
+      if (itemSerie.listaExecucaoItemSerie.length > 0) total++;
     })
     return total;
   }

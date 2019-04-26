@@ -1,6 +1,7 @@
 
 /* tslint:disable */
 import {
+	ExecucaoCarga,
 	DiaTreino,
 	ItemSerie,
 	Exercicio,
@@ -13,7 +14,7 @@ export interface ExecucaoItemSerieInterface {
 	"dataHoraInicio"?: Date;
 	"dataHoraFinalizacao"?: Date;
 	"cargaUtilizada"?: number;
-	"sucessoRepeticoes"?: string;
+	"sucessoRepeticoes"?: number;
 	"numeroSerie"?: number;
 	"quantidadeRepeticao"?: number;
 	diaTreino?: DiaTreino;
@@ -24,6 +25,7 @@ export interface ExecucaoItemSerieInterface {
 	exercicioId? : number;
 	usuario?: Usuario;
 	usuarioId? : number;
+	listaExecucaoCarga?: ExecucaoCarga[];
 }
 
 export class ExecucaoItemSerie implements ExecucaoItemSerieInterface {
@@ -31,7 +33,7 @@ export class ExecucaoItemSerie implements ExecucaoItemSerieInterface {
 	dataHoraInicio?: Date;
 	dataHoraFinalizacao?: Date;
 	cargaUtilizada?: number;
-	sucessoRepeticoes?: string;
+	sucessoRepeticoes?: number;
 	numeroSerie?: number;
 	quantidadeRepeticao?: number;
 	diaTreino?: DiaTreino;
@@ -42,6 +44,7 @@ export class ExecucaoItemSerie implements ExecucaoItemSerieInterface {
 	exercicioId? : number;
 	usuario?: Usuario;
 	usuarioId? : number;
+	listaExecucaoCarga?: ExecucaoCarga[];
   constructor(data?: ExecucaoItemSerieInterface) {
     Object.assign(this, data);
   }
@@ -94,7 +97,7 @@ export class ExecucaoItemSerie implements ExecucaoItemSerieInterface {
         },
         "sucessoRepeticoes" : {
         	name : "sucessoRepeticoes",
-        	type : "string"
+        	type : "number"
         },
         "numeroSerie" : {
         	name : "numeroSerie",
