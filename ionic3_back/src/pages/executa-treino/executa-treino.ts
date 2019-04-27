@@ -3,7 +3,7 @@ import { IonicPage, ModalController, NavController, NavParams } from 'ionic-angu
 import { Screenshot } from '@ionic-native/screenshot';
 
 
-import { DiaTreino, DiaTreinoApi, LoopBackFilter, SerieTreinoApi, ItemSerie, ExecucaoItemSerieApi, ExecucaoItemSerie } from '../../shared/sdk';
+import { DiaTreino, DiaTreinoApi, LoopBackFilter, SerieTreinoApi, ItemSerie, ExecucaoItemSerieApi, ExecucaoItemSerie, CargaPlanejada, ExecucaoCarga } from '../../shared/sdk';
 import { ExecutaTreinoPageBase } from './executa-treino-base';
 
 @IonicPage()
@@ -61,13 +61,24 @@ export class ExecutaTreinoPage extends ExecutaTreinoPageBase {
   }
 
 
+
   protected concluido(itemSerie: ItemSerie) {
     console.log('Item: ' , itemSerie);
-    var execucao: ExecucaoItemSerie = new ExecucaoItemSerie();
+    var execucao:ExecucaoItemSerie = new ExecucaoItemSerie();
     execucao.diaTreinoId = this.item.id;
     execucao.exercicioId = itemSerie.exercicioId;
     execucao.itemSerieId = itemSerie.id;
     execucao.dataHoraFinalizacao = new Date();
+    execucao.listaExecucaoCarga = [];
+
+    itemSerie.listaCargaPlanejada.forEach((carga:CargaPlanejada) => {
+      var exeCarga: ExecucaoCarga = new ExecucaoCarga();
+      exeCarga.dataHora = execucao.dataHoraFinalizacao;
+      exeCarga.valorCarga = carga.valorCarga;
+      exeCarga.repeticao = carga.quantidadeRepeticao;
+      exeCarga.sequencia = carga.ordemRepeticao;
+      execucao.listaExecucaoCarga.push(exeCarga); 
+    })
     this.submit(execucao);
   }
 
