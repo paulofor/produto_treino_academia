@@ -62,12 +62,13 @@ export class ExecutaTreinoPage extends ExecutaTreinoPageBase {
 
 
   protected concluido(itemSerie: ItemSerie) {
+    console.log('Item: ' , itemSerie);
     var execucao: ExecucaoItemSerie = new ExecucaoItemSerie();
     execucao.diaTreinoId = this.item.id;
     execucao.exercicioId = itemSerie.exercicioId;
     execucao.itemSerieId = itemSerie.id;
     execucao.dataHoraFinalizacao = new Date();
-    this.submit(itemSerie);
+    this.submit(execucao);
   }
 
 
