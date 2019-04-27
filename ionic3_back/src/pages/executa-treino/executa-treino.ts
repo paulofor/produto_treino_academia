@@ -13,11 +13,16 @@ import { ExecutaTreinoPageBase } from './executa-treino-base';
 })
 export class ExecutaTreinoPage extends ExecutaTreinoPageBase {
 
+  protected resultadoSubmit(result: ExecucaoItemSerie) {
+    //throw new Error("Method not implemented.");
+  }
+
   constructor(public navParams: NavParams,
     public navCtrl: NavController,
-    public srv: DiaTreinoApi, public srvExecucao: ExecucaoItemSerieApi) {
-    super(navParams, navCtrl, srv);
+    public srv: DiaTreinoApi,
+    public srvPut: ExecucaoItemSerieApi) {
 
+    super(navParams, navCtrl, srv, srvPut);
     let index = this.navCtrl.length() - 1;
     this.navCtrl.remove(index);
   }
@@ -41,7 +46,7 @@ export class ExecutaTreinoPage extends ExecutaTreinoPageBase {
                   "relation": "listaExecucaoItemSerie", "scope": { "where": { "diaTreinoId": id } }
                 },
                 {
-                  "relation": "listaCargaPlanejada" , "scope" : { "order" : "ordemRepeticao" }
+                  "relation": "listaCargaPlanejada", "scope": { "order": "ordemRepeticao" }
                 }
               ]
             }
@@ -62,13 +67,11 @@ export class ExecutaTreinoPage extends ExecutaTreinoPageBase {
     execucao.exercicioId = itemSerie.exercicioId;
     execucao.itemSerieId = itemSerie.id;
     execucao.dataHoraFinalizacao = new Date();
-    this.srvExecucao.create(execucao)
-      .subscribe((result) => {
-        this.carregaItem();
-      })
+    this.submit(itemSerie);
   }
 
 
+  /*
   carregaItem() {
     console.log('ExecutaTreinoPageBase:filtro: ', JSON.stringify(this.filtroLoadId(this.item.id)));
     console.log('DiaTreino.findById');
@@ -81,7 +84,7 @@ export class ExecutaTreinoPage extends ExecutaTreinoPageBase {
         (erro: any) => console.log('ExecutaTreinoPageBase:LoadId(Erro): ', JSON.stringify(erro))
       )
   }
-
+  */
 
   getQuantidadeExecutado(): number {
     var total = 0;

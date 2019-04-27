@@ -1,7 +1,7 @@
-import { DiaTreino, DiaTreinoApi , LoopBackFilter } from '../../shared/sdk';
+import { DiaTreino, ExecucaoItemSerie,  DiaTreinoApi , ExecucaoItemSerieApi, LoopBackFilter } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
 
-// Tipo: DETALHE
+// Tipo: GETPUT
 export abstract class ExecutaTreinoPageBase {
   
   protected item: DiaTreino;
@@ -10,10 +10,13 @@ export abstract class ExecutaTreinoPageBase {
   protected abstract filtroLoadId(id:any) : LoopBackFilter;
   // filtro sem parametro id
   protected abstract filtroLoadOne() : LoopBackFilter;
+  // chamada depois do submit e de nova inicializacao
+  protected abstract resultadoSubmit(result:ExecucaoItemSerie)
  
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
-				public srv: DiaTreinoApi) {
+				public srv: DiaTreinoApi, 
+				public srvPut: ExecucaoItemSerieApi) {
   } 
   
 	private inicializaItem() {
@@ -50,12 +53,23 @@ export abstract class ExecutaTreinoPageBase {
 
   
   ionViewWillEnter() {
-    console.log('ionViewWillEnter ExecutaTreinoPage<<DETALHE>>');
+    console.log('ionViewWillEnter ExecutaTreinoPage<<GETPUT>>');
     this.inicializaItem();
   }
   ionViewDidLoad() {
-  	console.log('ionViewDidLoad ExecutaTreinoPage<<DETALHE>>');
+  	console.log('ionViewDidLoad ExecutaTreinoPage<<GETPUT>>');
   }
+  
+  
+  	protected submit(item:ExecucaoItemSerie ) {
+		console.log('ExecutaTreinoPageBase:Submit-Item:' , JSON.stringify(this.item));
+    	this.srvPut.submitExecutaTreinoPage(this.item)
+      		.subscribe((resultado:ExecucaoItemSerie) => {
+        		console.log('ExecutaTreinoPageBase:Submit-Result: ' , JSON.stringify(resultado));
+				this.resultadoSubmit(resultado);
+				this.inicializaItem();
+      	})
+	}
 }
     
     
