@@ -63,6 +63,7 @@ export abstract class ExecutaTreinoPageBase {
   
 	protected submit(itemSubmit:ExecucaoItemSerie ) {
 		console.log('ExecutaTreinoPageBase:Submit-Item:' , itemSubmit);
+		console.log('ExecutaTreinoPageBase:Submit-ItemJson:' , JSON.stringify(itemSubmit));
 		this.srvPut.submitExecutaTreinoPage(itemSubmit)
 			.subscribe((resultado:ExecucaoItemSerie) => {
 				console.log('ExecutaTreinoPageBase:Submit-Result: ' , resultado);
