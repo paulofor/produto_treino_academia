@@ -16,6 +16,11 @@ registerLocaleData(localePtBr);
 })
 export class DetalheDiaTreinoPage extends DetalheDiaTreinoPageBase {
 
+  protected posInicializaItem() {
+  }
+  protected preInicializaItem() {
+  }
+
   constructor(public navParams: NavParams,
     public navCtrl: NavController,
     public srv: DiaTreinoApi) {
@@ -23,7 +28,28 @@ export class DetalheDiaTreinoPage extends DetalheDiaTreinoPageBase {
   }
 
   protected filtroLoadId(id: number): LoopBackFilter {
-    return { "include": { "relation": "serieTreino", "scope": { "include": { "relation": "listaItemSerie", "scope": { "include": [{ "relation": "exercicio" }, { "relation": "listaExecucaoItemSerie", "scope": { "where": { "diaTreinoId": id } } }] } } } } };;
+    return {
+      "include": {
+        "relation": "serieTreino", "scope": {
+          "include": {
+            "relation": "listaItemSerie", "scope": {
+              "include": [
+                {
+                  "relation": "exercicio"
+                },
+                {
+                  "relation": "listaExecucaoItemSerie", "scope": {
+                    "where": { "diaTreinoId": id },
+                    "include": {
+                      "relation": "listaExecucaoCarga" , "scope" : { "order" : "sequencia"}
+                    }
+                  }
+                }]
+            }
+          }
+        }
+      }
+    };;
   }
 
   protected filtroLoadOne(): LoopBackFilter {

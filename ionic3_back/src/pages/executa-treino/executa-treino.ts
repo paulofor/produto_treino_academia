@@ -79,6 +79,7 @@ export class ExecutaTreinoPage extends ExecutaTreinoPageBase {
       exeCarga.sequencia = carga.ordemRepeticao;
       execucao.listaExecucaoCarga.push(exeCarga); 
     })
+    console.log('Execucao' , execucao);
     this.submit(execucao);
   }
 

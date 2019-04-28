@@ -10,6 +10,13 @@ export abstract class ExercicioGraficoExecucaoPageBase {
   protected abstract filtroLoadId(id:any) : LoopBackFilter;
   // filtro sem parametro id
   protected abstract filtroLoadOne() : LoopBackFilter;
+  // chamada caso item nao tenha sido encontrado
+  //protected abstract itemNaoEncontrado();
+  
+  // chamada antes e depois da inicializacao
+  protected abstract posInicializaItem();
+  protected abstract preInicializaItem();
+  
  
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
@@ -36,11 +43,13 @@ export abstract class ExercicioGraficoExecucaoPageBase {
 			} else  {
 				console.log('ExercicioGraficoExecucaoPageBase:filtro: ' , JSON.stringify(this.filtroLoadOne()));
 				console.log('Exercicio.findOne');
+				// se nao encontrar vai pro erro -> 404
 				this.srv.findOne(this.filtroLoadOne())
 					.subscribe(
 						(result: Exercicio) => {
 							this.item = result;
-							console.log('ExercicioGraficoExecucaoPageBase.item: ' , this.item)
+							console.log('ExercicioGraficoExecucaoPageBase.item: ' , this.item);
+							//if (!this.item) this.itemNaoEncontrado();
 						},
 						(erro: any) => console.log('ExercicioGraficoExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
@@ -49,13 +58,16 @@ export abstract class ExercicioGraficoExecucaoPageBase {
 	}
 
   
-  ionViewWillEnter() {
-    console.log('ionViewWillEnter ExercicioGraficoExecucaoPage<<DETALHE>>');
-    this.inicializaItem();
-  }
-  ionViewDidLoad() {
-  	console.log('ionViewDidLoad ExercicioGraficoExecucaoPage<<DETALHE>>');
-  }
+	ionViewWillEnter() {
+		console.log('ionViewWillEnter ExercicioGraficoExecucaoPage<<DETALHE>>');
+		this.preInicializaItem();
+		this.inicializaItem();
+		this.posInicializaItem();
+	}
+  
+	ionViewDidLoad() {
+		console.log('ionViewDidLoad ExercicioGraficoExecucaoPage<<DETALHE>>');
+	}
 }
     
     

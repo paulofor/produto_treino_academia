@@ -10,6 +10,13 @@ export abstract class SerieEditaExecucaoPageBase {
   protected abstract filtroLoadId(id:any) : LoopBackFilter;
   // filtro sem parametro id
   protected abstract filtroLoadOne() : LoopBackFilter;
+  // chamada caso item nao tenha sido encontrado
+  //protected abstract itemNaoEncontrado();
+  
+  // chamada antes e depois da inicializacao
+  protected abstract posInicializaItem();
+  protected abstract preInicializaItem();
+  
  
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
@@ -36,11 +43,13 @@ export abstract class SerieEditaExecucaoPageBase {
 			} else  {
 				console.log('SerieEditaExecucaoPageBase:filtro: ' , JSON.stringify(this.filtroLoadOne()));
 				console.log('ItemSerie.findOne');
+				// se nao encontrar vai pro erro -> 404
 				this.srv.findOne(this.filtroLoadOne())
 					.subscribe(
 						(result: ItemSerie) => {
 							this.item = result;
-							console.log('SerieEditaExecucaoPageBase.item: ' , this.item)
+							console.log('SerieEditaExecucaoPageBase.item: ' , this.item);
+							//if (!this.item) this.itemNaoEncontrado();
 						},
 						(erro: any) => console.log('SerieEditaExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
@@ -49,13 +58,16 @@ export abstract class SerieEditaExecucaoPageBase {
 	}
 
   
-  ionViewWillEnter() {
-    console.log('ionViewWillEnter SerieEditaExecucaoPage<<DETALHE>>');
-    this.inicializaItem();
-  }
-  ionViewDidLoad() {
-  	console.log('ionViewDidLoad SerieEditaExecucaoPage<<DETALHE>>');
-  }
+	ionViewWillEnter() {
+		console.log('ionViewWillEnter SerieEditaExecucaoPage<<DETALHE>>');
+		this.preInicializaItem();
+		this.inicializaItem();
+		this.posInicializaItem();
+	}
+  
+	ionViewDidLoad() {
+		console.log('ionViewDidLoad SerieEditaExecucaoPage<<DETALHE>>');
+	}
 }
     
     

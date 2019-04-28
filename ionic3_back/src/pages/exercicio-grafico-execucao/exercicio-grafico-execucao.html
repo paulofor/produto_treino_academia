@@ -1,5 +1,4 @@
-
-<ion-header >
+<ion-header>
   <ion-navbar color="titulo">
     <ion-title *ngIf="item">{{item.titulo}}</ion-title>
   </ion-navbar>
@@ -18,12 +17,42 @@
       </ion-card-content>
     </ion-card>
 
-    <ion-list *ngIf="item.listaExecucaoItemSerie.length>0">
-      <ion-item *ngFor="let execucao of item.listaExecucaoItemSerie">
-        <h3 class="linha1">{{execucao.dataHoraFinalizacao | date : 'hh:mm:ss'}}</h3>
-        <h3 class="linhan"></h3>
-      </ion-item>
-    </ion-list>
+
+
+    <ion-grid *ngIf="item.listaExecucaoItemSerie.length>0">
+
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <h2>{{item.titulo}}</h2>
+              <h2>{{item.subtitulo}}</h2>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <p>Execuções: {{item.listaExecucaoItemSerie.length}}</p>
+              <p>Data mais recente: {{item.listaExecucaoItemSerie[0].dataHoraFinalizacao | date : 'dd/MM/yyyy'}}</p>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col id="item">
+          <ion-card>
+            <canvas id="cv01" baseChart height="250" [datasets]="barChartData" [labels]="barChartLabels"
+              [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"></canvas>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
 
   </ng-container>
 

@@ -11,64 +11,55 @@ import { ExecutaTreinoPage } from '../executa-treino/executa-treino';
   selector: 'page-inicio-treino-dia',
   templateUrl: 'inicio-treino-dia.html'
 })
-export class InicioTreinoDiaPage extends InicioTreinoDiaPageBase{
+export class InicioTreinoDiaPage extends InicioTreinoDiaPageBase {
 
 
-
-  
   QUATRO_HORAS = 4 * 60 * 60 * 1000;
-  
-  diaTreino : DiaTreino;
-
-  filtroDia : LoopBackFilter = {
-    "where" : {"data" :  {gt: Date.now() - this.QUATRO_HORAS} }
-  }
-
-
-  protected inicializaImpl() {
-    this.srvDia.find(this.filtroDia)
-      .subscribe((result: DiaTreino[]) => {
-        console.log('Dia recuperado: ' , result);
-        if (result.length>0) {
-          this.navCtrl.push(ExecutaTreinoPage, {
-            id : result[0].id
-          })
-        }
-      })
-  }
-  
-
-
 
   constructor(public navParams: NavParams,
     public navCtrl: NavController,
     public srv: SerieTreinoApi, private srvDia: DiaTreinoApi) {
-      super(navParams,navCtrl,srv);
+    super(navParams, navCtrl, srv);
   }
 
-  protected filtroLoadOne(): LoopBackFilter {
-    return { "where": { "ativa": "1" }, "order": "dataUltimaExecucao" };
-  }
-
-  protected filtroLoadId(): LoopBackFilter {
+  protected filtroLoadId(id: any): LoopBackFilter {
     return {};
   }
+  protected filtroLoadOne(): LoopBackFilter {
+    //return {"where" : {"data" :  {gt: Date.now() - this.QUATRO_HORAS} }};
+    return { "where": { "ativa": "1" }, "order": "dataUltimaExecucao" };
+  }
+  protected posInicializaItem() {
+  }
+  protected preInicializaItem() {
+    // findOne da erro quando nao encontra
+    this.srvDia.find(this.filtroDia)
+      .subscribe((result: DiaTreino[]) => {
+        console.log('Dia recuperado: ', result);
+        if (result.length>0) {
+          this.navCtrl.push(ExecutaTreinoPage, {
+            id: result[0].id
+          })
+        }
+      })
+  }
 
-
- 
+  filtroDia: LoopBackFilter = {
+    "where": { "data": { gt: Date.now() - this.QUATRO_HORAS } , "order" : "data desc"}
+  }
 
 
   iniciaDia() {
-    var novo : DiaTreino = new DiaTreino();
+    var novo: DiaTreino = new DiaTreino();
     novo.concluido = 0;
     novo.data = new Date();
     novo.serieTreinoId = this.item.id;
     this.srvDia.create(novo)
       .subscribe((result: DiaTreino) => {
         this.navCtrl.push(ExecutaTreinoPage, {
-          id : result.id
+          id: result.id
         })
       })
   }
-  
+
 }

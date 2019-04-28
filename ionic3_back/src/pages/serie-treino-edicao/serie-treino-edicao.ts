@@ -12,6 +12,11 @@ import { CriaSeriePage } from '../cria-serie/cria-serie';
   templateUrl: 'serie-treino-edicao.html'
 })
 export class SerieTreinoEdicaoPage extends SerieTreinoEdicaoPageBase {
+ 
+  protected posInicializaItem() {
+  }
+  protected preInicializaItem() {
+  }
 
   protected filtroLoadOne() {
     return {};
