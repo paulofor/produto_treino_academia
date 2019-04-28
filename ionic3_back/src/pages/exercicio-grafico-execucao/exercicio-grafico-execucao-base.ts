@@ -1,7 +1,7 @@
 import { Exercicio, ExercicioApi , LoopBackFilter } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
 
-// Tipo: DETALHE
+// Tipo: GRAFICO_BARRA
 export abstract class ExercicioGraficoExecucaoPageBase {
   
   protected item: Exercicio;
@@ -59,15 +59,58 @@ export abstract class ExercicioGraficoExecucaoPageBase {
 
   
 	ionViewWillEnter() {
-		console.log('ionViewWillEnter ExercicioGraficoExecucaoPage<<DETALHE>>');
+		console.log('ionViewWillEnter ExercicioGraficoExecucaoPage<<GRAFICO_BARRA>>');
 		this.preInicializaItem();
 		this.inicializaItem();
 		this.posInicializaItem();
 	}
   
 	ionViewDidLoad() {
-		console.log('ionViewDidLoad ExercicioGraficoExecucaoPage<<DETALHE>>');
+		console.log('ionViewDidLoad ExercicioGraficoExecucaoPage<<GRAFICO_BARRA>>');
 	}
+	
+  protected criaImagem() {
+  }
+  
+  public barChartType: string = 'bar';
+  public barChartLegend: boolean = true;
+  
+  public barChartOptions: any = {
+    legend: {
+      display: true,
+      labels: {
+        boxWidth: 20,
+        boxHeight: 2
+      }
+    },
+    animation: {
+      onComplete: this.criaImagem
+    },
+    responsive: true,
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  };
+  
+  
+  	/*
+	public barChartLabels: string[] = ['22/12', '28/12', '02/01', '04/01', '06/01', '08/01', '10/01'];
+
+  public barChartData: any[] = [
+    { data: [30, 30, 30, 30, 30, 35, 35], label: 'Repeti??o 1' },
+    { data: [25, 25, 25, 25, 25, 30, 30], label: 'Repeti??o 2' },
+    { data: [20, 20, 20, 20, 20, 25, 25], label: 'Repeti??o 3' }
+	];
+	*/
+	protected abstract getRotulos() : string[];
+	public barChartLabels : string[] = this.getRotulos();
+
+	protected abstract getDataLabel(): any[];
+	public barChartData: any[] = this.getDataLabel();
 }
     
     
