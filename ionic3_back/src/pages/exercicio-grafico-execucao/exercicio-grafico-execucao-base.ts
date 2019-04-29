@@ -18,6 +18,9 @@ export abstract class ExercicioGraficoExecucaoPageBase {
   protected abstract preInicializaItem();
   
  
+  public rotulos: string[];
+  public dados: any[];
+ 
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
 				public srv: ExercicioApi) {
@@ -36,7 +39,9 @@ export abstract class ExercicioGraficoExecucaoPageBase {
 					.subscribe(
 						(result: Exercicio) => {
 							this.item = result;
-							console.log('ExercicioGraficoExecucaoPageBase.item: ' , this.item)
+							console.log('ExercicioGraficoExecucaoPageBase.item: ' , this.item);
+							this.posInicializaItem();
+							this.trataGrafico();
 						},
 						(erro: any) => console.log('ExercicioGraficoExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
@@ -49,6 +54,8 @@ export abstract class ExercicioGraficoExecucaoPageBase {
 						(result: Exercicio) => {
 							this.item = result;
 							console.log('ExercicioGraficoExecucaoPageBase.item: ' , this.item);
+							this.posInicializaItem();
+							this.trataGrafico();
 							//if (!this.item) this.itemNaoEncontrado();
 						},
 						(erro: any) => console.log('ExercicioGraficoExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
@@ -56,13 +63,27 @@ export abstract class ExercicioGraficoExecucaoPageBase {
 			}
 		}  
 	}
+	
+	protected abstract getListaGrafico() : Array<any>;
+	protected abstract extraiRotulo(detalhe:any) : string;
 
+    private trataGrafico() {
+    	var listaGrafico = this.getListaGrafico();
+    	var saida:string[] = [];
+    	for (let i=0; i< listaGrafico.length; i++) {
+      		//var dado = new DatePipe('pt-BR').transform(this.item.listaExecucaoItemSerie[i].dataHoraFinalizacao, 'dd/MM');
+      		var dado = this.extraiRotulo(listaGrafico[i]);
+      		saida.push(dado);
+    	}
+    	this.rotulos=  saida;
+    }
+  
   
 	ionViewWillEnter() {
 		console.log('ionViewWillEnter ExercicioGraficoExecucaoPage<<GRAFICO_BARRA>>');
 		this.preInicializaItem();
 		this.inicializaItem();
-		this.posInicializaItem();
+		
 	}
   
 	ionViewDidLoad() {
@@ -97,20 +118,7 @@ export abstract class ExercicioGraficoExecucaoPageBase {
   };
   
   
-  	/*
-	public barChartLabels: string[] = ['22/12', '28/12', '02/01', '04/01', '06/01', '08/01', '10/01'];
 
-  public barChartData: any[] = [
-    { data: [30, 30, 30, 30, 30, 35, 35], label: 'Repeti??o 1' },
-    { data: [25, 25, 25, 25, 25, 30, 30], label: 'Repeti??o 2' },
-    { data: [20, 20, 20, 20, 20, 25, 25], label: 'Repeti??o 3' }
-	];
-	*/
-	protected abstract getRotulos() : string[];
-	public barChartLabels : string[] = this.getRotulos();
-
-	protected abstract getDataLabel(): any[];
-	public barChartData: any[] = this.getDataLabel();
 }
     
     
