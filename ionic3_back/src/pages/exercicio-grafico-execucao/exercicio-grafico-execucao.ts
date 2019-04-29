@@ -25,7 +25,11 @@ export class ExercicioGraficoExecucaoPage extends ExercicioGraficoExecucaoPageBa
     return saida;
   }
   protected obtemTituloSerie(): string[] {
-    return ['Rep 1' , 'Rep 2' , 'Rep 3' , 'Rep 4'];
+    var saida:string[] = [];
+    for (let i=0; i < this.item.listaExecucaoItemSerie[0].listaExecucaoCarga.length; i++) {
+      saida.push('Repetição ' + (i+1));
+    }
+    return saida;
   }
 
   protected getListaGrafico() {
