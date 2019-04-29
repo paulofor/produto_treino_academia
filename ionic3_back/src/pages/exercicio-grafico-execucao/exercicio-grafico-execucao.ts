@@ -16,6 +16,18 @@ registerLocaleData(localePtBr);
 })
 export class ExercicioGraficoExecucaoPage extends ExercicioGraficoExecucaoPageBase {
 
+
+  protected extraiValores(detalhe: any): number[] {
+    var saida:number[] = [];
+    for (let i=0; i < detalhe.listaExecucaoCarga.length; i++) {
+      saida.push(detalhe.listaExecucaoCarga[i].valorCarga);
+    }
+    return saida;
+  }
+  protected obtemTituloSerie(): string[] {
+    return ['Rep 1' , 'Rep 2' , 'Rep 3' , 'Rep 4'];
+  }
+
   protected getListaGrafico() {
    return this.item.listaExecucaoItemSerie;
   }
@@ -59,21 +71,21 @@ export class ExercicioGraficoExecucaoPage extends ExercicioGraficoExecucaoPageBa
     //this.rotulos=  saida;
     //console.log('rotulos:' , this.rotulos);
     // -------
-    var saida2:any[] = [];
-    for (let i=0; i<this.item.listaExecucaoItemSerie.length; i++) {
-      for (let x=0; x<this.item.listaExecucaoItemSerie[i].listaExecucaoCarga.length;x++) {
-        var valor:number = this.item.listaExecucaoItemSerie[i].listaExecucaoCarga[x].valorCarga;
-        if (i==0) {
-          var novoDado = {'data' : [valor] , 'label' : 'Repeticao ' + x};
-          saida2.push(novoDado);
-        } else {
-          var itemDado:any = saida2[x];
-          itemDado.data.push(valor);
-        }
-      } 
-    }
-    this.dados = saida2;
-    console.log('dados:', JSON.stringify(this.dados));
+    //var saida2:any[] = [];
+    //for (let i=0; i<this.item.listaExecucaoItemSerie.length; i++) {
+    //  for (let x=0; x<this.item.listaExecucaoItemSerie[i].listaExecucaoCarga.length;x++) {
+    //    var valor:number = this.item.listaExecucaoItemSerie[i].listaExecucaoCarga[x].valorCarga;
+    //    if (i==0) {
+    //      var novoDado = {'data' : [valor] , 'label' : 'Repeticao ' + (x+1)};
+    //      saida2.push(novoDado);
+    //    } else {
+    //      var itemDado:any = saida2[x];
+    //      itemDado.data.push(valor);
+    //    }
+    //  } 
+    //}
+    //this.dados = saida2;
+    //console.log('dados:', JSON.stringify(this.dados));
   }
 
   protected preInicializaItem() {
