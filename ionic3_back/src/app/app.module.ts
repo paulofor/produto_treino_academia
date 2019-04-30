@@ -9,6 +9,9 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Screenshot } from '@ionic-native/screenshot';
 import { ChartsModule } from 'ng2-charts';
+import { SignupPage } from '../pages/signup/signup';
+import { LoginPage } from '../pages/login/login';
+
 import { SerieListaExecucaoPage } from '../pages/serie-lista-execucao/serie-lista-execucao';
 import { SerieEditaExecucaoPage } from '../pages/serie-edita-execucao/serie-edita-execucao';
 import { CadastraItemSeriePage } from '../pages/cadastra-item-serie/cadastra-item-serie';
@@ -43,6 +46,8 @@ import { ExecucaoCargaApi } from '../shared/sdk';
   declarations: [
     MyApp,
     HomePage,
+    LoginPage,
+    SignupPage,
     SerieListaExecucaoPage,
 	
     SerieEditaExecucaoPage,

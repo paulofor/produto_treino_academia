@@ -20,7 +20,6 @@ import { SerieTreinoEdicaoPage } from '../pages/serie-treino-edicao/serie-treino
 import { ExecutaTreinoPage } from '../pages/executa-treino/executa-treino';
 import { ConsultaListaExercicioPage } from '../pages/consulta-lista-exercicio/consulta-lista-exercicio';
 import { DetalheDiaTreinoPage } from '../pages/detalhe-dia-treino/detalhe-dia-treino';
-import { LoginPage } from '../pages/login/login';
 
 
 @Component({
@@ -29,7 +28,7 @@ import { LoginPage } from '../pages/login/login';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage;
+  rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
 
