@@ -90,6 +90,7 @@ import { ExecucaoCargaApi } from '../shared/sdk';
   entryComponents: [
     MyApp,
     HomePage,
+    LoginPage,
     SerieListaExecucaoPage,
 	
     SerieEditaExecucaoPage,

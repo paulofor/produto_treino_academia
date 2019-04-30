@@ -1,17 +1,25 @@
 <ion-content padding>
   <ion-list>
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    
       <ion-item>
-        <ion-label fixed>Usu�rio</ion-label>
+        <ion-label floating>Usuario</ion-label>
         <ion-input type="text" formControlName="login"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label fixed>Senha</ion-label>
-        <ion-input type="password" formControlName="senha"></ion-input>
+        <ion-label floating>Senha</ion-label>
+        <ion-input type="password" formControlName="senha1"></ion-input>
       </ion-item>
 
-      <button ion-button block color="primary-login" type="submit">Entrar</button>
+
+      <ion-item>
+        <ion-label floating>Repetir Senha</ion-label>
+        <ion-input type="password" formControlName="senha2"></ion-input>
+      </ion-item>
+
+      <button ion-button block type="submit">Enviar</button>
     </form>
   </ion-list>
+
 </ion-content>

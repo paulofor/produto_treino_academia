@@ -5,6 +5,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
 import { SerieListaExecucaoPage } from '../pages/serie-lista-execucao/serie-lista-execucao';
 import { SerieEditaExecucaoPage } from '../pages/serie-edita-execucao/serie-edita-execucao';
 import { CadastraItemSeriePage } from '../pages/cadastra-item-serie/cadastra-item-serie';
@@ -28,7 +29,7 @@ import { DetalheDiaTreinoPage } from '../pages/detalhe-dia-treino/detalhe-dia-tr
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
 
