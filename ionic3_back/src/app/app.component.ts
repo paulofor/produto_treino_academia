@@ -6,15 +6,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
-import { SerieListaExecucaoPage } from '../pages/serie-lista-execucao/serie-lista-execucao';
 import { SerieEditaExecucaoPage } from '../pages/serie-edita-execucao/serie-edita-execucao';
-import { CadastraItemSeriePage } from '../pages/cadastra-item-serie/cadastra-item-serie';
 import { ExercicioGraficoExecucaoPage } from '../pages/exercicio-grafico-execucao/exercicio-grafico-execucao';
 import { ConsultaListaDiaTreinoPage } from '../pages/consulta-lista-dia-treino/consulta-lista-dia-treino';
-import { ExercicioCadastroPage } from '../pages/exercicio-cadastro/exercicio-cadastro';
-import { ListaExercicioPage } from '../pages/lista-exercicio/lista-exercicio';
 import { ListaSerieTreinoPage } from '../pages/lista-serie-treino/lista-serie-treino';
-import { EditaItemSeriePage } from '../pages/edita-item-serie/edita-item-serie';
 import { CriaSeriePage } from '../pages/cria-serie/cria-serie';
 import { InicioTreinoDiaPage } from '../pages/inicio-treino-dia/inicio-treino-dia';
 import { SerieTreinoEdicaoPage } from '../pages/serie-treino-edicao/serie-treino-edicao';
@@ -40,8 +35,6 @@ export class MyApp {
     this.pages = [
 	
       { title: 'Consulta Dia*' , component: ConsultaListaDiaTreinoPage},
-	
-      { title: 'Exercicios' , component: ListaExercicioPage},
 	
       { title: 'Series*' , component: ListaSerieTreinoPage},
 	

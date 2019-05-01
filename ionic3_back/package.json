@@ -30,6 +30,7 @@
     "@ngx-translate/core": "8.0.0",
     "@ngx-translate/http-loader": "^2.0.0",
     "chart.js": "^2.7.3",
+    "brmasker-ionic-3": "^1.6.3",
     "com.darktalker.cordova.screenshot": "0.1.6",
     "info.protonet.imageresizer": "0.1.1",
     "ionic-angular": "3.9.2",

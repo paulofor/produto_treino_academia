@@ -2,7 +2,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Storage } from '@ionic/storage';
-import { Usuario, UsuarioApi } from '../../shared/sdk';
+import { Usuario, UsuarioApi, LoopBackFilter } from '../../shared/sdk';
 
 
 
@@ -10,8 +10,10 @@ export abstract class LoginPageBase {
 
   protected usuario: Usuario;
   protected loginForm: FormGroup;
+  protected erroMsg: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, protected formBuilder: FormBuilder) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, 
+    protected formBuilder: FormBuilder, protected srv: UsuarioApi, protected storage: Storage) {
     this.loginForm = this.formBuilder.group({
       login: '',
       senha: ''
@@ -23,16 +25,30 @@ export abstract class LoginPageBase {
   }
 
   onSubmit() {
-    //this.usuario = new Usuario();
-    //this.usuario.email = this.loginForm.get("login").value;
-    //this.usuario.senha = this.loginForm.get("senha").value;
-    //this.usuario.id = 1;
-    //this.storage.set('user', this.usuario);
-    //console.log("form:", this.usuario);
+    var email = this.loginForm.get("login").value;
+    var senha = this.loginForm.get("senha").value;
+    var filtro:LoopBackFilter = {
+      'where' : { 'and' : [{'email' : email} , {'senha' : senha }]}
+    }
+    this.srv.findOne(filtro)
+      .subscribe(
+        (result:Usuario) => {
+          console.log('UserLogin: ' , result);
+          this.storage.set('user' , result);
+          this.mudaTela();
+        },
+        (erro) => {
+          console.log('Erro login: ' , erro);
+          this.erroMsg = 'Usuario nao encontrado'
+        }
+      )
   }
 
   mudaTela() {
-    this.navCtrl.push(HomePage, {}, { animate: true });
+    this.navCtrl.push(HomePage).then(() => {
+      let index = 0;
+      this.navCtrl.remove(index);
+    });
   }
 
 

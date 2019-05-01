@@ -1,12 +1,15 @@
 
-import { SerieTreino, SerieTreinoApi } from '../../shared/sdk';
+import { SerieTreino, SerieTreinoApi, Usuario } from '../../shared/sdk';
 import { LoopBackFilter } from '../../shared/sdk';
 import { NavController } from 'ionic-angular';
 import { Page } from 'ionic-angular/umd/navigation/nav-util';
 import { SerieTreinoEdicaoPage } from '../serie-treino-edicao/serie-treino-edicao';
+import { Storage } from '@ionic/storage';
 
-
+// Tipo: LISTA_ITEM
 export abstract class ListaSerieTreinoPageBase {
+
+    protected usuario: Usuario;
 
 	protected listaItem: SerieTreino[];
 	protected abstract inicializacao();
@@ -14,23 +17,24 @@ export abstract class ListaSerieTreinoPageBase {
 	
 	 
 	getPageEdicao(): Page {
-		
+	
     	return SerieTreinoEdicaoPage;
     	
   	}
   	getPageDetalhe(): Page {
-		
+	
     	return SerieTreinoEdicaoPage;
     	
   	}
 
-	constructor(public navCtrl: NavController, protected srv: SerieTreinoApi) {
+	constructor(public navCtrl: NavController, protected srv: SerieTreinoApi,protected storage: Storage) {
 	}
 
 	ionViewWillEnter() {
-    	console.log('ionViewWillEnter ListaSerieTreinoPage<<LISTA_ITEM>>');
-    	this.inicializacao();
-    	this.carregaLista();
+    		console.log('ionViewWillEnter ListaSerieTreinoPage<<LISTA_ITEM>>');
+    		this.carregaUsuario();
+    		this.inicializacao();
+    		
   	}
   	
   	carregaLista() {
@@ -41,6 +45,12 @@ export abstract class ListaSerieTreinoPageBase {
   				console.log('ListaSerieTreinoPageBase:LoadLista:' , resultado);
   				this.listaItem = resultado;
   			})
+  	}
+  	  carregaUsuario() {
+		this.storage.get('user').then((val: Usuario) => {
+			this.usuario = val;
+			this.carregaLista();
+		})
   	}
   
 	protected detalheId(item: SerieTreino) {

@@ -4,6 +4,7 @@ import { DetalheDiaTreinoPageBase } from './detalhe-dia-treino-base';
 import { DiaTreinoApi, LoopBackFilter, ExecucaoItemSerie } from '../../shared/sdk/index';
 import { DatePipe } from '@angular/common';
 import localePtBr from '@angular/common/locales/pt';
+import { Storage } from '@ionic/storage';
 
 import { registerLocaleData } from '@angular/common';
 
@@ -23,7 +24,7 @@ export class DetalheDiaTreinoPage extends DetalheDiaTreinoPageBase {
 
   constructor(public navParams: NavParams,
     public navCtrl: NavController,
-    public srv: DiaTreinoApi) {
+    public srv: DiaTreinoApi, protected storage: Storage) {
     super(navParams, navCtrl, srv);
   }
 

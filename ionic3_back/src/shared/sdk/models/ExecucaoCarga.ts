@@ -6,23 +6,23 @@ import {
 
 declare var Object: any;
 export interface ExecucaoCargaInterface {
-	"id"?: number;
+	"id"?: string;
 	"dataHora"?: Date;
 	"valorCarga"?: number;
 	"repeticao"?: number;
 	"sequencia"?: number;
 	execucaoItemSerie?: ExecucaoItemSerie;
-	execucaoItemSerieId? : number;
+	execucaoItemSerieId? : string;
 }
 
 export class ExecucaoCarga implements ExecucaoCargaInterface {
-	id?: number;
+	id?: string;
 	dataHora?: Date;
 	valorCarga?: number;
 	repeticao?: number;
 	sequencia?: number;
 	execucaoItemSerie?: ExecucaoItemSerie;
-	execucaoItemSerieId? : number;
+	execucaoItemSerieId? : string;
   constructor(data?: ExecucaoCargaInterface) {
     Object.assign(this, data);
   }
@@ -59,7 +59,7 @@ export class ExecucaoCarga implements ExecucaoCargaInterface {
 		
         "id" : {
         	name : "id",
-        	type : "number"
+        	type : "string"
         },
         "dataHora" : {
         	name : "dataHora",

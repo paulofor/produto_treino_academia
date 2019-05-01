@@ -6,21 +6,21 @@ import {
 
 declare var Object: any;
 export interface RegistroPesoInterface {
-	"id"?: number;
+	"id"?: string;
 	"data"?: Date;
 	"valor"?: number;
 	"obs"?: string;
 	usuario?: Usuario;
-	usuarioId? : number;
+	usuarioId? : string;
 }
 
 export class RegistroPeso implements RegistroPesoInterface {
-	id?: number;
+	id?: string;
 	data?: Date;
 	valor?: number;
 	obs?: string;
 	usuario?: Usuario;
-	usuarioId? : number;
+	usuarioId? : string;
   constructor(data?: RegistroPesoInterface) {
     Object.assign(this, data);
   }
@@ -57,7 +57,7 @@ export class RegistroPeso implements RegistroPesoInterface {
 		
         "id" : {
         	name : "id",
-        	type : "number"
+        	type : "string"
         },
         "data" : {
         	name : "data",

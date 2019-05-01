@@ -4,7 +4,7 @@ import { IonicPage, NavController } from 'ionic-angular';
 import { Page } from 'ionic-angular/navigation/nav-util';
 import { ListaSerieTreinoPageBase } from './lista-serie-treino-base';
 import { SerieTreinoApi, LoopBackFilter, SerieTreino } from '../../shared/sdk';
-
+import { Storage } from '@ionic/storage';
 
 @IonicPage()
 @Component({
@@ -19,13 +19,14 @@ export class ListaSerieTreinoPage extends ListaSerieTreinoPageBase {
    
   }
 
-  constructor(public navCtrl: NavController, protected srv: SerieTreinoApi) {
-    super(navCtrl, srv);
+  constructor(public navCtrl: NavController, protected srv: SerieTreinoApi, protected storage: Storage) {
+    super(navCtrl, srv, storage);
   }
 
 
   protected getFiltro(): LoopBackFilter {
-    return {};
+    console.log('Usuario' , this.usuario);
+    return { 'where' : {'usuarioId' : this.usuario.id } };
   }
 
   protected novo() {
@@ -33,6 +34,7 @@ export class ListaSerieTreinoPage extends ListaSerieTreinoPageBase {
     serieNova.dataCriacao = new Date();
     serieNova.ativa = 1;
     serieNova.qtdeExecucao = 0;
+    serieNova.usuarioId = this.usuario.id;
     this.srv.create(serieNova)
       .subscribe((result:SerieTreino) => {
         this.navCtrl.push(this.getPageEdicao(), {

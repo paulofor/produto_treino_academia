@@ -1,12 +1,15 @@
 
-import { Exercicio, ExercicioApi } from '../../shared/sdk';
+import { Exercicio, ExercicioApi, Usuario } from '../../shared/sdk';
 import { LoopBackFilter } from '../../shared/sdk';
 import { NavController } from 'ionic-angular';
 import { Page } from 'ionic-angular/umd/navigation/nav-util';
 import { ExercicioGraficoExecucaoPage } from '../exercicio-grafico-execucao/exercicio-grafico-execucao';
+import { Storage } from '@ionic/storage';
 
-
+// Tipo: LISTA_ITEM
 export abstract class ConsultaListaExercicioPageBase {
+
+    protected usuario: Usuario;
 
 	protected listaItem: Exercicio[];
 	protected abstract inicializacao();
@@ -14,23 +17,24 @@ export abstract class ConsultaListaExercicioPageBase {
 	
 	 
 	getPageEdicao(): Page {
-		
+	
     	return ExercicioGraficoExecucaoPage;
     	
   	}
   	getPageDetalhe(): Page {
-		
+	
     	return ExercicioGraficoExecucaoPage;
     	
   	}
 
-	constructor(public navCtrl: NavController, protected srv: ExercicioApi) {
+	constructor(public navCtrl: NavController, protected srv: ExercicioApi,protected storage: Storage) {
 	}
 
 	ionViewWillEnter() {
-    	console.log('ionViewWillEnter ConsultaListaExercicioPage<<LISTA_ITEM>>');
-    	this.inicializacao();
-    	this.carregaLista();
+    		console.log('ionViewWillEnter ConsultaListaExercicioPage<<LISTA_ITEM>>');
+    		this.carregaUsuario();
+    		this.inicializacao();
+    		
   	}
   	
   	carregaLista() {
@@ -41,6 +45,12 @@ export abstract class ConsultaListaExercicioPageBase {
   				console.log('ConsultaListaExercicioPageBase:LoadLista:' , resultado);
   				this.listaItem = resultado;
   			})
+  	}
+  	  carregaUsuario() {
+		this.storage.get('user').then((val: Usuario) => {
+			this.usuario = val;
+			this.carregaLista();
+		})
   	}
   
 	protected detalheId(item: Exercicio) {

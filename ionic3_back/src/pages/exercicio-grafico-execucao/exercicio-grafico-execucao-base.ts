@@ -1,10 +1,13 @@
-import { Exercicio, ExercicioApi , LoopBackFilter } from '../../shared/sdk';
+import { Exercicio, ExercicioApi , LoopBackFilter, Usuario } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 // Tipo: GRAFICO_BARRA
 export abstract class ExercicioGraficoExecucaoPageBase {
   
   protected item: Exercicio;
+  
+  protected usuario: Usuario;
   
   // filtro com parametro id
   protected abstract filtroLoadId(id:any) : LoopBackFilter;
@@ -23,7 +26,8 @@ export abstract class ExercicioGraficoExecucaoPageBase {
  
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
-				public srv: ExercicioApi) {
+				public srv: ExercicioApi,
+				protected storage: Storage) {
   } 
   
 	private inicializaItem() {
@@ -113,6 +117,7 @@ export abstract class ExercicioGraficoExecucaoPageBase {
   
 	ionViewWillEnter() {
 		console.log('ionViewWillEnter ExercicioGraficoExecucaoPage<<GRAFICO_BARRA>>');
+		this.carregaUsuario();
 		this.preInicializaItem();
 		this.inicializaItem();
 		
@@ -121,6 +126,12 @@ export abstract class ExercicioGraficoExecucaoPageBase {
 	ionViewDidLoad() {
 		console.log('ionViewDidLoad ExercicioGraficoExecucaoPage<<GRAFICO_BARRA>>');
 	}
+	
+	  	carregaUsuario() {
+		this.storage.get('user').then((val: Usuario) => {
+			this.usuario = val;
+		})
+  	}
 	
   protected criaImagem() {
   }

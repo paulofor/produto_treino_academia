@@ -17,8 +17,6 @@ import { EXERCICIO } from '../../../../dados/exercicio';
 //Versao Ionic
 import { of } from 'rxjs/observable/of';
 import {EXERCICIO_EXERCICIOGRAFICOEXECUCAOPAGE} from  '../../../../dados/exercicio';
-import {EXERCICIO_EXERCICIOCADASTROPAGE} from  '../../../../dados/exercicio';
-import {EXERCICIO_LISTAEXERCICIOPAGE} from  '../../../../dados/exercicio';
 import {EXERCICIO_CONSULTALISTAEXERCICIOPAGE} from  '../../../../dados/exercicio';
 /**
  * Api services for the `Aplicacao` model.
@@ -103,26 +101,9 @@ export class ExercicioApi extends BaseLoopBackApi {
 	getExercicioGraficoExecucaoPageLoad(filter: LoopBackFilter = {}) : Observable<Exercicio> {
 		return of (EXERCICIO_EXERCICIOGRAFICOEXECUCAOPAGE);
 	}
-	getExercicioCadastroPageLoad(filter: LoopBackFilter = {}) : Observable<Exercicio> {
-		return of (EXERCICIO_EXERCICIOCADASTROPAGE);
-	}
-	getListaExercicioPageLoad(filter: LoopBackFilter = {}) : Observable<Exercicio> {
-		return of (EXERCICIO_LISTAEXERCICIOPAGE);
-	}
 	getConsultaListaExercicioPageLoad(filter: LoopBackFilter = {}) : Observable<Exercicio> {
 		return of (EXERCICIO_CONSULTALISTAEXERCICIOPAGE);
 	}
 
-	public submitExercicioCadastroPage(item : any , customHeaders?: Function) : Observable<Exercicio> {
-		let _method: string = "POST";
-		let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
-    		"/TreinoAcademia_Exercicios/submitExercicioCadastroPage";
-    	let _routeParams: any = {};
-    	let _postBody: any = {};
-    	let _urlParams: any = {};
-    	if (typeof item !== 'undefined' && item !== null) _urlParams.item = item;
-    	let result = this.request(_method, _url, _routeParams, _urlParams, _postBody, null, customHeaders);
-    	return result;
-	}
   
 }

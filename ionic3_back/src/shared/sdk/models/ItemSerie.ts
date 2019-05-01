@@ -9,25 +9,25 @@ import {
 
 declare var Object: any;
 export interface ItemSerieInterface {
-	"id"?: number;
+	"id"?: string;
 	"ordemExecucao"?: number;
 	"parametros"?: string;
 	serieTreino?: SerieTreino;
-	serieTreinoId? : number;
+	serieTreinoId? : string;
 	exercicio?: Exercicio;
-	exercicioId? : number;
+	exercicioId? : string;
 	listaCargaPlanejada?: CargaPlanejada[];
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
 }
 
 export class ItemSerie implements ItemSerieInterface {
-	id?: number;
+	id?: string;
 	ordemExecucao?: number;
 	parametros?: string;
 	serieTreino?: SerieTreino;
-	serieTreinoId? : number;
+	serieTreinoId? : string;
 	exercicio?: Exercicio;
-	exercicioId? : number;
+	exercicioId? : string;
 	listaCargaPlanejada?: CargaPlanejada[];
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
   constructor(data?: ItemSerieInterface) {
@@ -66,7 +66,7 @@ export class ItemSerie implements ItemSerieInterface {
 		
         "id" : {
         	name : "id",
-        	type : "number"
+        	type : "string"
         },
         "ordemExecucao" : {
         	name : "ordemExecucao",

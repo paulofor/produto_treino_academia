@@ -1,10 +1,13 @@
-import { ItemSerie, ItemSerieApi , LoopBackFilter } from '../../shared/sdk';
+import { ItemSerie, ItemSerieApi , LoopBackFilter, Usuario } from '../../shared/sdk';
 import { SerieTreino, SerieTreinoApi } from '../../shared/sdk';
 import { Exercicio, ExercicioApi } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 // Tipo: EDITA
 export abstract class CriaSeriePageBase {
+
+  protected usuario: Usuario;
   
   // Objeto principal para a edicao
   protected item: ItemSerie;
@@ -29,6 +32,7 @@ export abstract class CriaSeriePageBase {
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
 				public srv: ItemSerieApi, 
+				protected storage: Storage,
 				public srvSerieTreino : SerieTreinoApi,
 				public srvExercicio : ExercicioApi,
   				) {
@@ -56,11 +60,17 @@ export abstract class CriaSeriePageBase {
   }
   ionViewWillEnter() {
     console.log('ionViewWillEnter CriaSeriePage<<EDITA>>');
+    this.carregaUsuario();
     this.inicializacaoComplementos();
     this.inicializaItem();
   }
   ionViewDidLoad() {
   	console.log('ionViewDidLoad CriaSeriePage<<EDITA>>');
+  }
+  carregaUsuario() {
+	this.storage.get('user').then((val: Usuario) => {
+		this.usuario = val;
+	})
   }
   
 	protected listaSerieTreino : SerieTreino[];

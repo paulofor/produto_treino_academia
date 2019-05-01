@@ -4,7 +4,7 @@ import { ExercicioGraficoExecucaoPageBase } from './exercicio-grafico-execucao-b
 import { ExercicioApi, LoopBackFilter } from '../../shared/sdk/index';
 import { DatePipe } from '@angular/common';
 import localePtBr from '@angular/common/locales/pt';
-
+import { Storage } from '@ionic/storage';
 import { registerLocaleData } from '@angular/common';
 
 registerLocaleData(localePtBr);
@@ -44,8 +44,8 @@ export class ExercicioGraficoExecucaoPage extends ExercicioGraficoExecucaoPageBa
 
   constructor(public navParams: NavParams,
     public navCtrl: NavController,
-    public srv: ExercicioApi) {
-    super(navParams, navCtrl, srv);
+    public srv: ExercicioApi, protected storage: Storage) {
+    super(navParams, navCtrl, srv, storage);
   }
 
   protected filtroLoadId(id: any): LoopBackFilter {

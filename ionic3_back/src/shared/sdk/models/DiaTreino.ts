@@ -9,25 +9,25 @@ import {
 
 declare var Object: any;
 export interface DiaTreinoInterface {
-	"id"?: number;
+	"id"?: string;
 	"data"?: Date;
 	"concluido"?: number;
 	serieTreino?: SerieTreino;
-	serieTreinoId? : number;
+	serieTreinoId? : string;
 	usuario?: Usuario;
-	usuarioId? : number;
+	usuarioId? : string;
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
 	listaExercicio?: Exercicio[];
 }
 
 export class DiaTreino implements DiaTreinoInterface {
-	id?: number;
+	id?: string;
 	data?: Date;
 	concluido?: number;
 	serieTreino?: SerieTreino;
-	serieTreinoId? : number;
+	serieTreinoId? : string;
 	usuario?: Usuario;
-	usuarioId? : number;
+	usuarioId? : string;
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
 	listaExercicio?: Exercicio[];
   constructor(data?: DiaTreinoInterface) {
@@ -66,7 +66,7 @@ export class DiaTreino implements DiaTreinoInterface {
 		
         "id" : {
         	name : "id",
-        	type : "number"
+        	type : "string"
         },
         "data" : {
         	name : "data",

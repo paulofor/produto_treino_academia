@@ -1,10 +1,13 @@
-import { DiaTreino, ExecucaoItemSerie,  DiaTreinoApi , ExecucaoItemSerieApi, LoopBackFilter } from '../../shared/sdk';
+import { DiaTreino, ExecucaoItemSerie,  DiaTreinoApi , ExecucaoItemSerieApi, LoopBackFilter, Usuario } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 // Tipo: GETPUT
 export abstract class ExecutaTreinoPageBase {
   
   protected item: DiaTreino;
+  
+  protected usuario: Usuario;
   
   // filtro com parametro id
   protected abstract filtroLoadId(id:any) : LoopBackFilter;
@@ -16,7 +19,8 @@ export abstract class ExecutaTreinoPageBase {
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
 				public srv: DiaTreinoApi, 
-				public srvPut: ExecucaoItemSerieApi) {
+				public srvPut: ExecucaoItemSerieApi,
+				protected storage: Storage) {
   } 
   
 	private inicializaItem() {
@@ -54,12 +58,17 @@ export abstract class ExecutaTreinoPageBase {
   
   ionViewWillEnter() {
     console.log('ionViewWillEnter ExecutaTreinoPage<<GETPUT>>');
+    this.carregaUsuario();
     this.inicializaItem();
   }
   ionViewDidLoad() {
   	console.log('ionViewDidLoad ExecutaTreinoPage<<GETPUT>>');
   }
-  
+  carregaUsuario() {
+	this.storage.get('user').then((val: Usuario) => {
+		this.usuario = val;
+	})
+  }
   
 	protected submit(itemSubmit:ExecucaoItemSerie ) {
 		console.log('ExecutaTreinoPageBase:Submit-Item:' , itemSubmit);

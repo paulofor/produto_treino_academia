@@ -7,7 +7,7 @@ import {
 
 declare var Object: any;
 export interface CargaPlanejadaInterface {
-	"id"?: number;
+	"id"?: string;
 	"valorCarga"?: number;
 	"dataInicio"?: Date;
 	"dataFinal"?: Date;
@@ -15,13 +15,13 @@ export interface CargaPlanejadaInterface {
 	"ativa"?: number;
 	"ordemRepeticao"?: number;
 	itemSerie?: ItemSerie;
-	itemSerieId? : number;
+	itemSerieId? : string;
 	usuario?: Usuario;
-	usuarioId? : number;
+	usuarioId? : string;
 }
 
 export class CargaPlanejada implements CargaPlanejadaInterface {
-	id?: number;
+	id?: string;
 	valorCarga?: number;
 	dataInicio?: Date;
 	dataFinal?: Date;
@@ -29,9 +29,9 @@ export class CargaPlanejada implements CargaPlanejadaInterface {
 	ativa?: number;
 	ordemRepeticao?: number;
 	itemSerie?: ItemSerie;
-	itemSerieId? : number;
+	itemSerieId? : string;
 	usuario?: Usuario;
-	usuarioId? : number;
+	usuarioId? : string;
   constructor(data?: CargaPlanejadaInterface) {
     Object.assign(this, data);
   }
@@ -68,7 +68,7 @@ export class CargaPlanejada implements CargaPlanejadaInterface {
 		
         "id" : {
         	name : "id",
-        	type : "number"
+        	type : "string"
         },
         "valorCarga" : {
         	name : "valorCarga",

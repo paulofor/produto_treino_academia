@@ -10,30 +10,30 @@ import {
 
 declare var Object: any;
 export interface ExercicioInterface {
-	"id"?: number;
+	"id"?: string;
 	"descricao"?: string;
 	"imagem"?: string;
 	"titulo"?: string;
 	"subtitulo"?: string;
 	grupoMuscular?: GrupoMuscular;
-	grupoMuscularId? : number;
+	grupoMuscularId? : string;
 	usuario?: Usuario;
-	usuarioId? : number;
+	usuarioId? : string;
 	listaItemSerie?: ItemSerie[];
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
 	listaDiaTreino?: DiaTreino[];
 }
 
 export class Exercicio implements ExercicioInterface {
-	id?: number;
+	id?: string;
 	descricao?: string;
 	imagem?: string;
 	titulo?: string;
 	subtitulo?: string;
 	grupoMuscular?: GrupoMuscular;
-	grupoMuscularId? : number;
+	grupoMuscularId? : string;
 	usuario?: Usuario;
-	usuarioId? : number;
+	usuarioId? : string;
 	listaItemSerie?: ItemSerie[];
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
 	listaDiaTreino?: DiaTreino[];
@@ -73,7 +73,7 @@ export class Exercicio implements ExercicioInterface {
 		
         "id" : {
         	name : "id",
-        	type : "number"
+        	type : "string"
         },
         "descricao" : {
         	name : "descricao",

@@ -5,6 +5,8 @@ import { Screenshot } from '@ionic-native/screenshot';
 import { ItemSerie, ItemSerieApi, Exercicio, ExecucaoItemSerie, CargaPlanejada, GrupoMuscular, GrupoMuscularApi, SerieTreinoApi, ExercicioApi, LoopBackFilter } from '../../shared/sdk';
 import { CriaSeriePageBase } from './cria-serie-base';
 import { SerieTreinoEdicaoPage } from '../serie-treino-edicao/serie-treino-edicao';
+import { Storage } from '@ionic/storage';
+
 
 @IonicPage()
 @Component({
@@ -12,6 +14,7 @@ import { SerieTreinoEdicaoPage } from '../serie-treino-edicao/serie-treino-edica
   templateUrl: 'cria-serie.html'
 })
 export class CriaSeriePage extends CriaSeriePageBase {
+
 
   
   protected complementaItem(item: any) {
@@ -24,20 +27,26 @@ export class CriaSeriePage extends CriaSeriePageBase {
 
       var carga1 = new CargaPlanejada();
       carga1.ordemRepeticao = 1;
+      //carga1.valorCarga = 0;
+      //carga1.quantidadeRepeticao = 0;
       item.listaCargaPlanejada.push(carga1);
 
       var carga2 = new CargaPlanejada();
       carga2.ordemRepeticao = 2;
+      //carga2.valorCarga = 0;
+      //carga2.quantidadeRepeticao = 0;
       item.listaCargaPlanejada.push(carga2);
 
       var carga3 = new CargaPlanejada();
       carga3.ordemRepeticao = 3;
+      //carga3.valorCarga = 0;
+      //carga3.quantidadeRepeticao = 0;
       item.listaCargaPlanejada.push(carga3);
     }
 
-    if (!item.serieTreinoId) {
-      item.serieTreinoId = 0;
-    }
+    //if (!item.serieTreinoId) {
+    //  item.serieTreinoId = 0;
+    //}
 
     return item;
   }
@@ -64,17 +73,23 @@ export class CriaSeriePage extends CriaSeriePageBase {
 
     var carga1 = new CargaPlanejada();
     carga1.ordemRepeticao = 1;
+    carga1.valorCarga = 0;
+    carga1.quantidadeRepeticao = 0;
     item.listaCargaPlanejada.push(carga1);
 
     var carga2 = new CargaPlanejada();
     carga2.ordemRepeticao = 2;
+    carga2.valorCarga = 0;
+    carga2.quantidadeRepeticao = 0;
     item.listaCargaPlanejada.push(carga2);
 
     var carga3 = new CargaPlanejada();
     carga3.ordemRepeticao = 3;
+    carga3.valorCarga = 0;
+    carga3.quantidadeRepeticao = 0;
     item.listaCargaPlanejada.push(carga3);
 
-    item.serieTreinoId = 0;
+    //item.serieTreinoId = '';
 
     return item;
   }
@@ -88,9 +103,10 @@ export class CriaSeriePage extends CriaSeriePageBase {
     public srv: ItemSerieApi,
     public srvSerieTreino: SerieTreinoApi,
     public srvExercicio: ExercicioApi,
-    public srvGrupoMuscular: GrupoMuscularApi
+    public srvGrupoMuscular: GrupoMuscularApi,
+    protected storage: Storage
   ) {
-    super(navParams, navCtrl, srv, srvSerieTreino, srvExercicio);
+    super(navParams, navCtrl, srv, storage, srvSerieTreino, srvExercicio);
   }
 
   criaItemSerie() {
@@ -111,6 +127,8 @@ export class CriaSeriePage extends CriaSeriePageBase {
       for (let i=this.item.listaCargaPlanejada.length;i<qtde;i++) {
         var novo = new CargaPlanejada();
         novo.ordemRepeticao = (i+1);
+        novo.valorCarga = 0;
+        novo.quantidadeRepeticao = 0;
         this.item.listaCargaPlanejada.push(novo);
       }
     }

@@ -5,6 +5,7 @@ import { Screenshot } from '@ionic-native/screenshot';
 
 import { DiaTreino, DiaTreinoApi, LoopBackFilter, SerieTreinoApi, ItemSerie, ExecucaoItemSerieApi, ExecucaoItemSerie, CargaPlanejada, ExecucaoCarga } from '../../shared/sdk';
 import { ExecutaTreinoPageBase } from './executa-treino-base';
+import { Storage } from '@ionic/storage';
 
 @IonicPage()
 @Component({
@@ -18,11 +19,11 @@ export class ExecutaTreinoPage extends ExecutaTreinoPageBase {
   }
 
   constructor(public navParams: NavParams,
-    public navCtrl: NavController,
+    public navCtrl: NavController, protected storage: Storage,
     public srv: DiaTreinoApi,
     public srvPut: ExecucaoItemSerieApi) {
 
-    super(navParams, navCtrl, srv, srvPut);
+    super(navParams, navCtrl, srv, srvPut, storage);
     let index = this.navCtrl.length() - 1;
     this.navCtrl.remove(index);
   }
