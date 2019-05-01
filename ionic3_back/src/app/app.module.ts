@@ -11,6 +11,7 @@ import { Screenshot } from '@ionic-native/screenshot';
 import { ChartsModule } from 'ng2-charts';
 import { SignupPage } from '../pages/signup/signup';
 import { LoginPage } from '../pages/login/login';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { SerieListaExecucaoPage } from '../pages/serie-lista-execucao/serie-lista-execucao';
 import { SerieEditaExecucaoPage } from '../pages/serie-edita-execucao/serie-edita-execucao';
@@ -84,13 +85,15 @@ import { ExecucaoCargaApi } from '../shared/sdk';
     IonicModule.forRoot(MyApp),
     HttpClientModule,
     SDKBrowserModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
     LoginPage,
+    SignupPage,
     SerieListaExecucaoPage,
 	
     SerieEditaExecucaoPage,
@@ -150,7 +153,8 @@ import { ExecucaoCargaApi } from '../shared/sdk';
 	
 	ExecucaoCargaApi,
 	
-    Screenshot
+    Screenshot,
+    Storage
   ]
 })
 export class AppModule {}

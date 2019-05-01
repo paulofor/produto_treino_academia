@@ -11,7 +11,7 @@ import {
 
 declare var Object: any;
 export interface UsuarioInterface {
-	"id"?: number;
+	"id"?: string;
 	"nome"?: string;
 	"senha"?: string;
 	"email"?: string;
@@ -24,7 +24,7 @@ export interface UsuarioInterface {
 }
 
 export class Usuario implements UsuarioInterface {
-	id?: number;
+	id?: string;
 	nome?: string;
 	senha?: string;
 	email?: string;
@@ -70,7 +70,7 @@ export class Usuario implements UsuarioInterface {
 		
         "id" : {
         	name : "id",
-        	type : "number"
+        	type : "string"
         },
         "nome" : {
         	name : "nome",
