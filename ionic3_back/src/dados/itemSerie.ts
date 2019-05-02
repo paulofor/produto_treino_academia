@@ -11,3 +11,5 @@ export const ITEMSERIE_CADASTRAITEMSERIEPAGE : ItemSerie = {};
 export const ITEMSERIE_EDITAITEMSERIEPAGE: ItemSerie = {};
 
 export const ITEMSERIE_CRIASERIEPAGE : ItemSerie = {};
+
+export const ITEMSERIE_CRIASERIEWORKPAGE : ItemSerie = {};

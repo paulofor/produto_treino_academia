@@ -17,6 +17,7 @@ import { BrMaskerModule } from 'brmasker-ionic-3';
 import { SerieEditaExecucaoPage } from '../pages/serie-edita-execucao/serie-edita-execucao';
 import { ExercicioGraficoExecucaoPage } from '../pages/exercicio-grafico-execucao/exercicio-grafico-execucao';
 import { ConsultaListaDiaTreinoPage } from '../pages/consulta-lista-dia-treino/consulta-lista-dia-treino';
+import { CriaSerieWorkPage } from '../pages/cria-serie-work/cria-serie-work';
 import { ListaSerieTreinoPage } from '../pages/lista-serie-treino/lista-serie-treino';
 import { CriaSeriePage } from '../pages/cria-serie/cria-serie';
 import { InicioTreinoDiaPage } from '../pages/inicio-treino-dia/inicio-treino-dia';
@@ -50,6 +51,8 @@ import { ExecucaoCargaApi } from '../shared/sdk';
     ExercicioGraficoExecucaoPage,
 	
     ConsultaListaDiaTreinoPage,
+	
+    CriaSerieWorkPage,
 	
     ListaSerieTreinoPage,
 	
@@ -86,6 +89,8 @@ import { ExecucaoCargaApi } from '../shared/sdk';
     ExercicioGraficoExecucaoPage,
 	
     ConsultaListaDiaTreinoPage,
+	
+    CriaSerieWorkPage,
 	
     ListaSerieTreinoPage,
 	

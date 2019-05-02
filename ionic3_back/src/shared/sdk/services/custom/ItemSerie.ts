@@ -17,6 +17,7 @@ import { ITEMSERIE } from '../../../../dados/itemSerie';
 //Versao Ionic
 import { of } from 'rxjs/observable/of';
 import {ITEMSERIE_SERIEEDITAEXECUCAOPAGE} from  '../../../../dados/itemSerie';
+import {ITEMSERIE_CRIASERIEWORKPAGE} from  '../../../../dados/itemSerie';
 import {ITEMSERIE_CRIASERIEPAGE} from  '../../../../dados/itemSerie';
 /**
  * Api services for the `Aplicacao` model.
@@ -101,10 +102,24 @@ export class ItemSerieApi extends BaseLoopBackApi {
 	getSerieEditaExecucaoPageLoad(filter: LoopBackFilter = {}) : Observable<ItemSerie> {
 		return of (ITEMSERIE_SERIEEDITAEXECUCAOPAGE);
 	}
+	getCriaSerieWorkPageLoad(filter: LoopBackFilter = {}) : Observable<ItemSerie> {
+		return of (ITEMSERIE_CRIASERIEWORKPAGE);
+	}
 	getCriaSeriePageLoad(filter: LoopBackFilter = {}) : Observable<ItemSerie> {
 		return of (ITEMSERIE_CRIASERIEPAGE);
 	}
 
+	public submitCriaSerieWorkPage(item : any , customHeaders?: Function) : Observable<ItemSerie> {
+		let _method: string = "POST";
+		let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    		"/TreinoAcademia_ItemSeries/submitCriaSerieWorkPage";
+    	let _routeParams: any = {};
+    	let _postBody: any = {};
+    	let _urlParams: any = {};
+    	if (typeof item !== 'undefined' && item !== null) _urlParams.item = item;
+    	let result = this.request(_method, _url, _routeParams, _urlParams, _postBody, null, customHeaders);
+    	return result;
+	}
 	public submitCriaSeriePage(item : any , customHeaders?: Function) : Observable<ItemSerie> {
 		let _method: string = "POST";
 		let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +

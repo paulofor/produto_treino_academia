@@ -3,12 +3,9 @@ import { SerieTreino, SerieTreinoApi } from '../../shared/sdk';
 import { Exercicio, ExercicioApi } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
-import { FormGroup } from '@angular/forms';
 
 // Tipo: EDITA
-export abstract class CriaSeriePageBase {
-
-  protected	myForm: FormGroup;
+export abstract class CriaSerieWorkPageBase {
 
   protected usuario: Usuario;
   
@@ -42,33 +39,33 @@ export abstract class CriaSeriePageBase {
   }
   private inicializaItem() {
 	this.item = this.navParams.get('item');
-	console.log('CriaSeriePageBase:ItemParametro: ', this.item);
+	console.log('CriaSerieWorkPageBase:ItemParametro: ', this.item);
 	if (!this.item) {
 		var id = this.navParams.get('id');
 		if (id) {
-			console.log('CriaSeriePageBase:Id: ' , id);
+			console.log('CriaSerieWorkPageBase:Id: ' , id);
 			this.srv.findById(id, this.filtroLoadId(id))
 				.subscribe((result:ItemSerie) => {
 					this.item = result;
-					console.log('CriaSeriePageBase:LoadId: ' , this.item);
+					console.log('CriaSerieWorkPageBase:LoadId: ' , this.item);
 				})
 		} else {
 			this.item = this.criaItem();
-			console.log('CriaSeriePageBase:ItemCriado: ', this.item);
+			console.log('CriaSerieWorkPageBase:ItemCriado: ', this.item);
 		}
 	} else {
 		this.item = this.complementaItem(this.item);
-		console.log('CriaSeriePageBase:ItemComComplemento: ', this.item);
+		console.log('CriaSerieWorkPageBase:ItemComComplemento: ', this.item);
 	}
   }
   ionViewWillEnter() {
-    console.log('ionViewWillEnter CriaSeriePage<<EDITA>>');
+    console.log('ionViewWillEnter CriaSerieWorkPage<<EDITA>>');
     this.carregaUsuario();
     this.inicializacaoComplementos();
     this.inicializaItem();
   }
   ionViewDidLoad() {
-  	console.log('ionViewDidLoad CriaSeriePage<<EDITA>>');
+  	console.log('ionViewDidLoad CriaSerieWorkPage<<EDITA>>');
   }
   carregaUsuario() {
 	this.storage.get('user').then((val: Usuario) => {
@@ -107,12 +104,11 @@ export abstract class CriaSeriePageBase {
       	})
 	}
 	protected submit() {
-		console.log('Valores: ' , this.myForm.value);
-		//console.log('CriaSeriePageBase:Submit-Item:' , JSON.stringify(this.item));
-    	//this.srv.submitCriaSeriePage(this.item)
-      	//	.subscribe((resultado:ItemSerie) => {
-        //		console.log('CriaSeriePageBase:Submit-Result: ' , JSON.stringify(resultado));
-		//		this.executaNavegacao(this.navCtrl,resultado);
-      	//})
+		console.log('CriaSerieWorkPageBase:Submit-Item:' , JSON.stringify(this.item));
+    	this.srv.submitCriaSerieWorkPage(this.item)
+      		.subscribe((resultado:ItemSerie) => {
+        		console.log('CriaSerieWorkPageBase:Submit-Result: ' , JSON.stringify(resultado));
+				this.executaNavegacao(this.navCtrl,resultado);
+      	})
 	}
 }

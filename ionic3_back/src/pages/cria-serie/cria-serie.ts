@@ -6,6 +6,7 @@ import { ItemSerie, ItemSerieApi, Exercicio, ExecucaoItemSerie, CargaPlanejada, 
 import { CriaSeriePageBase } from './cria-serie-base';
 import { SerieTreinoEdicaoPage } from '../serie-treino-edicao/serie-treino-edicao';
 import { Storage } from '@ionic/storage';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 
 @IonicPage()
@@ -15,8 +16,13 @@ import { Storage } from '@ionic/storage';
 })
 export class CriaSeriePage extends CriaSeriePageBase {
 
+ 
+
+  // Validation error messages that will be displayed for each form field with errors.
 
   
+  
+
   protected complementaItem(item: any) {
     if (!item.exercicio) {
       item.exercicio = new Exercicio();
@@ -104,9 +110,16 @@ export class CriaSeriePage extends CriaSeriePageBase {
     public srvSerieTreino: SerieTreinoApi,
     public srvExercicio: ExercicioApi,
     public srvGrupoMuscular: GrupoMuscularApi,
-    protected storage: Storage
+    protected storage: Storage, public fb:FormBuilder
   ) {
     super(navParams, navCtrl, srv, storage, srvSerieTreino, srvExercicio);
+    this.myForm = this.fb.group({
+      titulo: ['' , [Validators.required]],
+      grupoMuscularId : ['' , [Validators.required]],
+      qtdeExecucao : [3, [Validators.required]],
+      valorCarga : this.fb.array([]),
+      valorQtde : this.fb.array([])
+    })
   }
 
   criaItemSerie() {
@@ -122,22 +135,22 @@ export class CriaSeriePage extends CriaSeriePageBase {
   }
 
   alteraQuantidade(qtde: number) {
-    console.log('Qtde: ' , JSON.stringify(qtde));
-    if (qtde>this.item.listaCargaPlanejada.length) {
-      for (let i=this.item.listaCargaPlanejada.length;i<qtde;i++) {
+    console.log('Qtde: ', JSON.stringify(qtde));
+    if (qtde > this.item.listaCargaPlanejada.length) {
+      for (let i = this.item.listaCargaPlanejada.length; i < qtde; i++) {
         var novo = new CargaPlanejada();
-        novo.ordemRepeticao = (i+1);
+        novo.ordemRepeticao = (i + 1);
         novo.valorCarga = 0;
         novo.quantidadeRepeticao = 0;
         this.item.listaCargaPlanejada.push(novo);
       }
     }
-    if (qtde<this.item.listaCargaPlanejada.length) {
-      for (let i=this.item.listaCargaPlanejada.length;i>qtde;i--)  {
-        this.item.listaCargaPlanejada.splice(i-1,1);
+    if (qtde < this.item.listaCargaPlanejada.length) {
+      for (let i = this.item.listaCargaPlanejada.length; i > qtde; i--) {
+        this.item.listaCargaPlanejada.splice(i - 1, 1);
       }
     }
-    console.log('ListaCarga:' , this.item.listaCargaPlanejada);
+    console.log('ListaCarga:', this.item.listaCargaPlanejada);
   }
 
 }
