@@ -32,7 +32,7 @@
         </ion-select>
       </ion-item>
 
-      <ion-item-group *ngFor="let carga of item.listaCargaPlanejada">
+      <ion-item-group *ngFor="let carga of item.listaCargaPlanejada;let i=index">
         <ion-item-divider color="light">
           <ion-label>Execução {{carga.ordemRepeticao}}</ion-label>
         </ion-item-divider>

@@ -6,7 +6,7 @@ import { ItemSerie, ItemSerieApi, Exercicio, ExecucaoItemSerie, CargaPlanejada, 
 import { CriaSeriePageBase } from './cria-serie-base';
 import { SerieTreinoEdicaoPage } from '../serie-treino-edicao/serie-treino-edicao';
 import { Storage } from '@ionic/storage';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
 
 
 @IonicPage()
@@ -117,8 +117,8 @@ export class CriaSeriePage extends CriaSeriePageBase {
       titulo: ['' , [Validators.required]],
       grupoMuscularId : ['' , [Validators.required]],
       qtdeExecucao : [3, [Validators.required]],
-      valorCarga : this.fb.array([]),
-      valorQtde : this.fb.array([])
+      valorCarga : new FormArray([])
+      //valorQtde : this.fb.array([])
     })
   }
 
