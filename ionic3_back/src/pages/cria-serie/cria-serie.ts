@@ -113,13 +113,16 @@ export class CriaSeriePage extends CriaSeriePageBase {
     protected storage: Storage, public fb:FormBuilder
   ) {
     super(navParams, navCtrl, srv, storage, srvSerieTreino, srvExercicio);
-    this.myForm = this.fb.group({
-      titulo: ['' , [Validators.required]],
-      grupoMuscularId : ['' , [Validators.required]],
-      qtdeExecucao : [3, [Validators.required]],
-      valorCarga : new FormArray([])
-      //valorQtde : this.fb.array([])
-    })
+
+    
+    //this.myForm = this.fb.group({
+    //  titulo: ['' , [Validators.required]],
+    //  grupoMuscularId : ['' , [Validators.required]],
+    //  qtdeExecucao : [3, [Validators.required]],
+    //  valorCarga : new FormArray([])
+    //})
+    
+
   }
 
   criaItemSerie() {

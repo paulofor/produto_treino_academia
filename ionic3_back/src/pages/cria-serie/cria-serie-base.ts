@@ -3,12 +3,9 @@ import { SerieTreino, SerieTreinoApi } from '../../shared/sdk';
 import { Exercicio, ExercicioApi } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
-import { FormGroup } from '@angular/forms';
 
 // Tipo: EDITA
 export abstract class CriaSeriePageBase {
-
-  protected	myForm: FormGroup;
 
   protected usuario: Usuario;
   
@@ -64,8 +61,8 @@ export abstract class CriaSeriePageBase {
   ionViewWillEnter() {
     console.log('ionViewWillEnter CriaSeriePage<<EDITA>>');
     this.carregaUsuario();
-    this.inicializacaoComplementos();
-    this.inicializaItem();
+
+
   }
   ionViewDidLoad() {
   	console.log('ionViewDidLoad CriaSeriePage<<EDITA>>');
@@ -73,6 +70,8 @@ export abstract class CriaSeriePageBase {
   carregaUsuario() {
 	this.storage.get('user').then((val: Usuario) => {
 		this.usuario = val;
+		this.inicializacaoComplementos();
+		this.inicializaItem();
 	})
   }
   
@@ -107,12 +106,11 @@ export abstract class CriaSeriePageBase {
       	})
 	}
 	protected submit() {
-		console.log('Valores: ' , this.myForm.value);
-		//console.log('CriaSeriePageBase:Submit-Item:' , JSON.stringify(this.item));
-    	//this.srv.submitCriaSeriePage(this.item)
-      	//	.subscribe((resultado:ItemSerie) => {
-        //		console.log('CriaSeriePageBase:Submit-Result: ' , JSON.stringify(resultado));
-		//		this.executaNavegacao(this.navCtrl,resultado);
-      	//})
+		console.log('CriaSeriePageBase:Submit-Item:' , JSON.stringify(this.item));
+    	this.srv.submitCriaSeriePage(this.item)
+      		.subscribe((resultado:ItemSerie) => {
+        		console.log('CriaSeriePageBase:Submit-Result: ' , JSON.stringify(resultado));
+				this.executaNavegacao(this.navCtrl,resultado);
+      	})
 	}
 }

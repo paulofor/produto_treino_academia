@@ -5,6 +5,7 @@ import { Screenshot } from '@ionic-native/screenshot';
 import { SerieTreino, SerieTreinoApi, DiaTreinoApi, LoopBackFilter, DiaTreino } from '../../shared/sdk';
 import { InicioTreinoDiaPageBase } from './inicio-treino-dia-base';
 import { ExecutaTreinoPage } from '../executa-treino/executa-treino';
+import { Storage } from '@ionic/storage';
 
 @IonicPage()
 @Component({
@@ -18,8 +19,8 @@ export class InicioTreinoDiaPage extends InicioTreinoDiaPageBase {
 
   constructor(public navParams: NavParams,
     public navCtrl: NavController,
-    public srv: SerieTreinoApi, private srvDia: DiaTreinoApi) {
-    super(navParams, navCtrl, srv);
+    public srv: SerieTreinoApi, private srvDia: DiaTreinoApi, protected storage: Storage) {
+    super(navParams, navCtrl, srv, storage);
   }
 
   protected filtroLoadId(id: any): LoopBackFilter {
@@ -27,7 +28,10 @@ export class InicioTreinoDiaPage extends InicioTreinoDiaPageBase {
   }
   protected filtroLoadOne(): LoopBackFilter {
     //return {"where" : {"data" :  {gt: Date.now() - this.QUATRO_HORAS} }};
-    return { "where": { "ativa": "1" }, "order": "dataUltimaExecucao" };
+    return {
+      "where": { 'and': [{ 'usuarioId': this.usuario.id }, { "ativa": "1" }] },
+      "order": "dataUltimaExecucao"
+    };
   }
   protected posInicializaItem() {
   }
@@ -36,7 +40,7 @@ export class InicioTreinoDiaPage extends InicioTreinoDiaPageBase {
     this.srvDia.find(this.filtroDia)
       .subscribe((result: DiaTreino[]) => {
         console.log('Dia recuperado: ', result);
-        if (result.length>0) {
+        if (result.length > 0) {
           this.navCtrl.push(ExecutaTreinoPage, {
             id: result[0].id
           })
@@ -45,7 +49,13 @@ export class InicioTreinoDiaPage extends InicioTreinoDiaPageBase {
   }
 
   filtroDia: LoopBackFilter = {
-    "where": { "data": { gt: Date.now() - this.QUATRO_HORAS } , "order" : "data desc"}
+    "where":
+      {
+        'and': [
+          { 'usuarioId': this.usuario.id },
+          { "data": { gt: Date.now() - this.QUATRO_HORAS } }]
+      }, 
+      "order": "data desc"
   }
 
 

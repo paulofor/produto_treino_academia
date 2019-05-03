@@ -1,8 +1,11 @@
-import { ItemSerie, ItemSerieApi , LoopBackFilter } from '../../shared/sdk';
+import { ItemSerie, ItemSerieApi , LoopBackFilter, Usuario } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 // Tipo: DETALHE
 export abstract class SerieEditaExecucaoPageBase {
+
+  protected usuario: Usuario;
   
   protected item: ItemSerie;
   
@@ -20,7 +23,8 @@ export abstract class SerieEditaExecucaoPageBase {
  
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
-				public srv: ItemSerieApi) {
+				public srv: ItemSerieApi,
+				protected storage: Storage) {
   } 
   
 	private inicializaItem() {
@@ -56,13 +60,18 @@ export abstract class SerieEditaExecucaoPageBase {
 			}
 		}  
 	}
-
+	carregaUsuario() {
+		this.storage.get('user').then((val: Usuario) => {
+			this.usuario = val;
+			this.preInicializaItem();
+			this.inicializaItem();
+			this.posInicializaItem();
+		})
+	}
   
 	ionViewWillEnter() {
 		console.log('ionViewWillEnter SerieEditaExecucaoPage<<DETALHE>>');
-		this.preInicializaItem();
-		this.inicializaItem();
-		this.posInicializaItem();
+		this.carregaUsuario();
 	}
   
 	ionViewDidLoad() {

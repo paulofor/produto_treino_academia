@@ -61,8 +61,8 @@ export abstract class CriaSerieWorkPageBase {
   ionViewWillEnter() {
     console.log('ionViewWillEnter CriaSerieWorkPage<<EDITA>>');
     this.carregaUsuario();
-    this.inicializacaoComplementos();
-    this.inicializaItem();
+
+
   }
   ionViewDidLoad() {
   	console.log('ionViewDidLoad CriaSerieWorkPage<<EDITA>>');
@@ -70,6 +70,8 @@ export abstract class CriaSerieWorkPageBase {
   carregaUsuario() {
 	this.storage.get('user').then((val: Usuario) => {
 		this.usuario = val;
+		this.inicializacaoComplementos();
+		this.inicializaItem();
 	})
   }
   

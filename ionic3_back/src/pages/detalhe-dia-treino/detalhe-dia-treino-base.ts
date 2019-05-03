@@ -1,8 +1,11 @@
-import { DiaTreino, DiaTreinoApi , LoopBackFilter } from '../../shared/sdk';
+import { DiaTreino, DiaTreinoApi , LoopBackFilter, Usuario } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 // Tipo: DETALHE
 export abstract class DetalheDiaTreinoPageBase {
+
+  protected usuario: Usuario;
   
   protected item: DiaTreino;
   
@@ -20,7 +23,8 @@ export abstract class DetalheDiaTreinoPageBase {
  
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
-				public srv: DiaTreinoApi) {
+				public srv: DiaTreinoApi,
+				protected storage: Storage) {
   } 
   
 	private inicializaItem() {
@@ -56,13 +60,18 @@ export abstract class DetalheDiaTreinoPageBase {
 			}
 		}  
 	}
-
+	carregaUsuario() {
+		this.storage.get('user').then((val: Usuario) => {
+			this.usuario = val;
+			this.preInicializaItem();
+			this.inicializaItem();
+			this.posInicializaItem();
+		})
+	}
   
 	ionViewWillEnter() {
 		console.log('ionViewWillEnter DetalheDiaTreinoPage<<DETALHE>>');
-		this.preInicializaItem();
-		this.inicializaItem();
-		this.posInicializaItem();
+		this.carregaUsuario();
 	}
   
 	ionViewDidLoad() {

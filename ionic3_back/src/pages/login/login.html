@@ -4,15 +4,17 @@
     
       <ion-item>
         <ion-label floating>Usuario</ion-label>
-        <ion-input type="text" formControlName="login"></ion-input>
+        <ion-input type="text" formControlName="login" required></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label floating>Senha</ion-label>
-        <ion-input type="password" formControlName="senha"></ion-input>
+        <ion-input type="password" formControlName="senha" required></ion-input>
       </ion-item>
-
-      <button ion-button block type="submit">Entrar</button>
+      <ion-item *ngIf="erroMsg">
+        <p style="color:red">{{erroMsg}}</p>
+      </ion-item>
+      <button ion-button block type="submit" >Entrar</button>
     </form>
   </ion-list>
   <button ion-button outline (click)="criarConta()">Cria Conta</button>
