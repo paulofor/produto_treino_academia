@@ -5,6 +5,7 @@ import { Screenshot } from '@ionic-native/screenshot';
 import { SerieTreino, SerieTreinoApi, LoopBackFilter, ItemSerie } from '../../shared/sdk';
 import { SerieTreinoEdicaoPageBase } from './serie-treino-edicao-base';
 import { CriaSeriePage } from '../cria-serie/cria-serie';
+import { Storage } from '@ionic/storage';
 
 @IonicPage()
 @Component({
@@ -42,8 +43,8 @@ export class SerieTreinoEdicaoPage extends SerieTreinoEdicaoPageBase {
 
   constructor(public navParams: NavParams,
     public navCtrl: NavController,
-    public srv: SerieTreinoApi) {
-    super(navParams, navCtrl, srv);
+    public srv: SerieTreinoApi, protected storage:Storage) {
+    super(navParams, navCtrl, srv, storage);
   }
 
 

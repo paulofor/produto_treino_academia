@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class ErrorHandler {
   public handleError(errorResponse: HttpErrorResponse): Observable<never> {
     //return throwError(errorResponse.error.error || 'Server error');
+    console.log('ErroHttp: ', errorResponse.error.error);
 	return null;
   }
 }

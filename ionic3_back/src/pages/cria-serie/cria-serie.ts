@@ -16,16 +16,17 @@ import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
 })
 export class CriaSeriePage extends CriaSeriePageBase {
 
- 
+
 
   // Validation error messages that will be displayed for each form field with errors.
 
-  
-  
+
+
 
   protected complementaItem(item: any) {
     if (!item.exercicio) {
       item.exercicio = new Exercicio();
+      item.exercicio.usuarioId = this.usuario.id;
     }
 
     if (!item.listaCargaPlanejada) {
@@ -75,6 +76,7 @@ export class CriaSeriePage extends CriaSeriePageBase {
 
     var item: ItemSerie = new ItemSerie();
     item.exercicio = new Exercicio();
+    item.exercicio.usuarioId = this.usuario.id;
     item.listaCargaPlanejada = [];
 
     var carga1 = new CargaPlanejada();
@@ -110,18 +112,18 @@ export class CriaSeriePage extends CriaSeriePageBase {
     public srvSerieTreino: SerieTreinoApi,
     public srvExercicio: ExercicioApi,
     public srvGrupoMuscular: GrupoMuscularApi,
-    protected storage: Storage, public fb:FormBuilder
+    protected storage: Storage, public fb: FormBuilder
   ) {
     super(navParams, navCtrl, srv, storage, srvSerieTreino, srvExercicio);
 
-    
+
     //this.myForm = this.fb.group({
     //  titulo: ['' , [Validators.required]],
     //  grupoMuscularId : ['' , [Validators.required]],
     //  qtdeExecucao : [3, [Validators.required]],
     //  valorCarga : new FormArray([])
     //})
-    
+
 
   }
 

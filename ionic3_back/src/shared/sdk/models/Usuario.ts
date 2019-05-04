@@ -4,9 +4,7 @@ import {
 	SerieTreino,
 	Exercicio,
 	ExecucaoItemSerie,
-	CargaPlanejada,
 	DiaTreino,
-	RegistroPeso,
 } from '../index';
 
 declare var Object: any;
@@ -18,9 +16,7 @@ export interface UsuarioInterface {
 	listaSerieTreino?: SerieTreino[];
 	listaExercicio?: Exercicio[];
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
-	listaCargaPlanejada?: CargaPlanejada[];
 	listaDiaTreino?: DiaTreino[];
-	listaRegistroPeso?: RegistroPeso[];
 }
 
 export class Usuario implements UsuarioInterface {
@@ -31,9 +27,7 @@ export class Usuario implements UsuarioInterface {
 	listaSerieTreino?: SerieTreino[];
 	listaExercicio?: Exercicio[];
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
-	listaCargaPlanejada?: CargaPlanejada[];
 	listaDiaTreino?: DiaTreino[];
-	listaRegistroPeso?: RegistroPeso[];
   constructor(data?: UsuarioInterface) {
     Object.assign(this, data);
   }

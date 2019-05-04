@@ -65,7 +65,7 @@ export abstract class CriaSerieWorkPageBase {
 
   }
   ionViewDidLoad() {
-  	console.log('ionViewDidLoad CriaSerieWorkPage<<EDITA>>');
+  	//console.log('ionViewDidLoad CriaSerieWorkPage<<EDITA>>');
   }
   carregaUsuario() {
 	this.storage.get('user').then((val: Usuario) => {

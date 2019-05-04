@@ -25,7 +25,7 @@ export class DetalheDiaTreinoPage extends DetalheDiaTreinoPageBase {
   constructor(public navParams: NavParams,
     public navCtrl: NavController,
     public srv: DiaTreinoApi, protected storage: Storage) {
-    super(navParams, navCtrl, srv);
+    super(navParams, navCtrl, srv, storage);
   }
 
   protected filtroLoadId(id: number): LoopBackFilter {

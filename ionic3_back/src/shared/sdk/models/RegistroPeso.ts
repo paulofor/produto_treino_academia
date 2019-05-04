@@ -1,7 +1,6 @@
 
 /* tslint:disable */
 import {
-	Usuario,
 } from '../index';
 
 declare var Object: any;
@@ -10,8 +9,6 @@ export interface RegistroPesoInterface {
 	"data"?: Date;
 	"valor"?: number;
 	"obs"?: string;
-	usuario?: Usuario;
-	usuarioId? : string;
 }
 
 export class RegistroPeso implements RegistroPesoInterface {
@@ -19,8 +16,6 @@ export class RegistroPeso implements RegistroPesoInterface {
 	data?: Date;
 	valor?: number;
 	obs?: string;
-	usuario?: Usuario;
-	usuarioId? : string;
   constructor(data?: RegistroPesoInterface) {
     Object.assign(this, data);
   }
