@@ -22,7 +22,9 @@ export class ConsultaListaExercicioPage extends ConsultaListaExercicioPageBase {
 
 
   protected getFiltro(): LoopBackFilter {
-    return {};
+    return {
+      'where' : {'usuarioId' : this.usuario.id }
+    };
   }
   
 }

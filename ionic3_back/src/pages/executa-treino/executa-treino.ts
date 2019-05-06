@@ -71,6 +71,7 @@ export class ExecutaTreinoPage extends ExecutaTreinoPageBase {
     execucao.itemSerieId = itemSerie.id;
     execucao.dataHoraFinalizacao = new Date();
     execucao.listaExecucaoCarga = [];
+    execucao.usuarioId = this.usuario.id;
 
     itemSerie.listaCargaPlanejada.forEach((carga:CargaPlanejada) => {
       var exeCarga: ExecucaoCarga = new ExecucaoCarga();

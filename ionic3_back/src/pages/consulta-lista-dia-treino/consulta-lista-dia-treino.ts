@@ -22,7 +22,11 @@ export class ConsultaListaDiaTreinoPage extends ConsultaListaDiaTreinoPageBase {
 
 
   protected getFiltro(): LoopBackFilter {
-    return {"include" : "serieTreino" , "order" :  "data desc" };
+    return {
+      "include": "serieTreino", 
+      "order": "data desc",
+      "where" : {"usuarioId" : this.usuario.id }
+    };
   }
-  
+
 }
