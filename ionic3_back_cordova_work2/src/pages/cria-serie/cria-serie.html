@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar color="titulo">
+    <ion-title>Adicionando Exercício</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="quadroBase">
+  <ion-card *ngIf="item && listaGrupo">
+    <form novalidate #itemSerieForm="ngForm" (submit)="submit()">
+
+      <ion-item>
+        <ion-label floating>Nome do Exercício</ion-label>
+        <ion-input name="titulo" type="text" [(ngModel)]="item.exercicio.titulo" #tituloExercicio="ngModel" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <p style="color: rgb(8, 65, 158)">Digite o exercício que quer incluir na série.</p>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>Grupo Muscular</ion-label>
+        <ion-select [(ngModel)]="item.grupoMuscularId" name="grupoMuscularId" #grupoMuscularId="ngModel" required>
+          <ion-option *ngFor="let grupo of listaGrupo" value="{{grupo.id}}">{{grupo.nome}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <p style="color: rgb(8, 65, 158)">Digite o exercício que quer incluir na série.</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Execuções</ion-label>
+        <ion-select (ionChange)="alteraQuantidade($event);">
+          <ion-option>1</ion-option>
+          <ion-option>2</ion-option>
+          <ion-option selected>3</ion-option>
+          <ion-option>4</ion-option>
+          <ion-option>5</ion-option>
+          <ion-option>6</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item-group *ngFor="let carga of item.listaCargaPlanejada">
+        <ion-item-divider color="light">
+          <ion-label>Execução {{carga.ordemRepeticao}}</ion-label>
+        </ion-item-divider>
+        <ion-item>
+          <ion-label floating>Carga (Kg)</ion-label>
+          <ion-input [(ngModel)]="carga.valorCarga" name="valorCarga" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Repetições (Qtde)</ion-label>
+          <ion-input [(ngModel)]="carga.quantidadeRepeticao" name="quantidadeRepeticao" type="text"></ion-input>
+        </ion-item>
+      </ion-item-group>
+
+
+
+      <button ion-button type="submit" block [disabled]="itemSerieForm.form.invalid">Adicionar</button>
+    </form>
+  </ion-card>
+</ion-content>
