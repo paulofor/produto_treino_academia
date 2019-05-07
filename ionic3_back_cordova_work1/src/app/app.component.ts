@@ -1,0 +1,66 @@
+
+import { Component, ViewChild } from '@angular/core';
+import { Nav, Platform } from 'ionic-angular';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
+import { SerieEditaExecucaoPage } from '../pages/serie-edita-execucao/serie-edita-execucao';
+import { ExercicioGraficoExecucaoPage } from '../pages/exercicio-grafico-execucao/exercicio-grafico-execucao';
+import { ConsultaListaDiaTreinoPage } from '../pages/consulta-lista-dia-treino/consulta-lista-dia-treino';
+import { CriaSerieWorkPage } from '../pages/cria-serie-work/cria-serie-work';
+import { ListaSerieTreinoPage } from '../pages/lista-serie-treino/lista-serie-treino';
+import { CriaSeriePage } from '../pages/cria-serie/cria-serie';
+import { InicioTreinoDiaPage } from '../pages/inicio-treino-dia/inicio-treino-dia';
+import { SerieTreinoEdicaoPage } from '../pages/serie-treino-edicao/serie-treino-edicao';
+import { ExecutaTreinoPage } from '../pages/executa-treino/executa-treino';
+import { ConsultaListaExercicioPage } from '../pages/consulta-lista-exercicio/consulta-lista-exercicio';
+import { DetalheDiaTreinoPage } from '../pages/detalhe-dia-treino/detalhe-dia-treino';
+
+
+@Component({
+  templateUrl: 'app.html'
+})
+export class MyApp {
+  @ViewChild(Nav) nav: Nav;
+
+  rootPage: any = LoginPage;
+
+  pages: Array<{title: string, component: any}>;
+
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+    this.initializeApp();
+
+    // used for an example of ngFor and navigation
+    this.pages = [
+	
+      { title: 'Consulta Dia*' , component: ConsultaListaDiaTreinoPage},
+	
+      { title: 'Cria Serie Work' , component: CriaSerieWorkPage},
+	
+      { title: 'Series*' , component: ListaSerieTreinoPage},
+	
+      { title: 'Inicia Treino*' , component: InicioTreinoDiaPage},
+	
+      { title: 'Consulta Exerc*' , component: ConsultaListaExercicioPage},
+	
+     ];
+
+  }
+
+  initializeApp() {
+    this.platform.ready().then(() => {
+      // Okay, so the platform is ready and our plugins are available.
+      // Here you can do any higher level native things you might need.
+      this.statusBar.styleDefault();
+      this.splashScreen.hide();
+    });
+  }
+
+  openPage(page) {
+    // Reset the content nav to have just this page
+    // we wouldn't want the back button to show in this scenario
+    this.nav.push(page.component);
+  }
+}
