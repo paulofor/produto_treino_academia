@@ -1,12 +1,16 @@
-<ion-content padding>
-  <ion-list>
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    
+<ion-content>
+
+  <div id="logo" class="quadro30" style='background-color:rgb(205, 205, 226)'>
+
+  </div>
+
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="quadro50" >
+    <ion-list>
       <ion-item>
         <ion-label floating>Usuario</ion-label>
         <ion-input type="text" formControlName="login" required></ion-input>
       </ion-item>
-
       <ion-item>
         <ion-label floating>Senha</ion-label>
         <ion-input type="password" formControlName="senha" required></ion-input>
@@ -14,8 +18,13 @@
       <ion-item *ngIf="erroMsg">
         <p style="color:red">{{erroMsg}}</p>
       </ion-item>
-      <button ion-button block type="submit" >Entrar</button>
-    </form>
-  </ion-list>
-  <button ion-button outline (click)="criarConta()">Cria Conta</button>
+      <button ion-button block type="submit">Entrar</button>
+    </ion-list>
+  </form>
+
+
+  <div id="criaEsquece" class="quadro20">
+    <button ion-button outline (click)="criarConta()">Cria Conta</button>
+  </div>
+
 </ion-content>
