@@ -19,6 +19,7 @@ import { of } from 'rxjs/observable/of';
 import {SERIETREINO_LISTASERIETREINOPAGE} from  '../../../../dados/serieTreino';
 import {SERIETREINO_INICIOTREINODIAPAGE} from  '../../../../dados/serieTreino';
 import {SERIETREINO_SERIETREINOEDICAOPAGE} from  '../../../../dados/serieTreino';
+import {SERIETREINO_ESCOLHASERIETREINOPAGE} from  '../../../../dados/serieTreino';
 /**
  * Api services for the `Aplicacao` model.
  */
@@ -107,6 +108,9 @@ export class SerieTreinoApi extends BaseLoopBackApi {
 	}
 	getSerieTreinoEdicaoPageLoad(filter: LoopBackFilter = {}) : Observable<SerieTreino> {
 		return of (SERIETREINO_SERIETREINOEDICAOPAGE);
+	}
+	getEscolhaSerieTreinoPageLoad(filter: LoopBackFilter = {}) : Observable<SerieTreino> {
+		return of (SERIETREINO_ESCOLHASERIETREINOPAGE);
 	}
 
   

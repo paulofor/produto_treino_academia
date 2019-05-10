@@ -13,6 +13,7 @@ export interface SerieTreinoInterface {
 	"ativa"?: number;
 	"dataUltimaExecucao"?: Date;
 	"qtdeExecucao"?: number;
+	"nome"?: string;
 	usuario?: Usuario;
 	usuarioId? : string;
 	listaItemSerie?: ItemSerie[];
@@ -25,6 +26,7 @@ export class SerieTreino implements SerieTreinoInterface {
 	ativa?: number;
 	dataUltimaExecucao?: Date;
 	qtdeExecucao?: number;
+	nome?: string;
 	usuario?: Usuario;
 	usuarioId? : string;
 	listaItemSerie?: ItemSerie[];
@@ -82,6 +84,10 @@ export class SerieTreino implements SerieTreinoInterface {
         "qtdeExecucao" : {
         	name : "qtdeExecucao",
         	type : "number"
+        },
+        "nome" : {
+        	name : "nome",
+        	type : "string"
         },
       },
       relations: {

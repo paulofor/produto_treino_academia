@@ -6,6 +6,7 @@ import { ConsultaListaDiaTreinoPageBase } from './consulta-lista-dia-treino-base
 import { DiaTreinoApi, LoopBackFilter } from '../../shared/sdk';
 import { Storage } from '@ionic/storage';
 
+
 @IonicPage()
 @Component({
   selector: 'page-consulta-lista-dia-treino',
