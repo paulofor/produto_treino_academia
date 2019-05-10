@@ -5,6 +5,9 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { LoginPageBase } from './login-base';
 import { SignupPage } from '../signup/signup';
 import { Storage } from '@ionic/storage';
+import { Page } from 'ionic-angular/navigation/nav-util';
+import { ComandosZeroPage } from '../comandos-zero/comandos-zero';
+
 
 
 /**
@@ -20,6 +23,13 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'login.html',
 })
 export class LoginPage extends LoginPageBase {
+
+
+  getPaginaInicial(): Page {
+    var proxima = ComandosZeroPage;
+    console.log('Proxima: ' , proxima);
+    return proxima;
+  }
 
 
 

@@ -11,6 +11,7 @@ import { Screenshot } from '@ionic-native/screenshot';
 import { ChartsModule } from 'ng2-charts';
 import { SignupPage } from '../pages/signup/signup';
 import { LoginPage } from '../pages/login/login';
+import { ComandosZeroPage } from '../pages/comandos-zero/comandos-zero';
 import { IonicStorageModule } from '@ionic/storage';
 import { BrMaskerModule } from 'brmasker-ionic-3';
 
@@ -46,6 +47,7 @@ import { ExecucaoCargaApi } from '../shared/sdk';
     HomePage,
     LoginPage,
     SignupPage,
+    ComandosZeroPage,
     SerieEditaExecucaoPage,
 	
     ExercicioGraficoExecucaoPage,
@@ -84,6 +86,7 @@ import { ExecucaoCargaApi } from '../shared/sdk';
     HomePage,
     LoginPage,
     SignupPage,
+    ComandosZeroPage,
     SerieEditaExecucaoPage,
 	
     ExercicioGraficoExecucaoPage,

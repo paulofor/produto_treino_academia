@@ -3,6 +3,7 @@ import { HomePage } from '../home/home';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Storage } from '@ionic/storage';
 import { Usuario, UsuarioApi, LoopBackFilter } from '../../shared/sdk';
+import { Page } from 'ionic-angular/navigation/nav-util';
 
 
 
@@ -11,6 +12,8 @@ export abstract class LoginPageBase {
   protected usuario: Usuario;
   protected loginForm: FormGroup;
   protected erroMsg: string;
+  
+  abstract getPaginaInicial() : Page;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
     protected formBuilder: FormBuilder, protected srv: UsuarioApi, protected storage: Storage) {
@@ -45,7 +48,7 @@ export abstract class LoginPageBase {
   }
 
   mudaTela() {
-    this.navCtrl.push(HomePage).then(() => {
+    this.navCtrl.push(this.getPaginaInicial()).then(() => {
       let index = 0;
       this.navCtrl.remove(index);
     });
