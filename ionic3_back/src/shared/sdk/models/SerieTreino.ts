@@ -17,7 +17,9 @@ export interface SerieTreinoInterface {
 	usuario?: Usuario;
 	usuarioId? : string;
 	listaItemSerie?: ItemSerie[];
+	listaItemSerieCount?: number;
 	listaDiaTreino?: DiaTreino[];
+	listaDiaTreinoCount?: number;
 }
 
 export class SerieTreino implements SerieTreinoInterface {
@@ -30,7 +32,9 @@ export class SerieTreino implements SerieTreinoInterface {
 	usuario?: Usuario;
 	usuarioId? : string;
 	listaItemSerie?: ItemSerie[];
+	listaItemSerieCount?: number;
 	listaDiaTreino?: DiaTreino[];
+	listaDiaTreinoCount?: number;
   constructor(data?: SerieTreinoInterface) {
     Object.assign(this, data);
   }

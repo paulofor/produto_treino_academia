@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, ModalController, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, ModalController, NavController, NavParams, AlertController } from 'ionic-angular';
 import { Screenshot } from '@ionic-native/screenshot';
 
-import { SerieTreino, SerieTreinoApi, LoopBackFilter, ItemSerie } from '../../shared/sdk';
+import { SerieTreino, SerieTreinoApi, LoopBackFilter, ItemSerie, ItemSerieApi } from '../../shared/sdk';
 import { SerieTreinoEdicaoPageBase } from './serie-treino-edicao-base';
 import { CriaSeriePage } from '../cria-serie/cria-serie';
 import { Storage } from '@ionic/storage';
@@ -28,6 +28,7 @@ export class SerieTreinoEdicaoPage extends SerieTreinoEdicaoPageBase {
 
   protected filtroLoadId(): LoopBackFilter {
     return {
+      'counts' :'listaDiaTreino' ,
       'include':
       {
         'relation': 'listaItemSerie', scope: {
@@ -43,7 +44,8 @@ export class SerieTreinoEdicaoPage extends SerieTreinoEdicaoPageBase {
 
   constructor(public navParams: NavParams,
     public navCtrl: NavController,
-    public srv: SerieTreinoApi, protected storage:Storage) {
+    public srv: SerieTreinoApi, protected storage:Storage, private srvItemSerie : ItemSerieApi,
+    private alertCtrl: AlertController) {
     super(navParams, navCtrl, srv, storage);
   }
 
@@ -62,5 +64,30 @@ export class SerieTreinoEdicaoPage extends SerieTreinoEdicaoPageBase {
     })
   }
 
+  exclui(item: ItemSerie) {
+    let alert = this.alertCtrl.create({
+      title: 'Confirma exclusão',
+      message: 'Deseja realmente retirar esse item da série ?',
+      buttons: [
+        {
+          text: 'Não',
+          role: 'cancel',
+          handler: () => {
+            
+          }
+        },
+        {
+          text: 'Sim',
+          handler: () => {
+            this.srvItemSerie.deleteById(item.id)
+              .subscribe((result) => {
+                this.carregaUsuario();
+              })
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
 
 }

@@ -62,7 +62,7 @@ export abstract class ExecutaTreinoPageBase {
     this.inicializaItem();
   }
   ionViewDidLoad() {
-  	console.log('ionViewDidLoad ExecutaTreinoPage<<GETPUT>>');
+  	//console.log('ionViewDidLoad ExecutaTreinoPage<<GETPUT>>');
   }
   carregaUsuario() {
 	this.storage.get('user').then((val: Usuario) => {

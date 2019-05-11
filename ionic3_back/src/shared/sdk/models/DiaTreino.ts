@@ -17,7 +17,9 @@ export interface DiaTreinoInterface {
 	usuario?: Usuario;
 	usuarioId? : string;
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
+	listaExecucaoItemSerieCount?: number;
 	listaExercicio?: Exercicio[];
+	listaExercicioCount?: number;
 }
 
 export class DiaTreino implements DiaTreinoInterface {
@@ -29,7 +31,9 @@ export class DiaTreino implements DiaTreinoInterface {
 	usuario?: Usuario;
 	usuarioId? : string;
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
+	listaExecucaoItemSerieCount?: number;
 	listaExercicio?: Exercicio[];
+	listaExercicioCount?: number;
   constructor(data?: DiaTreinoInterface) {
     Object.assign(this, data);
   }

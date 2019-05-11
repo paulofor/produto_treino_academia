@@ -109,7 +109,7 @@ export abstract class CriaSerieWorkPageBase {
       	})
 	}
 	protected submit() {
-		console.log('CriaSerieWorkPageBase:Submit-Item:' , JSON.stringify(this.item));
+		console.log('ItemSerieApi.submitCriaSerieWorkPage:' , JSON.stringify(this.item));
     	this.srv.submitCriaSerieWorkPage(this.item)
       		.subscribe((resultado:ItemSerie) => {
         		console.log('CriaSerieWorkPageBase:Submit-Result: ' , JSON.stringify(resultado));

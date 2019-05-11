@@ -26,6 +26,7 @@ export interface ExecucaoItemSerieInterface {
 	usuario?: Usuario;
 	usuarioId? : string;
 	listaExecucaoCarga?: ExecucaoCarga[];
+	listaExecucaoCargaCount?: number;
 }
 
 export class ExecucaoItemSerie implements ExecucaoItemSerieInterface {
@@ -45,6 +46,7 @@ export class ExecucaoItemSerie implements ExecucaoItemSerieInterface {
 	usuario?: Usuario;
 	usuarioId? : string;
 	listaExecucaoCarga?: ExecucaoCarga[];
+	listaExecucaoCargaCount?: number;
   constructor(data?: ExecucaoItemSerieInterface) {
     Object.assign(this, data);
   }

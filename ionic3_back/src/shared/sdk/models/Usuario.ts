@@ -14,9 +14,13 @@ export interface UsuarioInterface {
 	"senha"?: string;
 	"email"?: string;
 	listaSerieTreino?: SerieTreino[];
+	listaSerieTreinoCount?: number;
 	listaExercicio?: Exercicio[];
+	listaExercicioCount?: number;
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
+	listaExecucaoItemSerieCount?: number;
 	listaDiaTreino?: DiaTreino[];
+	listaDiaTreinoCount?: number;
 }
 
 export class Usuario implements UsuarioInterface {
@@ -25,9 +29,13 @@ export class Usuario implements UsuarioInterface {
 	senha?: string;
 	email?: string;
 	listaSerieTreino?: SerieTreino[];
+	listaSerieTreinoCount?: number;
 	listaExercicio?: Exercicio[];
+	listaExercicioCount?: number;
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
+	listaExecucaoItemSerieCount?: number;
 	listaDiaTreino?: DiaTreino[];
+	listaDiaTreinoCount?: number;
   constructor(data?: UsuarioInterface) {
     Object.assign(this, data);
   }

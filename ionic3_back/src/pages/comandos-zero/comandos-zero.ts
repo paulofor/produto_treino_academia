@@ -3,6 +3,7 @@ import { Component } from "@angular/core";
 import { ComandosZeroPageBase } from "./comandos-zero-base";
 import { Storage } from '@ionic/storage';
 import { ListaSerieTreinoPage } from "../lista-serie-treino/lista-serie-treino";
+import { SerieTreinoApi, SerieTreino, DiaTreinoApi } from "../../shared/sdk";
 
 /**
  * Generated class for the GeradorDigicom
@@ -16,11 +17,42 @@ import { ListaSerieTreinoPage } from "../lista-serie-treino/lista-serie-treino";
 })
 export class ComandosZeroPage extends ComandosZeroPageBase {
 
- 
 
-  constructor(public navCtrl: NavController, protected storage: Storage) {
-    super();
+
+  existeConsulta = false;
+  existeDiaTreino = false;
+  existeSerie = true;
+
+  constructor(public navCtrl: NavController, protected storage: Storage,
+    private srvSerie: SerieTreinoApi, private srvDiaTreino: DiaTreinoApi) {
+    super(storage);
   }
+
+  protected inicializacao() {
+    this.verificaConsulta();
+    this.verificaDiaTreino();
+  }
+
+  verificaConsulta() {
+    this.srvSerie.find(
+      { "limit": 1, "where": { "and": [{ "usuarioId": this.usuario.id, "ativo": 1 }] } }
+    )
+      .subscribe((result: SerieTreino[]) => {
+        this.existeDiaTreino = (result.length > 0);
+      })
+  }
+
+  verificaDiaTreino() {
+    this.srvDiaTreino.find(
+      { "limit": 1, "where": { "and": [{ "usuarioId": this.usuario.id}] } }
+    )
+      .subscribe((result: SerieTreino[]) => {
+        this.existeConsulta = (result.length > 0);
+      })
+  }
+
+
+ 
 
 
   protected getNomeAplicacao(): string {
@@ -31,26 +63,19 @@ export class ComandosZeroPage extends ComandosZeroPageBase {
   executaConsulta() {
     console.log('ExecutaConsulta');
   }
-  existeConsulta() {
-    return true;
-  }
+
 
   executaDiaTreino() {
     console.log('executaDiaTreino');
   }
-  existeDiaTreino() {
-    return true;
-  }
+ 
 
   executaSerie() {
-    //console.log('executaSerie');
     this.navCtrl.push(ListaSerieTreinoPage, {
-      
+
     });
   }
-  existeSerie() {
-    return true;
-  }
+
 
 
 

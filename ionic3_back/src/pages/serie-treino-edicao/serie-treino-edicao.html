@@ -8,8 +8,9 @@
   <ion-card *ngIf="item">
 
     <ion-item>
-      <h3 class="linha1">Criação: {{item.dataCriacao | date : 'dd/MM/yy'}}</h3>
-      <h3 *ngIf="item.listaItemSerie.length==0">Adicione exercícios</h3>
+      <h3 class="linha1">Série criada em: {{item.dataCriacao | date : 'dd/MM/yyyy'}}</h3>
+      <h3 *ngIf="item.listaItemSerie.length>0" class="linhan">Quantidade de Itens: {{item.listaItemSerie.length}}</h3>
+      <h3 *ngIf="item.listaItemSerie.length==0" class="linhan">Adicione exercícios</h3>
     </ion-item>
 
     <ion-list *ngIf="item.listaItemSerie.length>0">
@@ -21,8 +22,10 @@
           <ion-col><h2>Repetições: {{carga.quantidadeRepeticao}}</h2></ion-col>
         </ion-row>
       </ion-grid>
-      <button ion-button (click)="altera(itemSerie)">Alterar</button>
+      <button *ngIf="(item.qtdeExecucao==0)" style="margin: 2px" ion-button (click)="altera(itemSerie)">Alterar</button>
+      <button *ngIf="(item.qtdeExecucao==0)" style="margin: 2px" ion-button (click)="exclui(itemSerie)">Excluir</button>
       </ion-item>
+      <hr/>
     </ion-list>
 
 

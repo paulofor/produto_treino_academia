@@ -11,6 +11,7 @@ export interface LoopBackFilter {
   skip?: any;
   offset?: any;
   where?: any;
+  counts? : any;
 }
 
 export interface AccessTokenInterface {

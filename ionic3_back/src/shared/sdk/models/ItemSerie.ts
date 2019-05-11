@@ -17,7 +17,9 @@ export interface ItemSerieInterface {
 	exercicio?: Exercicio;
 	exercicioId? : string;
 	listaCargaPlanejada?: CargaPlanejada[];
+	listaCargaPlanejadaCount?: number;
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
+	listaExecucaoItemSerieCount?: number;
 }
 
 export class ItemSerie implements ItemSerieInterface {
@@ -29,7 +31,9 @@ export class ItemSerie implements ItemSerieInterface {
 	exercicio?: Exercicio;
 	exercicioId? : string;
 	listaCargaPlanejada?: CargaPlanejada[];
+	listaCargaPlanejadaCount?: number;
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
+	listaExecucaoItemSerieCount?: number;
   constructor(data?: ItemSerieInterface) {
     Object.assign(this, data);
   }

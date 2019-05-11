@@ -20,8 +20,11 @@ export interface ExercicioInterface {
 	usuario?: Usuario;
 	usuarioId? : string;
 	listaItemSerie?: ItemSerie[];
+	listaItemSerieCount?: number;
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
+	listaExecucaoItemSerieCount?: number;
 	listaDiaTreino?: DiaTreino[];
+	listaDiaTreinoCount?: number;
 }
 
 export class Exercicio implements ExercicioInterface {
@@ -35,8 +38,11 @@ export class Exercicio implements ExercicioInterface {
 	usuario?: Usuario;
 	usuarioId? : string;
 	listaItemSerie?: ItemSerie[];
+	listaItemSerieCount?: number;
 	listaExecucaoItemSerie?: ExecucaoItemSerie[];
+	listaExecucaoItemSerieCount?: number;
 	listaDiaTreino?: DiaTreino[];
+	listaDiaTreinoCount?: number;
   constructor(data?: ExercicioInterface) {
     Object.assign(this, data);
   }

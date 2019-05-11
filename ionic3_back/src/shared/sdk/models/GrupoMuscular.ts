@@ -10,6 +10,7 @@ export interface GrupoMuscularInterface {
 	"id"?: number;
 	"imagem"?: string;
 	listaExercicio?: Exercicio[];
+	listaExercicioCount?: number;
 }
 
 export class GrupoMuscular implements GrupoMuscularInterface {
@@ -17,6 +18,7 @@ export class GrupoMuscular implements GrupoMuscularInterface {
 	id?: number;
 	imagem?: string;
 	listaExercicio?: Exercicio[];
+	listaExercicioCount?: number;
   constructor(data?: GrupoMuscularInterface) {
     Object.assign(this, data);
   }
