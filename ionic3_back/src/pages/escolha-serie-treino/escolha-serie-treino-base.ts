@@ -30,18 +30,18 @@ export abstract class EscolhaSerieTreinoPageBase {
 	}
 
 	ionViewWillEnter() {
-    		console.log('ionViewWillEnter EscolhaSerieTreinoPage<<LISTA_ITEM>>');
+		console.log('');
+    		console.log('Tela: EscolhaSerieTreinoPage<<LISTA_ITEM>> : SerieTreino');
     		this.carregaUsuario();
     		this.inicializacao();
     		
   	}
   	
   	carregaLista() {
-  		console.log('EscolhaSerieTreinoPageBase:filtro: ' , JSON.stringify(this.getFiltro()));
-		console.log('SerieTreino.find');
+  		console.log('SerieTreino.find: ', JSON.stringify(this.getFiltro()));
   		this.srv.find(this.getFiltro())
   			.subscribe((resultado: SerieTreino[]) => {
-  				console.log('EscolhaSerieTreinoPageBase:LoadLista:' , resultado);
+  				console.log('Result:' , resultado);
   				this.listaItem = resultado;
   			})
   	}

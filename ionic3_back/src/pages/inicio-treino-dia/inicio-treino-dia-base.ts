@@ -29,30 +29,26 @@ export abstract class InicioTreinoDiaPageBase {
   
 	private inicializaItem() {
 		this.item = this.navParams.get('item');
-		console.log('InicioTreinoDiaPageBase:ItemParametro: ', this.item);
 		if (!this.item) {
 			var id = this.navParams.get('id');
-			console.log('InicioTreinoDiaPageBase:Id: ' , id);
 			if (id) {
-				console.log('InicioTreinoDiaPageBase:filtro: ' , JSON.stringify(this.filtroLoadId(id)));
-				console.log('SerieTreino.findById');
+				console.log('SerieTreino.findById: [' + id + '] , filtroLoadId:' , JSON.stringify(this.filtroLoadId(id)));
 				this.srv.findById(id, this.filtroLoadId(id))
 					.subscribe(
 						(result: SerieTreino) => {
 							this.item = result;
-							console.log('InicioTreinoDiaPageBase.item: ' , this.item)
+							console.log('Result: ' , this.item)
 						},
 						(erro: any) => console.log('InicioTreinoDiaPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
 			} else  {
-				console.log('InicioTreinoDiaPageBase:filtro: ' , JSON.stringify(this.filtroLoadOne()));
-				console.log('SerieTreino.findOne');
+				console.log('SerieTreino.findOne , filtroLoadOne: ' , JSON.stringify(this.filtroLoadOne()));
 				// se nao encontrar vai pro erro -> 404
 				this.srv.findOne(this.filtroLoadOne())
 					.subscribe(
 						(result: SerieTreino) => {
 							this.item = result;
-							console.log('InicioTreinoDiaPageBase.item: ' , this.item);
+							console.log('Result: ' , this.item);
 							//if (!this.item) this.itemNaoEncontrado();
 						},
 						(erro: any) => console.log('InicioTreinoDiaPageBase:LoadId(Erro): ' , JSON.stringify(erro))
@@ -70,12 +66,12 @@ export abstract class InicioTreinoDiaPageBase {
 	}
   
 	ionViewWillEnter() {
-		console.log('ionViewWillEnter InicioTreinoDiaPage<<DETALHE>>');
+		console.log('');
+		console.log('Tela: InicioTreinoDiaPage<<DETALHE>> : SerieTreino');
 		this.carregaUsuario();
 	}
   
 	ionViewDidLoad() {
-		console.log('ionViewDidLoad InicioTreinoDiaPage<<DETALHE>>');
 	}
 }
     

@@ -56,5 +56,11 @@ export class SerieTreinoEdicaoPage extends SerieTreinoEdicaoPageBase {
     })
   }
 
+  altera(item: ItemSerie) {
+    this.navCtrl.push(CriaSeriePage, {
+      item: item
+    })
+  }
+
 
 }

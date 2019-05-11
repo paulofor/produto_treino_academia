@@ -31,18 +31,18 @@ export abstract class ConsultaListaExercicioPageBase {
 	}
 
 	ionViewWillEnter() {
-    		console.log('ionViewWillEnter ConsultaListaExercicioPage<<LISTA_ITEM>>');
+		console.log('');
+    		console.log('Tela: ConsultaListaExercicioPage<<LISTA_ITEM>> : Exercicio');
     		this.carregaUsuario();
     		this.inicializacao();
     		
   	}
   	
   	carregaLista() {
-  		console.log('ConsultaListaExercicioPageBase:filtro: ' , JSON.stringify(this.getFiltro()));
-		console.log('Exercicio.find');
+  		console.log('Exercicio.find: ', JSON.stringify(this.getFiltro()));
   		this.srv.find(this.getFiltro())
   			.subscribe((resultado: Exercicio[]) => {
-  				console.log('ConsultaListaExercicioPageBase:LoadLista:' , resultado);
+  				console.log('Result:' , resultado);
   				this.listaItem = resultado;
   			})
   	}

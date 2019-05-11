@@ -31,18 +31,18 @@ export abstract class ConsultaListaDiaTreinoPageBase {
 	}
 
 	ionViewWillEnter() {
-    		console.log('ionViewWillEnter ConsultaListaDiaTreinoPage<<LISTA_ITEM>>');
+		console.log('');
+    		console.log('Tela: ConsultaListaDiaTreinoPage<<LISTA_ITEM>> : DiaTreino');
     		this.carregaUsuario();
     		this.inicializacao();
     		
   	}
   	
   	carregaLista() {
-  		console.log('ConsultaListaDiaTreinoPageBase:filtro: ' , JSON.stringify(this.getFiltro()));
-		console.log('DiaTreino.find');
+  		console.log('DiaTreino.find: ', JSON.stringify(this.getFiltro()));
   		this.srv.find(this.getFiltro())
   			.subscribe((resultado: DiaTreino[]) => {
-  				console.log('ConsultaListaDiaTreinoPageBase:LoadLista:' , resultado);
+  				console.log('Result:' , resultado);
   				this.listaItem = resultado;
   			})
   	}

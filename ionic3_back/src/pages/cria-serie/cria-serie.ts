@@ -16,11 +16,13 @@ import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
 })
 export class CriaSeriePage extends CriaSeriePageBase {
 
-
+  qtdeExecucao = 0;
 
   // Validation error messages that will be displayed for each form field with errors.
 
-
+  getQtdeExecucao() {
+    return 0;
+  }
 
 
   protected complementaItem(item: any) {
@@ -32,28 +34,19 @@ export class CriaSeriePage extends CriaSeriePageBase {
     if (!item.listaCargaPlanejada) {
       item.listaCargaPlanejada = [];
 
-      var carga1 = new CargaPlanejada();
-      carga1.ordemRepeticao = 1;
-      //carga1.valorCarga = 0;
-      //carga1.quantidadeRepeticao = 0;
-      item.listaCargaPlanejada.push(carga1);
+      //var carga1 = new CargaPlanejada();
+      //carga1.ordemRepeticao = 1;
+      //item.listaCargaPlanejada.push(carga1);
 
-      var carga2 = new CargaPlanejada();
-      carga2.ordemRepeticao = 2;
-      //carga2.valorCarga = 0;
-      //carga2.quantidadeRepeticao = 0;
-      item.listaCargaPlanejada.push(carga2);
+      //var carga2 = new CargaPlanejada();
+      //carga2.ordemRepeticao = 2;
+      //item.listaCargaPlanejada.push(carga2);
 
-      var carga3 = new CargaPlanejada();
-      carga3.ordemRepeticao = 3;
-      //carga3.valorCarga = 0;
-      //carga3.quantidadeRepeticao = 0;
-      item.listaCargaPlanejada.push(carga3);
+      //var carga3 = new CargaPlanejada();
+      //carga3.ordemRepeticao = 3;
+      //item.listaCargaPlanejada.push(carga3);
     }
-
-    //if (!item.serieTreinoId) {
-    //  item.serieTreinoId = 0;
-    //}
+    this.qtdeExecucao = item.listaCargaPlanejada.length;
 
     return item;
   }
@@ -79,23 +72,23 @@ export class CriaSeriePage extends CriaSeriePageBase {
     item.exercicio.usuarioId = this.usuario.id;
     item.listaCargaPlanejada = [];
 
-    var carga1 = new CargaPlanejada();
-    carga1.ordemRepeticao = 1;
-    carga1.valorCarga = 0;
-    carga1.quantidadeRepeticao = 0;
-    item.listaCargaPlanejada.push(carga1);
+    //var carga1 = new CargaPlanejada();
+    //carga1.ordemRepeticao = 1;
+    //carga1.valorCarga = 0;
+    //carga1.quantidadeRepeticao = 0;
+    //item.listaCargaPlanejada.push(carga1);
 
-    var carga2 = new CargaPlanejada();
-    carga2.ordemRepeticao = 2;
-    carga2.valorCarga = 0;
-    carga2.quantidadeRepeticao = 0;
-    item.listaCargaPlanejada.push(carga2);
+    //var carga2 = new CargaPlanejada();
+    //carga2.ordemRepeticao = 2;
+    //carga2.valorCarga = 0;
+    //carga2.quantidadeRepeticao = 0;
+    //item.listaCargaPlanejada.push(carga2);
 
-    var carga3 = new CargaPlanejada();
-    carga3.ordemRepeticao = 3;
-    carga3.valorCarga = 0;
-    carga3.quantidadeRepeticao = 0;
-    item.listaCargaPlanejada.push(carga3);
+    //var carga3 = new CargaPlanejada();
+    //carga3.ordemRepeticao = 3;
+    //carga3.valorCarga = 0;
+    //carga3.quantidadeRepeticao = 0;
+    //item.listaCargaPlanejada.push(carga3);
 
     //item.serieTreinoId = '';
 

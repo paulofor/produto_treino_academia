@@ -31,18 +31,18 @@ export abstract class ListaSerieTreinoPageBase {
 	}
 
 	ionViewWillEnter() {
-    		console.log('ionViewWillEnter ListaSerieTreinoPage<<LISTA_ITEM>>');
+		console.log('');
+    		console.log('Tela: ListaSerieTreinoPage<<LISTA_ITEM>> : SerieTreino');
     		this.carregaUsuario();
     		this.inicializacao();
     		
   	}
   	
   	carregaLista() {
-  		console.log('ListaSerieTreinoPageBase:filtro: ' , JSON.stringify(this.getFiltro()));
-		console.log('SerieTreino.find');
+  		console.log('SerieTreino.find: ', JSON.stringify(this.getFiltro()));
   		this.srv.find(this.getFiltro())
   			.subscribe((resultado: SerieTreino[]) => {
-  				console.log('ListaSerieTreinoPageBase:LoadLista:' , resultado);
+  				console.log('Result:' , resultado);
   				this.listaItem = resultado;
   			})
   	}

@@ -39,27 +39,30 @@ export abstract class CriaSeriePageBase {
   }
   private inicializaItem() {
 	this.item = this.navParams.get('item');
-	console.log('CriaSeriePageBase:ItemParametro: ', this.item);
+	
 	if (!this.item) {
 		var id = this.navParams.get('id');
 		if (id) {
-			console.log('CriaSeriePageBase:Id: ' , id);
+			console.log('ItemSerie.findById: [' + id + ']');
 			this.srv.findById(id, this.filtroLoadId(id))
 				.subscribe((result:ItemSerie) => {
 					this.item = result;
-					console.log('CriaSeriePageBase:LoadId: ' , this.item);
+					console.log('Result: ' , this.item);
 				})
 		} else {
 			this.item = this.criaItem();
-			console.log('CriaSeriePageBase:ItemCriado: ', this.item);
+			console.log('Item(posCriaItem): ', this.item);
 		}
 	} else {
+	 		console.log('ItemParametro: ', this.item);
 		this.item = this.complementaItem(this.item);
-		console.log('CriaSeriePageBase:ItemComComplemento: ', this.item);
+		console.log('ItemPrametro(posComplementaItem): ' , this.item);
 	}
   }
   ionViewWillEnter() {
-    console.log('ionViewWillEnter CriaSeriePage<<EDITA>>');
+	console.log('');
+	console.log('Tela: CriaSeriePage<<EDITA>> : ItemSerie');
+
     this.carregaUsuario();
 
 

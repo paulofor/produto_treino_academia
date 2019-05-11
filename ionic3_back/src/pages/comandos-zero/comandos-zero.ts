@@ -43,7 +43,7 @@ export class ComandosZeroPage extends ComandosZeroPageBase {
   }
 
   executaSerie() {
-    console.log('executaSerie');
+    //console.log('executaSerie');
     this.navCtrl.push(ListaSerieTreinoPage, {
       
     });

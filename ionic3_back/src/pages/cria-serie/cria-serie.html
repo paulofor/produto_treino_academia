@@ -10,28 +10,29 @@
 
       <ion-item>
         <ion-label floating>Nome do Exercício</ion-label>
-        <ion-input name="titulo" type="text" [(ngModel)]="item.exercicio.titulo" #tituloExercicio="ngModel" required></ion-input>
+        <ion-input name="titulo" type="text" [(ngModel)]="item.exercicio.titulo" #tituloExercicio="ngModel" required>
+        </ion-input>
       </ion-item>
-      <ion-item>
-        <p style="color: rgb(8, 65, 158)">Digite o exercício que quer incluir na série.</p>
-      </ion-item>
-    
-      <ion-item>
-        <ion-label floating>Grupo Muscular</ion-label>
-        <ion-select [(ngModel)]="item.grupoMuscularId" name="grupoMuscularId" #grupoMuscularId="ngModel" required>
-          <ion-option *ngFor="let grupo of listaGrupo" value="{{grupo.id}}">{{grupo.nome}}</ion-option>
-        </ion-select>
-      </ion-item>
-      <ion-item>
+      <ion-item *ngIf="!item.exercicio.titulo">
         <p style="color: rgb(8, 65, 158)">Digite o exercício que quer incluir na série.</p>
       </ion-item>
 
       <ion-item>
+        <ion-label floating>Grupo Muscular</ion-label>
+        <ion-select [(ngModel)]="item.exercicio.grupoMuscularId" name="grupoMuscularId" #grupoMuscularId="ngModel" required>
+          <ion-option *ngFor="let grupo of listaGrupo" value="{{grupo.id}}">{{grupo.nome}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+      </ion-item>
+
+      <ion-item>
         <ion-label floating>Execuções</ion-label>
-        <ion-select (ionChange)="alteraQuantidade($event);">
+        <ion-select (ionChange)="alteraQuantidade($event);" [(ngModel)]="qtdeExecucao"  [ngModelOptions]="{standalone: true}">
+          <ion-option>0</ion-option>
           <ion-option>1</ion-option>
           <ion-option>2</ion-option>
-          <ion-option selected>3</ion-option>
+          <ion-option>3</ion-option>
           <ion-option>4</ion-option>
           <ion-option>5</ion-option>
           <ion-option>6</ion-option>
@@ -54,7 +55,7 @@
 
 
 
-      <button ion-button type="submit" block [disabled]="itemSerieForm.form.invalid">Adicionar</button>
+      <button ion-button type="submit" block [disabled]="itemSerieForm.form.invalid">Enviar</button>
     </form>
   </ion-card>
 </ion-content>

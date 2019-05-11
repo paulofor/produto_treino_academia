@@ -29,30 +29,26 @@ export abstract class SerieTreinoEdicaoPageBase {
   
 	private inicializaItem() {
 		this.item = this.navParams.get('item');
-		console.log('SerieTreinoEdicaoPageBase:ItemParametro: ', this.item);
 		if (!this.item) {
 			var id = this.navParams.get('id');
-			console.log('SerieTreinoEdicaoPageBase:Id: ' , id);
 			if (id) {
-				console.log('SerieTreinoEdicaoPageBase:filtro: ' , JSON.stringify(this.filtroLoadId(id)));
-				console.log('SerieTreino.findById');
+				console.log('SerieTreino.findById: [' + id + '] , filtroLoadId:' , JSON.stringify(this.filtroLoadId(id)));
 				this.srv.findById(id, this.filtroLoadId(id))
 					.subscribe(
 						(result: SerieTreino) => {
 							this.item = result;
-							console.log('SerieTreinoEdicaoPageBase.item: ' , this.item)
+							console.log('Result: ' , this.item)
 						},
 						(erro: any) => console.log('SerieTreinoEdicaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
 			} else  {
-				console.log('SerieTreinoEdicaoPageBase:filtro: ' , JSON.stringify(this.filtroLoadOne()));
-				console.log('SerieTreino.findOne');
+				console.log('SerieTreino.findOne , filtroLoadOne: ' , JSON.stringify(this.filtroLoadOne()));
 				// se nao encontrar vai pro erro -> 404
 				this.srv.findOne(this.filtroLoadOne())
 					.subscribe(
 						(result: SerieTreino) => {
 							this.item = result;
-							console.log('SerieTreinoEdicaoPageBase.item: ' , this.item);
+							console.log('Result: ' , this.item);
 							//if (!this.item) this.itemNaoEncontrado();
 						},
 						(erro: any) => console.log('SerieTreinoEdicaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
@@ -70,12 +66,12 @@ export abstract class SerieTreinoEdicaoPageBase {
 	}
   
 	ionViewWillEnter() {
-		console.log('ionViewWillEnter SerieTreinoEdicaoPage<<DETALHE>>');
+		console.log('');
+		console.log('Tela: SerieTreinoEdicaoPage<<DETALHE>> : SerieTreino');
 		this.carregaUsuario();
 	}
   
 	ionViewDidLoad() {
-		console.log('ionViewDidLoad SerieTreinoEdicaoPage<<DETALHE>>');
 	}
 }
     

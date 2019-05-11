@@ -8,17 +8,20 @@
   <ion-card *ngIf="item">
 
     <ion-item>
-      <h3>Criação: {{item.dataCriacao | date : 'dd/MM/yy'}}</h3>
+      <h3 class="linha1">Criação: {{item.dataCriacao | date : 'dd/MM/yy'}}</h3>
       <h3 *ngIf="item.listaItemSerie.length==0">Adicione exercícios</h3>
     </ion-item>
 
     <ion-list *ngIf="item.listaItemSerie.length>0">
       <ion-item *ngFor="let itemSerie of item.listaItemSerie">
         <h2 class="linha1">{{itemSerie.exercicio.titulo}}</h2>
-        <ng-container *ngFor="let carga of itemSerie.listaCargaPlanejada">
-          <h3>Carga: {{carga.valorCarga}}</h3>
-          <h3>Repetições: {{carga.quantidadeRepeticao}}</h3>
-        </ng-container>
+        <ion-grid style='padding: 0px'>
+        <ion-row *ngFor="let carga of itemSerie.listaCargaPlanejada">
+          <ion-col><h2>Carga: {{carga.valorCarga}}</h2></ion-col>
+          <ion-col><h2>Repetições: {{carga.quantidadeRepeticao}}</h2></ion-col>
+        </ion-row>
+      </ion-grid>
+      <button ion-button (click)="altera(itemSerie)">Alterar</button>
       </ion-item>
     </ion-list>
 
