@@ -17,6 +17,8 @@ export abstract class ComandosZeroPageBase {
  
   ionViewWillEnter() {
     //console.log('ionViewDidLoad ComandosZeroPageBase');
+    console.log('');
+    console.log('Tela: ComandosZeroPage');
     this.storage.get('user').then((val: Usuario) => {
       this.usuario = val;
       this.inicializacao();

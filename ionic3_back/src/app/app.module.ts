@@ -27,6 +27,7 @@ import { ExecutaTreinoPage } from '../pages/executa-treino/executa-treino';
 import { ConsultaListaExercicioPage } from '../pages/consulta-lista-exercicio/consulta-lista-exercicio';
 import { DetalheDiaTreinoPage } from '../pages/detalhe-dia-treino/detalhe-dia-treino';
 import { EscolhaSerieTreinoPage } from '../pages/escolha-serie-treino/escolha-serie-treino';
+import { PrincipalPerformancePage } from '../pages/principal-performance/principal-performance';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -73,6 +74,8 @@ import { ExecucaoCargaApi } from '../shared/sdk';
 	
     EscolhaSerieTreinoPage,
 	
+    PrincipalPerformancePage,
+	
   ],
   imports: [
     BrowserModule,
@@ -113,6 +116,8 @@ import { ExecucaoCargaApi } from '../shared/sdk';
     DetalheDiaTreinoPage,
 	
     EscolhaSerieTreinoPage,
+	
+    PrincipalPerformancePage,
 	
   ],
   providers: [

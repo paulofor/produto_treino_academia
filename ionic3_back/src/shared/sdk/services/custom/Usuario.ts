@@ -16,6 +16,7 @@ import { USUARIO } from '../../../../dados/usuario';
 //import { of } from 'rxjs';
 //Versao Ionic
 import { of } from 'rxjs/observable/of';
+import {USUARIO_PRINCIPALPERFORMANCEPAGE} from  '../../../../dados/usuario';
 /**
  * Api services for the `Aplicacao` model.
  */
@@ -96,6 +97,9 @@ export class UsuarioApi extends BaseLoopBackApi {
     return of(USUARIO[filter.where.id]);
   }
 
+	getPrincipalPerformancePageLoad(filter: LoopBackFilter = {}) : Observable<Usuario> {
+		return of (USUARIO_PRINCIPALPERFORMANCEPAGE);
+	}
 
   
 }

@@ -16,7 +16,7 @@
     </ion-item>
 
     <ion-item>
-      <h3 class="linhan">Hora Inicio : </h3>
+      <h3 class="linhan">Hora Inicio : {{item.data | date: 'hh:mm:ss'}}</h3>
     </ion-item>
 
     <ion-list *ngIf="item.serieTreino.listaItemSerie.length>0">

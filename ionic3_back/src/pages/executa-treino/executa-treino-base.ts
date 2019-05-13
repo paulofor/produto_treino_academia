@@ -57,9 +57,10 @@ export abstract class ExecutaTreinoPageBase {
 
   
   ionViewWillEnter() {
-    console.log('ionViewWillEnter ExecutaTreinoPage<<GETPUT>>');
+	console.log('');
+	console.log('Tela: ExecutaTreinoPage<<GETPUT>> : DiaTreino');
     this.carregaUsuario();
-    this.inicializaItem();
+    
   }
   ionViewDidLoad() {
   	//console.log('ionViewDidLoad ExecutaTreinoPage<<GETPUT>>');
@@ -67,6 +68,7 @@ export abstract class ExecutaTreinoPageBase {
   carregaUsuario() {
 	this.storage.get('user').then((val: Usuario) => {
 		this.usuario = val;
+		this.inicializaItem();
 	})
   }
   

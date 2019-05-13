@@ -77,7 +77,8 @@ export class InicioTreinoDiaPage extends InicioTreinoDiaPageBase {
   }
 
   existeMaisSerie():boolean {
-    return this.listaLoadOne.length > 1;
+    return false;
+    //return this.listaLoadOne.length > 1;
   }
 
 }

@@ -5,6 +5,7 @@ import { Storage } from '@ionic/storage';
 import { ListaSerieTreinoPage } from "../lista-serie-treino/lista-serie-treino";
 import { SerieTreinoApi, SerieTreino, DiaTreinoApi } from "../../shared/sdk";
 import { InicioTreinoDiaPage } from "../inicio-treino-dia/inicio-treino-dia";
+import { PrincipalPerformancePage } from "../principal-performance/principal-performance";
 
 /**
  * Generated class for the GeradorDigicom
@@ -62,7 +63,9 @@ export class ComandosZeroPage extends ComandosZeroPageBase {
 
 
   executaConsulta() {
-    console.log('ExecutaConsulta');
+    this.navCtrl.push(PrincipalPerformancePage, {
+
+    });
   }
 
 

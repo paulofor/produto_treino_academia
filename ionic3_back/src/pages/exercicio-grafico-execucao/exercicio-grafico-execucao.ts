@@ -17,6 +17,11 @@ registerLocaleData(localePtBr);
 export class ExercicioGraficoExecucaoPage extends ExercicioGraficoExecucaoPageBase {
 
 
+  protected existeDadosGrafico(): boolean {
+    return this.item.listaExecucaoItemSerie.length>0;
+  }
+
+
   protected extraiValores(detalhe: any): number[] {
     var saida:number[] = [];
     for (let i=0; i < detalhe.listaExecucaoCarga.length; i++) {

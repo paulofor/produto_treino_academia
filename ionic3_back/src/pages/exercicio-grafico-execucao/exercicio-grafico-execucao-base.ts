@@ -19,6 +19,7 @@ export abstract class ExercicioGraficoExecucaoPageBase {
   // chamada antes e depois da inicializacao
   protected abstract posInicializaItem();
   protected abstract preInicializaItem();
+  protected abstract existeDadosGrafico(): boolean;
   
  
   public rotulos: string[];
@@ -32,34 +33,31 @@ export abstract class ExercicioGraficoExecucaoPageBase {
   
 	private inicializaItem() {
 		this.item = this.navParams.get('item');
-		console.log('ExercicioGraficoExecucaoPageBase:ItemParametro: ', this.item);
+		//console.log('ExercicioGraficoExecucaoPageBase:ItemParametro: ', this.item);
 		if (!this.item) {
 			var id = this.navParams.get('id');
-			console.log('ExercicioGraficoExecucaoPageBase:Id: ' , id);
+			//console.log('ExercicioGraficoExecucaoPageBase:Id: ' , id);
 			if (id) {
-				console.log('ExercicioGraficoExecucaoPageBase:filtro: ' , JSON.stringify(this.filtroLoadId(id)));
-				console.log('Exercicio.findById');
+				console.log('Exercicio.findById: [' + id + '] , filtroLoadId:' , JSON.stringify(this.filtroLoadId(id)));
 				this.srv.findById(id, this.filtroLoadId(id))
 					.subscribe(
 						(result: Exercicio) => {
 							this.item = result;
-							console.log('ExercicioGraficoExecucaoPageBase.item: ' , this.item);
-							this.posInicializaItem();
-							this.trataGrafico();
+							console.log('Result: ' , this.item)
+							if (this.existeDadosGrafico()) this.trataGrafico();
 						},
 						(erro: any) => console.log('ExercicioGraficoExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
 			} else  {
-				console.log('ExercicioGraficoExecucaoPageBase:filtro: ' , JSON.stringify(this.filtroLoadOne()));
-				console.log('Exercicio.findOne');
+				console.log('Exercicio.findOne , filtroLoadOne: ' , JSON.stringify(this.filtroLoadOne()));
 				// se nao encontrar vai pro erro -> 404
 				this.srv.findOne(this.filtroLoadOne())
 					.subscribe(
 						(result: Exercicio) => {
 							this.item = result;
-							console.log('ExercicioGraficoExecucaoPageBase.item: ' , this.item);
+							console.log('Result: ' , this.item);
 							this.posInicializaItem();
-							this.trataGrafico();
+							if (this.existeDadosGrafico()) this.trataGrafico();
 							//if (!this.item) this.itemNaoEncontrado();
 						},
 						(erro: any) => console.log('ExercicioGraficoExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
@@ -116,22 +114,23 @@ export abstract class ExercicioGraficoExecucaoPageBase {
   
   
 	ionViewWillEnter() {
-		console.log('ionViewWillEnter ExercicioGraficoExecucaoPage<<GRAFICO_BARRA>>');
+		console.log('');
+		console.log('Tela: ExercicioGraficoExecucaoPage<<GRAFICO_BARRA>> : Exercicio');
 		this.carregaUsuario();
-		this.preInicializaItem();
-		this.inicializaItem();
-		
 	}
   
 	ionViewDidLoad() {
 		console.log('ionViewDidLoad ExercicioGraficoExecucaoPage<<GRAFICO_BARRA>>');
 	}
 	
-	  	carregaUsuario() {
+	carregaUsuario() {
 		this.storage.get('user').then((val: Usuario) => {
 			this.usuario = val;
+			this.preInicializaItem();
+			this.inicializaItem();
+			//this.posInicializaItem();
 		})
-  	}
+	}
 	
   protected criaImagem() {
   }
