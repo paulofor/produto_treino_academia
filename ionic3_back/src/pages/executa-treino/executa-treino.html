@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar color="titulo">
-    <ion-title>Executando Série</ion-title>
+    <ion-title *ngIf="item">Executando Série  - {{ getQuantidadeExecutado() }} de {{item.serieTreino.listaItemSerie.length}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -11,13 +11,12 @@
   <ion-card *ngIf="item">
 
     <ion-item>
-      <h3>Série de: {{item.serieTreino.dataCriacao | date : 'dd/MM/yy'}}</h3>
-      <h3 *ngIf="item.serieTreino.listaItemSerie.length==0">Nenhum exercício nessa série</h3>
+      <h3 class="linha1">Série de: {{item.serieTreino.dataCriacao | date : 'dd/MM/yyyy'}}</h3>
+      <h3 class="linhan" *ngIf="item.serieTreino.listaItemSerie.length==0">Nenhum exercício nessa série</h3>
     </ion-item>
 
     <ion-item>
-      <h3>Total : {{item.serieTreino.listaItemSerie.length}}</h3>
-      <h3>Executados: {{ getQuantidadeExecutado() }}</h3>
+      <h3 class="linhan">Hora Inicio : </h3>
     </ion-item>
 
     <ion-list *ngIf="item.serieTreino.listaItemSerie.length>0">

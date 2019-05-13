@@ -20,6 +20,10 @@ export abstract class DetalheDiaTreinoPageBase {
   protected abstract posInicializaItem();
   protected abstract preInicializaItem();
   
+  
+  protected listaLoadOne : DiaTreino[];
+  protected itemNaoEncontrado: boolean;
+  
  
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
@@ -44,12 +48,19 @@ export abstract class DetalheDiaTreinoPageBase {
 			} else  {
 				console.log('DiaTreino.findOne , filtroLoadOne: ' , JSON.stringify(this.filtroLoadOne()));
 				// se nao encontrar vai pro erro -> 404
-				this.srv.findOne(this.filtroLoadOne())
+				this.srv.find(this.filtroLoadOne())
 					.subscribe(
-						(result: DiaTreino) => {
-							this.item = result;
-							console.log('Result: ' , this.item);
-							//if (!this.item) this.itemNaoEncontrado();
+						(result: DiaTreino[]) => {
+							console.log('Tam Lista Result: ' , result.length);
+							if (result.length>0) {
+								this.item = result[0];
+								this.listaLoadOne = result;
+								console.log('Result: ' , this.item);
+								this.itemNaoEncontrado = false;
+							} else {
+								this.itemNaoEncontrado = true;
+							}
+								//if (!this.item) this.itemNaoEncontrado();
 						},
 						(erro: any) => console.log('DetalheDiaTreinoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)

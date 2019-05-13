@@ -15,6 +15,7 @@ import { Storage } from '@ionic/storage';
 export class InicioTreinoDiaPage extends InicioTreinoDiaPageBase {
 
 
+
   QUATRO_HORAS = 4 * 60 * 60 * 1000;
 
   constructor(public navParams: NavParams,
@@ -73,6 +74,10 @@ export class InicioTreinoDiaPage extends InicioTreinoDiaPageBase {
           id: result.id
         })
       })
+  }
+
+  existeMaisSerie():boolean {
+    return this.listaLoadOne.length > 1;
   }
 
 }

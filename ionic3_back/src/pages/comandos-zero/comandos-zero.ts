@@ -4,6 +4,7 @@ import { ComandosZeroPageBase } from "./comandos-zero-base";
 import { Storage } from '@ionic/storage';
 import { ListaSerieTreinoPage } from "../lista-serie-treino/lista-serie-treino";
 import { SerieTreinoApi, SerieTreino, DiaTreinoApi } from "../../shared/sdk";
+import { InicioTreinoDiaPage } from "../inicio-treino-dia/inicio-treino-dia";
 
 /**
  * Generated class for the GeradorDigicom
@@ -66,7 +67,9 @@ export class ComandosZeroPage extends ComandosZeroPageBase {
 
 
   executaDiaTreino() {
-    console.log('executaDiaTreino');
+    this.navCtrl.push(InicioTreinoDiaPage, {
+
+    });
   }
  
 
