@@ -7,6 +7,7 @@ import { CriaSeriePageBase } from './cria-serie-base';
 import { SerieTreinoEdicaoPage } from '../serie-treino-edicao/serie-treino-edicao';
 import { Storage } from '@ionic/storage';
 import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
+import { iterateListLike } from '@angular/core/src/change_detection/change_detection_util';
 
 
 @IonicPage()
@@ -17,6 +18,12 @@ import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
 export class CriaSeriePage extends CriaSeriePageBase {
 
   qtdeExecucao = 0;
+  novo = false;
+
+  passo1 = true;
+  passo2 = false;
+  passo3 = false;
+  passo4 = false;
 
   // Validation error messages that will be displayed for each form field with errors.
 
@@ -98,6 +105,7 @@ export class CriaSeriePage extends CriaSeriePageBase {
 
 
   listaGrupo: GrupoMuscular[];
+  listaExercicio: Exercicio[];
 
   constructor(public navParams: NavParams,
     public navCtrl: NavController,
@@ -120,20 +128,34 @@ export class CriaSeriePage extends CriaSeriePageBase {
 
   }
 
-  criaItemSerie() {
 
+
+  carregaExercicio() {
+    this.srvExercicio.find({
+      'where': {
+        'and': [
+          { 'usuarioId': this.usuario.id },
+          { 'grupoMuscularId' : this.item.exercicio.grupoMuscularId }
+        ]
+      }
+    })
+      .subscribe((result: Exercicio[]) => {
+        console.log('Result-Exercicio: ', result);
+        this.listaExercicio = result;
+      })
   }
 
   carregaGrupoMuscular() {
     this.srvGrupoMuscular.find()
       .subscribe((result: GrupoMuscular[]) => {
-        console.log('Result: ', result);
+        console.log('Result-GrupoMuscular: ', result);
         this.listaGrupo = result;
       })
   }
 
   alteraQuantidade(qtde: number) {
     console.log('Qtde: ', JSON.stringify(qtde));
+    this.passo3 = false;
     if (qtde > this.item.listaCargaPlanejada.length) {
       for (let i = this.item.listaCargaPlanejada.length; i < qtde; i++) {
         var novo = new CargaPlanejada();
@@ -151,4 +173,20 @@ export class CriaSeriePage extends CriaSeriePageBase {
     console.log('ListaCarga:', this.item.listaCargaPlanejada);
   }
 
+
+  onEscolheGrupo($event) {
+    console.log('onEscolheGrupo()');
+    this.passo1 = false;
+    this.passo2 = true;
+    this.carregaExercicio();
+  }
+
+  onEscolheExercicio($event) {
+    console.log('onEscolheExercicio()');
+    this.passo2 = false;
+    this.passo3 = true;
+    this.novo = this.item.exercicio.id === '0';
+    console.log('item:', this.item);
+    console.log('novo: ', this.novo);
+  }
 }
