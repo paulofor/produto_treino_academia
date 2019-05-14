@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="titulo">
+    <ion-title>Dia Treino</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="quadroBase">
+
+  <ng-container *ngIf="item">
+
+    <ion-card>
+      <h2 class="linha1">Série de Hoje:</h2>
+      <h2 class="linhan">Criada em {{item.dataCriacao | date : 'dd/MM/yyyy'}}</h2>
+      <h2 class="linhan">Quantidade Execuções:{{item.qtdeExecucao}}</h2>
+      <h2 class="linhan">Última Execução:{{item.dataUltimaExecucao | date : 'dd/MM/yyyy'}}</h2>
+      <button style="margin: 2px" ion-button outline (click)="iniciaDia()">Iniciar</button>
+      <button *ngIf="existeMaisSerie()" style="margin: 2px" ion-button outline (click)="iniciaDia()">Alterar</button>
+    </ion-card>
+
+  </ng-container>
+</ion-content>
