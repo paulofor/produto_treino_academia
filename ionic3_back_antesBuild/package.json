@@ -32,7 +32,6 @@
     "chart.js": "^2.7.3",
     "brmasker-ionic-3": "^1.6.3",
     "com.darktalker.cordova.screenshot": "0.1.6",
-    "info.protonet.imageresizer": "0.1.1",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
     "ng2-charts": "^1.6.0",
@@ -50,8 +49,7 @@
   "description": "An Ionic project",
   "cordova": {
     "plugins": {
-      "com.darktalker.cordova.screenshot": {},
-      "info.protonet.imageresizer": {}
+      "com.darktalker.cordova.screenshot": {}
     }
   }
 }
