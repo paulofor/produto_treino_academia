@@ -1,15 +1,31 @@
 <ion-content padding>
-  <ion-list>
-    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" novalidate>
-    
+
+  <div id="logo">
+    <img width="100%" heigth="100%" src="assets/imgs/LogoTreino.png" />
+  </div>
+
+
+  <form padding [formGroup]="signupForm" (ngSubmit)="onSubmit()" novalidate>
+    <ion-list>
+
       <ion-item>
         <ion-label floating>Email</ion-label>
         <ion-input type="email" formControlName="login"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="signupForm.get('login').invalid && signupForm.get('login').dirty">
+        <p style="color:red">
+          Digite seu email.
+        </p>
       </ion-item>
 
       <ion-item>
         <ion-label floating>Senha</ion-label>
         <ion-input type="password" formControlName="senha1"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="signupForm.get('senha1').invalid && signupForm.get('senha1').dirty">
+        <p style="color:red">
+          Digite uma senha de pelo menos 8 caracteres.
+        </p>
       </ion-item>
 
 
@@ -17,9 +33,22 @@
         <ion-label floating>Repetir Senha</ion-label>
         <ion-input type="password" formControlName="senha2"></ion-input>
       </ion-item>
+      <ion-item *ngIf="signupForm.get('senha2').invalid && signupForm.get('senha2').dirty">
+        <p style="color:red">
+          Digite uma senha de pelo menos 8 caracteres.
+        </p>
+      </ion-item>
 
-      <button ion-button block type="submit">Enviar</button>
-    </form>
-  </ion-list>
+      <ion-item *ngIf="erroMsg">
+        <p style="color:red">{{erroMsg}}</p>
+      </ion-item>
+
+    </ion-list>
+
+    <div width="100%" style="align-content: center; margin: 12px">
+      <button ion-button round class="botaoPrincipal" type="submit" [disabled]="signupForm.invalid">Enviar</button>
+    </div>
+  </form>
+
 
 </ion-content>

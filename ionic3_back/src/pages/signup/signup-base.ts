@@ -1,8 +1,9 @@
 import { NavController } from "ionic-angular";
-import { FormBuilder, FormGroup } from "@angular/forms";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Usuario, UsuarioApi } from "../../shared/sdk/index";
 import { HomePage } from "../home/home";
 import { Storage } from '@ionic/storage';
+import { ComandosZeroPage } from "../comandos-zero/comandos-zero";
 
 
 
@@ -14,9 +15,9 @@ export abstract class SignupPageBase {
 
   constructor(public navCtrl: NavController, protected formBuilder: FormBuilder, protected storage:Storage, protected srv: UsuarioApi) {
     this.signupForm = this.formBuilder.group({
-      login: '',
-      senha1: '' ,
-      senha2: ''
+      login: ['', Validators.email],
+      senha1: ['' , Validators.minLength(8)] ,
+      senha2: ['', Validators.minLength(8)]
     });
   }
 
@@ -27,14 +28,20 @@ export abstract class SignupPageBase {
   onSubmit() {
     this.usuario = new Usuario();
     this.usuario.email = this.signupForm.get("login").value;
-    this.usuario.senha = this.signupForm.get("senha1").value;
+    let senha1 = this.signupForm.get("senha1").value;
+    let senha2 = this.signupForm.get("senha2").value;
+    if (senha1!=senha2) {
+      //console.log('Entrou diferente');
+      this.erroMsg = 'Senhas diferentes';
+      return;
+    }
     console.log('Usuario-Enviado: ' , this.usuario);
     this.srv.create(this.usuario)
       .subscribe(
         (result) => {
           this.storage.set('user' , this.usuario);
           console.log('SignUp: ' , result);
-          this.navCtrl.push(HomePage);
+          this.navCtrl.push(ComandosZeroPage);
         },
         (error) => {
           console.log('Erro: ' , error);
