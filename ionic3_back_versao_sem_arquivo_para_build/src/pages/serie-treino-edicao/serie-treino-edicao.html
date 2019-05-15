@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="titulo">
+    <ion-title>Alterando Série</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="quadroBase">
+  <ion-card *ngIf="item">
+
+    <ion-item>
+      <h3 class="linha1">Série criada em: {{item.dataCriacao | date : 'dd/MM/yyyy'}}</h3>
+      <h3 *ngIf="item.listaItemSerie.length>0" class="linhan">Quantidade de Itens: {{item.listaItemSerie.length}}</h3>
+      <h3 *ngIf="item.listaItemSerie.length==0" class="linhan">Adicione exercícios</h3>
+    </ion-item>
+
+    <ion-list *ngIf="item.listaItemSerie.length>0">
+      <ion-item *ngFor="let itemSerie of item.listaItemSerie">
+        <h2 class="linha1">{{itemSerie.exercicio.titulo}}</h2>
+        <ion-grid style='padding: 0px'>
+        <ion-row *ngFor="let carga of itemSerie.listaCargaPlanejada">
+          <ion-col><h2>Carga: {{carga.valorCarga}}</h2></ion-col>
+          <ion-col><h2>Repetições: {{carga.quantidadeRepeticao}}</h2></ion-col>
+        </ion-row>
+      </ion-grid>
+      <button *ngIf="(item.qtdeExecucao==0)" style="margin: 2px" ion-button (click)="altera(itemSerie)">Alterar</button>
+      <button *ngIf="(item.qtdeExecucao==0)" style="margin: 2px" ion-button (click)="exclui(itemSerie)">Excluir</button>
+      </ion-item>
+      <hr/>
+    </ion-list>
+
+
+
+  </ion-card>
+  <ion-fab right bottom>
+    <button ion-fab mini (click)="novoRelacionado()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
