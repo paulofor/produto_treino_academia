@@ -42,7 +42,7 @@ import { RegistroPesoApi } from '../shared/sdk';
 import { UsuarioApi } from '../shared/sdk';
 import { ExecucaoCargaApi } from '../shared/sdk';
 
-
+import { ShowHidePasswordModule } from 'ngx-show-hide-password';
 @NgModule({
   declarations: [
     MyApp,
@@ -84,7 +84,8 @@ import { ExecucaoCargaApi } from '../shared/sdk';
     SDKBrowserModule.forRoot(),
     ChartsModule,
     IonicStorageModule.forRoot(),
-    BrMaskerModule
+    BrMaskerModule,
+    ShowHidePasswordModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

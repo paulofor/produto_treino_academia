@@ -20,7 +20,9 @@
 
       <ion-item>
         <ion-label floating>Senha</ion-label>
+
         <ion-input type="password" formControlName="senha1"></ion-input>
+
       </ion-item>
       <ion-item *ngIf="signupForm.get('senha1').invalid && signupForm.get('senha1').dirty">
         <p style="color:red">
@@ -31,7 +33,9 @@
 
       <ion-item>
         <ion-label floating>Repetir Senha</ion-label>
-        <ion-input type="password" formControlName="senha2"></ion-input>
+        <show-hide-password size="lg" btnStyle="primary" [btnOutline]="false">
+          <ion-input type="password" formControlName="senha2"></ion-input>
+        </show-hide-password>
       </ion-item>
       <ion-item *ngIf="signupForm.get('senha2').invalid && signupForm.get('senha2').dirty">
         <p style="color:red">
@@ -42,7 +46,6 @@
       <ion-item *ngIf="erroMsg">
         <p style="color:red">{{erroMsg}}</p>
       </ion-item>
-
     </ion-list>
 
     <div width="100%" style="align-content: center; margin: 12px">
