@@ -24,6 +24,11 @@ export abstract class SignupPageBase {
   ionViewDidLoad() {
     //console.log('ionViewDidLoad LoginPage');
   }
+  
+  ionViewWillEnter() {
+    console.log('');
+    console.log('Tela: SignupPage');
+  }
 
   onSubmit() {
     this.usuario = new Usuario();
@@ -34,20 +39,24 @@ export abstract class SignupPageBase {
       //console.log('Entrou diferente');
       this.erroMsg = 'Senhas diferentes';
       return;
-    }
-    console.log('Usuario-Enviado: ' , this.usuario);
-    this.srv.create(this.usuario)
-      .subscribe(
-        (result) => {
-          this.storage.set('user' , this.usuario);
-          console.log('SignUp: ' , result);
-          this.navCtrl.push(ComandosZeroPage);
-        },
-        (error) => {
-          console.log('Erro: ' , error);
-          this.erroMsg = 'Ocorreu um erro, tente novamente';
-        }
-      )
+    } else {
+      this.usuario.senha = senha1;
+      this.usuario.dataHoraCriacao = new Date();
+      this.usuario.dataHoraUltimoAcesso = new Date();
+      console.log('Usuario-Enviado: ' , this.usuario);
+      this.srv.create(this.usuario)
+        .subscribe(
+          (result) => {
+            this.storage.set('user' , this.usuario);
+            console.log('SignUp: ' , result);
+            this.navCtrl.push(ComandosZeroPage);
+          },
+          (error) => {
+            console.log('Erro: ' , error);
+            this.erroMsg = 'Ocorreu um erro, tente novamente';
+          }
+        )
+     }
   }
 
 

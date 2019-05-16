@@ -28,6 +28,7 @@ import { ConsultaListaExercicioPage } from '../pages/consulta-lista-exercicio/co
 import { DetalheDiaTreinoPage } from '../pages/detalhe-dia-treino/detalhe-dia-treino';
 import { EscolhaSerieTreinoPage } from '../pages/escolha-serie-treino/escolha-serie-treino';
 import { PrincipalPerformancePage } from '../pages/principal-performance/principal-performance';
+import { FaleComDevPage } from '../pages/fale-com-dev/fale-com-dev';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -42,7 +43,7 @@ import { RegistroPesoApi } from '../shared/sdk';
 import { UsuarioApi } from '../shared/sdk';
 import { ExecucaoCargaApi } from '../shared/sdk';
 
-import { ShowHidePasswordModule } from 'ngx-show-hide-password';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -76,6 +77,8 @@ import { ShowHidePasswordModule } from 'ngx-show-hide-password';
 	
     PrincipalPerformancePage,
 	
+    FaleComDevPage,
+	
   ],
   imports: [
     BrowserModule,
@@ -84,8 +87,7 @@ import { ShowHidePasswordModule } from 'ngx-show-hide-password';
     SDKBrowserModule.forRoot(),
     ChartsModule,
     IonicStorageModule.forRoot(),
-    BrMaskerModule,
-    ShowHidePasswordModule
+    BrMaskerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -119,6 +121,8 @@ import { ShowHidePasswordModule } from 'ngx-show-hide-password';
     EscolhaSerieTreinoPage,
 	
     PrincipalPerformancePage,
+	
+    FaleComDevPage,
 	
   ],
   providers: [

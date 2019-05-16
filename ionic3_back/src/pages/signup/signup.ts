@@ -19,12 +19,21 @@ import { Storage } from '@ionic/storage';
 })
 export class SignupPage extends SignupPageBase{
 
-
+  tipo = 'password';
   passwordCheckbox
 
   constructor(public navCtrl: NavController, protected formBuilder: FormBuilder, protected storage:Storage, protected srv: UsuarioApi) {
     super(navCtrl, formBuilder, storage, srv);
   }
 
+
+  mudaStatusSenha() {
+    console.log('Status: ' , this.passwordCheckbox);
+    if (this.passwordCheckbox) {
+      this.tipo = 'text'
+    } else {
+      this.tipo = 'password';
+    }
+  }
 
 }

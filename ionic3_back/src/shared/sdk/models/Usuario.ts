@@ -13,6 +13,8 @@ export interface UsuarioInterface {
 	"nome"?: string;
 	"senha"?: string;
 	"email"?: string;
+	"dataHoraCriacao"?: Date;
+	"dataHoraUltimoAcesso"?: Date;
 	listaSerieTreino?: SerieTreino[];
 	listaSerieTreinoCount?: number;
 	listaExercicio?: Exercicio[];
@@ -28,6 +30,8 @@ export class Usuario implements UsuarioInterface {
 	nome?: string;
 	senha?: string;
 	email?: string;
+	dataHoraCriacao?: Date;
+	dataHoraUltimoAcesso?: Date;
 	listaSerieTreino?: SerieTreino[];
 	listaSerieTreinoCount?: number;
 	listaExercicio?: Exercicio[];
@@ -85,6 +89,14 @@ export class Usuario implements UsuarioInterface {
         "email" : {
         	name : "email",
         	type : "string"
+        },
+        "dataHoraCriacao" : {
+        	name : "dataHoraCriacao",
+        	type : "Date"
+        },
+        "dataHoraUltimoAcesso" : {
+        	name : "dataHoraUltimoAcesso",
+        	type : "Date"
         },
       },
       relations: {

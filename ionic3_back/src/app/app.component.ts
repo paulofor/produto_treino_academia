@@ -19,6 +19,7 @@ import { ConsultaListaExercicioPage } from '../pages/consulta-lista-exercicio/co
 import { DetalheDiaTreinoPage } from '../pages/detalhe-dia-treino/detalhe-dia-treino';
 import { EscolhaSerieTreinoPage } from '../pages/escolha-serie-treino/escolha-serie-treino';
 import { PrincipalPerformancePage } from '../pages/principal-performance/principal-performance';
+import { FaleComDevPage } from '../pages/fale-com-dev/fale-com-dev';
 
 
 @Component({
