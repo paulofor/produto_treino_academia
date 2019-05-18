@@ -11,6 +11,9 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'cria-serie-work.html'
 })
 export class CriaSerieWorkPage extends CriaSerieWorkPageBase {
+  protected antesSubmit() {
+    throw new Error("Method not implemented.");
+  }
 
 
   constructor(	public navParams: NavParams,

@@ -14,6 +14,7 @@ export abstract class LoginPageBase {
   protected erroMsg: string;
   
   abstract getPaginaInicial() : Page;
+  abstract getMensagemNaoEncontrado() : string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
     protected formBuilder: FormBuilder, protected srv: UsuarioApi, protected storage: Storage) {
@@ -42,7 +43,7 @@ export abstract class LoginPageBase {
         },
         (erro) => {
           console.log('Erro login: ' , erro);
-          this.erroMsg = 'Usuario nao encontrado'
+          this.erroMsg = this.getMensagemNaoEncontrado();
         }
       )
   }

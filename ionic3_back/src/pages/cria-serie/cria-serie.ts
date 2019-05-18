@@ -17,6 +17,14 @@ import { iterateListLike } from '@angular/core/src/change_detection/change_detec
 })
 export class CriaSeriePage extends CriaSeriePageBase {
 
+
+  protected antesSubmit() {
+    //console.log('this.item.exercicio.id:' , this.item.exercicio.id);
+    if (this.item.exercicio.id == '0') {
+      delete this.item.exercicio.id;
+    }
+  }
+
   qtdeExecucao = 0;
   novo = false;
 

@@ -13,24 +13,33 @@ export abstract class SignupPageBase {
   protected signupForm: FormGroup;
   protected erroMsg: string;
 
-  constructor(public navCtrl: NavController, protected formBuilder: FormBuilder, protected storage:Storage, protected srv: UsuarioApi) {
+  constructor(public navCtrl: NavController, protected formBuilder: FormBuilder, protected storage: Storage, protected srv: UsuarioApi) {
     this.signupForm = this.formBuilder.group({
       login: ['', Validators.email],
-      senha1: ['' , Validators.minLength(8)] ,
-      senha2: ['', Validators.minLength(8)]
+      senha1: ['' , Validators.compose( [Validators.minLength(8) , Validators.required]) ] ,
+      senha2: ['', Validators.compose( [Validators.minLength(8) , Validators.required]) ]
     });
   }
 
   ionViewDidLoad() {
     //console.log('ionViewDidLoad LoginPage');
   }
-  
-  ionViewWillEnter() {
-    console.log('');
-    console.log('Tela: SignupPage');
+
+  verificado(): boolean {
+    let saida = (this.signupForm.get('login').valid) &&
+      (this.signupForm.get('senha1').valid) &&
+      (this.signupForm.get('senha2').valid);
+    return saida;
   }
 
   onSubmit() {
+    if (this.verificado()) {
+      this.processaSubmit();
+    }
+  }
+
+
+  processaSubmit() {
     this.usuario = new Usuario();
     this.usuario.email = this.signupForm.get("login").value;
     let senha1 = this.signupForm.get("senha1").value;
@@ -58,6 +67,5 @@ export abstract class SignupPageBase {
         )
      }
   }
-
 
 }

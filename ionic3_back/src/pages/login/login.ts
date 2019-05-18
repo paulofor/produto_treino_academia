@@ -25,6 +25,11 @@ import { ComandosZeroPage } from '../comandos-zero/comandos-zero';
 export class LoginPage extends LoginPageBase {
 
 
+  getMensagemNaoEncontrado(): string {
+    return 'Email ou senha incorreto';
+  }
+
+
   getPaginaInicial(): Page {
     var proxima = ComandosZeroPage;
     console.log('Proxima: ' , proxima);

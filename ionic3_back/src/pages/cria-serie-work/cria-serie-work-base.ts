@@ -27,7 +27,7 @@ export abstract class CriaSerieWorkPageBase {
   // quando existe parametro item
   protected abstract complementaItem(novo:ItemSerie) : ItemSerie;
 
-
+  protected abstract antesSubmit();
 
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
@@ -109,6 +109,7 @@ export abstract class CriaSerieWorkPageBase {
       	})
 	}
 	protected submit() {
+	   		this.antesSubmit();
 		console.log('ItemSerieApi.submitCriaSerieWorkPage:' , JSON.stringify(this.item));
     	this.srv.submitCriaSerieWorkPage(this.item)
       		.subscribe((resultado:ItemSerie) => {
