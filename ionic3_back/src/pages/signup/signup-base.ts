@@ -16,13 +16,8 @@ export abstract class SignupPageBase {
   constructor(public navCtrl: NavController, protected formBuilder: FormBuilder, protected storage: Storage, protected srv: UsuarioApi) {
     this.signupForm = this.formBuilder.group({
       login: ['', Validators.email],
-<<<<<<< HEAD
       senha1: ['' , Validators.compose( [Validators.minLength(8) , Validators.required]) ] ,
       senha2: ['', Validators.compose( [Validators.minLength(8) , Validators.required]) ]
-=======
-      senha1: ['' , Validators.minLength(8)] ,
-      senha2: ['', Validators.minLength(8)]
->>>>>>> 5950dcf66b269ed1f789fd0d84648546ab37bd16
     });
   }
 

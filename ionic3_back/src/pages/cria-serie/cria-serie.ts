@@ -18,6 +18,10 @@ import { iterateListLike } from '@angular/core/src/change_detection/change_detec
 export class CriaSeriePage extends CriaSeriePageBase {
 
 
+  protected getNovo() {
+    return (this.item.exercicio.id == '0');
+  }
+
   protected antesSubmit() {
     //console.log('this.item.exercicio.id:' , this.item.exercicio.id);
     if (this.item.exercicio.id == '0') {
@@ -26,12 +30,12 @@ export class CriaSeriePage extends CriaSeriePageBase {
   }
 
   qtdeExecucao = 0;
-  novo = false;
 
-  passo1 = true;
-  passo2 = false;
-  passo3 = false;
-  passo4 = false;
+
+  msgGrupo = true;
+  msgExercicio = false;
+  msgExecucoes = false;
+
 
   // Validation error messages that will be displayed for each form field with errors.
 
@@ -143,7 +147,7 @@ export class CriaSeriePage extends CriaSeriePageBase {
       'where': {
         'and': [
           { 'usuarioId': this.usuario.id },
-          { 'grupoMuscularId' : this.item.exercicio.grupoMuscularId }
+          { 'grupoMuscularId': this.item.exercicio.grupoMuscularId }
         ]
       }
     })
@@ -163,7 +167,7 @@ export class CriaSeriePage extends CriaSeriePageBase {
 
   alteraQuantidade(qtde: number) {
     console.log('Qtde: ', JSON.stringify(qtde));
-    this.passo3 = false;
+    this.msgExecucoes = false;
     if (qtde > this.item.listaCargaPlanejada.length) {
       for (let i = this.item.listaCargaPlanejada.length; i < qtde; i++) {
         var novo = new CargaPlanejada();
@@ -183,18 +187,15 @@ export class CriaSeriePage extends CriaSeriePageBase {
 
 
   onEscolheGrupo($event) {
-    console.log('onEscolheGrupo()');
-    this.passo1 = false;
-    this.passo2 = true;
+    this.msgGrupo = false;
+    this.msgExercicio = true;
+    this.msgExecucoes = false;
     this.carregaExercicio();
   }
 
   onEscolheExercicio($event) {
-    console.log('onEscolheExercicio()');
-    this.passo2 = false;
-    this.passo3 = true;
-    this.novo = this.item.exercicio.id === '0';
-    console.log('item:', this.item);
-    console.log('novo: ', this.novo);
+    this.msgGrupo = false;
+    this.msgExercicio = true;
+    this.msgExecucoes = true;
   }
 }
