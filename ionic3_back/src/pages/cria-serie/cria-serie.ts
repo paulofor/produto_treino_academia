@@ -65,6 +65,13 @@ export class CriaSeriePage extends CriaSeriePageBase {
       //carga3.ordemRepeticao = 3;
       //item.listaCargaPlanejada.push(carga3);
     }
+
+    
+    if (item.exercicio.grupoMuscularId) {
+      this.carregaExercicio();
+      this.msgExecucoes = true;
+    }
+
     this.qtdeExecucao = item.listaCargaPlanejada.length;
 
     return item;

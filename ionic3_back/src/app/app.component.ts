@@ -20,7 +20,7 @@ import { DetalheDiaTreinoPage } from '../pages/detalhe-dia-treino/detalhe-dia-tr
 import { EscolhaSerieTreinoPage } from '../pages/escolha-serie-treino/escolha-serie-treino';
 import { PrincipalPerformancePage } from '../pages/principal-performance/principal-performance';
 import { FaleComDevPage } from '../pages/fale-com-dev/fale-com-dev';
-
+import { timer } from 'rxjs/Observable/timer';
 
 @Component({
   templateUrl: 'app.html'
@@ -31,6 +31,7 @@ export class MyApp {
   rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
+  showSplash = true;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
@@ -58,6 +59,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      timer(3000).subscribe(() => this.showSplash = false)
     });
   }
 
