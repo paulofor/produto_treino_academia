@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Usuario, UsuarioApi } from '../../shared/sdk/index';
+import { Usuario, UsuarioApi, AcaoApi } from '../../shared/sdk/index';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { LoginPageBase } from './login-base';
 import { SignupPage } from '../signup/signup';
@@ -39,8 +39,8 @@ export class LoginPage extends LoginPageBase {
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
-    protected formBuilder: FormBuilder, protected srv: UsuarioApi, protected storage: Storage) {
-    super(navCtrl, navParams, formBuilder, srv, storage);
+    protected formBuilder: FormBuilder, protected srv: UsuarioApi, protected srvACao: AcaoApi, protected storage: Storage) {
+    super(navCtrl, navParams, formBuilder, srv, srvACao, storage);
   }
 
   ionViewDidLoad() {

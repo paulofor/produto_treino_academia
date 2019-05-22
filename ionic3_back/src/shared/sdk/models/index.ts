@@ -9,6 +9,7 @@ export * from './ItemSerie';
 export * from './RegistroPeso';
 export * from './Usuario';
 export * from './ExecucaoCarga';
+export * from './Acao';
 export * from './Container';
 export * from './BaseModels';
 export * from './FireLoopRef';

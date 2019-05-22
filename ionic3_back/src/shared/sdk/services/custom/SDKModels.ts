@@ -12,6 +12,7 @@ import { ItemSerie } from '../../models/ItemSerie';
 import { RegistroPeso } from '../../models/RegistroPeso';
 import { Usuario } from '../../models/Usuario';
 import { ExecucaoCarga } from '../../models/ExecucaoCarga';
+import { Acao } from '../../models/Acao';
 export interface Models { [name: string]: any }
 
 @Injectable()
@@ -28,6 +29,7 @@ export class SDKModels {
 	RegistroPeso: RegistroPeso,
 	Usuario: Usuario,
 	ExecucaoCarga: ExecucaoCarga,
+	Acao: Acao,
 	User: User,
     Container: Container
   };

@@ -62,6 +62,7 @@ import { ItemSerieApi } from './services/custom/ItemSerie';
 import { RegistroPesoApi } from './services/custom/RegistroPeso';
 import { UsuarioApi } from './services/custom/Usuario';
 import { ExecucaoCargaApi } from './services/custom/ExecucaoCarga';
+import { AcaoApi } from './services/custom/Acao';
 
 /**
 * @module SDKBrowserModule
@@ -115,6 +116,8 @@ export class SDKBrowserModule {
 		UsuarioApi,
 	
 		ExecucaoCargaApi,
+	
+		AcaoApi,
 	
         internalStorageProvider,
         { provide: SDKStorage, useClass: StorageBrowser }
