@@ -20,7 +20,8 @@ import { DetalheDiaTreinoPage } from '../pages/detalhe-dia-treino/detalhe-dia-tr
 import { EscolhaSerieTreinoPage } from '../pages/escolha-serie-treino/escolha-serie-treino';
 import { PrincipalPerformancePage } from '../pages/principal-performance/principal-performance';
 import { FaleComDevPage } from '../pages/fale-com-dev/fale-com-dev';
-import { timer } from 'rxjs/Observable/timer';
+import { timer } from 'rxjs/observable/timer';
+
 
 @Component({
   templateUrl: 'app.html'

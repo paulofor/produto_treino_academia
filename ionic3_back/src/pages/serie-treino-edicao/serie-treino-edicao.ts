@@ -13,7 +13,7 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'serie-treino-edicao.html'
 })
 export class SerieTreinoEdicaoPage extends SerieTreinoEdicaoPageBase {
- 
+
   protected posInicializaItem() {
   }
   protected preInicializaItem() {
@@ -28,13 +28,14 @@ export class SerieTreinoEdicaoPage extends SerieTreinoEdicaoPageBase {
 
   protected filtroLoadId(): LoopBackFilter {
     return {
-      'counts' :'listaDiaTreino' ,
+      'counts': 'listaDiaTreino',
       'include':
       {
         'relation': 'listaItemSerie', scope: {
+          'order': 'ordemExecucao',
           'include': [
             'exercicio',
-            { 'relation': 'listaCargaPlanejada', 'order': 'ordemRepeticao' }
+            { 'relation': 'listaCargaPlanejada' }
           ]
         }
       }
@@ -44,7 +45,7 @@ export class SerieTreinoEdicaoPage extends SerieTreinoEdicaoPageBase {
 
   constructor(public navParams: NavParams,
     public navCtrl: NavController,
-    public srv: SerieTreinoApi, protected storage:Storage, private srvItemSerie : ItemSerieApi,
+    public srv: SerieTreinoApi, protected storage: Storage, private srvItemSerie: ItemSerieApi,
     private alertCtrl: AlertController) {
     super(navParams, navCtrl, srv, storage);
   }
@@ -73,7 +74,7 @@ export class SerieTreinoEdicaoPage extends SerieTreinoEdicaoPageBase {
           text: 'Não',
           role: 'cancel',
           handler: () => {
-            
+
           }
         },
         {

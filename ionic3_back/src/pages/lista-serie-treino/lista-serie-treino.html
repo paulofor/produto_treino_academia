@@ -21,7 +21,7 @@
       <ion-item *ngFor="let item of listaItem">
         <h3 class="linha1">Criado em {{item.dataCriacao | date: 'dd/MM/yyyy'}}</h3>
         <h3 class="linhan">Quantidade execuções {{item.qtdeExecucao}}</h3>
-        <h3 class="linhan">Última execução em {{item.dataCriacao | date: 'dd/MM/yyyy'}}</h3>
+        <h3 class="linhan">Última execução em {{item.dataUltimaExecucao | date: 'dd/MM/yyyy'}}</h3>
         <h3 class="linhan">Situação: {{getSituacao(item)}}</h3>
         <h3 class="linhan">Quantidade exercícios: {{item.listaItemSerieCount}}</h3>
         <button *ngIf="exibeAlterar(item)" ion-button clear item-end style="margin: 2px" (click)="alterarId(item)">alterar</button>

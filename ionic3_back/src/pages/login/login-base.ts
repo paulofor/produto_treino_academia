@@ -38,8 +38,9 @@ export abstract class LoginPageBase {
       .subscribe(
         (result:Usuario) => {
           console.log('UserLogin: ' , result);
-          this.storage.set('user' , result);
-          this.mudaTela();
+          this.storage.set("user",result).then((successData)=>{
+            this.mudaTela();
+          })
         },
         (erro) => {
           console.log('Erro login: ' , erro);
