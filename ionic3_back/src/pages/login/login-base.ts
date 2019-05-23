@@ -77,18 +77,6 @@ export abstract class LoginPageBase {
       })
   }
 
-  viewTela() {
-    let acao:Acao = new Acao();
-    acao.dataHora = new Date();
-    acao.nome = 'View';
-    acao.objeto = 'Login';
-    this.srvAcao.create(acao)
-      .subscribe(result => {
-        console.log('Result: ' , result);
-      })
-  }
-
-
   mudaTela() {
     this.navCtrl.push(this.getPaginaInicial()).then(() => {
       let index = 0;

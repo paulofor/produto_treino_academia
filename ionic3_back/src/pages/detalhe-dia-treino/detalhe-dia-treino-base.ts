@@ -20,6 +20,8 @@ export abstract class DetalheDiaTreinoPageBase {
   protected abstract posInicializaItem();
   protected abstract preInicializaItem();
   
+  protected abstract posItemLoad();
+  
   
   protected listaLoadOne : DiaTreino[];
   protected itemNaoEncontrado: boolean;
@@ -41,7 +43,8 @@ export abstract class DetalheDiaTreinoPageBase {
 					.subscribe(
 						(result: DiaTreino) => {
 							this.item = result;
-							console.log('Result: ' , this.item)
+							this.posItemLoad();
+							console.log('item: ' , this.item)
 						},
 						(erro: any) => console.log('DetalheDiaTreinoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
@@ -55,7 +58,8 @@ export abstract class DetalheDiaTreinoPageBase {
 							if (result.length>0) {
 								this.item = result[0];
 								this.listaLoadOne = result;
-								console.log('Result: ' , this.item);
+								console.log('item: ' , this.item);
+								this.posItemLoad();
 								this.itemNaoEncontrado = false;
 							} else {
 								this.itemNaoEncontrado = true;
@@ -65,8 +69,11 @@ export abstract class DetalheDiaTreinoPageBase {
 						(erro: any) => console.log('DetalheDiaTreinoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
 			}
-		}  
+		} else {
+			this.posItemLoad();
+		}
 	}
+	
 	carregaUsuario() {
 		this.storage.get('user').then((val: Usuario) => {
 			this.usuario = val;

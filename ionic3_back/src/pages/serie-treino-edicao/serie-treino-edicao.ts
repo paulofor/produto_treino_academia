@@ -13,6 +13,10 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'serie-treino-edicao.html'
 })
 export class SerieTreinoEdicaoPage extends SerieTreinoEdicaoPageBase {
+  
+  protected posItemLoad() {
+    //throw new Error("Method not implemented.");
+  }
 
   protected posInicializaItem() {
   }

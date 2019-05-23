@@ -15,6 +15,11 @@ import { Storage } from '@ionic/storage';
 export class InicioTreinoDiaPage extends InicioTreinoDiaPageBase {
 
 
+  protected posItemLoad() {
+    
+  }
+
+
 
   QUATRO_HORAS = 4 * 60 * 60 * 1000;
 

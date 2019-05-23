@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController, NavParams } from 'ionic-angular';
 import { DetalheDiaTreinoPageBase } from './detalhe-dia-treino-base';
-import { DiaTreinoApi, LoopBackFilter, ExecucaoItemSerie } from '../../shared/sdk/index';
+import { DiaTreinoApi, LoopBackFilter, ExecucaoItemSerie, ItemSerie } from '../../shared/sdk/index';
 import { DatePipe } from '@angular/common';
 import localePtBr from '@angular/common/locales/pt';
 import { Storage } from '@ionic/storage';
@@ -16,6 +16,17 @@ registerLocaleData(localePtBr);
   templateUrl: 'detalhe-dia-treino.html'
 })
 export class DetalheDiaTreinoPage extends DetalheDiaTreinoPageBase {
+
+
+  protected posItemLoad() {
+    this.item.serieTreino.listaItemSerie.sort( function (item1:ItemSerie, item2:ItemSerie)  {
+      if (item1.listaExecucaoItemSerie[0].dataHoraFinalizacao < item2.listaExecucaoItemSerie[0].dataHoraFinalizacao)
+        return -1;
+      else
+        return 1;
+    });
+    console.log('PosSort:' , this.item);
+  }
 
   protected posInicializaItem() {
   }

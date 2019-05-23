@@ -5,6 +5,9 @@
 </ion-header>
 
 <ion-content padding class="quadroBase">
+  <ng-container *ngIf="!item">
+    Aguarde...
+  </ng-container>
   <ng-container *ngIf="item">
 
     <ion-card>

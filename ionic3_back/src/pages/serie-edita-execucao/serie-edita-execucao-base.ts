@@ -20,6 +20,8 @@ export abstract class SerieEditaExecucaoPageBase {
   protected abstract posInicializaItem();
   protected abstract preInicializaItem();
   
+  protected abstract posItemLoad();
+  
   
   protected listaLoadOne : ItemSerie[];
   protected itemNaoEncontrado: boolean;
@@ -41,7 +43,8 @@ export abstract class SerieEditaExecucaoPageBase {
 					.subscribe(
 						(result: ItemSerie) => {
 							this.item = result;
-							console.log('Result: ' , this.item)
+							this.posItemLoad();
+							console.log('item: ' , this.item)
 						},
 						(erro: any) => console.log('SerieEditaExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
@@ -55,7 +58,8 @@ export abstract class SerieEditaExecucaoPageBase {
 							if (result.length>0) {
 								this.item = result[0];
 								this.listaLoadOne = result;
-								console.log('Result: ' , this.item);
+								console.log('item: ' , this.item);
+								this.posItemLoad();
 								this.itemNaoEncontrado = false;
 							} else {
 								this.itemNaoEncontrado = true;
@@ -65,8 +69,11 @@ export abstract class SerieEditaExecucaoPageBase {
 						(erro: any) => console.log('SerieEditaExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
 					)
 			}
-		}  
+		} else {
+			this.posItemLoad();
+		}
 	}
+	
 	carregaUsuario() {
 		this.storage.get('user').then((val: Usuario) => {
 			this.usuario = val;

@@ -10,6 +10,7 @@ export interface AcaoInterface {
 	"dataHora"?: Date;
 	"objeto"?: string;
 	"id"?: number;
+	"telaAppId"?: number;
 	usuario?: Usuario;
 	usuarioId? : string;
 }
@@ -19,6 +20,7 @@ export class Acao implements AcaoInterface {
 	dataHora?: Date;
 	objeto?: string;
 	id?: number;
+	telaAppId?: number;
 	usuario?: Usuario;
 	usuarioId? : string;
   constructor(data?: AcaoInterface) {
@@ -69,6 +71,10 @@ export class Acao implements AcaoInterface {
         },
         "id" : {
         	name : "id",
+        	type : "number"
+        },
+        "telaAppId" : {
+        	name : "telaAppId",
         	type : "number"
         },
       },
