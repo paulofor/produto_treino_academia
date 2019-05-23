@@ -40,6 +40,7 @@ export class DetalheDiaTreinoPage extends DetalheDiaTreinoPageBase {
                 },
                 {
                   "relation": "listaExecucaoItemSerie", "scope": {
+                    "order" : "dataHoraFinalizacao" ,
                     "where": { "diaTreinoId": id },
                     "include": {
                       "relation": "listaExecucaoCarga" , "scope" : { "order" : "sequencia"}

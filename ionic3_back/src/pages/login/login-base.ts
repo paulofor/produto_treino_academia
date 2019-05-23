@@ -39,11 +39,13 @@ export abstract class LoginPageBase {
         (result:Usuario) => {
           console.log('UserLogin: ' , result);
           this.executouLogin(result);
-          this.storage.set('user' , result);
-          this.mudaTela();
+          this.storage.set("user",result).then((successData)=>{
+            this.mudaTela();
+          })
         },
         (erro) => {
           console.log('Erro login: ' , erro);
+          this.errouLogin();
           this.erroMsg = this.getMensagemNaoEncontrado();
         }
       )
@@ -74,6 +76,18 @@ export abstract class LoginPageBase {
         console.log('Result: ' , result);
       })
   }
+
+  viewTela() {
+    let acao:Acao = new Acao();
+    acao.dataHora = new Date();
+    acao.nome = 'View';
+    acao.objeto = 'Login';
+    this.srvAcao.create(acao)
+      .subscribe(result => {
+        console.log('Result: ' , result);
+      })
+  }
+
 
   mudaTela() {
     this.navCtrl.push(this.getPaginaInicial()).then(() => {
