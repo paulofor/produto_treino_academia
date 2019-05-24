@@ -1,0 +1,217 @@
+/**
+ * Material design based Styles for navi widget
+ */
+
+/* Styles for the floating Navi widget */
+#navi-popup {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);
+  cursor: move;
+  font-family: "Roboto", sans-serif;
+  left: 200px;
+  position: absolute;
+  text-align:left;
+  top: 200px;
+  z-index: 9990;
+}
+
+#navi-popup.navi-intro {
+  background-color: #3F51B5;
+  background-image: url("/navi/resources/abstract.png");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 441px 383px;
+  min-height: 400px;
+  width: 720px;
+}
+
+/* Used when the Navi widget's max width should be enforced.
+   This is to give space between the Next button and the progress bar. */
+#navi-popup.navi-fixed-width {
+  width: 486px;
+}
+
+#navi-popup-progress-bar {
+  bottom: 30px;
+  height: 3px;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  right: 0;
+  width: 200px;
+}
+
+.navi-progress-bar-container {
+  background-color: #ddd;
+  height: 100%;
+  width: 100%;
+}
+
+.navi-progress-bar-inner {
+  background-color: #3F51B5;
+  height: 100%;
+}
+
+.navi-close-icon {
+  content: url("https://www.gstatic.com/images/icons/material/system/2x/close_white_24dp.png");
+  cursor: pointer;
+  height: 18px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 18px;
+}
+
+.navi-popup-clear {
+  /* Clear out the floating styles used by the progress bar close button, and
+     images. This ensures the integrity of top margins for subsequent elements,
+     and it ensures that floating styles for some component of the Navi widget
+     (e.g. the description area) doesn't affect other components. */
+  clear: both;
+}
+
+.navi-popup-title {
+  background-color: #3F51B5;
+  color: rgba(255,255,255,.87);
+  font-size: 21px;
+  padding: 30px;
+}
+
+#navi-popup-intro-title {
+  background: none;
+  color: rgba(255,255,255,.87);
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: -30px;
+  max-width: 360px;
+  padding: 60px 30px 15px 30px;
+}
+
+#navi-popup-whiteout {
+  background-color: #fff;
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* intentionally below the navi widget */
+  z-index: 9980;
+}
+
+#navi-popup-description {
+  color: rgba(0,0,0,.54);
+  font-size: 16px;
+  line-height: 24px;
+  padding: 30px;
+}
+
+/* In the AWN navi dialog, if there is no description, the description dialog
+   needs an extra bottom margin to separate from the progress bar. */
+#navi-popup-description.show-description-margin {
+  margin-bottom: 20px;
+}
+
+#navi-popup-description div.navi-splash-text {
+  color: rgba(255,255,255,.87);
+  max-width: 360px;
+}
+
+#navi-popup-description.navi-intro img {
+  margin-left: 15px;
+  max-width: 360px;
+}
+
+#navi-popup-description a {
+  color: #4285F4;
+  text-decoration: none;
+}
+
+#navi-popup-description ul {
+  /* Override CM style that applies hanging punctuation. */
+  padding-left: 40px;
+}
+
+#navi-popup-description p {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+#navi-popup-next,
+#navi-popup-done,
+#navi-popup-redirect,
+#navi-remind-me-later,
+#navi-popup-confirm-continue,
+#navi-popup-confirm-close {
+  margin: 0px 15px 18px 0px;
+  float: right;
+}
+
+#navi-popup-getstarted {
+  background-color: #283593;
+  color: rgba(255,255,255,.87);
+  float: left;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+#navi-popup-cancel {
+  visibility: hidden;
+}
+
+.navi-arrow {
+  pointer-events: none;
+  position: absolute;
+  z-index: 10000;
+}
+
+.navi-chevron {
+  position: absolute;
+  z-index: 10000;
+}
+
+/**
+ * Material flat buttons
+ */
+
+.navi-aw-gray-button,
+.navi-aw-blue-button {
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 36px;
+  min-width: 88px;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.navi-aw-gray-button {
+  color: rgba(0,0,0,.54);
+}
+
+.navi-aw-blue-button {
+  color: #3F51B5;
+}
+
+.navi-aw-gray-button:hover,
+.navi-aw-blue-button:hover,
+.navi-aw-gray-button:focus,
+.navi-aw-blue-button:focus {
+  background-color: #eee;
+}
+
+.navi-aw-gray-button:active,
+.navi-aw-blue-button:active {
+  background-color: #999;
+}
+
+#navi-popup-getstarted:active
+#navi-popup-getstarted:focus,
+#navi-popup-getstarted:hover {
+  background-color: #303F9F;
+}

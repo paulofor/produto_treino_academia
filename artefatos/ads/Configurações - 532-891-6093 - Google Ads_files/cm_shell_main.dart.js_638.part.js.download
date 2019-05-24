@@ -1,0 +1,42 @@
+self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
+$__dart_deferred_initializers__.current=function(a,b,c,$){var C,H,J,P,W,V,G,M,X,B,S,Q,K,O,N,E,D,U,R,A,F,Z,T,Y={
+lYV:function(){if($.oQ3)return
+$.oQ3=!0
+$.X.p(0,C.Lp,new Y.l4f())
+E.C()},
+l4f:function l4f(){}},L
+a.setFunctionNamesIfNecessary([Y])
+C=c[0]
+H=c[1]
+J=c[2]
+P=c[3]
+W=c[4]
+V=c[5]
+G=c[6]
+M=c[7]
+X=c[8]
+B=c[9]
+S=c[10]
+Q=c[11]
+K=c[12]
+O=c[13]
+N=c[14]
+E=c[15]
+D=c[16]
+U=c[17]
+R=c[18]
+A=c[19]
+F=c[20]
+Z=c[21]
+T=c[22]
+Y=a.updateHolder(c[23],Y)
+L=c[24]
+var z=a.updateTypes([{func:1,ret:T.aGo}])
+Y.l4f.prototype={
+$0:function(){return new T.aGo()},
+$C:"$0",
+$R:0,
+$S:z+0};(function inheritance(){var y=a.inherit
+y(Y.l4f,H.bW)})();(function staticFields(){$.oQ3=!1})()}
+$__dart_deferred_initializers__["vkNBiew/JlE26ZXZ67MDhJlwylc="] = $__dart_deferred_initializers__.current
+//# sourceMappingURL=cm_shell_main.dart.js_638.part.js.map

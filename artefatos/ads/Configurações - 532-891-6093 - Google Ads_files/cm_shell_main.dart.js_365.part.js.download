@@ -1,0 +1,417 @@
+self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
+$__dart_deferred_initializers__.current=function(a,b,c,$){var C,H,J,P,W,V,G,M,X,B={aPE:function aPE(d,e){var _=this
+_.a=d
+_.b=e
+_.c=null
+_.e=_.d=!1},hrj:function hrj(){},hrk:function hrk(){},hrl:function hrl(){}},S={
+v5Z:function(){return C.b77},
+Bw5:function(){return new S.km3(null,S.e(3,C.h,null))},
+xrF:function(){if($.o86)return
+$.o86=!0
+$.Y.p(0,C.jgh,C.b77)
+B.c2()
+D.aT()
+K.e14()
+D.e15()
+A.ptI()
+A.xrG()
+K.hn()
+V.bd()
+A.blh()
+X.e16()
+G.crn()
+E.aV()
+Y.hy()
+L.kK()
+S.lv()
+K.e17()
+E.C()
+V.rs()
+R.ptJ()},
+iCf:function iCf(d,e){var _=this
+_.c=_.b=_.a=_.go=_.fy=_.fx=_.fr=_.dy=_.dx=_.db=_.cy=_.cx=_.ch=_.Q=_.z=_.y=_.x=_.r=_.f=null
+_.d=d
+_.e=e},
+km3:function km3(d,e){var _=this
+_.c=_.b=_.a=_.z=_.y=_.x=_.r=_.f=null
+_.d=d
+_.e=e}},Q,K,O,N,E,D,U={
+v5Y:function(d,e,f,g,h,i,j,k,l,m,n,o,p,q){var y,x,w,v,u,t,s=null,r=new R.Z(!0)
+n.gb1()
+y=j.b_("UniversalAppTable")
+x=new U.aoz(r,p,q,P.B(P.b,{func:1,ret:B.t9}),e,y)
+w=Y.mra(m,e,x.gbk().gb3(),o)
+x.ch=N.m5($.d().n("You don't have any campaigns yet",s,s,s,s),$.d().n("No campaigns match your filters",s,s,s,s),s,"add",s,s,s,s,N.pH(),s)
+v=x.gbk().gb3()
+u=x.gbk().gb3()
+t=H.a7(L.cK.prototype.gdg.call(e),"$idE")
+t=l.SI(0,u,y,$.d().n("Modify columns for campaign",s,s,s,s),t)
+t.a2(0,S.e_6(x.gbk().gb3(),w,r,!1))
+v.aZ=t
+return x},
+aoz:function aoz(d,e,f,g,h,i){var _=this
+_.r=d
+_.x=e
+_.y=f
+_.cy=_.cx=_.ch=_.Q=null
+_.db=g
+_.a=h
+_.b=i
+_.c=!1
+_.d=null},
+i2R:function i2R(){}},R,A={
+nor:function(d,e){var y,x=new A.iuB(d,S.e(3,C.f,e)),w=$.nos
+if(w==null)w=$.nos=O.a5($.z6a,null)
+x.c=w
+y=document.createElement("policy-decision-panel")
+x.a=y
+return x},
+B4r:function(d,e){var y=new A.jYc(N.v(),N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B4s:function(){return new A.jYd(null,S.e(3,C.h,null))},
+xrG:function(){if($.o8x)return
+$.o8x=!0
+$.Y.p(0,C.j9J,C.dIw)
+D.aT()
+E.C()
+R.cv()
+M.tg()},
+iuB:function iuB(d,e){var _=this
+_.c=_.b=_.a=_.r=_.f=null
+_.d=d
+_.e=e},
+jYc:function jYc(d,e,f,g){var _=this
+_.f=d
+_.r=e
+_.c=_.b=_.a=_.dy=_.dx=_.db=_.cy=_.cx=_.ch=_.Q=_.z=_.y=_.x=null
+_.d=f
+_.e=g},
+jYd:function jYd(d,e){var _=this
+_.c=_.b=_.a=_.y=_.x=_.r=_.f=null
+_.d=d
+_.e=e}},F,Z,T,Y,L
+a.setFunctionNamesIfNecessary([B,S,U,A])
+C=c[0]
+H=c[1]
+J=c[2]
+P=c[3]
+W=c[4]
+V=c[5]
+G=c[6]
+M=c[7]
+X=c[8]
+B=a.updateHolder(c[9],B)
+S=a.updateHolder(c[10],S)
+Q=c[11]
+K=c[12]
+O=c[13]
+N=c[14]
+E=c[15]
+D=c[16]
+U=a.updateHolder(c[17],U)
+R=c[18]
+A=a.updateHolder(c[19],A)
+F=c[20]
+Z=c[21]
+T=c[22]
+Y=c[23]
+L=c[24]
+B.aPE.prototype={
+gfAW:function(){var y,x,w=null
+if(this.d){y=this.a===C.bX?$.d().n("Search Ads 360",w,w,w,"Product name for Search Ads 360"):$.d().n("Google Ads",w,w,w,w)
+x="Some settings violate "+H.o(y)+" policy. Your campaign may be limited."
+y=H.a([y],[P.c])
+return $.d().n(x,w,"PolicyDecisionPanelComponent__violationMsg",y,w)}return $.d().n("The audience for this campaign may be limited.",w,w,w,w)},
+cws:function(){var y=this.b.a
+if(y.gd_())y.a2(0,null)},
+eNp:function(){var y,x,w=this
+w.d=w.e=!1
+y=w.c
+y=y==null?null:y.a.B(12,M.acy)
+y=y==null?null:J.be(y)
+if(y!==!1)return
+x=J.tS(w.c.a.B(12,M.acy),new B.hrj(),M.Cp)
+w.d=x.cU(0,new B.hrk())
+w.e=x.cU(0,new B.hrl())}}
+A.iuB.prototype={
+m:function(){var y=this,x=y.f=new V.i(0,null,y,T.p(y.ad()))
+y.r=new K.r(new D.l(x,A.yj1()),x)
+y.au()},
+q:function(){var y=this.b,x=this.r
+x.sH(y.d||y.e)
+this.f.E()},
+A:function(){this.f.D()}}
+A.jYc.prototype={
+m:function(){var y,x,w,v=this,u="\n  ",t=v.b,s=document,r=s.createElement("div")
+v.t(r,"root")
+v.i(r)
+T.f(r,u)
+y=M.og(v,2)
+v.x=y
+y=y.a
+v.db=y
+r.appendChild(y)
+v.Y(v.db,"glyph-icon")
+v.i(v.db)
+y=new L.mj(v.db)
+v.y=y
+v.x.P(y)
+T.f(r,u)
+y=T.aj(s,r)
+v.dx=y
+v.t(y,"policy-msg")
+v.W(v.dx)
+T.f(v.dx,"\n    ")
+v.dx.appendChild(v.f.b)
+T.f(v.dx,u)
+T.f(r,u)
+y=T.aj(s,r)
+v.dy=y
+T.m(y,"buttonDecorator","")
+v.t(v.dy,"action")
+v.W(v.dy)
+y=v.dy
+v.z=new R.c9(T.cd(y,null,!1,!0))
+T.f(y,"\n    ")
+v.dy.appendChild(v.r.b)
+T.f(v.dy,u)
+T.f(r,"\n")
+y=v.dy
+x=W.ak;(y&&C.ao).a9(y,"click",v.O(v.z.b.gcb(),x,W.bv))
+y=v.dy;(y&&C.ao).a9(y,"keypress",v.O(v.z.b.gc_(),x,W.aQ))
+x=v.z.b.b
+w=new P.A(x,[H.k(x,0)]).J(0,v.a4(t.gcwr(),W.ah))
+v.a3(H.a([r],[P.c]),H.a([w],[[P.I,-1]]))},
+N:function(d,e,f){if(d===C.t&&10<=e&&e<=13)return this.z.b
+return f},
+q:function(){var y,x,w,v,u=this,t=null,s="violations-color",r=u.b,q=r.d?"error":"warning",p=u.cx
+if(p!==q){u.y.saL(0,q)
+u.cx=q
+y=!0}else y=!1
+if(y)u.x.e.sV(1)
+x=r.d
+p=u.Q
+if(p!==x){T.bj(u.db,s,x)
+u.Q=x}w=!r.d&&r.e
+p=u.ch
+if(p!==w){T.bj(u.db,"limitation-color",w)
+u.ch=w}v=r.d
+p=u.cy
+if(p!==v){T.aB(u.dx,s,v)
+u.cy=v}p=r.gfAW()
+if(p==null)p=""
+u.f.M(p)
+u.z.b6(u,u.dy)
+p=r.d?$.d().n("Go to and fix.",t,t,t,t):$.d().n("View settings.",t,t,t,t)
+if(p==null)p=""
+u.r.M(p)
+u.x.u()},
+A:function(){this.x.v()}}
+A.jYd.prototype={
+gbU4:function(){var y,x=this,w=x.x
+if(w==null){w=x.l(C.d,x.e.z)
+y=P.b
+y=new S.am(w,P.B(y,y))
+w=y
+w=x.x=w}return w},
+geoK:function(){var y=this,x=y.y
+if(x==null){x=y.e.z
+x=S.al(y.l(C.i,x),y.gbU4(),y.l(C.d,x))
+y.y=x}return x},
+m:function(){var y,x,w=this,v=A.nor(w,0)
+w.f=v
+y=v.a
+v=w.e
+x=w.j(C.aL,v.z)
+x=new B.aPE(x,O.dZ(P.G))
+w.r=x
+w.f.L(0,x,v.e)
+w.G(y)
+return new D.M(w,0,y,w.r,[B.aPE])},
+N:function(d,e,f){if(0===e){if(d===C.d)return this.gbU4()
+if(d===C.o)return this.geoK()}return f},
+q:function(){this.f.u()},
+A:function(){this.f.v()}}
+U.aoz.prototype={
+gef:function(){return this.geL0()},
+qY:function(d,e,f){var y=this.a
+this.cx=Z.e_5(d,e,f,H.a7(L.cK.prototype.gdg.call(y),"$idE").gzS())
+return P.AR(new U.i2R(),P.h)},
+yg:function(d,e){return this.qY(d,e,null)},
+ctk:function(){var y,x,w=this,v=w.cy.d?"GotoAndFix":"ViewSettings"
+w.b.aF(C.bn,v)
+y=U.ir(H.a8(w.y.gb9(),"$ia9",[[U.a9,,]],"$aa9").gbo(),null,C.a2,!1,null)
+x=y.x
+if(x==null)x=Q.an()
+w.x.cH(new M.afI(y,x))},
+bZQ:function(d,e){var y=this,x=O.b_,w=d.a.B(0,x),v=d.a.k(2,E.aI)
+y.a.po(w,y.b.gbQ(),v)
+y.Q=null
+if(J.be(d.a.B(0,x)))return
+y.Q=J.au(d.a.B(0,x)).a.k(48,M.m9)},
+eL1:function(d){return this.bZQ(d,null)},
+kP:function(d,e){return this.gef().$2$summaryResponses(d,e)},
+kO:function(d){return this.gef().$1(d)}}
+S.iCf.prototype={
+gbmh:function(){var y,x=this,w=x.db
+if(w==null){w=x.d.l(C.d,x.e.z)
+y=P.b
+y=new S.am(w,P.B(y,y))
+w=y
+w=x.db=w}return w},
+gcSR:function(){var y,x=this,w=x.dx
+if(w==null){w=x.d
+y=x.e.z
+y=S.al(w.l(C.i,y),x.gbmh(),w.l(C.d,y))
+x.dx=y
+w=y}return w},
+m:function(){var y,x,w,v,u,t,s=this,r=null,q="universal-app-campaign-table-view",p=s.b,o=s.ad(),n=A.c0t(s,0)
+s.f=n
+y=n.a
+o.appendChild(y)
+s.i(y)
+n=new T.Yu()
+n.fc(0)
+s.r=n
+x=s.d
+w=s.e.z
+n=U.bX0(n,x.j(C.l,w),x.j(C.of,w))
+s.x=n
+s.f.P(n)
+T.f(o,"\n")
+n=L.ll(s,3,r)
+s.y=n
+v=n.a
+o.appendChild(v)
+T.m(v,"minerva-id",q)
+T.m(v,"navi-id",q)
+s.i(v)
+n=S.al(x.l(C.i,w),r,x.l(C.d,w))
+s.z=n
+n=K.dW(x.l(C.X,w))
+s.Q=n
+n=S.lk(x.j(C.n,w),x.j(C.au,w),x.l(C.an,w),x.j(C.as,w),s.z,x.j(C.l,w),r,s.Q,x.l(C.c3,w),x.l(C.cn,w),x.j(C.a1,w),x.j(C.aL,w),x.l(C.bB,w),r)
+s.ch=n
+s.y.L(0,n,H.a([C.c,C.c],[P.c]))
+T.f(o,"\n")
+n=A.nor(s,6)
+s.cx=n
+u=n.a
+o.appendChild(u)
+s.i(u)
+n=x.j(C.aL,w)
+n=new B.aPE(n,O.dZ(P.G))
+s.cy=n
+s.cx.P(n)
+T.f(o,"\n")
+t=s.cy.b.J(0,s.a4(p.gctj(),P.G))
+p.cy=s.cy
+s.a3(C.y,H.a([t],[[P.I,-1]]))},
+N:function(d,e,f){var y=this
+if(e<=1){if(d===C.u8)return y.r
+if(d===C.CI)return y.x}if(3<=e&&e<=4){if(d===C.o)return y.z
+if(d===C.X)return y.Q}if(6===e){if(d===C.d)return y.gbmh()
+if(d===C.o)return y.gcSR()}return f},
+q:function(){var y,x,w,v,u,t=this,s=t.b,r=t.e.cx===0,q=s.cx,p=t.dy
+if(p!=q){t.x.saW(q)
+t.dy=q}if(r){p=t.x
+p.a.d=p.f}if(r){p=s.gyf()
+y=t.ch
+y.ar=p
+p=s.db
+y.gmn().ag(0,p)}x=s.gn8()
+p=t.fr
+if(p==null?x!=null:p!==x)t.fr=t.ch.y2=x
+w=s.ch
+p=t.fx
+if(p!=w)t.fx=t.ch.b7=w
+v=s.gbk().gb3()
+p=t.fy
+if(p!=v){t.ch.sb3(v)
+t.fy=v}u=s.Q
+p=t.go
+if(p!=u){p=t.cy
+p.c=u
+p.eNp()
+t.go=u}if(r)t.ch.toString
+t.f.u()
+t.y.u()
+t.cx.u()},
+A:function(){var y=this
+y.f.v()
+y.y.v()
+y.cx.v()
+y.x.aa()
+y.ch.aa()}}
+S.km3.prototype={
+m:function(){var y,x,w,v,u=this,t=new S.iCf(u,S.e(3,C.f,0)),s=$.nx7
+if(s==null)s=$.nx7=O.a5($.zbF,null)
+t.c=s
+y=document.createElement("universal-app-campaign-view")
+t.a=y
+u.f=t
+u.r=new V.i(0,null,u,y)
+t=u.e
+x=t.z
+w=u.l(C.d,x)
+v=P.b
+v=new S.am(w,P.B(v,v))
+w=v
+u.x=w
+w=S.al(u.l(C.i,x),u.x,u.l(C.d,x))
+u.y=w
+x=U.v5Y(u.j(C.l,x),u.j(C.S7,x),u.j(C.Co,x),new Z.cl(y),u.j(C.er,x),u.j(C.hi,x),u.y,u.r,u.j(C.ce,x),u.j(C.a3k,x),u.j(C.m,x),u.j(C.rR,x),u.j(C.I,x),u.j(C.a0,x))
+u.z=x
+u.f.L(0,x,t.e)
+u.G(u.r)
+return new D.M(u,0,y,u.z,[U.aoz])},
+N:function(d,e,f){if(0===e){if(d===C.d)return this.x
+if(d===C.o)return this.y}return f},
+q:function(){var y=this,x=y.e.cx
+if(x===0)y.z.a8()
+y.r.E()
+y.f.u()},
+A:function(){this.r.D()
+this.f.v()
+var y=this.z
+y.ks()
+y.r.X()}}
+var z=a.updateTypes([{func:1,ret:-1},{func:1,ret:[P.ad,P.h],args:[[O.d4,M.en],P.h],opt:[,]},{func:1,ret:-1,args:[O.mp],named:{summaryResponses:[P.j,,]}},{func:1,ret:[S.u,-1],args:[A.ba,P.n]},{func:1,ret:[S.u,B.aPE]},{func:1,ret:[S.u,U.aoz]}])
+B.hrj.prototype={
+$1:function(d){return d.a.B(2,M.Cp)},
+$S:4522}
+B.hrk.prototype={
+$1:function(d){var y=A.xg
+return d.a.k(1,y)===C.BY||d.a.k(1,y)===C.Kz},
+$S:636}
+B.hrl.prototype={
+$1:function(d){var y=A.xg
+return d.a.k(1,y)===C.aha||d.a.k(1,y)===C.ahc},
+$S:636}
+U.i2R.prototype={
+$0:function(){return!0},
+$S:10};(function installTearOffs(){var y=a._instance_0u,x=a._static_2,w=a._static_0,v=a.installInstanceTearOff
+y(B.aPE.prototype,"gcwr","cws",0)
+x(A,"yj1","B4r",3)
+w(A,"yj2","B4s",4)
+var u
+v(u=U.aoz.prototype,"gyf",0,2,function(){return[null]},["$3","$2"],["qY","yg"],1,0)
+y(u,"gctj","ctk",0)
+v(u,"geL0",0,1,null,["$2$summaryResponses","$1"],["bZQ","eL1"],2,0)
+w(S,"zJs","Bw5",5)})();(function inheritance(){var y=a.inherit,x=a.inheritMany
+y(B.aPE,P.c)
+x(H.bW,[B.hrj,B.hrk,B.hrl,U.i2R])
+x(S.u,[A.iuB,A.jYc,A.jYd,S.iCf,S.km3])
+y(U.aoz,M.ml)})();(function constants(){C.b77=new D.F("universal-app-campaign-view",S.zJs(),[U.aoz])
+C.dIw=new D.F("policy-decision-panel",A.yj2(),[B.aPE])
+C.j9J=H.t(B.aPE)
+C.jgh=H.t(U.aoz)})();(function staticFields(){$.zsS=[".violations-color._ngcontent-%ID%{color:#c53929}.limitation-color._ngcontent-%ID%{color:#f4b400}.glyph-icon._ngcontent-%ID%,.policy-msg._ngcontent-%ID%{vertical-align:middle}.policy-msg._ngcontent-%ID%{display:inline-block;padding-left:8px}.root._ngcontent-%ID%{padding:16px}.action._ngcontent-%ID%{cursor:pointer;color:#3367d6}"]
+$.nos=null
+$.o8x=!1
+$.nx7=null
+$.o86=!1
+$.z6a=[$.zsS]
+$.zbF=[$.m21]})()}
+$__dart_deferred_initializers__["n9obbeIH2+ayfs+1YRCX4yWbf4k="] = $__dart_deferred_initializers__.current
+//# sourceMappingURL=cm_shell_main.dart.js_365.part.js.map

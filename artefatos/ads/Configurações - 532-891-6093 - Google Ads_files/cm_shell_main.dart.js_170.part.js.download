@@ -1,0 +1,150 @@
+self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
+$__dart_deferred_initializers__.current=function(a,b,c,$){var C,H,J,P,W,V,G,M,X,B,S,Q,K={
+bNb:function(d,e){var y,x=new K.izh(d,S.e(3,C.f,e)),w=$.ntI
+if(w==null)w=$.ntI=O.a5($.z9y,null)
+x.c=w
+y=document.createElement("sliding-panel")
+x.a=y
+return x},
+BmK:function(){return new K.kdt(null,S.e(3,C.h,null))},
+c3s:function(){if($.nP1)return
+$.nP1=!0
+$.Y.p(0,C.jcQ,C.dK1)
+E.C()
+R.cv()
+G.eh()
+U.aFy()
+M.bU()},
+izh:function izh(d,e){var _=this
+_.c=_.b=_.a=_.cx=_.ch=_.Q=_.z=_.y=_.x=_.r=_.f=null
+_.d=d
+_.e=e},
+kdt:function kdt(d,e){var _=this
+_.c=_.b=_.a=_.r=_.f=null
+_.d=d
+_.e=e}},O,N,E,D,U,R,A,F={SN:function SN(d){this.a=d
+this.b=!1
+this.c=null}},Z,T,Y,L
+a.setFunctionNamesIfNecessary([K,F])
+C=c[0]
+H=c[1]
+J=c[2]
+P=c[3]
+W=c[4]
+V=c[5]
+G=c[6]
+M=c[7]
+X=c[8]
+B=c[9]
+S=c[10]
+Q=c[11]
+K=a.updateHolder(c[12],K)
+O=c[13]
+N=c[14]
+E=c[15]
+D=c[16]
+U=c[17]
+R=c[18]
+A=c[19]
+F=a.updateHolder(c[20],F)
+Z=c[21]
+T=c[22]
+Y=c[23]
+L=c[24]
+F.SN.prototype={
+ge9:function(d){var y=this.a
+return new P.A(y,[H.k(y,0)])},
+gbB:function(d){return this.b},
+sbB:function(d,e){if(e==this.b)return
+this.b=e},
+F4:function(d){this.sbB(0,!1)
+this.a.a2(0,!1)},
+by:function(d){return this.ge9(this).$0()}}
+K.izh.prototype={
+m:function(){var y,x,w,v,u,t=this,s=t.b,r=t.ad(),q=document,p=T.q(q,r)
+t.ch=p
+t.t(p,"sliding-panel")
+t.i(t.ch)
+y=T.q(q,t.ch)
+t.t(y,"inner")
+t.i(y)
+x=T.q(q,y)
+t.t(x,"title-bar")
+t.i(x)
+w=T.aj(q,x)
+t.t(w,"title")
+t.W(w)
+t.dP(w,0)
+p=M.aU(t,4)
+t.f=p
+p=p.a
+t.cx=p
+x.appendChild(p)
+T.m(t.cx,"buttonDecorator","")
+t.Y(t.cx,"close-btn")
+T.m(t.cx,"focusableElement","")
+T.m(t.cx,"icon","close")
+t.i(t.cx)
+p=t.cx
+t.r=new R.c9(T.cd(p,null,!1,!0))
+t.x=new E.Ca(p)
+p=new Y.aR(p)
+t.y=p
+t.f.P(p)
+v=T.q(q,y)
+t.t(v,"content")
+t.i(v)
+t.dP(v,1)
+p=W.ak
+J.aA(t.cx,"click",t.O(t.r.b.gcb(),p,W.bv))
+J.aA(t.cx,"keypress",t.O(t.r.b.gc_(),p,W.aQ))
+p=t.r.b.b
+u=new P.A(p,[H.k(p,0)]).J(0,t.a4(s.gfT(s),W.ah))
+s.c=t.x
+t.a3(C.y,H.a([u],[[P.I,-1]]))},
+N:function(d,e,f){if(4===e){if(d===C.t)return this.r.b
+if(d===C.u)return this.x}return f},
+q:function(){var y,x,w,v,u=this,t=null,s=u.b
+if(u.e.cx===0){u.y.saL(0,"close")
+y=!0}else y=!1
+if(y)u.f.e.sV(1)
+x=!s.b
+w=u.z
+if(w!==x){T.aB(u.ch,"closed",x)
+u.z=x}v=$.d().n("Close",t,t,t,t)
+w=u.Q
+if(w!=v){T.ap(u.cx,"aria-label",v)
+u.Q=v}u.r.b6(u.f,u.cx)
+u.f.u()},
+A:function(){this.f.v()}}
+K.kdt.prototype={
+m:function(){var y,x,w,v,u=this,t=K.bNb(u,0)
+u.f=t
+y=t.a
+t=u.e
+x=u.j(C.bg,t.z)
+w=new F.SN(new P.z(null,null,[P.h]))
+v=y.style
+x.toString
+x=J.dG(self.acxZIndex,1)
+self.acxZIndex=x
+x=H.o(x)
+v.zIndex=x
+x=w
+u.r=x
+u.f.L(0,x,t.e)
+u.G(y)
+return new D.M(u,0,y,u.r,[F.SN])},
+q:function(){this.f.u()},
+A:function(){this.f.v()}}
+var z=a.updateTypes([{func:1,ret:-1},{func:1,ret:[S.u,F.SN]}]);(function installTearOffs(){var y=a._instance_0i,x=a._static_0
+y(F.SN.prototype,"gfT","F4",0)
+x(K,"yNr","BmK",1)})();(function inheritance(){var y=a.inherit,x=a.inheritMany
+y(F.SN,P.c)
+x(S.u,[K.izh,K.kdt])})();(function constants(){C.dK1=new D.F("sliding-panel",K.yNr(),[F.SN])
+C.jcQ=H.t(F.SN)})();(function staticFields(){$.zkG=["._nghost-%ID%{display:flex;outline:none;overflow:hidden;pointer-events:none;width:inherit}.sliding-panel._ngcontent-%ID%{background-color:#fff;border-right:1px solid rgba(0,0,0,.12);display:flex;overflow:hidden;pointer-events:auto;transition:218ms cubic-bezier(0,0,0.2,1);width:inherit}.sliding-panel.closed._ngcontent-%ID%{margin-left:-125%;pointer-events:none}._nghost-%ID%[slide-to-left] .sliding-panel._ngcontent-%ID%{border-right:0;border-left:1px solid rgba(0,0,0,.12)}._nghost-%ID%[slide-to-left] .sliding-panel.closed._ngcontent-%ID%{margin-left:125%}.inner._ngcontent-%ID%{display:flex;flex-direction:column;flex-grow:1;width:inherit}.title-bar._ngcontent-%ID%{align-items:center;border-bottom:1px solid rgba(0,0,0,.12);display:flex;flex-shrink:0;justify-content:space-between;padding:12px 16px}.title._ngcontent-%ID%{overflow:hidden;text-overflow:ellipsis}.close-btn._ngcontent-%ID%{color:rgba(0,0,0,.54);cursor:pointer;flex-shrink:0;transition:color 218ms cubic-bezier(0.4,0,0.2,1);vertical-align:middle}.close-btn:hover._ngcontent-%ID%{color:black}.content._ngcontent-%ID%{flex-grow:1;overflow-y:auto;word-wrap:break-word}"]
+$.ntI=null
+$.nP1=!1
+$.z9y=[$.zkG]})()}
+$__dart_deferred_initializers__["wfusLWS3nZX3IHe2tsyMp2Ambc0="] = $__dart_deferred_initializers__.current
+//# sourceMappingURL=cm_shell_main.dart.js_170.part.js.map

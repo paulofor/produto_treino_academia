@@ -1,0 +1,731 @@
+self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
+$__dart_deferred_initializers__.current=function(a,b,c,$){var C,H,J,P,W,V,G={
+xLs:function(){if($.oQh)return
+$.oQh=!0
+Z.xLt()}},M,X,B,S,Q,K,O,N,E={
+uj3:function(){return G.pn(new E.h0I(),new E.h0J())},
+uj_:function(){return G.pn(new E.h0A(),new E.h0B())},
+uj0:function(){return G.pn(new E.h0C(),new E.h0D())},
+uj1:function(){return G.pn(new E.h0E(),new E.h0F())},
+uj2:function(){return G.pn(new E.h0G(),new E.h0H())},
+uj4:function(){return G.pn(new E.h0K(),new E.h0L())},
+uj5:function(){return G.pn(new E.h0M(),new E.h0N())},
+h0I:function h0I(){},
+h0J:function h0J(){},
+h0A:function h0A(){},
+h0B:function h0B(){},
+h0C:function h0C(){},
+h0D:function h0D(){},
+h0E:function h0E(){},
+h0F:function h0F(){},
+h0G:function h0G(){},
+h0H:function h0H(){},
+h0K:function h0K(){},
+h0L:function h0L(){},
+h0M:function h0M(){},
+h0N:function h0N(){},
+yvv:function(d){var y=null
+switch(d){case C.DN:return $.d().n("Inactive",y,y,y,y)
+case C.DQ:case C.DR:case C.DU:case C.DW:case C.DO:case C.DP:case C.DG:return $.d().n("Learning",y,y,y,y)
+case C.DT:case C.DS:case C.DD:case C.DE:case C.DI:case C.DJ:case C.DK:case C.DH:return $.d().n("Limited",y,y,y,y)
+case C.DV:case C.DC:case C.DM:return $.d().n("Misconfigured",y,y,y,y)
+case C.IA:return $.d().n("Various",y,y,y,y)
+case C.DF:case C.xT:return $.d().n("Unavailable",y,y,y,y)
+case C.DL:return $.d().n("Active",y,y,y,y)
+default:throw H.O(P.pr(d,"Bid strategy system status not recognized.",y))}},
+yvz:function(d){var y=null
+switch(d){case C.DQ:return $.d().n("Budget change",y,y,y,y)
+case C.DR:return $.d().n("Composition change",y,y,y,y)
+case C.DU:return $.d().n("Conversion setting change",y,y,y,y)
+case C.DW:return $.d().n("Conversion action setting change",y,y,y,y)
+case C.DO:return $.d().n("New strategy",y,y,y,y)
+case C.DP:return $.d().n("Setting change",y,y,y,y)
+case C.DT:return $.d().n("Not enough budget",y,y,y,y)
+case C.DS:return $.d().n("Not enough data",y,y,y,y)
+case C.DD:return $.d().n("Low priority spend",y,y,y,y)
+case C.DE:return $.d().n("Low Quality Score",y,y,y,y)
+case C.DI:case C.DJ:case C.DK:return $.d().n("Bid limits",y,y,y,y)
+case C.DV:case C.DC:return $.d().n("Conversion setting",y,y,y,y)
+case C.DN:case C.DG:case C.DH:case C.DM:case C.DF:case C.DL:case C.xT:return""
+default:throw H.O(P.pr(d,"Bid strategy system status not recognized.",y))}},
+yvw:function(d){var y=null
+switch(d){case C.DQ:return E.uj_()
+case C.DR:return E.uj0()
+case C.DU:return E.uj1()
+case C.DW:return E.uj2()
+case C.DO:return E.uj3()
+case C.DP:return E.uj4()
+case C.DT:return $.d().n("This strategy is limited by budget. Increasing your budget can help the bid strategy meet your goals.",y,y,y,y)
+case C.DS:return E.uj5()
+case C.DD:return $.d().n("The target spend for this bid strategy cannot be met. The budgets associated with this strategy may be depleted by other bid strategies or manual keyword bids.",y,y,y,y)
+case C.DE:return $.d().n("Many of the keywords associated with this bid strategy have a low Quality Score. As a result, your ads may not be displayed often enough to meet your goals.",y,y,y,y)
+case C.DI:case C.DJ:case C.DK:return $.d().n("Maximum and/or minimum bid limits are being met by multiple keywords or targeting methods using this bid strategy. As a result, your bids may not be fully optimized.",y,y,y,y)
+case C.DV:return $.d().n("You don't have any active conversion actions with the \"Include in 'Conversions'\" setting checked",y,y,y,y)
+case C.DC:return $.d().n("You're missing the right conversion actions for your bid strategy",y,y,y,y)
+case C.DN:return $.d().n("The bid strategy is inactive. Here are some reasons why a bid strategy might be inactive:",y,y,y,y)
+case C.DF:case C.xT:return $.d().n("Status is not yet available for this strategy type",y,y,y,y)
+case C.DL:return $.d().n("The bid strategy is setting bids to optimize performance. No changes are needed at this time.",y,y,y,y)
+case C.IA:return $.d().n("The bid strategy had various statuses",y,y,y,y)
+case C.DG:return $.d().n("The bid strategy had various learning statuses",y,y,y,y)
+case C.DH:return $.d().n("The bid strategy had various limited statuses",y,y,y,y)
+case C.DM:return $.d().n("The bid strategy had various misconfigured statuses",y,y,y,y)
+default:throw H.O(P.pr(d,"Bid strategy system status not recognized.",y))}},
+yvo:function(d,e){var y,x,w,v,u,t,s,r,q=null
+switch(d){case C.DN:return H.a([$.d().n("There are no campaigns, ad groups, or keywords attached to this strategy.",q,q,q,q),$.d().n("All keywords or ads using this strategy are paused.",q,q,q,q),$.d().n("A prepaid budget has been spent.",q,q,q,q)],[P.b])
+case C.DQ:case C.DR:case C.DO:case C.DP:y=H.a([],[P.b])
+x=Y.aZq
+w=P.n
+v=e.a.k(0,x).a.ah(0,0,w)
+if(v!=null&&v>0){u=$.e5U().as(v)
+t=u+" day left for learning"
+s=u+" days left for learning"
+y.push(T.b2(v,H.a([u,v],[P.c]),"Message telling the user how many more days the bidding strategy will be learning.",C.c0E,q,q,"Messages_learningDaysLeftAnnotation",t,s,q,q))}x=e.a.k(0,x).a.ah(1,0,w)
+if(x!=null&&x>0){w=$.e5U().as(x)
+v=w+" day since the last significant change"
+u=w+" days since the last significant change"
+y.push(T.b2(x,H.a([w,x],[P.c]),"Message telling the user how many days have elapsed since the last significant change to the bidding strategy.",C.c0E,q,q,"Messages_learningDaysSinceChangeAnnotation",v,u,q,q))}return y
+case C.DU:x=e.a.k(3,Y.aZo)
+y=H.a([],[P.b])
+w=P.h
+if(x.a.ah(0,!1,w))y.push($.d().n("Conversion tracking recently enabled",q,q,q,q))
+else if(x.a.ah(1,!1,w))y.push($.d().n("Conversion bid metric recently changed",q,q,q,q))
+return y
+case C.DW:x=e.a.k(4,Y.aZp)
+y=H.a([],[P.b])
+w=P.h
+if(x.a.ah(0,!1,w))y.push($.d().n("App conversion action recently added or removed",q,q,q,q))
+else if(x.a.ah(1,!1,w))y.push($.d().n("Phone call conversion action recently added or removed",q,q,q,q))
+else if(x.a.ah(2,!1,w))y.push($.d().n("Website conversion action recently added or removed",q,q,q,q))
+if(x.a.ah(5,!1,w)||x.a.ah(6,!1,w)||x.a.ah(7,!1,w))y.push($.d().n("Conversion counting setting recently changed",q,q,q,q))
+return y
+case C.DT:y=H.a([],[P.b])
+x=Y.a6O
+w=P.n
+v=e.a.k(1,x).a.ah(1,0,w)
+w=e.a.k(1,x).a.ah(2,0,w)
+if(E.c2H(v)){x=$.bPQ().as(v/100)
+v=x+" of impressions are limited by your budget"
+x=H.a([x],[P.c])
+y.push($.d().n(v,q,"Messages_limitedBudgetImpressionsAnnotation",x,q))}if(E.c2H(w)){x=$.bPQ().as(w/100)
+w=x+" of keywords are limited by your budget"
+x=H.a([x],[P.c])
+y.push($.d().n(w,q,"Messages_limitedBudgetKeywordsAnnotation",x,q))}return y
+case C.DI:y=H.a([],[P.b])
+x=Y.a6O
+w=P.n
+v=e.a.k(1,x).a.ah(0,0,w)
+u=e.a.k(1,x).a.ah(2,0,w)
+w=e.a.k(1,x).a.ah(1,0,w)
+if(E.c2H(v)){x=$.bPQ().as(v/100)
+v=x+" of spend is limited by your max. bid limit"
+x=H.a([x],[P.c])
+y.push($.d().n(v,q,"Messages_limitedMaxBidLimitSpendAnnotation",x,q))}if(E.c2H(w)){x=$.bPQ().as(w/100)
+w=x+" of impressions are limited by your max. bid limit"
+x=H.a([x],[P.c])
+y.push($.d().n(w,q,"Messages_limitedMaxBidLimitImpressionsAnnotation",x,q))}if(E.c2H(u)){x=$.bPQ().as(u/100)
+w=x+" of keywords are limited by your max. bid limit"
+x=H.a([x],[P.c])
+y.push($.d().n(w,q,"Messages_limitedMaxBidLimitKeywordsAnnotation",x,q))}return y
+case C.DJ:x=e.a.k(1,Y.a6O).a.ah(0,0,P.n)
+w=[P.b]
+if(E.c2H(x)){x=$.bPQ().as(x/100)
+v=x+" of spend is limited by your min. bid limit"
+x=H.a([x],[P.c])
+w=H.a([$.d().n(v,q,"Messages_limitedMinBidLimitSpendAnnotation",x,q)],w)
+x=w}else x=H.a([],w)
+return x
+case C.DK:x=e.a.k(1,Y.a6O).a.ah(0,0,P.n)
+w=[P.b]
+if(E.c2H(x)){x=$.bPQ().as(x/100)
+v=x+" of spend is limited by your min. ROAS"
+x=H.a([x],[P.c])
+w=H.a([$.d().n(v,q,"Messages_limitedMinRoasSpendAnnotation",x,q)],w)
+x=w}else x=H.a([],w)
+return x
+case C.DS:x=e.a.k(2,Y.aZr).a.k(1,Y.aZn)
+w=Y.a6N
+w=H.a([x.a.k(0,w),x.a.k(1,w)],[w])
+x=H.k(w,0)
+v=P.b
+return P.aN(new H.ff(new H.bx(w,E.yOz(),[x]),new E.lqc(),[x,v]),!0,v)
+case C.DE:x=e.a.k(1,Y.a6O).a.ah(2,0,P.n)
+w=[P.b]
+if(E.c2H(x)){x=$.bPQ().as(x/100)
+v=$.e5U().as(4)
+u=x+" of your keywords have a Quality Score less than "+v
+v=H.a([x,v],[P.c])
+w=H.a([$.d().n(u,q,"Messages_limitedLowQualityAnnotation",v,q)],w)
+x=w}else x=H.a([],w)
+return x
+case C.DC:x=e.a.k(5,Y.aZs)
+r=H.a([],[P.b])
+w=P.h
+if(x.a.ah(2,!1,w))r.push($.d().n("Missing website conversion actions",q,q,q,q))
+else if(x.a.ah(0,!1,w))r.push($.d().n("Targeting app installs but missing app conversion actions",q,q,q,q))
+else if(x.a.ah(1,!1,w))r.push($.d().n("You have call-only ads but no phone call conversion actions included in your Conversions column",q,q,q,q))
+return r
+case C.DD:case C.DV:case C.DF:case C.DL:case C.DG:case C.DH:case C.DM:case C.IA:case C.xT:return H.a([],[P.b])
+default:throw H.O(P.pr(d,"Bid strategy system status not recognized.",q))}},
+c2H:function(d){return d!=null&&d>0&&d<=100},
+yM8:function(d,e){switch(d){case C.DN:case C.DQ:case C.DR:case C.DU:case C.DW:case C.DO:case C.DP:case C.DT:case C.DS:case C.DE:case C.DI:case C.DJ:case C.DK:case C.DC:return!0
+case C.DD:case C.DV:case C.DF:case C.DL:case C.DG:case C.DH:case C.DM:case C.IA:case C.xT:return!1
+default:throw H.O(P.pr(d,"Bid strategy system status not recognized.",null))}},
+yvx:function(d){switch(d){case C.DL:return"check_circle"
+case C.DQ:case C.DR:case C.DU:case C.DW:case C.DO:case C.DP:case C.DG:case C.DH:case C.DM:case C.IA:return"info"
+case C.DN:case C.DT:case C.DS:case C.DD:case C.DE:case C.DI:case C.DJ:case C.DK:return"warning"
+case C.DV:case C.DC:return"error"
+case C.DF:case C.xT:return""
+default:throw H.O(P.pr(d,"Bid strategy system status not recognized.",null))}},
+yvy:function(d){switch(d){case C.DT:return"2616012"
+case C.DE:return"140351"
+case C.DL:case C.DQ:case C.DR:case C.DU:case C.DW:case C.DO:case C.DP:case C.DG:case C.DH:case C.DM:case C.IA:case C.DN:case C.DS:case C.DD:case C.DI:case C.DJ:case C.DK:case C.DV:case C.DC:case C.DF:case C.xT:return""
+default:throw H.O(P.pr(d,"Bid strategy system status not recognized.",null))}},
+viv:function(d){var y
+if(d!=null){y=P.ai
+if(d.a.k(0,y)!=null)if(d.a.k(1,y)!=null)if(d.a.k(1,y)>0){y=P.n
+y=d.a.ah(2,0,y)!=null&&d.a.ah(2,0,y)>0}else y=!1
+else y=!1
+else y=!1}else y=!1
+return y},
+lqc:function lqc(){},
+aZu:function aZu(d,e,f,g){var _=this
+_.a=d
+_.b=e
+_.c=f
+_.d=g
+_.Q=_.z=_.y=_.x=_.r=_.f=_.e=null
+_.ch=!1
+_.dy=_.dx=_.db=_.cy=_.cx=null}},D,U,R,A,F={
+tw0:function(){return C.bbr},
+A6j:function(d,e){var y=new F.j45(N.v(),N.v(),N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+A6k:function(d,e){var y=new F.j46(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+A6l:function(d,e){var y=new F.j47(d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+A6m:function(d,e){var y=new F.j48(d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+A6n:function(d,e){var y=new F.j49(d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+A6o:function(d,e){var y=new F.j4a(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+A6p:function(d,e){var y=new F.j4b(d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+A6q:function(d,e){var y=new F.j4c(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+A6r:function(d,e){var y=new F.j4d(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+A6s:function(){return new F.j4e(null,S.e(3,C.h,null))},
+xLp:function(){if($.oQe)return
+$.oQe=!0
+$.Y.p(0,C.aUe,C.bbr)
+L.ex()
+E.dd()
+G.xLs()
+X.e2B()
+V.bd()
+E.C()
+R.cv()
+M.tg()
+U.c4()},
+ich:function ich(d,e){var _=this
+_.c=_.b=_.a=_.r=_.f=null
+_.d=d
+_.e=e},
+j45:function j45(d,e,f,g,h){var _=this
+_.f=d
+_.r=e
+_.x=f
+_.c=_.b=_.a=_.fr=_.dy=_.dx=_.db=_.cy=_.cx=_.ch=_.Q=_.z=_.y=null
+_.d=g
+_.e=h},
+j46:function j46(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=_.x=_.r=null
+_.d=e
+_.e=f},
+j47:function j47(d,e){var _=this
+_.c=_.b=_.a=_.z=_.y=_.x=_.r=_.f=null
+_.d=d
+_.e=e},
+j48:function j48(d,e){var _=this
+_.c=_.b=_.a=_.z=_.y=_.x=_.r=_.f=null
+_.d=d
+_.e=e},
+j49:function j49(d,e){var _=this
+_.c=_.b=_.a=_.y=_.x=_.r=_.f=null
+_.d=d
+_.e=e},
+j4a:function j4a(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=null
+_.d=e
+_.e=f},
+j4b:function j4b(d,e){var _=this
+_.c=_.b=_.a=_.x=_.r=_.f=null
+_.d=d
+_.e=e},
+j4c:function j4c(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=null
+_.d=e
+_.e=f},
+j4d:function j4d(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=_.y=_.x=_.r=null
+_.d=e
+_.e=f},
+j4e:function j4e(d,e){var _=this
+_.c=_.b=_.a=_.r=_.f=null
+_.d=d
+_.e=e}},Z={
+xLt:function(){if($.oQi)return
+$.oQi=!0}},T,Y,L
+a.setFunctionNamesIfNecessary([G,E,F,Z])
+C=c[0]
+H=c[1]
+J=c[2]
+P=c[3]
+W=c[4]
+V=c[5]
+G=a.updateHolder(c[6],G)
+M=c[7]
+X=c[8]
+B=c[9]
+S=c[10]
+Q=c[11]
+K=c[12]
+O=c[13]
+N=c[14]
+E=a.updateHolder(c[15],E)
+D=c[16]
+U=c[17]
+R=c[18]
+A=c[19]
+F=a.updateHolder(c[20],F)
+Z=a.updateHolder(c[21],Z)
+T=c[22]
+Y=c[23]
+L=c[24]
+E.aZu.prototype={
+sh_:function(d){var y,x,w,v,u,t=this
+t.cx=d.a.K(1)
+t.dy=d.a.k(6,U.bK)
+y=d.a.k(23,O.ie)
+x=N.uU
+t.dx=y.a.k(3,x)
+w=D.cV
+v=Y.aIe
+u=t.b
+if(y.a.a1(2)){y=y.a.k(2,D.fB)
+t.cy=y.a.K(1)
+t.db=y.a.k(3,w)
+t.dx=y.a.k(6,x)
+t.bN_(y.a.k(6,x),y.a.k(7,v))
+v=t.db
+if(u.a)y=u.b&&v===C.lv||$.e6Q().aj(0,v)
+else y=!1
+t.ch=y}else{t.db=y.a.k(0,w)
+t.bN_(y.a.k(3,x),y.a.k(4,v))
+y=t.db
+if(u.a)y=u.b&&y===C.lv||$.mhp().aj(0,y)
+else y=!1
+t.ch=y}},
+bN_:function(d,e){var y=this
+y.e=E.yvv(d)
+y.f=E.yvz(d)
+y.r=E.yvw(d)
+y.x=E.yvx(d)
+y.y=E.yvy(d)
+y.z=E.yvo(d,e)
+y.Q=E.yM8(d,e)},
+fox:function(){var y,x,w,v,u=this,t=P.b,s=P.D(["BidStrategyType",H.o(u.db),"BidStrategySystemStatus",H.o(u.dx)],t,t)
+t=u.cy
+if(t!=null)s.p(0,"BidStrategyId",t.a7(0))
+t=u.cx
+if(t!=null)s.p(0,"CampaignId",t.a7(0))
+t=u.dy
+if(t!=null)s.p(0,"CampaignChannelType",t.a7(0))
+t=u.c
+t.toString
+y=Y.i9("BiddingStrategyStatusTooltip.clickViewReport","PLACE_CHANGE",null)
+y.d.ag(0,s)
+t.fa(y,null)
+t=u.d
+y=u.a
+if(u.cy==null){x=U.ir(u.cx,null,C.a2,!1,y.gb1())
+y=u.db
+w=u.dy
+v=x.x
+t.cH(new Z.a1g(y,w,x,v==null?Q.an():v))}else{y=y.gb1()
+w=u.cy
+v=u.db
+t.cH(new V.a1e(w,v,y==null?Q.an():y))}}}
+F.ich.prototype={
+m:function(){var y=this,x=y.ad(),w=y.f=new V.i(0,null,y,T.p(x))
+y.r=new K.r(new D.l(w,F.yP5()),w)
+T.f(x,"\n")
+y.au()},
+q:function(){var y=this.b,x=this.r
+x.sH(y.cx!=null||y.cy!=null)
+this.f.E()},
+A:function(){this.f.D()}}
+F.j45.prototype={
+m:function(){var y,x,w,v,u,t,s,r,q=this,p="\n  ",o="\n    ",n=T.H(p),m=document,l=m.createElement("div")
+q.t(l,"category")
+q.i(l)
+T.f(l,o)
+y=T.aj(m,l)
+q.t(y,"label")
+q.W(y)
+y.appendChild(q.f.b)
+T.f(l,o)
+x=T.aj(m,l)
+q.W(x)
+q.y=new Y.nd(x,H.a([],[P.b]))
+x.appendChild(q.r.b)
+T.f(l,p)
+w=T.H(p)
+v=q.z=new V.i(10,null,q,T.ao())
+q.Q=new K.r(new D.l(v,F.yP6()),v)
+u=T.H("\n\n  ")
+t=m.createElement("div")
+q.t(t,"description")
+q.i(t)
+T.f(t,o)
+t.appendChild(q.x.b)
+T.f(t,o)
+v=q.ch=new V.i(16,12,q,T.p(t))
+q.cx=new K.r(new D.l(v,F.yP8()),v)
+T.f(t,o)
+v=q.cy=new V.i(18,12,q,T.p(t))
+q.db=new K.r(new D.l(v,F.yP9()),v)
+T.f(t,p)
+s=T.H("\n\n  ")
+v=q.dx=new V.i(21,null,q,T.ao())
+q.dy=new K.r(new D.l(v,F.yPd()),v)
+r=T.H("\n")
+q.a3(H.a([n,l,w,q.z,u,t,s,v,r],[P.c]),null)},
+q:function(){var y=this,x=null,w=y.b,v=w.x,u=y.fr
+if(u!=v){y.y.sjW(v)
+y.fr=v}y.y.aG()
+y.Q.sH(w.f.length!==0)
+y.cx.sH(w.y.length!==0)
+y.db.sH(w.z.length!==0)
+y.dy.sH(w.ch)
+y.z.E()
+y.ch.E()
+y.cy.E()
+y.dx.E()
+u=$.d().n("Bid strategy: ",x,x,x,x)
+if(u==null)u=""
+y.f.M(u)
+u=w.e
+if(u==null)u=""
+y.r.M(u)
+u=w.r
+if(u==null)u=""
+y.x.M(u)},
+A:function(){var y,x=this
+x.z.D()
+x.ch.D()
+x.cy.D()
+x.dx.D()
+y=x.y
+y.jn(y.e,!0)
+y.jk(!1)}}
+F.j46.prototype={
+m:function(){var y,x=this,w=document.createElement("div")
+x.t(w,"reason")
+x.i(w)
+T.f(w,"\n    ")
+y=x.r=new V.i(2,0,x,T.p(w))
+x.x=new K.r(new D.l(y,F.yP7()),y)
+T.f(w,"\n    ")
+w.appendChild(x.f.b)
+T.f(w,"\n  ")
+x.G(w)},
+q:function(){var y,x=this,w=x.b
+x.x.sH(w.x.length!==0)
+x.r.E()
+y=w.f
+if(y==null)y=""
+x.f.M(y)},
+A:function(){this.r.D()}}
+F.j47.prototype={
+m:function(){var y,x=this,w=M.og(x,0)
+x.f=w
+y=w.a
+x.i(y)
+x.r=new L.mj(y)
+x.x=new Y.nd(y,H.a([],[P.b]))
+x.f.P(x.r)
+x.G(y)},
+q:function(){var y,x,w=this,v=w.b,u=v.x,t=w.y
+if(t!=u){w.r.saL(0,u)
+w.y=u
+y=!0}else y=!1
+if(y)w.f.e.sV(1)
+x=v.x
+t=w.z
+if(t!=x){w.x.sjW(x)
+w.z=x}w.x.aG()
+w.f.u()},
+A:function(){this.f.v()
+var y=this.x
+y.jn(y.e,!0)
+y.jk(!1)}}
+F.j48.prototype={
+m:function(){var y,x,w,v,u=this,t=L.e6(u,0)
+u.f=t
+y=t.a
+u.i(y)
+t=u.d
+x=t.d
+t=t.e.z
+w=Y.dH(x.j(C.aJ,t),x.l(C.aH,t),x.l(C.aK,t),x.l(C.aI,t),x.l(C.aF,t))
+u.r=w
+w=F.aP(x.l(C.w,t))
+u.x=w
+v=u.r
+t=A.e5(v,y,w,new G.cI(u,0,C.ac),x.l(C.aB,t),x.l(C.ay,t),x.l(C.J,t),x.l(C.i,t))
+u.y=t
+u.f.P(t)
+u.G(y)},
+N:function(d,e,f){if(e<=1){if(d===C.aC)return this.r
+if(d===C.v)return this.x
+if(d===C.Q||d===C.u)return this.y}return f},
+q:function(){var y,x=this,w=x.b,v=x.e.cx,u=w.y,t=x.z
+if(t!=u){t=x.y
+t.y=u
+t.di()
+x.z=u
+y=!0}else y=!1
+if(y)x.f.e.sV(1)
+if(v===0)x.y.dJ()
+x.f.u()},
+A:function(){this.f.v()
+this.y.fr.X()}}
+F.j49.prototype={
+m:function(){var y,x=this,w=document.createElement("div")
+x.t(w,"annotation")
+x.i(w)
+T.f(w,"\n      ")
+y=x.f=new V.i(2,0,x,T.p(w))
+x.r=new K.r(new D.l(y,F.yPa()),y)
+T.f(w,"\n      ")
+y=x.x=new V.i(4,0,x,T.p(w))
+x.y=new K.r(new D.l(y,F.yPb()),y)
+T.f(w,"\n    ")
+x.G(w)},
+q:function(){var y=this,x=y.b
+y.r.sH(!x.Q)
+y.y.sH(x.Q)
+y.f.E()
+y.x.E()},
+A:function(){this.f.D()
+this.x.D()}}
+F.j4a.prototype={
+m:function(){var y=document.createElement("div")
+this.i(y)
+y.appendChild(this.f.b)
+this.G(y)},
+q:function(){var y=this.b.z
+y=(y&&C.b).gab(y)
+if(y==null)y=""
+this.f.M(y)}}
+F.j4b.prototype={
+m:function(){var y,x=this,w=document.createElement("ul")
+x.i(w)
+T.f(w,"\n        ")
+y=x.f=new V.i(2,0,x,T.p(w))
+x.r=new R.aG(y,new D.l(y,F.yPc()))
+T.f(w,"\n      ")
+x.G(w)},
+q:function(){var y=this,x=y.b.z,w=y.x
+if(w==null?x!=null:w!==x){y.r.saT(x)
+y.x=x}y.r.aG()
+y.f.E()},
+A:function(){this.f.D()}}
+F.j4c.prototype={
+m:function(){var y=document.createElement("li")
+this.W(y)
+y.appendChild(this.f.b)
+this.G(y)},
+q:function(){var y=this.e.b.w(0,"$implicit"),x=y==null?"":y
+this.f.M(x)}}
+F.j4d.prototype={
+m:function(){var y,x,w,v,u,t,s,r,q,p=this,o=p.b,n=document.createElement("div")
+p.t(n,"footer")
+p.i(n)
+T.f(n,"\n    ")
+y=U.bn(p,2)
+p.r=y
+x=y.a
+n.appendChild(x)
+T.m(x,"buttonDecorator","")
+T.m(x,"flat","")
+p.i(x)
+y=F.aP(p.d.l(C.w,p.e.z))
+p.x=y
+y=B.bm(x,y,p.r,null)
+p.y=y
+w=T.H("\n      ")
+v=T.H("\n    ")
+u=[P.c]
+p.r.L(0,y,H.a([H.a([w,p.f.b,v],[W.b3])],u))
+T.f(n,"\n  ")
+y=W.ak
+t=J.aF(x)
+t.a9(x,"click",p.O(p.y.gcb(),y,W.bv))
+t.a9(x,"keypress",p.O(p.y.gc_(),y,W.aQ))
+y=p.y.b
+t=o.gfow()
+s=W.ah
+r=new P.A(y,[H.k(y,0)]).J(0,p.a4(t,s))
+y=p.y.b
+q=new P.A(y,[H.k(y,0)]).J(0,p.a4(t,s))
+p.a3(H.a([n],u),H.a([r,q],[[P.I,-1]]))},
+N:function(d,e,f){if(2<=e&&e<=5){if(d===C.v)return this.x
+if(d===C.G||d===C.t||d===C.j)return this.y}return f},
+q:function(){var y=this,x=null,w=y.b,v=y.e.cx
+y.r.a6(v===0)
+w.toString
+v=$.d().n("VIEW BID STRATEGY REPORT",x,x,x,x)
+if(v==null)v=""
+y.f.M(v)
+y.r.u()},
+A:function(){this.r.v()}}
+F.j4e.prototype={
+m:function(){var y,x,w,v,u,t=this,s=new F.ich(t,S.e(3,C.f,0)),r=$.n4J
+if(r==null)r=$.n4J=O.a5($.yTO,null)
+s.c=r
+y=document.createElement("strategy-status-tooltip-content")
+s.a=y
+t.f=s
+s=t.e
+x=s.z
+w=t.j(C.i,x)
+v=t.j(C.I,x)
+u=t.j(C.m,x)
+x=t.j(C.LH,x)
+x=new E.aZu(u,x,w,v)
+t.r=x
+t.f.L(0,x,s.e)
+t.G(y)
+return new D.M(t,0,y,t.r,[E.aZu])},
+N:function(d,e,f){if(d===C.aUe&&0===e)return this.r
+return f},
+q:function(){this.f.u()},
+A:function(){this.f.v()}}
+var z=a.updateTypes([{func:1,ret:[S.u,-1],args:[A.ba,P.n]},{func:1,ret:-1},{func:1,ret:P.h,args:[Y.a6N]},{func:1,ret:[S.u,E.aZu]}])
+E.h0I.prototype={
+$0:function(){var y=null
+return $.d().n("Google Ads is optimizing your new bid strategy. Performance may improve further. No action is needed at this time.",y,y,y,y)},
+$S:6}
+E.h0J.prototype={
+$0:function(){var y=null
+return $.d().n("Search Ads 360 is optimizing your new bid strategy. Performance may improve further. No action is needed at this time.",y,y,y,y)},
+$S:6}
+E.h0A.prototype={
+$0:function(){var y=null
+return $.d().n("The budget was recently changed. Google Ads is now adjusting to optimize bids.",y,y,y,y)},
+$S:6}
+E.h0B.prototype={
+$0:function(){var y=null
+return $.d().n("The budget was recently changed. Search Ads 360 is now adjusting to optimize bids.",y,y,y,y)},
+$S:6}
+E.h0C.prototype={
+$0:function(){var y=null
+return $.d().n("Campaigns, ad groups, or keywords have been added to or removed from the bid strategy. Google Ads is now adjusting to optimize bids.",y,y,y,y)},
+$S:6}
+E.h0D.prototype={
+$0:function(){var y=null
+return $.d().n("Campaigns, ad groups, or keywords have been added to or removed from the bid strategy. Search Ads 360 is now adjusting to optimize bids.",y,y,y,y)},
+$S:6}
+E.h0E.prototype={
+$0:function(){var y=null
+return $.d().n("A conversion setting was recently changed. Google Ads is now adjusting to optimize bids.",y,y,y,y)},
+$S:6}
+E.h0F.prototype={
+$0:function(){var y=null
+return $.d().n("A conversion setting was recently changed. Search Ads 360 is now adjusting to optimize bids.",y,y,y,y)},
+$S:6}
+E.h0G.prototype={
+$0:function(){var y=null
+return $.d().n("A conversion action was recently changed. Google Ads is now adjusting to  optimize bids.",y,y,y,y)},
+$S:6}
+E.h0H.prototype={
+$0:function(){var y=null
+return $.d().n("A conversion action was recently changed. Search Ads 360 is now adjusting to  optimize bids.",y,y,y,y)},
+$S:6}
+E.h0K.prototype={
+$0:function(){var y=null
+return $.d().n("A setting for this bid strategy was recently changed. Google Ads is now adjusting to optimize bids.",y,y,y,y)},
+$S:6}
+E.h0L.prototype={
+$0:function(){var y=null
+return $.d().n("A setting for this bid strategy was recently changed. Search Ads 360 is now adjusting to optimize bids.",y,y,y,y)},
+$S:6}
+E.h0M.prototype={
+$0:function(){var y=null
+return $.d().n("Google Ads doesn't have enough conversion data to optimize your bids",y,y,y,y)},
+$S:6}
+E.h0N.prototype={
+$0:function(){var y=null
+return $.d().n("Search Ads 360 doesn't have enough conversion data to optimize your bids",y,y,y,y)},
+$S:6}
+E.lqc.prototype={
+$1:function(d){var y,x,w=null,v=" days. Recommended minimum is ",u=P.ai,t=J.kh(d.a.k(0,u)),s=$.e5U(),r=s.as(d.a.k(0,u)),q=s.as(d.a.k(1,u))
+u=P.n
+y=[P.c]
+if(d.a.ah(2,0,u)===1){u=r+" conversion in the last day. Recommended minimum is "+q+"."
+s=r+" conversions in the last day. Recommended minimum is "+q+"."
+s=T.b2(t,H.a([r,q,t],y),"Alerts the user that their bid strategy is currently limited because it has not met the minimum number of conversions over the past days. In this message, the number of days is always equal to one.",C.hsI,w,w,"Messages_limitedDataAnnotationSingleDay",u,s,w,w)
+u=s}else{u=s.as(d.a.ah(2,0,u))
+s=r+" conversion in the last "+u+v+q+"."
+x=r+" conversions in the last "+u+v+q+"."
+x=T.b2(t,H.a([r,q,u,t],y),"Alerts the user that their bid strategy is currently limited because it has not met the minimum number of conversions over the past days. In this message, the number of days is always more than one.",C.hs1,w,w,"Messages_limitedDataAnnotationMultipleDays",s,x,w,w)
+u=x}return u},
+$S:4528};(function installTearOffs(){var y=a._static_1,x=a._instance_0u,w=a._static_2,v=a._static_0
+y(E,"yOz","viv",2)
+x(E.aZu.prototype,"gfow","fox",1)
+w(F,"yP5","A6j",0)
+w(F,"yP6","A6k",0)
+w(F,"yP7","A6l",0)
+w(F,"yP8","A6m",0)
+w(F,"yP9","A6n",0)
+w(F,"yPa","A6o",0)
+w(F,"yPb","A6p",0)
+w(F,"yPc","A6q",0)
+w(F,"yPd","A6r",0)
+v(F,"yPe","A6s",3)})();(function inheritance(){var y=a.inheritMany,x=a.inherit
+y(H.bW,[E.h0I,E.h0J,E.h0A,E.h0B,E.h0C,E.h0D,E.h0E,E.h0F,E.h0G,E.h0H,E.h0K,E.h0L,E.h0M,E.h0N,E.lqc])
+x(E.aZu,P.c)
+y(S.u,[F.ich,F.j45,F.j46,F.j47,F.j48,F.j49,F.j4a,F.j4b,F.j4c,F.j4d,F.j4e])})();(function constants(){var y=a.makeConstList
+C.bbr=new D.F("strategy-status-tooltip-content",F.yPe(),[E.aZu])
+C.hfD=H.a(y(["renderedDays","days"]),[P.b])
+C.c0E=new H.aK(2,{renderedDays:"5",days:5},C.hfD,[P.b,P.c])
+C.fuo=H.a(y(["conversions","minimumConversions","days","conversionsCount"]),[P.b])
+C.hs1=new H.aK(4,{conversions:"2",minimumConversions:"15",days:"4",conversionsCount:2},C.fuo,[P.b,P.c])
+C.fAY=H.a(y(["conversions","minimumConversions","conversionsCount"]),[P.b])
+C.hsI=new H.aK(3,{conversions:"2",minimumConversions:"15",conversionsCount:2},C.fAY,[P.b,P.c])
+C.aUe=H.t(E.aZu)})();(function staticFields(){$.oQh=!1
+$.oQi=!1
+$.zj5=["._nghost-%ID%{display:block;max-width:360px}.reason._ngcontent-%ID%{align-items:center;display:flex}.category._ngcontent-%ID%,.reason._ngcontent-%ID%{font-size:15px;font-weight:700;padding-bottom:8px}glyph._ngcontent-%ID%{padding-right:8px}.category._ngcontent-%ID% > span.error._ngcontent-%ID%,.reason._ngcontent-%ID% > glyph.error._ngcontent-%ID%{color:#c53929}.reason._ngcontent-%ID% > glyph.check_circle._ngcontent-%ID%{color:#0f9d58}.reason._ngcontent-%ID% > glyph.info._ngcontent-%ID%{color:#3367d6}.reason._ngcontent-%ID% > glyph.warning._ngcontent-%ID%{color:#fbc02d}.annotation._ngcontent-%ID%,.description._ngcontent-%ID%{margin-bottom:8px}.footer._ngcontent-%ID%{width:100%;border-top:1px solid rgba(0,0,0,.12);margin-top:16px;padding-top:8px}material-button._ngcontent-%ID%{color:#3367d6;margin:0}"]
+$.n4J=null
+$.oQe=!1
+$.yTO=[$.zj5]})();(function lazyInitializers(){var y=a.lazy
+y($,"DPq","e5U",function(){return T.xf("#,##0.##",null)})
+y($,"DQ2","bPQ",function(){return T.xf("#.##%",null)})})()}
+$__dart_deferred_initializers__["7IpLhj2TiJZ7+MFypQkSuw1tISg="] = $__dart_deferred_initializers__.current
+//# sourceMappingURL=cm_shell_main.dart.js_154.part.js.map

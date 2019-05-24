@@ -1,0 +1,3567 @@
+self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
+$__dart_deferred_initializers__.current=function(a,b,c,$){var C,H,J,P,W,V,G,M,X={b8G:function b8G(d,e){this.a=d
+this.b=e},
+cj7:function(d,e){var y,x=new X.itQ(d,S.e(3,C.f,e)),w=$.nnS
+if(w==null)w=$.nnS=O.a5($.z5L,null)
+x.c=w
+y=document.createElement("performance-target-editor")
+x.a=y
+return x},
+B1Y:function(d,e){var y=new X.jVS(N.v(),N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B28:function(d,e){var y=new X.jW1(d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B2h:function(d,e){var y=new X.jWa(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B2i:function(d,e){var y=new X.jWb(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B2j:function(d,e){var y=new X.jWc(d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B2k:function(d,e){var y=new X.jWd(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B2l:function(d,e){var y=new X.dV_(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B2m:function(d,e){var y=new X.jWe(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B2n:function(d,e){var y=new X.jWf(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B1Z:function(d,e){var y=new X.jVT(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B2_:function(d,e){var y=new X.jVU(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B20:function(d,e){var y=new X.dUZ(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B21:function(d,e){var y=new X.jVV(N.v(),N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B22:function(d,e){var y=new X.jVW(d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B23:function(d,e){var y=new X.jVX(N.v(),N.v(),N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B24:function(d,e){var y=new X.jVY(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B25:function(d,e){var y=new X.jVZ(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B26:function(d,e){var y=new X.jW_(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B27:function(d,e){var y=new X.jW0(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B29:function(d,e){var y=new X.jW2(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B2a:function(d,e){var y=new X.jW3(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B2b:function(d,e){var y=new X.jW4(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B2c:function(d,e){var y=new X.jW5(d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B2d:function(d,e){var y=new X.jW6(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B2e:function(d,e){var y=new X.jW7(N.v(),N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B2f:function(d,e){var y=new X.jW8(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B2g:function(d,e){var y=new X.jW9(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+B2o:function(){return new X.jWg(null,S.e(3,C.h,null))},
+c3G:function(){if($.o8Z)return
+$.o8Z=!0
+$.Y.p(0,C.jgv,C.dKx)
+L.ex()
+L.dk()
+D.aT()
+V.bd()
+E.aV()
+U.Od()
+X.kPz()
+B.xs1()
+D.js()
+L.k0()
+E.C()
+K.bM()
+R.cv()
+M.tg()
+G.hv()
+D.Qm()
+M.bU()
+Q.dc()
+N.vZ()
+N.aFw()
+R.Qg()
+E.mP()
+L.hE()
+L.hM()
+Y.fT()
+O.a0b()
+R.fb()
+K.el()
+E.xs()},
+itQ:function itQ(d,e){var _=this
+_.c=_.b=_.a=_.cx=_.ch=_.Q=_.z=_.y=_.x=_.r=_.f=null
+_.d=d
+_.e=e},
+jVS:function jVS(d,e,f,g){var _=this
+_.f=d
+_.r=e
+_.c=_.b=_.a=_.cx=_.ch=_.Q=_.z=_.y=_.x=null
+_.d=f
+_.e=g},
+jW1:function jW1(d,e){var _=this
+_.c=_.b=_.a=_.dy=_.dx=_.db=_.cy=_.cx=_.ch=_.Q=_.z=_.y=_.x=_.r=_.f=null
+_.d=d
+_.e=e},
+jWa:function jWa(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=_.x=_.r=null
+_.d=e
+_.e=f},
+jWb:function jWb(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=_.x=_.r=null
+_.d=e
+_.e=f},
+jWc:function jWc(d,e){var _=this
+_.c=_.b=_.a=_.go=_.fy=_.fx=_.fr=_.dy=_.dx=_.db=_.cy=_.cx=_.ch=_.Q=_.z=_.y=_.x=_.r=_.f=null
+_.d=d
+_.e=e},
+jWd:function jWd(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=null
+_.d=e
+_.e=f},
+dV_:function dV_(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=_.ch=_.Q=_.z=_.y=_.x=_.r=null
+_.d=e
+_.e=f},
+jWe:function jWe(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=_.ch=_.Q=_.z=_.y=_.x=_.r=null
+_.d=e
+_.e=f},
+jWf:function jWf(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=_.x=_.r=null
+_.d=e
+_.e=f},
+jVT:function jVT(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=null
+_.d=e
+_.e=f},
+jVU:function jVU(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=_.k2=_.k1=_.id=_.go=_.fy=_.fx=_.fr=_.dy=_.dx=_.db=_.cy=_.cx=_.ch=_.Q=_.z=_.y=_.x=_.r=null
+_.d=e
+_.e=f},
+dUZ:function dUZ(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=_.x=_.r=null
+_.d=e
+_.e=f},
+jVV:function jVV(d,e,f,g){var _=this
+_.f=d
+_.r=e
+_.c=_.b=_.a=_.fy=_.fx=_.fr=_.dy=_.dx=_.db=_.cy=_.cx=_.ch=_.Q=_.z=_.y=_.x=null
+_.d=f
+_.e=g},
+jVW:function jVW(d,e){var _=this
+_.c=_.b=_.a=_.db=_.cy=_.cx=_.ch=_.Q=_.z=_.y=_.x=_.r=_.f=null
+_.d=d
+_.e=e},
+jVX:function jVX(d,e,f,g,h){var _=this
+_.f=d
+_.r=e
+_.x=f
+_.c=_.b=_.a=_.k1=_.id=_.go=_.fy=_.fx=_.fr=_.dy=_.dx=_.db=_.cy=_.cx=_.ch=_.Q=_.z=_.y=null
+_.d=g
+_.e=h},
+jVY:function jVY(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=null
+_.d=e
+_.e=f},
+jVZ:function jVZ(d,e,f){var _=this
+_.f=d
+_.an=_.am=_.y2=_.y1=_.x2=_.x1=_.ry=_.rx=_.r2=_.r1=_.k4=_.k3=_.k2=_.k1=_.id=_.go=_.fy=_.fx=_.fr=_.dy=_.dx=_.db=_.cy=_.cx=_.ch=_.Q=_.z=_.y=_.x=_.r=null
+_.c=_.b=_.a=_.aC=_.at=_.aq=_.ar=null
+_.d=e
+_.e=f},
+jW_:function jW_(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=null
+_.d=e
+_.e=f},
+jW0:function jW0(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=null
+_.d=e
+_.e=f},
+jW2:function jW2(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=_.z=_.y=_.x=_.r=null
+_.d=e
+_.e=f},
+jW3:function jW3(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=_.z=_.y=_.x=_.r=null
+_.d=e
+_.e=f},
+jW4:function jW4(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=_.z=_.y=_.x=_.r=null
+_.d=e
+_.e=f},
+jW5:function jW5(d,e){var _=this
+_.c=_.b=_.a=_.dx=_.db=_.cy=_.cx=_.ch=_.Q=_.z=_.y=_.x=_.r=_.f=null
+_.d=d
+_.e=e},
+jW6:function jW6(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=_.z=_.y=_.x=_.r=null
+_.d=e
+_.e=f},
+jW7:function jW7(d,e,f,g){var _=this
+_.f=d
+_.r=e
+_.c=_.b=_.a=null
+_.d=f
+_.e=g},
+jW8:function jW8(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=_.x=_.r=null
+_.d=e
+_.e=f},
+jW9:function jW9(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=_.z=_.y=_.x=_.r=null
+_.d=e
+_.e=f},
+jWg:function jWg(d,e){var _=this
+_.c=_.b=_.a=_.y=_.x=_.r=_.f=null
+_.d=d
+_.e=e}},B={cEb:function cEb(d,e){this.a=d
+this.b=e},
+iAB:function(d,e){var y,x=new B.iAA(d,S.e(3,C.f,e)),w=$.nvh
+if(w==null)w=$.nvh=O.a5($.zax,null)
+x.c=w
+y=document.createElement("target-picker")
+x.a=y
+return x},
+Bqm:function(d,e){var y=new B.kgF(d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+Bqn:function(d,e){var y=new B.kgG(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+Bqo:function(d,e){var y=new B.kgH(d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+Bqp:function(d,e){var y=new B.dX0(N.v(),d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+Bqq:function(d,e){var y=new B.dX1(d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+Bqr:function(d,e){var y=new B.dX2(d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+Bqs:function(d,e){var y=new B.dX3(d,S.e(3,C.a,e))
+y.c=d.c
+return y},
+Bqt:function(){return new B.kgI(null,S.e(3,C.h,null))},
+xs1:function(){if($.o9_)return
+$.o9_=!0
+$.Y.p(0,C.jdw,C.dCA)
+E.C()
+K.bM()
+G.hv()
+Q.dc()
+N.vZ()
+N.aFw()
+R.Qg()
+Y.fT()
+O.a0b()},
+iAA:function iAA(d,e){var _=this
+_.c=_.b=_.a=_.Q=_.z=_.y=_.x=_.r=_.f=null
+_.d=d
+_.e=e},
+kgF:function kgF(d,e){var _=this
+_.c=_.b=_.a=_.db=_.cy=_.cx=_.ch=_.Q=_.z=_.y=_.x=_.r=_.f=null
+_.d=d
+_.e=e},
+kgG:function kgG(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=null
+_.d=e
+_.e=f},
+kgH:function kgH(d,e){var _=this
+_.c=_.b=_.a=_.Q=_.z=_.y=_.x=_.r=_.f=null
+_.d=d
+_.e=e},
+dX0:function dX0(d,e,f){var _=this
+_.f=d
+_.c=_.b=_.a=_.x=_.r=null
+_.d=e
+_.e=f},
+dX1:function dX1(d,e){var _=this
+_.c=_.b=_.a=_.dx=_.db=_.cy=_.cx=_.ch=_.Q=_.z=_.y=_.x=_.r=_.f=null
+_.d=d
+_.e=e},
+dX2:function dX2(d,e){var _=this
+_.c=_.b=_.a=_.fy=_.fx=_.fr=_.dy=_.dx=_.db=_.cy=_.cx=_.ch=_.Q=_.z=_.y=_.x=_.r=_.f=null
+_.d=d
+_.e=e},
+dX3:function dX3(d,e){var _=this
+_.c=_.b=_.a=_.dy=_.dx=_.db=_.cy=_.cx=_.ch=_.Q=_.z=_.y=_.x=_.r=_.f=null
+_.d=d
+_.e=e},
+kgI:function kgI(d,e){var _=this
+_.c=_.b=_.a=_.r=_.f=null
+_.d=d
+_.e=e}},S,Q={
+cfD:function(d,e,f,g){var y,x,w,v=null,u=Q.iN(v).xb(0,3),t=Q.iN(v).xb(0,-3),s=[null],r=[P.b],q=[P.h],p=[null],o=new Z.bf(v,v,new P.z(v,v,s),new P.z(v,v,r),new P.z(v,v,q),p)
+o.bl(v,v,v)
+y=new Z.bf(v,v,new P.z(v,v,s),new P.z(v,v,r),new P.z(v,v,q),p)
+y.bl(v,v,v)
+x=new Z.bf(v,v,new P.z(v,v,s),new P.z(v,v,r),new P.z(v,v,q),p)
+x.bl(v,v,v)
+w=new Z.bf(v,v,new P.z(v,v,s),new P.z(v,v,r),new P.z(v,v,q),p)
+w.bl(v,v,v)
+s=new Z.bf(v,v,new P.z(v,v,s),new P.z(v,v,r),new P.z(v,v,q),p)
+s.bl(v,v,v)
+r=H.a([],[X.b8G])
+q=$.d().n("Conversions",v,v,v,v)
+p=e.b_("PerformanceTargetEditorComponent")
+q=new Q.bcx(g.aH("AWN_CM_CAMPAIGN_PERFORMANCE_TARGET"),p,new R.Z(!0),d,u,t,o,y,x,w,s,r,C.rs,q)
+q.cQL(d,e,f,g)
+return q},
+bcx:function bcx(d,e,f,g,h,i,j,k,l,m,n,o,p,q){var _=this
+_.b=d
+_.d=e
+_.e=f
+_.f=g
+_.r=h
+_.x=i
+_.y=j
+_.z=k
+_.Q=l
+_.ch=m
+_.cx=n
+_.dx=_.db=_.cy=null
+_.dy=o
+_.fx=_.fr=null
+_.fy=p
+_.id=_.go=null
+_.k2=_.k1=!1
+_.k3=null
+_.x1=_.ry=_.rx=_.r2=_.r1=_.k4=!1
+_.aZ=_.aU=_.aX=_.al=_.af=_.aE=_.aC=_.at=_.aq=_.ar=_.an=_.am=_.y2=_.y1=_.x2=null
+_.be=!1
+_.b7=null
+_.bm=q
+_.bF=_.bt=_.bj=_.bp=null},
+hof:function hof(d){this.a=d},
+hog:function hog(d){this.a=d},
+hoh:function hoh(d){this.a=d},
+hoi:function hoi(d){this.a=d},
+hoj:function hoj(d){this.a=d},
+hoe:function hoe(d){this.a=d},
+bZn:function bZn(d,e){this.a=d
+this.b=e},
+aTJ:function aTJ(d,e,f){this.a=d
+this.b=e
+this.c=f}},K,O,N,E,D={
+cqA:function(){if($.o8Y)return
+$.o8Y=!0
+$.X.p(0,C.zL,new D.lgc())
+$.R.p(0,C.zL,C.foH)
+E.hN()
+A.aFN()
+Q.fU()
+U.cqB()
+B.cqC()
+V.bd()
+R.hb()
+E.aV()
+N.ng()
+X.c3G()
+E.C()
+E.xs()},
+lgc:function lgc(){}},U,R,A,F,Z={aaJ:function aaJ(d,e,f,g,h){var _=this
+_.a=d
+_.b=e
+_.c=f
+_.d=g
+_.e=h}},T={
+cA4:function(d,e,f,g,h,i,j,k,l,m,n){return new T.aPl(d,e,f,g,h,i,j,k,l,n.aH("AWN_CM_CAMPAIGN_PERFORMANCE_TARGET"),m)},
+aPl:function aPl(d,e,f,g,h,i,j,k,l,m,n){var _=this
+_.a=d
+_.b=e
+_.c=f
+_.d=g
+_.e=h
+_.f=i
+_.r=j
+_.x=k
+_.y=l
+_.z=m
+_.ch=n},
+hos:function hos(){},
+hoo:function hoo(){},
+hop:function hop(){},
+hoq:function hoq(){},
+hor:function hor(d){this.a=d},
+hon:function hon(){},
+doh:function doh(d,e){this.a=d
+this.b=e}},Y={cE9:function cE9(d,e){this.a=d
+this.b=e},aod:function aod(d,e,f,g,h){var _=this
+_.c=_.b=_.a=null
+_.d=!1
+_.z=_.y=_.x=_.r=_.f=_.e=null
+_.Q=!1
+_.ch=d
+_.cx=e
+_.cy=f
+_.db=g
+_.dx=h}},L
+a.setFunctionNamesIfNecessary([X,B,Q,D,Z,T,Y])
+C=c[0]
+H=c[1]
+J=c[2]
+P=c[3]
+W=c[4]
+V=c[5]
+G=c[6]
+M=c[7]
+X=a.updateHolder(c[8],X)
+B=a.updateHolder(c[9],B)
+S=c[10]
+Q=a.updateHolder(c[11],Q)
+K=c[12]
+O=c[13]
+N=c[14]
+E=c[15]
+D=a.updateHolder(c[16],D)
+U=c[17]
+R=c[18]
+A=c[19]
+F=c[20]
+Z=a.updateHolder(c[21],Z)
+T=a.updateHolder(c[22],T)
+Y=a.updateHolder(c[23],Y)
+L=c[24]
+X.b8G.prototype={
+aw:function(d,e){var y,x=this
+if(e==null)return!1
+if(x!==e)y=e instanceof X.b8G&&new H.d0(H.lu(x)).aw(0,new H.d0(H.lu(e)))&&x.a==e.a&&x.b==e.b
+else y=!0
+return y},
+gbi:function(d){var y=J.cE(this.a),x=J.cE(this.b)
+return X.mN(X.fs(X.fs(0,C.r.gbi(y)),C.r.gbi(x)))}}
+B.cEb.prototype={
+a7:function(d){return this.b},
+gbX:function(d){return this.a}}
+Q.bcx.prototype={
+sP1:function(d){var y
+this.aU=d
+y=d.a.k(6,R.oN)
+this.x1=y!=null&&y!==C.xx},
+sabb:function(d,e){var y
+if(e==null||e.gkM())this.b7=null
+else{y=e.aM(0)
+this.b7=this.am.$1(y*30.4)}},
+sa_p:function(d){var y,x=this,w=null
+if(x.b.dx&&!x.x1){switch(d){case C.hn:y=x.bm=$.d().n("Clicks",w,w,w,w)
+break
+case C.jc:y=x.bm=$.d().n("Unique users",w,w,w,w)
+break
+case C.hB:y=x.bm=$.d().n("Conversion value",w,w,w,w)
+break
+case C.h8:default:y=x.bm=$.d().n("Conversions",w,w,w,w)}x.bhR(y)}},
+sa0s:function(d){var y,x,w,v,u=this
+if(d==null)return u.al=u.af=u.aE=u.aC=u.at=u.aq=u.ar=u.an=null
+u.x2=d.a
+y=d.b
+if(y!=null)u.an=new Q.aTJ(y,Q.bkL(C.Jb,u.aX.f,0),!0)
+for(y=J.aJ(d.c);y.ao();){x=y.gav(y)
+w=x.a
+if(w===C.hn){u.ar=new Q.aTJ(x.b,Q.bkL(C.OA,u.aX.f,0),!0)
+u.aq=new Q.aTJ(x.c,Q.bkL(C.OE,u.aX.f,0),!1)}else if(w===C.h8){u.at=new Q.aTJ(x.b,Q.bkL(C.OB,u.aX.f,0),!0)
+u.aC=new Q.aTJ(x.c,Q.bkL(C.OD,u.aX.f,0),!1)}else{v=u.aX
+if(w===C.hB){u.aE=new Q.aTJ(x.b,Q.bkL(C.OC,v.f,0),!0)
+u.af=new Q.aTJ(x.c,Q.bkL(C.OF,u.aX.f,0),!1)}else u.al=new Q.aTJ(x.b,Q.bkL(C.B5,v.f,0),!1)}}},
+cQL:function(d,e,f,g){var y=this,x=null,w=$.d().n("Clicks",x,x,x,x),v=$.d().n("Conversions",x,x,x,x),u=$.d().n("Conversion value",x,x,x,x),t=$.d().n("Unique users",x,x,x,x)
+C.b.ag(y.dy,H.a([new X.b8G(w,x),new X.b8G(v,x),new X.b8G(u,x),new X.b8G(t,$.d().n("This metric is only reported for Display and Video campaigns",x,x,x,x))],[X.b8G]))
+y.fr=H.a([new Q.bZn($.d().n("Weekly",x,x,x,x),C.mS),new Q.bZn($.d().n("Monthly",x,x,x,x),C.wU),new Q.bZn($.d().n("Quarterly",x,x,x,x),C.BT),new Q.bZn($.d().n("Custom",x,x,x,x),x)],[Q.bZn])
+w=y.e
+v=y.y.c
+w.ba(new P.A(v,[H.k(v,0)]).J(0,new Q.hof(y)))
+v=y.z.c
+w.ba(new P.A(v,[H.k(v,0)]).J(0,new Q.hog(y)))
+v=y.Q.c
+w.ba(new P.A(v,[H.k(v,0)]).J(0,new Q.hoh(y)))
+v=y.cx.c
+w.ba(new P.A(v,[H.k(v,0)]).J(0,new Q.hoi(y)))},
+a8:function(){var y,x,w,v,u,t,s=this,r=null,q=s.aU.a.k(6,R.oN)
+s.fx=q
+y=s.b
+if(y.dx&&q===C.xx)s.bhR(s.bm)
+if(!y.dx)s.T7()
+s.go=O.nf(s.aU.a.K(5))
+s.id=O.nf(s.aU.a.K(2))
+if(!s.aU.a.a1(6)||J.a0(s.aU.a.K(2),C.O))s.aU.F(9,C.wU)
+q=N.os
+if(s.aU.a.k(8,q)===C.vb)s.k3=s.aU.a.k(8,q)
+else s.k3=C.BS
+s.e3a()
+switch(s.bp){case C.chH:s.r1=!0
+break
+case C.chI:s.k4=!0
+break
+case C.chJ:s.r2=!0
+break
+default:break}y=s.f.a.$0()
+x=$.rdH()
+s.y2=x.as(y)
+y.toString
+y=H.ca(H.cY(y),H.dy(y)-1,1,0,0,0,0,!1)
+if(typeof y!=="number"||Math.floor(y)!==y)H.S(H.br(y))
+s.y1=x.as(new P.b1(y,!1))
+y=s.aZ
+if(y==null){y=P.b
+x=P.B(y,[Z.bH,,])
+w=[P.x,P.b,,]
+y=new Z.zP(x,r,r,new P.z(r,r,[w]),new P.z(r,r,[y]),new P.z(r,r,[P.h]))
+y.bl(r,r,w)
+y.j1(x,r)
+s.aZ=y}x=s.y
+y.Q.p(0,"volumeTargetFormControl",x)
+x.z=y
+y=s.aZ
+x=s.z
+y.Q.p(0,"spendTargetFormControl",x)
+x.z=y
+y=s.aZ
+w=s.Q
+y.Q.p(0,"efficiencyTargetFormControl",w)
+w.z=y
+y=s.aZ
+v=s.ch
+y.Q.p(0,"dateRangeFormControl",v)
+v.z=y
+y=s.aZ
+v=s.cx
+y.Q.p(0,"periodLengthFormControl",v)
+v.z=y
+s.aZ.a=new Q.hoj(s)
+y=P.ai
+if(s.aU.a.k(1,y)!==0){s.r2=!0
+u=s.fx===C.hB?C.RY:C.a16
+t=s.aU
+w.dU(u===C.RY?t.a.k(1,y)*100:V.a4(J.kh(t.a.k(1,y))))}if(!J.a0(s.aU.a.K(7),C.O)){s.k4=!0
+s.cy=s.aU.a.K(7).aM(0)}if(s.aU.a.k(8,q)===C.vb)v.dU(Q.O5(s.go,s.id,!0))
+if(!J.a0(s.aU.a.K(3),C.O)){s.r1=!0
+s.fy=s.aU.a.k(4,A.Gy)===C.zt?C.rs:C.v0
+x.dU(s.aU.a.K(3))}},
+bhS:function(d,e){var y,x=this,w=null
+if(e)x.x1=!0
+if(d==$.d().n("Clicks",w,w,w,w))y=C.hn
+else if(d==$.d().n("Conversions",w,w,w,w))y=C.h8
+else if(d==$.d().n("Conversion value",w,w,w,w))y=C.hB
+else if(d==$.d().n("Unique users",w,w,w,w)){if(x.aU.a.k(8,N.os)===C.mS)x.bhW(C.wU)
+x.aU.ey(1)
+x.aU.ey(2)
+y=C.jc}else y=C.xx
+x.fx=y
+x.aU.F(7,y)
+x.ch.cW()},
+bhR:function(d){return this.bhS(d,!1)},
+bi1:function(d){var y,x,w=this
+w.go=d
+if(d==null){w.k1=!1
+w.aU.ey(6)
+w.aXf(null)
+w.aX9(null)}else{w.k1=!0
+y=w.aU
+x=O.FA(d)
+y.a.C(5,x)}w.ch.cW()},
+aGu:function(d){var y,x,w=this
+w.id=d
+if(d==null){w.k2=!1
+w.aU.ey(3)
+w.aXf(null)
+w.aX9(null)}else{w.k2=!0
+y=w.aU
+x=O.FA(d)
+y.a.C(2,x)}w.ch.cW()},
+fOE:function(){var y=this,x=y.go
+if(x==null||y.id==null)return
+y.cx.VV(Q.O5(x,y.id,!0),!1,!1)},
+cxa:function(d){var y
+this.bi1(d)
+y=this.cx.b
+if(y!=null)this.bXE(y)},
+bXE:function(d){var y=this
+if(y.go==null)return
+if(d==null){y.aGu(null)
+return}if(Math.abs(d)>366)d=368*C.r.gaHq(d)
+y.aGu(y.go.jq(0,d-1))},
+fxD:function(d){var y
+this.fy=d
+if(this.aU.a.a1(3)){y=this.aU
+if(d===C.rs)y.F(5,C.zt)
+else y.F(5,C.FR)}},
+bhX:function(d,e){var y,x,w=this
+if(e)w.x1=!0
+if(d==null)d=w.k3
+if(d===C.vb)w.fOE()
+w.aU.F(9,d)
+w.aU.ey(6)
+w.aU.ey(3)
+if(w.gb6A()){y=w.go
+if(y!=null){x=w.aU
+y=O.FA(y)
+x.a.C(5,y)}y=w.id
+if(y!=null){x=w.aU
+y=O.FA(y)
+x.a.C(2,y)}}w.ch.cW()},
+bhW:function(d){return this.bhX(d,!1)},
+aX9:function(d){var y,x,w=this
+if(w.z.f!=="VALID")return
+w.db=d
+y=w.aU
+if(d==null){y.ey(5)
+w.aU.ey(4)}else{y.F(5,w.fy===C.v0?C.FR:C.zt)
+y=w.aU
+x=w.db
+y.a.C(3,x)}w.aZ.cW()},
+ezQ:function(d){var y,x,w,v=this
+if(v.Q.f!=="VALID")return
+v.dx=d
+y=v.aU
+if(d==null){y.ey(1)
+v.aU.ey(2)}else{y.F(1,v.gf3F())
+y=v.aU
+x=v.fx===C.hB?C.RY:C.a16
+w=v.dx
+x=x===C.RY?J.a5I(w)/100:J.a5I(w)
+y.a.C(1,x)}v.aZ.cW()},
+aXf:function(d){var y,x,w=this
+if(w.y.f!=="VALID")return
+w.cy=d
+y=w.aU
+if(d==null)y.ey(8)
+else{x=V.a4(d)
+y.a.C(7,x)}w.aZ.cW()},
+fxw:function(d){var y=this,x=y.d
+if(d)x.ze(C.W,"SpendTargetChecked",!0)
+else x.ze(C.W,"SpendTargetUnchecked",!0)
+y.x1=!0
+y.r1=d
+if(!d){y.aU.ey(5)
+y.aU.ey(4)}y.aZ.cW()},
+fxz:function(d){var y=this,x=y.d
+if(d)x.ze(C.W,"VolumeTargetChecked",!0)
+else x.ze(C.W,"VolumeTargetUnchecked",!0)
+y.x1=!0
+y.k4=d
+if(!d)y.aU.ey(8)
+y.aZ.cW()},
+fxu:function(d){var y=this,x=y.d
+if(d)x.ze(C.W,"EfficiencyTargetChecked",!0)
+else x.ze(C.W,"EfficiencyTargetUnchecked",!0)
+y.x1=!0
+y.r2=d
+if(!d){y.aU.ey(1)
+y.aU.ey(2)}y.aZ.cW()},
+ft_:function(d){this.k3=d
+this.bhW(d)},
+f5s:function(){return this.ry=!1},
+T7:function(){this.d.ze(C.W,"ExpandEditor",!0)
+this.rx=!0},
+gaAN:function(){var y=this.fx
+return y!=null&&y!==C.xx},
+gdu:function(){return this.aX.f},
+gfR5:function(){var y,x=this,w=null,v=x.fx
+if(v===C.hn){if(x.b.dx){v=x.Mz(x.aU.a.k(8,N.os))
+y="The number of clicks "+H.o(v)
+v=H.a([v],[P.c])
+v=$.d().n(y,w,"clicksTargetTimeFrameMsg",v,w)}else v=$.d().n("Number of clicks",w,w,w,w)
+return v}else if(v===C.h8){if(x.b.dx){v=x.Mz(x.aU.a.k(8,N.os))
+y="The number of conversions "+H.o(v)
+v=H.a([v],[P.c])
+v=$.d().n(y,w,"conversionsTargetTimeFrameMsg",v,w)}else v=$.d().n("Number of conversions",w,w,w,w)
+return v}else if(v===C.hB){if(x.b.dx){v=x.Mz(x.aU.a.k(8,N.os))
+y="The total conversion value "+H.o(v)
+v=H.a([v],[P.c])
+v=$.d().n(y,w,"conversionsValueTargetTimeFrameMsg",v,w)}else v=$.d().n("Total value of conversions",w,w,w,w)
+return v}else{if(x.b.dx){v=x.Mz(x.aU.a.k(8,N.os))
+y="The number of unique users "+H.o(v)
+v=H.a([v],[P.c])
+v=$.d().n(y,w,"uniqueUsersTargetTimeFrameMsg",v,w)}else v=$.d().n("Number of unique users",w,w,w,w)
+return v}},
+gf7C:function(){var y,x=this,w=null,v=x.fx
+if(v===C.hn){if(x.b.dx){v=x.Mz(x.aU.a.k(8,N.os))
+y="The average cost per click (CPC) "+H.o(v)
+v=H.a([v],[P.c])
+v=$.d().n(y,w,"averageCpcTargetTimeFrameMsg",v,w)}else v=$.d().n("Avg CPC (cost per click)",w,w,w,w)
+return v}else if(v===C.h8){if(x.b.dx){v=x.Mz(x.aU.a.k(8,N.os))
+y="The average cost per acquisition (CPA) "+H.o(v)
+v=H.a([v],[P.c])
+v=$.d().n(y,w,"averageCpaTargetTimeFrameMsg",v,w)}else v=$.d().n("Avg CPA (cost per acquisition)",w,w,w,w)
+return v}else{if(x.b.dx){v=x.Mz(x.aU.a.k(8,N.os))
+y="The average return on advertising spend (ROAS) "+H.o(v)
+v=H.a([v],[P.c])
+v=$.d().n(y,w,"averageRoasTargetTimeFrameMsg",v,w)}else v=$.d().n("Avg ROAS (return on advertising spend)",w,w,w,w)
+return v}},
+gfnl:function(){var y=null,x=this.fx
+if(x===C.hn)return $.d().n("Clicks",y,y,y,y)
+else if(x===C.h8)return $.d().n("Conversions",y,y,y,y)
+else if(x===C.hB)return $.d().n("Conversion value",y,y,y,y)
+else if(x===C.jc)return $.d().n("Unique users",y,y,y,y)
+else return this.b.dx?$.d().n("How will you measure performance?",y,y,y,y):$.d().n("Select a metric",y,y,y,y)},
+gf3F:function(){var y=this.fx
+if(y===C.hn)return C.J8
+else if(y===C.h8)return C.J7
+else return C.Os},
+e3a:function(){this.ch.a=new Q.hoe(this)},
+etz:function(d){var y=null
+switch(d){case C.mS:return $.d().n("Weekly",y,y,y,y)
+case C.wU:return $.d().n("Monthly",y,y,y,y)
+case C.BT:return $.d().n("Quarterly",y,y,y,y)
+default:return $.d().n("Custom",y,y,y,y)}},
+Mz:function(d){var y=null,x="for the performance target's time frame"
+switch(d){case C.mS:return $.d().n("each week",y,y,y,y)
+case C.wU:return $.d().n("each month",y,y,y,y)
+case C.BT:return $.d().n("each quarter",y,y,y,y)
+case C.BS:return $.d().n(x,y,y,y,y)
+case C.vb:return $.d().n(x,y,y,y,y)
+default:return $.d().n(x,y,y,y,y)}},
+gb6A:function(){return!D.li7(this.aU)||this.aU.a.k(8,N.os)===C.vb},
+gfBe:function(){if(this.fx===C.jc){var y=this.fr
+y.toString
+return H.ne(y,1,null,H.k(y,0))}return this.fr},
+gfGg:function(){var y=null,x=this.fx
+if(x===C.hn)return $.d().n("Enter targets for clicks, spend, or average CPC across all campaigns in this campaign group",y,y,y,y)
+else if(x===C.h8)return $.d().n("Enter targets for conversions, spend, or average CPA across all campaigns in this campaign group",y,y,y,y)
+else if(x===C.hB)return $.d().n("Enter targets for total conversion value, spend, or average ROAS across all campaigns in this campaign group",y,y,y,y)
+else if(x===C.jc)return $.d().n("Enter targets for number of unique users or spend across all campaigns in this campaign group",y,y,y,y)
+return""},
+gfAG:function(){var y,x=null
+if(this.rx)return $.d().n("Select the type of performance you want to track, a time frame, and one or more specific targets",x,x,x,x)
+y=this.fx
+if(y===C.hn)return $.d().n("The targets below work best for campaigns focused on clicks.",x,x,x,x)
+else if(y===C.h8)return $.d().n("The targets below work best for campaigns focused on monthly conversions.",x,x,x,x)
+else if(y===C.hB)return $.d().n("The targets below work best for campaigns focused on conversion value.",x,x,x,x)
+else return $.d().n("The targets below work best for campaigns focused on unique users.",x,x,x,x)},
+ge2d:function(){var y,x,w,v=this,u=null,t=v.at
+if(t==null)return
+y=t.a
+y=t.b.$1(y)
+x=v.at.gLS()
+if(v.aU.a.k(8,N.os)===C.mS)switch(v.x2){case C.mc:t=v.y1
+y="During "+H.o(t)+", the average number of conversions per week was "+H.o(x)
+t=H.a([t,x],[P.c])
+return $.d().n(y,u,"_historicalConversionsLastMonthWeeklyAverage",t,u)
+case C.nK:t="Over the past 3 months, the average number of conversions per week was "+H.o(x)
+y=H.a([x],[P.c])
+return $.d().n(t,u,"_historicalConversionsThreeMonthWeeklyAverage",y,u)
+case C.nL:t=v.y2
+y="In "+H.o(t)+" of last year, the average number of conversions per week was "+H.o(x)
+t=H.a([t,x],[P.c])
+return $.d().n(y,u,"_historicalConversionsSameMonthLastYearWeeklyAverage",t,u)
+default:return}else switch(v.x2){case C.mc:t=v.y1
+w="The number of conversions in "+H.o(t)+" was "+H.o(y)
+y=H.a([t,y],[P.c])
+return $.d().n(w,u,"_historicalConversionsLastMonth",y,u)
+case C.nK:t="Over the past 3 months, the average number of conversions per month was "+H.o(y)
+y=H.a([y],[P.c])
+return $.d().n(t,u,"_historicalConversionsThreeMonthAverage",y,u)
+case C.nL:t=v.y2
+w="In "+H.o(t)+" of last year, the number of conversions was "+H.o(y)
+y=H.a([t,y],[P.c])
+return $.d().n(w,u,"_historicalConversionsSameMonthLastYear",y,u)
+default:return}},
+ge2h:function(){var y,x,w,v=this,u=null,t=v.al
+if(t==null)return
+y=t.a
+y=t.b.$1(y)
+x=v.al.gLS()
+if(v.aU.a.k(8,N.os)===C.mS)switch(v.x2){case C.mc:t=v.y1
+y="During "+H.o(t)+", the average number of unique users per week was "+H.o(x)
+t=H.a([t,x],[P.c])
+return $.d().n(y,u,"_historicalUniqueUsersLastMonthWeeklyAverage",t,u)
+case C.nK:t="Over the past 3 months, the average number of unique users per week was "+H.o(x)
+y=H.a([x],[P.c])
+return $.d().n(t,u,"_historicalUniqueUsersThreeMonthWeeklyAverage",y,u)
+case C.nL:t=v.y2
+y="In "+H.o(t)+" of last year, the average number of unique users per week was "+H.o(x)
+t=H.a([t,x],[P.c])
+return $.d().n(y,u,"_historicalUniqueUsersSameMonthLastYearWeeklyAverage",t,u)
+default:return}else switch(v.x2){case C.mc:t=v.y1
+w="The number of unique users in "+H.o(t)+" was "+H.o(y)
+y=H.a([t,y],[P.c])
+return $.d().n(w,u,"_historicalUniqueUsersLastMonth",y,u)
+case C.nK:t="Over the past 3 months, the average number of unique users per month was "+H.o(y)
+y=H.a([y],[P.c])
+return $.d().n(t,u,"_historicalUniqueUsersThreeMonthAverage",y,u)
+case C.nL:t=v.y2
+w="In "+H.o(t)+" of last year, the number of unique users was "+H.o(y)
+y=H.a([t,y],[P.c])
+return $.d().n(w,u,"_historicalUniqueUsersSameMonthLastYear",y,u)
+default:return}},
+ge2b:function(){var y,x,w,v=this,u=null,t=v.ar
+if(t==null)return
+y=t.a
+y=t.b.$1(y)
+x=v.ar.gLS()
+if(v.aU.a.k(8,N.os)===C.mS)switch(v.x2){case C.mc:t=v.y1
+y="During "+H.o(t)+", the average number of clicks per week was "+H.o(x)
+t=H.a([t,x],[P.c])
+return $.d().n(y,u,"_historicalClicksLastMonthWeeklyAverage",t,u)
+case C.nK:t="Over the past 3 months, the average number of clicks per week was "+H.o(x)
+y=H.a([x],[P.c])
+return $.d().n(t,u,"_historicalClicksThreeMonthWeeklyAverage",y,u)
+case C.nL:t=v.y2
+y="In "+H.o(t)+" of last year, the average number of clicks per week was "+H.o(x)
+t=H.a([t,x],[P.c])
+return $.d().n(y,u,"_historicalClicksSameMonthLastYearWeeklyAverage",t,u)
+default:return}else switch(v.x2){case C.mc:t=v.y1
+w="The number of clicks in "+H.o(t)+" was "+H.o(y)
+y=H.a([t,y],[P.c])
+return $.d().n(w,u,"_historicalClicksLastMonth",y,u)
+case C.nK:t="Over the past 3 months, the average number of clicks per month was "+H.o(y)
+y=H.a([y],[P.c])
+return $.d().n(t,u,"_historicalClicksThreeMonthAverage",y,u)
+case C.nL:t=v.y2
+w="In "+H.o(t)+" of last year, the number of clicks was "+H.o(y)
+y=H.a([t,y],[P.c])
+return $.d().n(w,u,"_historicalClicksSameMonthLastYear",y,u)
+default:return}},
+ge2c:function(){var y,x,w,v=this,u=null,t=v.aE
+if(t==null)return
+y=t.a
+y=t.b.$1(y)
+x=v.aE.gLS()
+if(v.aU.a.k(8,N.os)===C.mS)switch(v.x2){case C.mc:t=v.y1
+y="During "+H.o(t)+", the average conversion value per week was "+H.o(x)
+t=H.a([t,x],[P.c])
+return $.d().n(y,u,"_historicalConversionValueLastMonthWeeklyAverage",t,u)
+case C.nK:t="Over the past 3 months, the average conversion value per week was "+H.o(x)
+y=H.a([x],[P.c])
+return $.d().n(t,u,"_historicalConversionValueThreeMonthWeeklyAverage",y,u)
+case C.nL:t=v.y2
+y="In "+H.o(t)+" of last year, the average conversion value per week was "+H.o(x)
+t=H.a([t,x],[P.c])
+return $.d().n(y,u,"_historicalConversionValueSameMonthLastYearWeeklyAverage",t,u)
+default:return}else switch(v.x2){case C.mc:t=v.y1
+w="The total conversion value in "+H.o(t)+" was "+H.o(y)
+y=H.a([t,y],[P.c])
+return $.d().n(w,u,"_historicalConversionValueLastMonth",y,u)
+case C.nK:t="Over the past 3 months, the average conversion value per month was "+H.o(y)
+y=H.a([y],[P.c])
+return $.d().n(t,u,"_historicalConversionValueThreeMonthAverage",y,u)
+case C.nL:t=v.y2
+w="In "+H.o(t)+" of last year, the total conversion value was "+H.o(y)
+y=H.a([t,y],[P.c])
+return $.d().n(w,u,"_historicalConversionValueSameMonthLastYear",y,u)
+default:return}},
+ge2g:function(){var y,x,w,v=this,u=null,t=v.af
+if(t==null)return
+y=t.a
+y=t.b.$1(y)
+x=v.af.gLS()
+if(v.aU.a.k(8,N.os)===C.mS)switch(v.x2){case C.mc:t=v.y1
+y="During "+H.o(t)+", the average weekly ROAS was "+H.o(x)
+t=H.a([t,x],[P.c])
+return $.d().n(y,u,"_historicalRoasLastMonthWeeklyAverage",t,u)
+case C.nK:t="Over the past 3 months, the average weekly ROAS was "+H.o(x)
+y=H.a([x],[P.c])
+return $.d().n(t,u,"_historicalRoasThreeMonthWeeklyAverage",y,u)
+case C.nL:t=v.y2
+y="In "+H.o(t)+" of last year, the average weekly ROAS was "+H.o(x)
+t=H.a([t,x],[P.c])
+return $.d().n(y,u,"_historicalRoasSameMonthLastYearWeeklyAverage",t,u)
+default:return}else switch(v.x2){case C.mc:t=v.y1
+w="The ROAS in "+H.o(t)+" was "+H.o(y)
+y=H.a([t,y],[P.c])
+return $.d().n(w,u,"_historicalRoasLastMonth",y,u)
+case C.nK:t="Over the past 3 months, the ROAS was "+H.o(y)
+y=H.a([y],[P.c])
+return $.d().n(t,u,"_historicalRoasThreeMonthAverage",y,u)
+case C.nL:t=v.y2
+w="In "+H.o(t)+" of last year, the ROAS was "+H.o(y)
+y=H.a([t,y],[P.c])
+return $.d().n(w,u,"_historicalRoasSameMonthLastYear",y,u)
+default:return}},
+ge2f:function(){var y,x,w,v=this,u=null,t=v.aq
+if(t==null)return
+y=t.a
+y=t.b.$1(y)
+x=v.aq.gLS()
+if(v.aU.a.k(8,N.os)===C.mS)switch(v.x2){case C.mc:t=v.y1
+y="During "+H.o(t)+", the average weekly CPC was "+H.o(x)
+t=H.a([t,x],[P.c])
+return $.d().n(y,u,"_historicalCpcLastMonthWeeklyAverage",t,u)
+case C.nK:t="Over the past 3 months, the average weekly CPC was "+H.o(x)
+y=H.a([x],[P.c])
+return $.d().n(t,u,"_historicalCpcThreeMonthWeeklyAverage",y,u)
+case C.nL:t=v.y2
+y="In "+H.o(t)+" of last year, the average weekly CPC was "+H.o(x)
+t=H.a([t,x],[P.c])
+return $.d().n(y,u,"_historicalCpcSameMonthLastYearWeeklyAverage",t,u)
+default:return}else switch(v.x2){case C.mc:t=v.y1
+w="The average CPC in "+H.o(t)+" was "+H.o(y)
+y=H.a([t,y],[P.c])
+return $.d().n(w,u,"_historicalCpcLastMonth",y,u)
+case C.nK:t="Over the past 3 months, the average CPC was "+H.o(y)
+y=H.a([y],[P.c])
+return $.d().n(t,u,"_historicalCpcThreeMonthAverage",y,u)
+case C.nL:t=v.y2
+w="In "+H.o(t)+" of last year, the average CPC was "+H.o(y)
+y=H.a([t,y],[P.c])
+return $.d().n(w,u,"_historicalCpcSameMonthLastYear",y,u)
+default:return}},
+ge2e:function(){var y,x,w,v=this,u=null,t=v.aC
+if(t==null)return
+y=t.a
+y=t.b.$1(y)
+x=v.aC.gLS()
+if(v.aU.a.k(8,N.os)===C.mS)switch(v.x2){case C.mc:t=v.y1
+y="During "+H.o(t)+", the average weekly CPA was "+H.o(x)
+t=H.a([t,x],[P.c])
+return $.d().n(y,u,"_historicalCpaLastMonthWeeklyAverage",t,u)
+case C.nK:t="Over the past 3 months, the average weekly CPA was "+H.o(x)
+y=H.a([x],[P.c])
+return $.d().n(t,u,"_historicalCpaThreeMonthWeeklyAverage",y,u)
+case C.nL:t=v.y2
+y="In "+H.o(t)+" of last year, the average weekly CPA was "+H.o(x)
+t=H.a([t,x],[P.c])
+return $.d().n(y,u,"_historicalCpaSameMonthLastYearWeeklyAverage",t,u)
+default:return}else switch(v.x2){case C.mc:t=v.y1
+w="The average CPA in "+H.o(t)+" was "+H.o(y)
+y=H.a([t,y],[P.c])
+return $.d().n(w,u,"_historicalCpaLastMonth",y,u)
+case C.nK:t="Over the past 3 months, the average CPA was "+H.o(y)
+y=H.a([y],[P.c])
+return $.d().n(t,u,"_historicalCpaThreeMonthAverage",y,u)
+case C.nL:t=v.y2
+w="In "+H.o(t)+" of last year, the average CPA was "+H.o(y)
+y=H.a([t,y],[P.c])
+return $.d().n(w,u,"_historicalCpaSameMonthLastYear",y,u)
+default:return}},
+gccG:function(){var y=this
+switch(y.fx){case C.hn:return y.ge2f()
+case C.hB:return y.ge2g()
+case C.jc:return
+case C.h8:return y.ge2e()
+default:return}},
+gccI:function(){var y=this
+switch(y.fx){case C.hn:return y.ge2b()
+case C.hB:return y.ge2c()
+case C.jc:return y.ge2h()
+case C.h8:return y.ge2d()
+default:return}},
+gccH:function(){var y,x,w,v=this,u=null,t=v.an
+if(t==null)return
+y=t.a
+y=t.b.$1(y)
+x=v.an.gLS()
+if(v.aU.a.k(8,N.os)===C.mS)switch(v.x2){case C.mc:t=v.y1
+y="During "+H.o(t)+", the average weekly spend was "+H.o(x)
+t=H.a([t,x],[P.c])
+return $.d().n(y,u,"_historicalSpendLastMonthWeeklyAverage",t,u)
+case C.nK:t="Over the past 3 months, the average spend per week was "+H.o(x)
+y=H.a([x],[P.c])
+return $.d().n(t,u,"_historicalSpendThreeMonthWeeklyAverage",y,u)
+case C.nL:t=v.y2
+y="In "+H.o(t)+" of last year, the average weekly spend was "+H.o(x)
+t=H.a([t,x],[P.c])
+return $.d().n(y,u,"_historicalSpendSameMonthLastYearWeeklyAverage",t,u)
+default:return}else switch(v.x2){case C.mc:t=v.y1
+w="The total spend in "+H.o(t)+" was "+H.o(y)
+y=H.a([t,y],[P.c])
+return $.d().n(w,u,"_historicalSpendLastMonth",y,u)
+case C.nK:t="Over the past 3 months, the average spend per month was "+H.o(y)
+y=H.a([y],[P.c])
+return $.d().n(t,u,"_historicalSpendThreeMonthAverage",y,u)
+case C.nL:t=v.y2
+w="In "+H.o(t)+" of last year, the total spend was "+H.o(y)
+y=H.a([t,y],[P.c])
+return $.d().n(w,u,"_historicalSpendSameMonthLastYear",y,u)
+default:return}},
+gdv3:function(){switch(this.fx){case C.hn:return"9227055"
+case C.hB:return"9227160"
+case C.jc:return
+case C.h8:default:return"9210152"}},
+gdv4:function(){switch(this.fx){case C.hn:return"9227055"
+case C.hB:return"9227160"
+case C.jc:return
+case C.h8:default:return"9210152"}},
+geQD:function(){switch(this.fx){case C.hn:return"9230836"
+case C.hB:return"9210153"
+case C.jc:return"9227161"
+case C.h8:default:return"9210153"}},
+geQE:function(){switch(this.fx){case C.hn:return"9230836"
+case C.hB:return"9210153"
+case C.jc:return"9227161"
+case C.h8:default:return"9210153"}},
+gc4j:function(){var y,x=this.b7
+if(x==null)x=null
+else{y="Your daily budget adds up to "+x+" per month"
+x=H.a([x],[P.c])
+x=$.d().n(y,null,"budgetPerMonth",x,null)}return x},
+gm5:function(){return this.x},
+gfl:function(){return this.dy},
+gds:function(){return this.rx}}
+Q.bZn.prototype={
+gae:function(d){return this.b}}
+Q.aTJ.prototype={
+gLS:function(){var y=this.a,x=this.b
+return this.c?x.$1(y*0.23026315789473686):x.$1(y)},
+gae:function(d){return this.a}}
+X.itQ.prototype={
+m:function(){var y,x=this,w="\n    ",v=x.ad(),u=document,t=T.q(u,v)
+x.t(t,"editor")
+x.i(t)
+T.f(t,"\n  ")
+y=T.q(u,t)
+x.cx=y
+x.i(y)
+T.f(x.cx,w)
+y=x.f=new V.i(4,2,x,T.p(x.cx))
+x.r=new K.r(new D.l(y,X.yfV()),y)
+T.f(x.cx,w)
+y=x.x=new V.i(6,2,x,T.p(x.cx))
+x.y=new K.r(new D.l(y,X.yg5()),y)
+T.f(x.cx,w)
+y=x.z=new V.i(8,2,x,T.p(x.cx))
+x.Q=new K.r(new D.l(y,X.ygd()),y)
+T.f(x.cx,"\n  ")
+T.f(t,"\n")
+T.f(v,"\n")
+x.au()},
+q:function(){var y,x,w,v=this,u=v.b
+v.r.sH(u.ry)
+v.y.sH(!u.ry)
+y=v.Q
+x=u.b
+y.sH(x.dx)
+v.f.E()
+v.x.E()
+v.z.E()
+w=x.dx
+y=v.ch
+if(y!==w){T.aB(v.cx,"row",w)
+v.ch=w}},
+A:function(){this.f.D()
+this.x.D()
+this.z.D()}}
+X.jVS.prototype={
+m:function(){var y,x,w,v,u,t,s,r,q=this,p="\n        ",o=q.b,n=document,m=n.createElement("div")
+q.ch=m
+q.i(m)
+T.f(q.ch,"\n      ")
+m=U.Bl(q,2)
+q.x=m
+y=m.a
+q.ch.appendChild(y)
+q.i(y)
+q.y=new T.ve(C.h0)
+x=T.H(p)
+w=n.createElement("div")
+q.t(w,"move-campaign-message")
+q.i(w)
+w.appendChild(q.f.b)
+v=T.H(p)
+m=n.createElement("div")
+q.cx=m
+T.m(m,"buttonDecorator","")
+q.t(q.cx,"link-style show-editor-link")
+T.m(q.cx,"keyboardOnlyFocusIndicator","")
+q.i(q.cx)
+m=q.cx
+q.z=new R.c9(T.cd(m,null,!1,!0))
+T.f(m,"\n          ")
+q.cx.appendChild(q.r.b)
+T.f(q.cx,p)
+u=T.H("\n      ")
+m=[P.c]
+q.x.L(0,q.y,H.a([H.a([x,w,v,q.cx,u],[W.b5])],m))
+T.f(q.ch,"\n    ")
+t=q.cx
+s=W.ak;(t&&C.p).a9(t,"click",q.O(q.z.b.gcb(),s,W.bv))
+t=q.cx;(t&&C.p).a9(t,"keypress",q.O(q.z.b.gc_(),s,W.aQ))
+s=q.z.b.b
+r=new P.A(s,[H.k(s,0)]).J(0,q.a4(o.gf5r(),W.ah))
+q.a3(H.a([q.ch],m),H.a([r],[[P.I,-1]]))},
+N:function(d,e,f){if(d===C.t&&7<=e&&e<=10)return this.z.b
+return f},
+q:function(){var y,x,w,v,u=this,t=null,s=u.b
+if(u.e.cx===0){u.y.a=C.qs
+y=!0}else y=!1
+if(y)u.x.e.sV(1)
+x=s.b.dx
+w=u.Q
+if(w!==x){T.aB(u.ch,"inner-column",x)
+u.Q=x}w=s.bF
+v="Changing to a campaign target means you are removing this campaign from "+H.o(w)+" and its targets."
+w=H.a([w],[P.c])
+w=$.d().n(v,t,"_removingCampaignFromGroupMessage",w,t)
+if(w==null)w=""
+u.f.M(w)
+u.z.b6(u,u.cx)
+w=$.d().n("SET CAMPAIGN TARGET",t,t,t,t)
+if(w==null)w=""
+u.r.M(w)
+u.x.u()},
+A:function(){this.x.v()}}
+X.jW1.prototype={
+m:function(){var y=this,x="\n      ",w=document.createElement("div")
+y.dy=w
+y.i(w)
+T.f(y.dy,x)
+w=y.f=new V.i(2,0,y,T.p(y.dy))
+y.r=new K.r(new D.l(w,X.yge()),w)
+T.f(y.dy,x)
+T.f(y.dy,x)
+w=y.x=new V.i(5,0,y,T.p(y.dy))
+y.y=new K.r(new D.l(w,X.ygg()),w)
+T.f(y.dy,x)
+T.f(y.dy,x)
+w=y.z=new V.i(8,0,y,T.p(y.dy))
+y.Q=new K.r(new D.l(w,X.yfX()),w)
+T.f(y.dy,x)
+T.f(y.dy,x)
+w=y.ch=new V.i(11,0,y,T.p(y.dy))
+y.cx=new K.r(new D.l(w,X.yg2()),w)
+T.f(y.dy,x)
+w=y.cy=new V.i(13,0,y,T.p(y.dy))
+y.db=new K.r(new D.l(w,X.ygc()),w)
+T.f(y.dy,"\n    ")
+y.G(y.dy)},
+q:function(){var y,x=this,w=x.b,v=x.r,u=w.b
+v.sH(u.dx)
+x.y.sH(w.rx)
+v=x.Q
+v.sH(w.gaAN()&&w.rx)
+x.cx.sH(w.gaAN())
+v=x.db
+v.sH(u.dx&&!w.be&&w.bj!=null)
+x.f.E()
+x.x.E()
+x.z.E()
+x.ch.E()
+x.cy.E()
+y=u.dx
+v=x.dx
+if(v!==y){T.aB(x.dy,"inner-column",y)
+x.dx=y}},
+A:function(){var y=this
+y.f.D()
+y.x.D()
+y.z.D()
+y.ch.D()
+y.cy.D()}}
+X.jWa.prototype={
+m:function(){var y,x=this,w="\n        ",v=document.createElement("div")
+x.t(v,"section performance-targets-msg")
+x.i(v)
+T.f(v,w)
+v.appendChild(x.f.b)
+T.f(v,w)
+y=x.r=new V.i(4,0,x,T.p(v))
+x.x=new K.r(new D.l(y,X.ygf()),y)
+T.f(v,"\n      ")
+x.G(v)},
+q:function(){var y,x=this,w=x.b
+x.x.sH(!w.rx)
+x.r.E()
+y=w.gfAG()
+if(y==null)y=""
+x.f.M(y)},
+A:function(){this.r.D()}}
+X.jWb.prototype={
+m:function(){var y,x,w=this,v=w.b,u=document.createElement("div")
+w.x=u
+T.m(u,"buttonDecorator","")
+w.t(w.x,"link-style switch-link")
+T.m(w.x,"keyboardOnlyFocusIndicator","")
+w.i(w.x)
+u=w.x
+w.r=new R.c9(T.cd(u,null,!1,!0))
+T.f(u,"\n          ")
+w.x.appendChild(w.f.b)
+T.f(w.x,"\n        ")
+u=w.x
+y=W.ak;(u&&C.p).a9(u,"click",w.O(w.r.b.gcb(),y,W.bv))
+u=w.x;(u&&C.p).a9(u,"keypress",w.O(w.r.b.gc_(),y,W.aQ))
+y=w.r.b.b
+x=new P.A(y,[H.k(y,0)]).J(0,w.a4(v.gacq(),W.ah))
+w.a3(H.a([w.x],[P.c]),H.a([x],[[P.I,-1]]))},
+N:function(d,e,f){if(d===C.t&&e<=3)return this.r.b
+return f},
+q:function(){var y,x=this,w=null,v=x.b
+x.r.b6(x,x.x)
+v.toString
+y=$.d().n("Set different targets",w,w,w,w)
+if(y==null)y=""
+x.f.M(y)}}
+X.jWc.prototype={
+m:function(){var y,x,w,v,u,t,s=this,r=null,q="\n        ",p="\n          ",o="\n            ",n=document,m=n.createElement("div")
+s.t(m,"section")
+s.i(m)
+T.f(m,q)
+y=s.f=new V.i(2,0,s,T.p(m))
+s.r=new K.r(new D.l(y,X.ygh()),y)
+T.f(m,q)
+x=T.q(n,m)
+s.t(x,"row")
+s.i(x)
+T.f(x,p)
+y=T.q(n,x)
+s.fy=y
+s.t(y,"edit")
+s.i(s.fy)
+T.f(s.fy,o)
+y=Y.eE(s,8,r)
+s.x=y
+y=y.a
+s.go=y
+s.fy.appendChild(y)
+T.m(s.go,"id","metric-select")
+s.i(s.go)
+y=s.d.d
+w=y.d
+y=y.e.z
+y=M.eD(w.l(C.a3,y),w.l(C.P,y),w.l(C.aD,y),r,r,s.x,s.go,r)
+s.y=y
+v=T.H("\n              ")
+w=s.Q=new V.i(10,8,s,T.ao())
+s.ch=new R.aG(w,new D.l(w,X.ygi()))
+u=T.H(o)
+t=[P.c]
+s.x.L(0,y,H.a([C.c,C.c,C.c,H.a([v,w,u],t),C.c,C.c],t))
+T.f(s.fy,o)
+t=s.cx=new V.i(13,6,s,T.p(s.fy))
+s.cy=new K.r(new D.l(t,X.ygk()),t)
+T.f(s.fy,p)
+T.f(x,p)
+t=s.db=new V.i(16,4,s,T.p(x))
+s.dx=new K.r(new D.l(t,X.yfW()),t)
+T.f(x,q)
+T.f(m,"\n      ")
+s.G(m)},
+N:function(d,e,f){var y,x=this
+if(8<=e&&e<=11){if(d===C.aY&&8===e){y=x.z
+return y==null?x.z=x.y.x:y}if(d===C.b0||d===C.a7||d===C.aO||d===C.j||d===C.ae||d===C.E||d===C.aS||d===C.P)return x.y}return f},
+q:function(){var y,x,w,v,u,t=this,s=t.b,r=t.e.cx
+t.r.sH(s.gaAN())
+y=s.gfnl()
+x=t.fx
+if(x!=y){t.fx=t.y.al$=y
+w=!0}else w=!1
+if(w)t.y.ax()
+if(r===0)t.ch.saT(s.dy)
+t.ch.aG()
+t.cy.sH(s.fx===C.jc)
+r=t.dx
+x=s.b
+r.sH(!x.dx)
+t.f.E()
+t.Q.E()
+t.cx.E()
+t.db.E()
+v=!x.dx
+r=t.dy
+if(r!==v){T.aB(t.fy,"inner-column",v)
+t.dy=v}u=s.gaAN()
+r=t.fr
+if(r!==u){T.bj(t.go,"selected",u)
+t.fr=u}t.x.u()},
+A:function(){var y=this
+y.f.D()
+y.Q.D()
+y.cx.D()
+y.db.D()
+y.x.v()
+y.y.aa()}}
+X.jWd.prototype={
+m:function(){var y=this,x=document.createElement("div")
+y.t(x,"label")
+y.i(x)
+x.appendChild(y.f.b)
+y.G(x)},
+q:function(){var y=null,x=this.b.b.dx?$.d().n("How will you measure performance?",y,y,y,y):$.d().n("Select a metric",y,y,y,y)
+if(x==null)x=""
+this.f.M(x)}}
+X.dV_.prototype={
+m:function(){var y,x,w,v,u,t,s,r,q=this,p=null,o="\n                ",n=O.Af(q,0,p)
+q.r=n
+y=n.a
+T.m(y,"tooltipTarget","")
+q.i(y)
+q.x=new V.i(0,p,q,y)
+n=q.d
+x=n.y
+n=n.d.d
+w=n.d
+n=n.e.z
+x=F.A2(y,p,x,x,w.l(C.a3,n),q.r,p)
+q.y=x
+n=w.j(C.z,n)
+x=q.x
+w=q.r
+n=new A.jQ(new P.a1(p,p,[P.h]),w,x,y,n,E.hg(p,!0),y,p,p,C.av,C.av)
+n.k4=new T.ip(n.gfs(),C.bM)
+n.af=y
+q.z=n
+v=T.H(o)
+u=T.H(o)
+n=q.Q=new V.i(4,0,q,T.ao())
+q.ch=new K.r(new D.l(n,X.ygj()),n)
+t=T.H("\n              ")
+x=[P.c]
+q.r.L(0,q.y,H.a([H.a([v,q.f.b,u,n,t],x)],x))
+n=W.ak
+w=J.aF(y)
+w.a9(y,"click",q.a4(q.z.gij(),n))
+s=q.z
+w.a9(y,"mouseover",q.a4(s.geW(s),n))
+s=q.z
+w.a9(y,"mouseleave",q.a4(s.gdv(s),n))
+s=q.z
+w.a9(y,"blur",q.O(s.ger(s),n,W.db))
+s=q.z
+w.a9(y,"focus",q.a4(s.gdk(s),n))
+n=q.y.b
+s=W.ah
+r=new P.A(n,[H.k(n,0)]).J(0,q.O(q.gaVn(),s,s))
+q.a3(H.a([q.x],x),H.a([r],[[P.I,-1]]))},
+N:function(d,e,f){if((d===C.d1||d===C.ae)&&e<=5)return this.y
+return f},
+q:function(){var y=this,x=y.e,w=x.cx===0,v=x.b.w(0,"$implicit")
+y.ch.sH(v.b!=null)
+y.x.E()
+y.Q.E()
+y.r.a6(w)
+x=v.a
+if(x==null)x=""
+y.f.M(x)
+y.r.u()
+if(w)y.z.ap()},
+A:function(){var y=this
+y.x.D()
+y.Q.D()
+y.r.v()
+y.y.Q.X()
+y.z.af=null},
+aVo:function(d){var y=this.e.b.w(0,"$implicit")
+this.b.bhS(y.a,!0)}}
+X.jWe.prototype={
+m:function(){var y,x,w,v,u=this,t=E.iz(u,0)
+u.r=t
+y=t.a
+u.Y(y,"metricTooltip")
+u.i(y)
+t=u.d.d.d.d
+x=t.d
+t=t.e.z
+t=G.dt(x.l(C.S,t),x.l(C.ab,t))
+u.x=t
+x=u.r
+y.toString
+t=new Q.h3(Q.h9(null,new W.fZ(y)),C.bC,new P.z(null,null,[P.h]),t,x)
+u.y=t
+w=T.H("\n                  ")
+v=T.H("\n                ")
+u.r.L(0,t,H.a([C.c,H.a([w,u.f.b,v],[W.b3]),C.c],[P.c]))
+u.G(y)},
+N:function(d,e,f){var y,x=this
+if(e<=3){if(d===C.S)return x.x
+if(d===C.bF||d===C.E)return x.y
+if(d===C.bJ){y=x.z
+return y==null?x.z=x.y.gfS():y}}return f},
+q:function(){var y,x=this,w=x.b,v=x.d,u=v.z,t=v.e.b.w(0,"$implicit")
+w.toString
+v=x.Q
+if(v!==C.ix){x.Q=x.y.c=C.ix
+y=!0}else y=!1
+v=x.ch
+if(v!=u){x.y.sfH(u)
+x.ch=u
+y=!0}if(y)x.r.e.sV(1)
+v=t.b
+if(v==null)v=""
+x.f.M(v)
+x.r.u()},
+A:function(){this.r.v()}}
+X.jWf.prototype={
+m:function(){var y,x,w=this,v="\n              ",u=document.createElement("div")
+w.t(u,"error-label")
+w.i(u)
+T.f(u,v)
+y=M.aU(w,2)
+w.r=y
+x=y.a
+u.appendChild(x)
+w.Y(x,"info-icon")
+T.m(x,"icon","info")
+T.m(x,"size","large")
+w.i(x)
+y=new Y.aR(x)
+w.x=y
+w.r.P(y)
+T.f(u,v)
+u.appendChild(w.f.b)
+T.f(u,"\n            ")
+w.G(u)},
+q:function(){var y,x,w=this,v=null,u=w.b
+if(w.e.cx===0){w.x.saL(0,"info")
+y=!0}else y=!1
+if(y)w.r.e.sV(1)
+u.toString
+x=$.d().n("This metric is only reported for Display and Video campaigns",v,v,v,v)
+if(x==null)x=""
+w.f.M(x)
+w.r.u()},
+A:function(){this.r.v()}}
+X.jVT.prototype={
+m:function(){var y=this,x=document.createElement("div")
+y.t(x,"tips")
+y.i(x)
+T.f(x,"\n            ")
+x.appendChild(y.f.b)
+T.f(x,"\n          ")
+y.G(x)},
+q:function(){var y,x=null
+this.b.toString
+y=$.d().n("Choose how to measure performance",x,x,x,x)
+if(y==null)y=""
+this.f.M(y)}}
+X.jVU.prototype={
+m:function(){var y,x,w,v,u,t,s,r,q,p,o,n,m=this,l=null,k="\n        ",j="\n          ",i="\n            ",h=document,g=h.createElement("div")
+m.t(g,"section")
+m.i(g)
+T.f(g,k)
+y=T.q(h,g)
+m.t(y,"row")
+m.i(y)
+T.f(y,j)
+x=T.q(h,y)
+m.k2=x
+m.t(x,"edit")
+m.i(m.k2)
+T.f(m.k2,i)
+w=T.q(h,m.k2)
+m.t(w,"label")
+m.i(w)
+w.appendChild(m.f.b)
+T.f(m.k2,i)
+T.f(m.k2,i)
+x=Y.eE(m,10,l)
+m.r=x
+v=x.a
+m.k2.appendChild(v)
+m.Y(v,"selected")
+T.m(v,"id","recurrence-symbol")
+T.m(v,"tooltipTarget","")
+m.i(v)
+m.x=new V.i(10,4,m,v)
+x=m.d.d
+u=x.d
+x=x.e.z
+t=M.eD(u.l(C.a3,x),u.l(C.P,x),u.l(C.aD,x),l,l,m.r,v,l)
+m.y=t
+x=u.j(C.z,x)
+u=m.x
+t=m.r
+x=new A.jQ(new P.a1(l,l,[P.h]),t,u,v,x,E.hg(l,!0),v,l,l,C.av,C.av)
+x.k4=new T.ip(x.gfs(),C.bM)
+x.af=v
+m.z=x
+s=T.H("\n              ")
+x=m.ch=new V.i(12,10,m,T.ao())
+m.cx=new R.aG(x,new D.l(x,X.yfY()))
+r=T.H(i)
+u=[P.c]
+m.r.L(0,m.y,H.a([C.c,C.c,C.c,H.a([s,x,r],u),C.c,C.c],u))
+T.f(m.k2,i)
+x=m.cy=new V.i(15,4,m,T.p(m.k2))
+m.db=new K.r(new D.l(x,X.yfZ()),x)
+T.f(m.k2,i)
+x=D.iS(m,17)
+m.dx=x
+q=x.a
+m.k2.appendChild(q)
+m.Y(q,"error-label")
+m.i(q)
+x=new G.i2([])
+m.dy=x
+m.dx.P(x)
+T.f(m.k2,i)
+m.dP(m.k2,0)
+T.f(m.k2,j)
+T.f(y,j)
+x=m.fr=new V.i(22,2,m,T.p(y))
+m.fx=new K.r(new D.l(x,X.yg1()),x)
+T.f(y,k)
+T.f(g,"\n      ")
+x=W.ak
+t=J.aF(v)
+t.a9(v,"click",m.a4(m.z.gij(),x))
+p=m.z
+t.a9(v,"mouseover",m.a4(p.geW(p),x))
+p=m.z
+t.a9(v,"mouseleave",m.a4(p.gdv(p),x))
+x=m.y.r2
+p=m.z
+t=W.db
+o=new P.A(x,[H.k(x,0)]).J(0,m.a4(p.gdk(p),t))
+p=m.y.rx
+x=m.z
+n=new P.A(p,[H.k(p,0)]).J(0,m.O(x.ger(x),t,t))
+m.a3(H.a([g],u),H.a([o,n],[[P.I,-1]]))},
+N:function(d,e,f){var y,x=this
+if(10<=e&&e<=13){if(d===C.aY&&10===e){y=x.Q
+return y==null?x.Q=x.y.x:y}if(d===C.b0||d===C.a7||d===C.aO||d===C.j||d===C.ae||d===C.E||d===C.aS||d===C.P)return x.y}if(d===C.bN&&17<=e&&e<=18)return x.dy
+return f},
+q:function(){var y,x,w,v,u,t=this,s=null,r=t.b,q=t.e.cx,p=r.etz(r.aU.a.k(8,N.os)),o=t.go
+if(o!=p){t.go=t.y.al$=p
+y=!0}else y=!1
+if(y)t.y.ax()
+x=r.gfBe()
+o=t.id
+if(o==null?x!=null:o!==x){t.cx.saT(x)
+t.id=x}t.cx.aG()
+t.db.sH(r.gb6A())
+w=r.ch
+o=t.k1
+if(o!==w)t.k1=t.dy.a=w
+o=t.fx
+v=r.b
+o.sH(!v.dx)
+t.x.E()
+t.ch.E()
+t.cy.E()
+t.fr.E()
+u=!v.dx
+o=t.fy
+if(o!==u){T.aB(t.k2,"inner-column",u)
+t.fy=u}o=v.dx?$.d().n("What time frame are you measuring performance for?",s,s,s,s):$.d().n("Date range",s,s,s,s)
+if(o==null)o=""
+t.f.M(o)
+t.r.u()
+t.dx.u()
+if(q===0)t.z.ap()},
+A:function(){var y=this
+y.x.D()
+y.ch.D()
+y.cy.D()
+y.fr.D()
+y.r.v()
+y.dx.v()
+y.y.aa()
+y.z.af=null}}
+X.dUZ.prototype={
+m:function(){var y,x,w,v,u,t,s=this,r=O.Af(s,0,null)
+s.r=r
+y=r.a
+s.i(y)
+r=s.d
+x=r.y
+r=r.d.d
+r=F.A2(y,null,x,x,r.d.l(C.a3,r.e.z),s.r,null)
+s.x=r
+w=T.H("\n                ")
+v=T.H("\n              ")
+x=[P.c]
+s.r.L(0,r,H.a([H.a([w,s.f.b,v],[W.b3])],x))
+r=s.x.b
+u=W.ah
+t=new P.A(r,[H.k(r,0)]).J(0,s.O(s.gaVn(),u,u))
+s.a3(H.a([y],x),H.a([t],[[P.I,-1]]))},
+N:function(d,e,f){if((d===C.d1||d===C.ae)&&e<=3)return this.x
+return f},
+q:function(){var y=this,x=y.e,w=x.cx,v=x.b.w(0,"$implicit")
+y.r.a6(w===0)
+w=v.a
+x=w==null?"":w
+y.f.M(x)
+y.r.u()},
+A:function(){this.r.v()
+this.x.Q.X()},
+aVo:function(d){var y=this.e.b.w(0,"$implicit")
+this.b.bhX(y.b,!0)}}
+X.jVV.prototype={
+m:function(){var y,x,w,v,u,t,s,r,q,p,o,n,m,l,k,j,i,h=this,g=null,f="\n              ",e="\n                ",d=h.b,a0=L.fF(h,0)
+h.x=a0
+y=a0.a
+h.Y(y,"custom-recurrence-picker")
+h.i(y)
+a0=h.d.d.d
+a0=T.fE(a0.d.j(C.B,a0.e.z),g)
+h.y=a0
+x=T.H(f)
+a0=L.di(h,2)
+h.z=a0
+w=a0.a
+h.i(w)
+h.Q=R.dh(w,h.z,h.y,g,g)
+v=T.H(e)
+u=document
+t=u.createElement("div")
+h.t(t,"label")
+h.i(t)
+t.appendChild(h.f.b)
+s=T.H(e)
+a0=h.ch=new V.i(7,2,h,T.ao())
+h.cx=new K.r(new D.l(a0,X.yg_()),a0)
+r=T.H(f)
+q=[P.c]
+h.z.L(0,h.Q,H.a([H.a([v,t,s,a0,r],q)],q))
+p=T.H(f)
+a0=L.di(h,10)
+h.cy=a0
+o=a0.a
+h.i(o)
+h.db=R.dh(o,h.cy,h.y,g,g)
+n=T.H(e)
+m=u.createElement("div")
+h.t(m,"label")
+h.i(m)
+m.appendChild(h.r.b)
+l=T.H(e)
+a0=h.dx=new V.i(15,10,h,T.ao())
+h.dy=new K.r(new D.l(a0,X.yg0()),a0)
+k=T.H(f)
+h.cy.L(0,h.db,H.a([H.a([n,m,l,a0,k],q)],q))
+j=T.H("\n            ")
+h.y.seM(H.a([h.Q,h.db],[R.cq]))
+h.x.L(0,h.y,H.a([H.a([x,w,p,o,j],[W.b5])],q))
+a0=h.y.d
+i=new P.A(a0,[H.k(a0,0)]).J(0,h.O(d.gfsZ(),g,N.os))
+h.a3(H.a([y],q),H.a([i],[[P.I,-1]]))},
+N:function(d,e,f){var y
+if(e<=17){y=d===C.j
+if(y&&2<=e&&e<=8)return this.Q
+if(y&&10<=e&&e<=16)return this.db
+if(d===C.bk)return this.y}return f},
+q:function(){var y,x=this,w=null,v=x.b,u=x.e.cx===0,t=v.k3,s=x.fr
+if(s!=t){x.y.sdB(0,t)
+x.fr=t
+y=!0}else y=!1
+if(y)x.x.e.sV(1)
+s=x.fx
+if(s!==C.BS){x.fx=x.Q.r=C.BS
+y=!0}else y=!1
+if(y)x.z.e.sV(1)
+x.cx.sH(v.k3===C.BS)
+s=x.fy
+if(s!==C.vb){x.fy=x.db.r=C.vb
+y=!0}else y=!1
+if(y)x.cy.e.sV(1)
+x.dy.sH(v.k3===C.vb)
+x.ch.E()
+x.dx.E()
+if(u)x.y.ez()
+x.z.a6(u)
+s=$.d().n("Fixed date range",w,w,w,w)
+if(s==null)s=""
+x.f.M(s)
+x.cy.a6(u)
+s=$.d().n("Custom repeating date range",w,w,w,w)
+if(s==null)s=""
+x.r.M(s)
+x.x.u()
+x.z.u()
+x.cy.u()},
+A:function(){var y=this
+y.ch.D()
+y.dx.D()
+y.x.v()
+y.z.v()
+y.cy.v()
+y.Q.e.X()
+y.db.e.X()
+y.y.b.X()}}
+X.jVW.prototype={
+m:function(){var y,x,w,v,u,t,s=this,r="\n                  ",q=s.b,p=document,o=p.createElement("div")
+s.t(o,"date-range-picker")
+s.i(o)
+T.f(o,r)
+y=D.Tg(s,2)
+s.f=y
+y=y.a
+s.cy=y
+o.appendChild(y)
+T.m(s.cy,"id","start-date-select")
+s.i(s.cy)
+y=s.cy
+x=s.d.d.d.d
+w=x.d
+x=x.e.z
+y=V.RF(y,null,w.l(C.eU,x))
+s.r=y
+s.f.P(y)
+T.f(o,r)
+v=T.aj(p,o)
+s.t(v,"separator")
+s.W(v)
+T.f(v,"-")
+T.f(o,r)
+y=D.Tg(s,8)
+s.x=y
+y=y.a
+s.db=y
+o.appendChild(y)
+T.m(s.db,"id","end-date-select")
+s.i(s.db)
+y=V.RF(s.db,null,w.l(C.eU,x))
+s.y=y
+s.x.P(y)
+T.f(o,"\n                ")
+y=s.r.y
+x=Q.cM
+u=new P.A(y,[H.k(y,0)]).J(0,s.O(q.gcym(),x,x))
+y=s.y.y
+t=new P.A(y,[H.k(y,0)]).J(0,s.O(q.gcxj(),x,x))
+s.a3(H.a([o],[P.c]),H.a([u,t],[[P.I,-1]]))},
+N:function(d,e,f){var y=d===C.j
+if(y&&2<=e&&e<=3)return this.r
+if(y&&8<=e&&e<=9)return this.y
+return f},
+q:function(){var y,x,w,v,u,t=this,s="selected",r=t.b,q=t.e.cx===0
+if(q){y=t.r
+y.d=r.r
+y.e=r.x
+y.r=!1}x=r.go
+y=t.Q
+if(y!=x){t.r.v6(x,!1)
+t.Q=x}if(q){y=t.y
+y.d=r.r
+y.e=r.x
+y.r=!1}w=r.id
+y=t.cx
+if(y!=w){t.y.v6(w,!1)
+t.cx=w}v=r.k1
+y=t.z
+if(y!==v){T.bj(t.cy,s,v)
+t.z=v}t.f.a6(q)
+u=r.k2
+y=t.ch
+if(y!==u){T.bj(t.db,s,u)
+t.ch=u}t.x.a6(q)
+t.f.u()
+t.x.u()
+if(q){y=t.r
+y.slE(y.gug())
+y=t.y
+y.slE(y.gug())}},
+A:function(){this.f.v()
+this.x.v()}}
+X.jVX.prototype={
+m:function(){var y,x,w,v,u,t,s,r,q,p,o,n,m,l=this,k=null,j="\n                  ",i="\n                    ",h="sublabel",g="\n                      ",f=l.b,e=document,d=e.createElement("div")
+l.t(d,"custom-period-picker")
+l.i(d)
+T.f(d,j)
+y=T.q(e,d)
+l.i(y)
+T.f(y,i)
+x=T.q(e,y)
+l.t(x,h)
+l.i(x)
+x.appendChild(l.f.b)
+T.f(y,i)
+w=D.Tg(l,7)
+l.y=w
+w=w.a
+l.k1=w
+y.appendChild(w)
+l.Y(l.k1,"date-range-picker")
+l.i(l.k1)
+w=l.k1
+v=l.d.d.d.d
+u=v.d
+v=v.e.z
+w=V.RF(w,k,u.l(C.eU,v))
+l.z=w
+l.y.P(w)
+T.f(y,j)
+T.f(d,j)
+t=T.q(e,d)
+l.i(t)
+T.f(t,i)
+s=T.q(e,t)
+l.t(s,h)
+l.i(s)
+s.appendChild(l.r.b)
+T.f(t,i)
+r=T.q(e,t)
+l.t(r,"recurrence-length-picker")
+l.i(r)
+T.f(r,g)
+w=Q.ci(l,18)
+l.Q=w
+q=w.a
+r.appendChild(q)
+T.m(q,"checkInteger","")
+T.m(q,"checkPositive","")
+l.Y(q,O.bb("","editable"," ","themeable",""))
+T.m(q,"keypressUpdate","")
+T.m(q,"type","number")
+l.i(q)
+w=new L.bZ(H.a([],[{func:1,ret:[P.x,P.b,,],args:[[Z.bH,,]]}]))
+l.ch=w
+p=new F.a1G()
+l.cx=p
+o=new T.Gp()
+l.cy=o
+o=[w,p,o]
+l.db=o
+o=T.cS(o,k)
+l.dx=o
+o=l.dy=L.cg("number",k,k,o,l.Q,l.ch)
+p=l.dx
+w=new Z.cp(new R.Z(!0),o,p)
+w.cg(o,p)
+l.fr=w
+w=F.yy(l.dy,l.dx,k,"","",k,u.l(C.en,v))
+l.fx=w
+w=[P.c]
+l.Q.L(0,l.dy,H.a([C.c,C.c],w))
+T.f(r,g)
+n=T.q(e,r)
+l.t(n,"symbol")
+l.i(n)
+n.appendChild(l.x.b)
+T.f(r,i)
+T.f(t,j)
+T.f(d,"\n                ")
+v=l.z.y
+u=Q.cM
+m=new P.A(v,[H.k(v,0)]).J(0,l.O(f.gcx9(),u,u))
+l.a3(H.a([d],w),H.a([m],[[P.I,-1]]))},
+N:function(d,e,f){var y=this,x=d===C.j
+if(x&&7<=e&&e<=8)return y.z
+if(18<=e&&e<=19){if(d===C.Z)return y.ch
+if(d===C.lM)return y.cy
+if(d===C.Y)return y.db
+if(d===C.H)return y.dx
+if(d===C.a4||d===C.a_||d===C.R||d===C.u||x)return y.dy}return f},
+q:function(){var y,x,w,v,u,t=this,s=null,r=t.b,q=t.e.cx===0
+if(q){y=t.z
+y.d=r.r
+y.e=r.x
+y.r=!1}x=r.go
+y=t.go
+if(y!=x){t.z.v6(x,!1)
+t.go=x}if(q)t.cy.a=!0
+w=r.cx
+y=t.id
+if(y!==w){y=t.dx
+y.f=w
+v=y.e=!0
+t.id=w}else v=!1
+if(v)t.dx.ax()
+y=$.d().n("Starting on",s,s,s,s)
+if(y==null)y=""
+t.f.M(y)
+u=r.k1
+y=t.fy
+if(y!==u){T.bj(t.k1,"selected",u)
+t.fy=u}t.y.a6(q)
+y=$.d().n("Repeating every",s,s,s,s)
+if(y==null)y=""
+t.r.M(y)
+y=$.d().n("days",s,s,s,s)
+if(y==null)y=""
+t.x.M(y)
+t.y.u()
+t.Q.u()
+if(q){y=t.z
+y.slE(y.gug())
+t.dy.ap()}},
+A:function(){var y,x=this
+x.y.v()
+x.Q.v()
+y=x.dy
+y.c8()
+y.al=y.af=null
+x.fr.a.X()
+x.fx.a.X()}}
+X.jVY.prototype={
+m:function(){var y=this,x=document.createElement("div")
+y.t(x,"tips")
+y.i(x)
+T.f(x,"\n            ")
+x.appendChild(y.f.b)
+T.f(x,"\n          ")
+y.G(x)},
+q:function(){var y,x=null
+this.b.toString
+y=$.d().n("Set a time frame for measuring performance. For example, select Monthly to compare the number of clicks or conversions each month with your expected monthly performance.",x,x,x,x)
+if(y==null)y=""
+this.f.M(y)}}
+X.jVZ.prototype={
+m:function(){var y,x,w,v,u,t,s,r,q,p,o,n,m,l,k=this,j=null,i="\n        ",h="\n          ",g="\n            ",f="\n              ",e="row target-picker",d=k.b,a0=document,a1=a0.createElement("div")
+k.t(a1,"section")
+k.i(a1)
+T.f(a1,i)
+y=k.r=new V.i(2,0,k,T.p(a1))
+k.x=new K.r(new D.l(y,X.yg3()),y)
+T.f(a1,i)
+x=T.q(a0,a1)
+k.t(x,"row")
+k.i(x)
+T.f(x,h)
+y=T.q(a0,x)
+k.aC=y
+k.t(y,"edit target")
+k.i(k.aC)
+T.f(k.aC,g)
+w=T.q(a0,k.aC)
+k.t(w,"label")
+k.i(w)
+T.f(w,f)
+w.appendChild(k.f.b)
+T.f(w,f)
+y=k.y=new V.i(12,8,k,T.p(w))
+k.z=new K.r(new D.l(y,X.yg4()),y)
+T.f(w,g)
+T.f(k.aC,g)
+T.f(k.aC,g)
+y=B.iAB(k,16)
+k.Q=y
+v=y.a
+k.aC.appendChild(v)
+k.Y(v,e)
+T.m(v,"id","volume-target-picker")
+k.i(v)
+y=N.b8E
+u=[y]
+t=P.h
+s=[t]
+r=R.oN
+q=[y]
+p=new Y.aod(new P.z(j,j,u),new P.z(j,j,s),P.B(r,j),P.B(r,t),H.a([C.rs,C.v0],q))
+k.ch=p
+k.Q.P(p)
+T.f(k.aC,g)
+p=k.cx=new V.i(19,6,k,T.p(k.aC))
+k.cy=new K.r(new D.l(p,X.yg6()),p)
+T.f(k.aC,g)
+T.f(k.aC,g)
+p=B.iAB(k,22)
+k.db=p
+o=p.a
+k.aC.appendChild(o)
+k.Y(o,e)
+T.m(o,"id","spend-target-picker")
+k.i(o)
+u=new Y.aod(new P.z(j,j,u),new P.z(j,j,s),P.B(r,j),P.B(r,t),H.a([C.rs,C.v0],q))
+k.dx=u
+k.db.P(u)
+T.f(k.aC,g)
+u=k.dy=new V.i(25,6,k,T.p(k.aC))
+k.fr=new K.r(new D.l(u,X.yg7()),u)
+T.f(k.aC,g)
+u=k.fx=new V.i(27,6,k,T.p(k.aC))
+k.fy=new K.r(new D.l(u,X.yg8()),u)
+T.f(k.aC,g)
+T.f(k.aC,g)
+u=k.go=new V.i(30,6,k,T.p(k.aC))
+k.id=new K.r(new D.l(u,X.yg9()),u)
+T.f(k.aC,g)
+u=k.k1=new V.i(32,6,k,T.p(k.aC))
+k.k2=new K.r(new D.l(u,X.yga()),u)
+T.f(k.aC,h)
+T.f(x,h)
+u=k.k3=new V.i(35,4,k,T.p(x))
+k.k4=new K.r(new D.l(u,X.ygb()),u)
+T.f(x,i)
+T.f(a1,"\n      ")
+u=k.ch.cx
+n=new P.A(u,[H.k(u,0)]).J(0,k.O(d.gfxy(),t,t))
+u=k.dx.ch
+m=new P.A(u,[H.k(u,0)]).J(0,k.O(d.gfxC(),y,y))
+y=k.dx.cx
+l=new P.A(y,[H.k(y,0)]).J(0,k.O(d.gfxv(),t,t))
+k.a3(H.a([a1],[P.c]),H.a([n,m,l],[[P.I,-1]]))},
+q:function(){var y,x,w,v,u,t,s,r,q,p,o,n,m,l,k=this,j=null,i=k.b,h=k.e.cx===0,g=k.x,f=i.b
+if(f.dx)if(i.x2===C.mc){y=i.bt
+y=y!=null&&y.d0(C.O)>0}else y=!1
+else y=!1
+g.sH(y)
+k.z.sH(!f.dx)
+if(h){g=k.ch
+g.a=C.chE
+g.d=!0
+g.z=C.v0}x=i.y
+g=k.r2
+if(g!==x)k.r2=k.ch.b=x
+w=i.k4
+g=k.rx
+if(g!=w)k.rx=k.ch.e=w
+v=i.cy
+g=k.ry
+if(g!=v)k.ry=k.ch.f=v
+u=i.gfR5()
+g=k.x1
+if(g!=u)k.x1=k.ch.r=u
+t=i.fx
+g=k.x2
+if(g!=t){k.ch.sqh(0,t)
+k.x2=t}g=k.cy
+g.sH(i.k4&&i.gccI()!=null&&f.dx)
+if(h){g=k.dx
+g.a=C.a16
+g.Q=!0}s=i.z
+g=k.y1
+if(g!==s)k.y1=k.dx.b=s
+r=i.r1
+g=k.y2
+if(g!=r)k.y2=k.dx.e=r
+q=i.db
+g=k.am
+if(g!=q)k.am=k.dx.f=q
+if(f.dx){g=i.Mz(i.aU.a.k(8,N.os))
+y="The amount you spend "+H.o(g)
+g=H.a([g],[P.c])
+p=$.d().n(y,j,"spendTargetTimeFrameMsg",g,j)}else p=$.d().n("Total spend",j,j,j,j)
+g=k.an
+if(g!=p)k.an=k.dx.r=p
+o=i.aX.b.c
+g=k.ar
+if(g!=o)k.ar=k.dx.x=o
+n=i.aX.guE()
+g=k.aq
+if(g!==n)k.aq=k.dx.y=n
+m=i.fy
+g=k.at
+if(g!=m)k.at=k.dx.z=m
+g=k.fr
+g.sH(i.r1&&i.gccH()!=null&&f.dx)
+g=k.fy
+g.sH(i.r1&&i.gc4j()!=null&&f.dx)
+k.id.sH(i.fx!==C.jc)
+g=k.k2
+g.sH(i.r2&&i.gccG()!=null&&f.dx)
+k.k4.sH(!f.dx)
+k.r.E()
+k.y.E()
+k.cx.E()
+k.dy.E()
+k.fx.E()
+k.go.E()
+k.k1.E()
+k.k3.E()
+l=!f.dx
+g=k.r1
+if(g!==l){T.aB(k.aC,"inner-column",l)
+k.r1=l}g=f.dx?$.d().n("Set a performance target for: ",j,j,j,j):$.d().n("Select 1 or more targets ",j,j,j,j)
+if(g==null)g=""
+k.f.M(g)
+k.Q.u()
+k.db.u()},
+A:function(){var y=this
+y.r.D()
+y.y.D()
+y.cx.D()
+y.dy.D()
+y.fx.D()
+y.go.D()
+y.k1.D()
+y.k3.D()
+y.Q.v()
+y.db.v()}}
+X.jW_.prototype={
+m:function(){var y=this,x=document.createElement("div")
+y.t(x,"partial-stats-message")
+y.i(x)
+x.appendChild(y.f.b)
+y.G(x)},
+q:function(){var y,x,w,v=null,u=this.b
+if(u.be)y=$.d().n("Your campaign started after the first of the month. The info shown here reflects your campaign performance from the time it started to the end of the month.",v,v,v,v)
+else{y=u.bt.aM(0)
+x="You have "+y+" campaign in this campaign group that started after the first of the month. The info shown here doesn't represent a full month of info for the campaign group."
+w="You have "+y+" campaigns in this campaign group that started after the first of the month. The info shown here doesn't represent a full month of info for the campaign group."
+w=T.b2(y,H.a([y],[P.c]),"Message explaining that the stats are partial since they include campaigns that were started before the end of last month.",C.c1R,v,v,"_partialStatsMessageCampaignGroup",x,w,v,v)
+y=w}if(y==null)y=""
+this.f.M(y)}}
+X.jW0.prototype={
+m:function(){var y=this,x=document.createElement("span")
+y.t(x,"optional")
+y.W(x)
+T.f(x,"\n                ")
+x.appendChild(y.f.b)
+T.f(x,"\n              ")
+y.G(x)},
+q:function(){var y,x=null
+this.b.toString
+y=$.d().n("(optional)",x,x,x,x)
+if(y==null)y=""
+this.f.M(y)}}
+X.jW2.prototype={
+m:function(){var y,x,w,v,u,t=this,s=null,r="\n              ",q=document.createElement("div")
+t.t(q,"stats-message")
+T.m(q,"id","historical-volume-message")
+t.i(q)
+T.f(q,r)
+q.appendChild(t.f.b)
+T.f(q,r)
+y=L.ct(t,4)
+t.r=y
+x=y.a
+q.appendChild(x)
+t.i(x)
+t.x=new V.i(4,0,t,x)
+y=t.d.d.d
+w=y.d
+y=y.e.z
+v=w.j(C.z,y)
+u=t.x
+y=Z.cs(v,u,u,x,s,s,s,s,w.l(C.a5,y),w.l(C.J,y))
+t.y=y
+t.r.P(y)
+T.f(q,"\n            ")
+t.G(q)},
+N:function(d,e,f){if(d===C.Q&&4===e)return this.y
+return f},
+q:function(){var y,x=this,w=x.b,v=x.e.cx===0,u=w.be?w.geQD():w.geQE(),t=x.z
+if(t!==u){x.y.scf(u)
+x.z=u
+y=!0}else y=!1
+if(y)x.r.e.sV(1)
+x.x.E()
+t=w.gccI()
+if(t==null)t=""
+x.f.M(t)
+x.r.a6(v)
+x.r.u()
+if(v)x.y.ap()},
+A:function(){this.x.D()
+this.r.v()
+this.y.k2.X()}}
+X.jW3.prototype={
+m:function(){var y,x,w,v,u,t=this,s=null,r="\n              ",q=document.createElement("div")
+t.t(q,"stats-message")
+T.m(q,"id","historical-spend-message")
+t.i(q)
+T.f(q,r)
+q.appendChild(t.f.b)
+T.f(q,r)
+y=L.ct(t,4)
+t.r=y
+x=y.a
+q.appendChild(x)
+t.i(x)
+t.x=new V.i(4,0,t,x)
+y=t.d.d.d
+w=y.d
+y=y.e.z
+v=w.j(C.z,y)
+u=t.x
+y=Z.cs(v,u,u,x,s,s,s,s,w.l(C.a5,y),w.l(C.J,y))
+t.y=y
+t.r.P(y)
+T.f(q,"\n            ")
+t.G(q)},
+N:function(d,e,f){if(d===C.Q&&4===e)return this.y
+return f},
+q:function(){var y,x,w=this,v=w.b,u=w.e.cx===0
+v.be
+y=w.z
+if(y!=="9210748"){w.y.scf("9210748")
+w.z="9210748"
+x=!0}else x=!1
+if(x)w.r.e.sV(1)
+w.x.E()
+y=v.gccH()
+if(y==null)y=""
+w.f.M(y)
+w.r.a6(u)
+w.r.u()
+if(u)w.y.ap()},
+A:function(){this.x.D()
+this.r.v()
+this.y.k2.X()}}
+X.jW4.prototype={
+m:function(){var y,x,w,v,u,t=this,s=null,r="\n              ",q=document.createElement("div")
+t.t(q,"stats-message")
+T.m(q,"id","budget-message")
+t.i(q)
+T.f(q,r)
+q.appendChild(t.f.b)
+T.f(q,r)
+y=L.ct(t,4)
+t.r=y
+x=y.a
+q.appendChild(x)
+t.i(x)
+t.x=new V.i(4,0,t,x)
+y=t.d.d.d
+w=y.d
+y=y.e.z
+v=w.j(C.z,y)
+u=t.x
+y=Z.cs(v,u,u,x,s,s,s,s,w.l(C.a5,y),w.l(C.J,y))
+t.y=y
+t.r.P(y)
+T.f(q,"\n            ")
+t.G(q)},
+N:function(d,e,f){if(d===C.Q&&4===e)return this.y
+return f},
+q:function(){var y,x,w=this,v=w.b,u=w.e.cx===0
+v.be
+y=w.z
+if(y!=="9210154"){w.y.scf("9210154")
+w.z="9210154"
+x=!0}else x=!1
+if(x)w.r.e.sV(1)
+w.x.E()
+y=v.gc4j()
+if(y==null)y=""
+w.f.M(y)
+w.r.a6(u)
+w.r.u()
+if(u)w.y.ap()},
+A:function(){this.x.D()
+this.r.v()
+this.y.k2.X()}}
+X.jW5.prototype={
+m:function(){var y,x,w,v,u=this,t=null,s=u.b,r=B.iAB(u,0)
+u.f=r
+y=r.a
+u.Y(y,"row target-picker")
+T.m(y,"id","efficiency-target-picker")
+u.i(y)
+r=N.b8E
+x=P.h
+w=R.oN
+r=new Y.aod(new P.z(t,t,[r]),new P.z(t,t,[x]),P.B(w,t),P.B(w,x),H.a([C.rs,C.v0],[r]))
+u.r=r
+u.f.P(r)
+r=u.r.cx
+v=new P.A(r,[H.k(r,0)]).J(0,u.O(s.gfxt(),x,x))
+u.a3(H.a([y],[P.c]),H.a([v],[[P.I,-1]]))},
+q:function(){var y,x,w,v,u,t,s,r,q,p,o=this,n=o.b
+if(o.e.cx===0)o.r.d=!0
+y=n.fx===C.hB?C.RY:C.a16
+x=o.x
+if(x!==y)o.x=o.r.a=y
+w=n.Q
+x=o.y
+if(x!==w)o.y=o.r.b=w
+v=n.r2
+x=o.z
+if(x!=v)o.z=o.r.e=v
+u=n.dx
+x=o.Q
+if(x==null?u!=null:x!==u)o.Q=o.r.f=u
+t=n.gf7C()
+x=o.ch
+if(x!=t)o.ch=o.r.r=t
+s=n.aX.b.c
+x=o.cx
+if(x!=s)o.cx=o.r.x=s
+r=n.aX.guE()
+x=o.cy
+if(x!==r)o.cy=o.r.y=r
+q=n.fx===C.hB?C.v0:C.rs
+x=o.db
+if(x!==q)o.db=o.r.z=q
+p=n.fx
+x=o.dx
+if(x!=p){o.r.sqh(0,p)
+o.dx=p}o.f.u()},
+A:function(){this.f.v()}}
+X.jW6.prototype={
+m:function(){var y,x,w,v,u,t=this,s=null,r="\n              ",q=document.createElement("div")
+t.t(q,"stats-message")
+T.m(q,"id","historical-efficiency-message")
+t.i(q)
+T.f(q,r)
+q.appendChild(t.f.b)
+T.f(q,r)
+y=L.ct(t,4)
+t.r=y
+x=y.a
+q.appendChild(x)
+t.i(x)
+t.x=new V.i(4,0,t,x)
+y=t.d.d.d
+w=y.d
+y=y.e.z
+v=w.j(C.z,y)
+u=t.x
+y=Z.cs(v,u,u,x,s,s,s,s,w.l(C.a5,y),w.l(C.J,y))
+t.y=y
+t.r.P(y)
+T.f(q,"\n            ")
+t.G(q)},
+N:function(d,e,f){if(d===C.Q&&4===e)return this.y
+return f},
+q:function(){var y,x=this,w=x.b,v=x.e.cx===0,u=w.be?w.gdv3():w.gdv4(),t=x.z
+if(t!=u){x.y.scf(u)
+x.z=u
+y=!0}else y=!1
+if(y)x.r.e.sV(1)
+x.x.E()
+t=w.gccG()
+if(t==null)t=""
+x.f.M(t)
+x.r.a6(v)
+x.r.u()
+if(v)x.y.ap()},
+A:function(){this.x.D()
+this.r.v()
+this.y.k2.X()}}
+X.jW7.prototype={
+m:function(){var y,x=this,w="\n            ",v=document,u=v.createElement("div")
+x.t(u,"tips")
+x.i(u)
+T.f(u,w)
+u.appendChild(x.f.b)
+T.f(u,w)
+y=T.ac(v,u,"p")
+x.W(y)
+y.appendChild(x.r.b)
+T.f(u,"\n          ")
+x.G(u)},
+q:function(){var y=null,x=this.b.gfGg()
+if(x==null)x=""
+this.f.M(x)
+x=$.d().n("These targets are for reporting only and won't affect campaign settings",y,y,y,y)
+if(x==null)x=""
+this.r.M(x)}}
+X.jW8.prototype={
+m:function(){var y,x,w,v=this,u=U.Bl(v,0)
+v.r=u
+y=u.a
+v.Y(y,"campaign-group-effect-message")
+v.i(y)
+u=new T.ve(C.h0)
+v.x=u
+x=T.H("\n        ")
+w=T.H("\n      ")
+v.r.L(0,u,H.a([H.a([x,v.f.b,w],[W.b3])],[P.c]))
+v.G(y)},
+q:function(){var y,x,w,v,u=this,t=null,s="Changes will update targets for the entire group, covering ",r=u.b
+if(u.e.cx===0){u.x.a=C.qs
+y=!0}else y=!1
+if(y)u.r.e.sV(1)
+x=r.bj.aM(0)
+w=s+x+" campaign."
+v=s+x+" campaigns."
+v=T.b2(x,H.a([x],[P.c]),"Message explaining that changes to the performance target will affect a number of campaigns",C.c1R,t,t,"_campaignGroupEffectMessage",w,v,t,t)
+u.f.M(v)
+u.r.u()},
+A:function(){this.r.v()}}
+X.jW9.prototype={
+m:function(){var y,x,w,v,u,t,s,r=this,q="\n      ",p="\n        ",o=document,n=o.createElement("div")
+r.t(n,"tips")
+r.i(n)
+T.f(n,q)
+n.appendChild(r.f.b)
+T.f(n,q)
+y=T.q(o,n)
+r.i(y)
+T.f(y,p)
+x=T.ac(o,y,"p")
+r.W(x)
+T.f(x,"\n          ")
+w=L.e6(r,8)
+r.r=w
+v=w.a
+x.appendChild(v)
+r.i(v)
+w=r.d
+u=w.d
+w=w.e.z
+t=Y.dH(u.j(C.aJ,w),u.l(C.aH,w),u.l(C.aK,w),u.l(C.aI,w),u.l(C.aF,w))
+r.x=t
+t=F.aP(u.l(C.w,w))
+r.y=t
+s=r.x
+w=A.e5(s,v,t,new G.cI(r,8,C.ac),u.l(C.aB,w),u.l(C.ay,w),u.l(C.J,w),u.l(C.i,w))
+r.z=w
+r.r.P(w)
+T.f(x,p)
+T.f(y,q)
+T.f(n,"\n    ")
+r.G(n)},
+N:function(d,e,f){if(8===e){if(d===C.aC)return this.x
+if(d===C.v)return this.y
+if(d===C.Q||d===C.u)return this.z}return f},
+q:function(){var y,x,w=this,v=null,u=w.b,t=w.e.cx===0
+if(t){y=w.z
+y.y="6393275"
+y.di()
+x=!0}else x=!1
+if(x)w.r.e.sV(1)
+if(t)w.z.dJ()
+u.toString
+y=$.d().n("Performance targets are for reporting only and won't affect campaign settings. If it looks like you won't hit a performance target, manually adjust the campaign to get better results.",v,v,v,v)
+if(y==null)y=""
+w.f.M(y)
+w.r.u()},
+A:function(){this.r.v()
+this.z.fr.X()}}
+X.jWg.prototype={
+m:function(){var y,x,w,v,u=this,t=X.cj7(u,0)
+u.f=t
+y=t.a
+t=u.e
+x=t.z
+w=u.l(C.d,x)
+v=P.b
+v=new S.am(w,P.B(v,v))
+w=v
+u.r=w
+w=S.al(u.l(C.i,x),u.r,u.l(C.d,x))
+u.x=w
+x=Q.cfD(u.j(C.c1,x),u.x,u.j(C.m,x),u.j(C.l,x))
+u.y=x
+u.f.L(0,x,t.e)
+u.G(y)
+return new D.M(u,0,y,u.y,[Q.bcx])},
+N:function(d,e,f){if(0===e){if(d===C.d)return this.r
+if(d===C.o)return this.x}return f},
+q:function(){var y=this.e.cx
+if(y===0)this.y.a8()
+this.f.u()},
+A:function(){this.f.v()
+this.y.e.X()}}
+Y.cE9.prototype={
+a7:function(d){return this.b},
+gbX:function(d){return this.a}}
+Y.aod.prototype={
+sqh:function(d,e){var y,x=this,w=x.c
+if(e!=w){if(x.d&&w!=null){y=x.db
+y.p(0,w,x.e)
+w=x.cy
+w.p(0,x.c,x.f)
+y=y.w(0,e)
+x.e=y===!0
+w=w.w(0,e)
+x.f=w
+x.b.dU(w)}x.c=e}},
+frx:function(d){var y=this.b
+if(d)y.b86()
+else y.aAE()
+this.e=d
+this.cx.a2(0,d)},
+gbA:function(d){return this.a},
+gbjB:function(d){return this.e},
+gae:function(d){return this.f},
+sae:function(d,e){return this.f=e}}
+B.iAA.prototype={
+m:function(){var y,x,w=this,v=null,u=w.b,t=w.ad(),s=G.fm(w,0)
+w.f=s
+y=s.a
+t.appendChild(y)
+w.i(y)
+s=B.fj(y,w.f,v,v,v)
+w.r=s
+w.f.L(0,s,H.a([C.c],[P.c]))
+s=w.x=new V.i(1,v,w,T.p(t))
+w.y=new K.r(new D.l(s,B.zBN()),s)
+s=w.r.f
+x=P.h
+w.a3(C.y,H.a([new P.A(s,[H.k(s,0)]).J(0,w.O(u.gfrw(),x,x))],[[P.I,-1]]))},
+N:function(d,e,f){if(d===C.j&&0===e)return this.r
+return f},
+q:function(){var y,x,w=this,v=w.b,u=w.e.cx,t=v.r,s=w.z
+if(s!=t){w.z=w.r.fx=t
+y=!0}else y=!1
+x=v.e
+s=w.Q
+if(s!=x){w.r.scL(0,x)
+w.Q=x
+y=!0}if(y)w.f.e.sV(1)
+w.y.sH(v.e)
+w.x.E()
+w.f.a6(u===0)
+w.f.u()},
+A:function(){this.x.D()
+this.f.v()
+this.r.toString}}
+B.kgF.prototype={
+m:function(){var y,x=this,w=document.createElement("div")
+x.t(w,"picker-fields")
+x.i(w)
+y=x.f=new V.i(1,0,x,T.p(w))
+x.r=new K.r(new D.l(y,B.zBO()),y)
+y=x.x=new V.i(2,0,x,T.p(w))
+x.y=new K.r(new D.l(y,B.zBP()),y)
+y=x.z=new V.i(3,0,x,T.p(w))
+x.Q=new K.r(new D.l(y,B.zBR()),y)
+y=x.ch=new V.i(4,0,x,T.p(w))
+x.cx=new K.r(new D.l(y,B.zBS()),y)
+y=x.cy=new V.i(5,0,x,T.p(w))
+x.db=new K.r(new D.l(y,B.zBT()),y)
+x.G(w)},
+q:function(){var y=this,x=y.b
+y.r.sH(!x.Q)
+y.y.sH(x.Q)
+y.Q.sH(x.a===C.chE)
+y.cx.sH(x.a===C.a16)
+y.db.sH(x.a===C.RY)
+y.f.E()
+y.x.E()
+y.z.E()
+y.ch.E()
+y.cy.E()},
+A:function(){var y=this
+y.f.D()
+y.x.D()
+y.z.D()
+y.ch.D()
+y.cy.D()}}
+B.kgG.prototype={
+m:function(){var y=this,x=document.createElement("div")
+y.t(x,"improved-symbol")
+y.i(x)
+x.appendChild(y.f.b)
+y.G(x)},
+q:function(){var y=null,x=this.b.z===C.rs?$.d().n("\u2264",y,y,y,y):$.d().n("\u2265",y,y,y,y)
+if(x==null)x=""
+this.f.M(x)}}
+B.kgH.prototype={
+m:function(){var y,x,w=this,v=null,u=Y.eE(w,0,v)
+w.f=u
+y=u.a
+w.Y(y,"editable")
+w.i(y)
+u=w.d
+x=u.d
+u=u.e.z
+u=M.eD(x.l(C.a3,u),x.l(C.P,u),x.l(C.aD,u),v,v,w.f,y,v)
+w.r=u
+x=w.y=new V.i(1,0,w,T.ao())
+w.z=new R.aG(x,new D.l(x,B.zBQ()))
+w.f.L(0,u,H.a([C.c,C.c,C.c,H.a([x],[V.i]),C.c,C.c],[P.c]))
+w.G(y)},
+N:function(d,e,f){var y,x=this
+if(e<=1){if(d===C.aY&&0===e){y=x.x
+return y==null?x.x=x.r.x:y}if(d===C.b0||d===C.a7||d===C.aO||d===C.j||d===C.ae||d===C.E||d===C.aS||d===C.P)return x.r}return f},
+q:function(){var y,x=this,w=null,v=x.b,u=x.e.cx,t=v.z===C.rs?$.d().n("\u2264",w,w,w,w):$.d().n("\u2265",w,w,w,w),s=x.Q
+if(s!=t){x.Q=x.r.al$=t
+y=!0}else y=!1
+if(y)x.r.ax()
+if(u===0)x.z.saT(v.dx)
+x.z.aG()
+x.y.E()
+x.f.u()},
+A:function(){this.y.D()
+this.f.v()
+this.r.aa()}}
+B.dX0.prototype={
+m:function(){var y,x,w,v,u,t=this,s=O.Af(t,0,null)
+t.r=s
+y=s.a
+t.i(y)
+s=t.d
+x=s.r
+s=s.d
+s=F.A2(y,null,x,x,s.d.l(C.a3,s.e.z),t.r,null)
+t.x=s
+w=document.createElement("div")
+t.i(w)
+w.appendChild(t.f.b)
+s=[P.c]
+t.r.L(0,t.x,H.a([H.a([w],[W.aH])],s))
+x=t.x.b
+v=W.ah
+u=new P.A(x,[H.k(x,0)]).J(0,t.O(t.geGI(),v,v))
+t.a3(H.a([y],s),H.a([u],[[P.I,-1]]))},
+N:function(d,e,f){if((d===C.d1||d===C.ae)&&e<=2)return this.x
+return f},
+q:function(){var y=this,x=null,w=y.b,v=y.e,u=v.cx,t=v.b.w(0,"$implicit")
+y.r.a6(u===0)
+w.toString
+v=t===C.rs?H.o($.d().n("\u2264",x,x,x,x))+" "+H.o($.d().n("Less than or equal to",x,x,x,x)):H.o($.d().n("\u2265",x,x,x,x))+" "+H.o($.d().n("Greater than or equal to",x,x,x,x))
+y.f.M(v)
+y.r.u()},
+A:function(){this.r.v()
+this.x.Q.X()},
+eGJ:function(d){var y=this.e.b.w(0,"$implicit"),x=this.b
+x.z=y
+x.ch.a2(0,y)}}
+B.dX1.prototype={
+m:function(){var y,x,w,v,u=this,t=null,s=Q.ci(u,0)
+u.f=s
+y=s.a
+T.m(y,"checkInteger","")
+T.m(y,"checkPositive","")
+u.Y(y,O.bb("","editable"," ","themeable",""))
+T.m(y,"keypressUpdate","")
+T.m(y,"type","number")
+u.i(y)
+s=new L.bZ(H.a([],[{func:1,ret:[P.x,P.b,,],args:[[Z.bH,,]]}]))
+u.r=s
+x=new F.a1G()
+u.x=x
+w=new T.Gp()
+u.y=w
+w=[s,x,w]
+u.z=w
+w=T.cS(w,t)
+u.Q=w
+w=u.ch=L.cg("number",t,t,w,u.f,u.r)
+x=u.Q
+s=new Z.cp(new R.Z(!0),w,x)
+s.cg(w,x)
+u.cx=s
+s=u.d
+s=F.yy(u.ch,u.Q,t,"","",t,s.d.l(C.en,s.e.z))
+u.cy=s
+s=[P.c]
+u.f.L(0,u.ch,H.a([C.c,C.c],s))
+x=u.Q.r
+v=new P.A(x,[H.k(x,0)]).J(0,u.O(u.ga9A(),t,t))
+u.a3(H.a([y],s),H.a([v],[[P.I,-1]]))},
+N:function(d,e,f){var y=this
+if(0===e){if(d===C.Z)return y.r
+if(d===C.lM)return y.y
+if(d===C.Y)return y.z
+if(d===C.H)return y.Q
+if(d===C.a4||d===C.a_||d===C.R||d===C.u||d===C.j)return y.ch}return f},
+q:function(){var y,x,w,v,u=this,t=u.b,s=u.e.cx===0
+if(s)u.y.a=!0
+y=t.b
+x=u.db
+if(x!=y){x=u.Q
+x.f=y
+x.e=!0
+u.db=y
+w=!0}else w=!1
+v=t.f
+x=u.dx
+if(x==null?v!=null:x!==v){x=u.Q
+w=x.x=!0
+u.dx=x.y=v}if(w)u.Q.ax()
+u.f.u()
+if(s)u.ch.ap()},
+A:function(){var y,x=this
+x.f.v()
+y=x.ch
+y.c8()
+y.al=y.af=null
+x.cx.a.X()
+x.cy.a.X()},
+a9B:function(d){this.b.f=d}}
+B.dX2.prototype={
+m:function(){var y,x,w,v,u,t=this,s=null,r=Q.ci(t,0)
+t.f=r
+y=r.a
+T.m(y,"autoFocus","")
+T.m(y,"checkPositive","")
+t.Y(y,O.bb("","editable"," ","themeable",""))
+T.ap(y,"dir","ltr")
+T.m(y,"type","money64")
+t.i(y)
+r=new L.bZ(H.a([],[{func:1,ret:[P.x,P.b,,],args:[[Z.bH,,]]}]))
+t.r=r
+x=new K.pz()
+t.x=x
+w=new G.pC()
+t.y=w
+v=new T.Gp()
+t.z=v
+v=[r,x,w,v]
+t.Q=v
+v=T.cS(v,s)
+t.ch=v
+v=t.cx=L.cg("money64",s,s,v,t.f,t.r)
+w=t.ch
+x=new Z.cp(new R.Z(!0),v,w)
+x.cg(v,w)
+t.cy=x
+t.db=K.EH(t.x,t.cx,t.ch,s,s,s)
+t.dx=G.qM(t.cx)
+x=[P.c]
+t.f.L(0,t.cx,H.a([C.c,C.c],x))
+w=t.ch.r
+u=new P.A(w,[H.k(w,0)]).J(0,t.O(t.ga9A(),s,s))
+t.a3(H.a([y],x),H.a([u],[[P.I,-1]]))},
+N:function(d,e,f){var y=this
+if(0===e){if(d===C.Z)return y.r
+if(d===C.ex)return y.x
+if(d===C.ey)return y.y
+if(d===C.lM)return y.z
+if(d===C.Y)return y.Q
+if(d===C.H)return y.ch
+if(d===C.a4||d===C.a_||d===C.R||d===C.u||d===C.j)return y.cx
+if(d===C.j7)return y.db
+if(d===C.ew)return y.dx}return f},
+q:function(){var y,x,w,v,u,t,s=this,r=s.b,q=s.e.cx===0
+if(q)s.z.a=!0
+y=r.b
+x=s.dy
+if(x!=y){x=s.ch
+x.f=y
+x.e=!0
+s.dy=y
+w=!0}else w=!1
+v=r.f
+x=s.fr
+if(x==null?v!=null:x!==v){x=s.ch
+w=x.x=!0
+s.fr=x.y=v}if(w)s.ch.ax()
+u=r.x
+x=s.fx
+if(x!=u){x=s.dx
+x.c=C.cR
+x.d=u
+x.jp()
+s.fx=u}t=r.y
+x=s.fy
+if(x!=t){x=s.dx
+x.c=C.cR
+x.e=t
+x.jp()
+s.fy=t}s.f.u()
+if(q)s.cx.ap()},
+A:function(){var y,x=this
+x.f.v()
+y=x.cx
+y.c8()
+y.al=y.af=null
+x.cy.a.X()
+x.db.a.X()},
+a9B:function(d){this.b.f=d}}
+B.dX3.prototype={
+m:function(){var y,x,w,v,u=this,t=null,s=Q.ci(u,0)
+u.f=s
+y=s.a
+T.m(y,"autoFocus","")
+T.m(y,"checkPositive","")
+u.Y(y,O.bb("","editable"," ","themeable",""))
+T.m(y,"type","percent")
+u.i(y)
+s=new L.bZ(H.a([],[{func:1,ret:[P.x,P.b,,],args:[[Z.bH,,]]}]))
+u.r=s
+x=new F.Ju()
+u.x=x
+w=new T.Gp()
+u.y=w
+w=[s,x,w]
+u.z=w
+w=T.cS(w,t)
+u.Q=w
+w=u.ch=L.cg("percent",t,t,w,u.f,u.r)
+x=u.Q
+s=new Z.cp(new R.Z(!0),w,x)
+s.cg(w,x)
+u.cx=s
+s=u.d
+s=F.yy(u.ch,u.Q,t,t,t,t,s.d.l(C.en,s.e.z))
+u.cy=s
+u.db=A.YH(u.ch,y)
+s=[P.c]
+u.f.L(0,u.ch,H.a([C.c,C.c],s))
+x=u.Q.r
+v=new P.A(x,[H.k(x,0)]).J(0,u.O(u.ga9A(),t,t))
+u.a3(H.a([y],s),H.a([v],[[P.I,-1]]))},
+N:function(d,e,f){var y=this
+if(0===e){if(d===C.Z)return y.r
+if(d===C.lM)return y.y
+if(d===C.Y)return y.z
+if(d===C.H)return y.Q
+if(d===C.a4||d===C.a_||d===C.R||d===C.u||d===C.j)return y.ch
+if(d===C.pM)return y.db}return f},
+q:function(){var y,x,w,v,u=this,t=u.b,s=u.e.cx===0
+if(s)u.y.a=!0
+y=t.b
+x=u.dx
+if(x!=y){x=u.Q
+x.f=y
+x.e=!0
+u.dx=y
+w=!0}else w=!1
+v=t.f
+x=u.dy
+if(x==null?v!=null:x!==v){x=u.Q
+w=x.x=!0
+u.dy=x.y=v}if(w)u.Q.ax()
+u.f.u()
+if(s)u.ch.ap()},
+A:function(){var y,x=this
+x.f.v()
+y=x.ch
+y.c8()
+y.al=y.af=null
+x.cx.a.X()
+x.cy.a.X()},
+a9B:function(d){this.b.f=d}}
+B.kgI.prototype={
+m:function(){var y,x,w,v=this,u=null,t=B.iAB(v,0)
+v.f=t
+y=t.a
+t=N.b8E
+x=P.h
+w=R.oN
+t=new Y.aod(new P.z(u,u,[t]),new P.z(u,u,[x]),P.B(w,u),P.B(w,x),H.a([C.rs,C.v0],[t]))
+v.r=t
+v.f.L(0,t,v.e.e)
+v.G(y)
+return new D.M(v,0,y,v.r,[Y.aod])},
+q:function(){this.f.u()},
+A:function(){this.f.v()}}
+Z.aaJ.prototype={}
+T.aPl.prototype={
+aA3:function(d){return this.fkg(d)},
+fkg:function(d){var y=0,x=P.W([P.j,,]),w,v=this,u
+var $async$aA3=P.Q(function(e,f){if(e===1)return P.T(f,x)
+while(true)switch(y){case 0:u=v.a.fY()
+u.dM(d)
+y=3
+return P.L(u.iO(),$async$aA3)
+case 3:w=f
+y=1
+break
+case 1:return P.U(w,x)}})
+return P.V($async$aA3,x)},
+Se:function(d,e,f,g){return this.eSB(d,e,f,g)},
+a2:function(d,e){return this.Se(d,e,null,null)},
+eSB:function(d,e,f,g){var y=0,x=P.W([P.j,[E.bY,,,]]),w,v=this,u,t,s
+var $async$Se=P.Q(function(h,i){if(h===1)return P.T(i,x)
+while(true)switch(y){case 0:s=f==null
+if(s&&g==null)throw H.O(P.bo("At least one of campaignGroupId or campaignId must be provided"))
+if(g!=null&&g.d0(0)<0)throw H.O(P.bo("campaignId cannot be a temp ID."))
+u=H.a([],[[E.bY,,,]])
+y=s?3:4
+break
+case 3:y=5
+return P.L(v.asl(g),$async$Se)
+case 5:t=i
+f=t.a
+y=!!J.a0(f,0)?6:7
+break
+case 6:f=t.b
+y=!J.a0(f,0)?8:10
+break
+case 8:u.push(v.bBV(g,f))
+y=9
+break
+case 10:y=11
+return P.L(v.a5W(g,!1),$async$Se)
+case 11:f=i
+case 9:case 7:case 4:u.push(v.ddJ(e,f))
+w=u
+y=1
+break
+case 1:return P.U(w,x)}})
+return P.V($async$Se,x)},
+c2u:function(d,e,f,g){var y=H.a([],[[E.bY,,,]])
+if(e.d0(0)<0){if(f==null)throw H.O(P.bo("campaignName cannot null when creating a SCG."))
+y.push(this.bBE(f,e))}y.push(this.bBD(d,e,g))
+return y},
+eSV:function(d,e,f){return this.c2u(d,e,f,!1)},
+c8m:function(d,e,f){var y,x,w,v=this,u=E.FM,t=H.a([],[u]),s=d.a.k(10,E.lG),r=P.b,q=H.a([],[r])
+if(s.a.a1(5)&&!e.a.a1(5))q.push("performance_target.start_time")
+if(s.a.a1(2)&&!e.a.a1(2))q.push("performance_target.end_time")
+if(s.a.a1(1)&&!e.a.a1(1)){q.push("performance_target.efficiency_target_type")
+q.push("performance_target.efficiency_target_value")}if(s.a.a1(7)&&!e.a.a1(7))q.push("performance_target.volume_target_value")
+if(s.a.a1(3)&&!e.a.a1(3)){q.push("performance_target.spend_target_type")
+q.push("performance_target.spend_target")}q=P.cm(q,H.k(q,0))
+if(q.a!==0){y=new E.jW()
+y.h()
+s=d.a.K(0)
+y.a.C(0,s)
+s=d.a.K(1)
+y.a.C(1,s)
+s=v.f.ju(v.r.gb1()).a.k(2,D.eP).a.I(21,"")
+y.a.C(13,s)
+s=d.a.K(2)
+y.a.C(2,s)
+s=new E.FM()
+s.h()
+s.F(1,C.bT)
+J.a6(s.a.B(1,r),q)
+s.F(3,y)
+t.push(s)}x=new E.jW()
+x.h()
+x.F(11,e)
+s=d.a.K(0)
+x.a.C(0,s)
+s=d.a.K(1)
+x.a.C(1,s)
+s=v.f.ju(v.r.gb1()).a.k(2,D.eP).a.I(21,"")
+x.a.C(13,s)
+s=d.a.K(2)
+x.a.C(2,s)
+w=P.xP($.ly0(),r).jO(q)
+s=new E.FM()
+s.h()
+s.F(1,C.aj)
+J.a6(s.a.B(1,r),w)
+s.F(3,x)
+t.push(s)
+s=new E.a78()
+s.h()
+s.F(1,f?$.m9w():$.e5f())
+J.a6(s.a.B(1,u),t)
+return v.e.bu(s)},
+c8l:function(d,e){return this.c8m(d,e,!1)},
+aK:function(d,e){var y,x,w=new E.a78()
+w.h()
+y=w.a.B(1,E.FM)
+x=new E.FM()
+x.h()
+x.F(1,C.cM)
+x.F(3,e)
+J.E(y,x)
+return this.e.bu(w)},
+abF:function(d,e){return this.f2j(d,e)},
+f2j:function(d,e){var y=0,x=P.W(N.afr),w,v=2,u,t=[],s=this,r,q,p,o,n,m,l,k,j,i,h
+var $async$abF=P.Q(function(f,g){if(f===1){u=g
+y=v}while(true)switch(y){case 0:i=new N.pQ()
+i.h()
+o=H.a7(s.x.gbZ(),"$idP").b
+i.a.C(0,o)
+i.a.C(1,d)
+i.F(3,C.b2e)
+o=new O.OL()
+o.h()
+o.a.C(1,e)
+i.F(11,o)
+n=new N.a1r()
+n.h()
+n.F(1,C.b2)
+o=P.b
+J.a6(n.a.B(1,o),H.a(["customer_id","campaign_id","appdata_key","appdata_value"],[o]))
+n.F(3,i)
+m=new N.aIB()
+m.h()
+m.F(1,$.e5f())
+J.E(m.a.B(1,N.a1r),n)
+r=m
+v=4
+o=s.b.bu(r).b4(0)
+y=7
+return P.L(o.gab(o),$async$abF)
+case 7:q=g
+w=q
+y=1
+break
+v=2
+y=6
+break
+case 4:v=3
+h=u
+p=H.by(h)
+o=J.aW(p)
+k=s.y
+j=k.k1.a
+if(j==null){k.toString
+j=Y.i9("SingletonCampaignGroupAppDataError","INSTANT",null)
+k.fa(j,null)}j.d.p(0,"errors",o)
+y=6
+break
+case 3:y=2
+break
+case 6:y=1
+break
+case 1:return P.U(w,x)
+case 2:return P.T(u,x)}})
+return P.V($async$abF,x)},
+asl:function(d){return this.evj(d)},
+evj:function(d){var y=0,x=P.W(T.doh),w,v=this,u,t,s,r,q,p,o,n,m,l,k,j,i,h,g
+var $async$asl=P.Q(function(e,f){if(e===1)return P.T(f,x)
+while(true)switch(y){case 0:g=new Q.bG()
+g.h()
+u=P.b
+J.E(g.a.B(0,u),"campaign_group_id")
+t=Q.a_
+s=g.a.B(1,t)
+r=new Q.a_()
+r.h()
+r.a.C(0,"campaign_id")
+r.F(2,C.C)
+q=Q.P
+p=r.a.B(2,q)
+o=new Q.P()
+o.h()
+o.a.C(1,d)
+J.E(p,o)
+J.E(s,r)
+n=new L.bg()
+n.h()
+n.F(1,v.aO3())
+n.F(2,g)
+r=v.c.b8(n)
+g=new Q.bG()
+g.h()
+J.E(g.a.B(0,u),"appdata_value")
+u=g.a.B(1,t)
+s=new Q.a_()
+s.h()
+s.a.C(0,"campaign_id")
+s.F(2,C.C)
+o=s.a.B(2,q)
+p=new Q.P()
+p.h()
+p.a.C(1,d)
+J.E(o,p)
+p=new Q.a_()
+p.h()
+p.a.C(0,"appdata_key")
+p.F(2,C.al)
+q=p.a.B(2,q)
+o=new Q.P()
+o.h()
+o.a.C(4,"SINGLETON_CAMPAIGN_GROUP_ID")
+J.E(q,o)
+J.a6(u,H.a([s,p],[t]))
+n=new L.bg()
+n.h()
+n.F(1,v.aO3())
+n.F(2,g)
+m=H.a([r,v.b.b8(n)],[[E.bY,,,]])
+l=v.a.fY()
+l.dM(m)
+y=3
+return P.L(l.iO(),$async$asl)
+case 3:k=f
+r=J.bV(k)
+j=H.a7(r.gab(k),"$imp")
+u=O.b_
+if(J.be(j.a.B(0,u)))throw H.O(P.bT("Unable to find campaign "+H.o(d)))
+i=J.cB(j.a.B(0,u)).a.K(56)
+h=H.a7(r.w(k,1),"$iQV")
+u=N.pQ
+w=new T.doh(i,J.ay(h.a.B(0,u))?J.cB(h.a.B(0,u)).a.k(3,O.OL).a.K(1):V.a4(0))
+y=1
+break
+case 1:return P.U(w,x)}})
+return P.V($async$asl,x)},
+asm:function(d){return this.evk(d)},
+evk:function(d){var y=0,x=P.W(P.b),w,v=this,u,t,s,r,q,p,o
+var $async$asm=P.Q(function(e,f){if(e===1)return P.T(f,x)
+while(true)switch(y){case 0:p=new Q.bG()
+p.h()
+J.E(p.a.B(0,P.b),"name")
+u=p.a.B(1,Q.a_)
+t=new Q.a_()
+t.h()
+t.a.C(0,"campaign_id")
+t.F(2,C.C)
+s=t.a.B(2,Q.P)
+r=new Q.P()
+r.h()
+r.a.C(1,d)
+J.E(s,r)
+J.E(u,t)
+q=new L.bg()
+q.h()
+q.F(1,v.aO3())
+q.F(2,p)
+t=v.c.b8(q).b4(0)
+o=J
+y=3
+return P.L(t.gab(t),$async$asm)
+case 3:w=o.cB(f.a.B(0,O.b_)).a.I(2,"")
+y=1
+break
+case 1:return P.U(w,x)}})
+return P.V($async$asm,x)},
+evE:function(d,e,f){var y,x,w,v="campaign_id"
+if(e!=null){y=new Q.a_()
+y.h()
+y.a.C(0,v)
+y.F(2,C.C)
+x=y.a.B(2,Q.P)
+w=new Q.P()
+w.h()
+w.a.C(1,e)
+J.E(x,w)
+return y}else{y=Q.P
+if(d!=null){x=new Q.a_()
+x.h()
+x.a.C(0,"campaign_group_id")
+x.F(2,C.C)
+y=x.a.B(2,y)
+w=new Q.P()
+w.h()
+w.a.C(1,d)
+J.E(y,w)
+return x}else{x=new Q.a_()
+x.h()
+x.a.C(0,v)
+x.F(2,C.al)
+J.a6(x.a.B(2,y),J.aO(f,new T.hos(),y))
+return x}}},
+bO6:function(d,e,f){var y,x,w,v,u=P.b,t=H.a(["stats.cost","stats.clicks","stats.cost_per_click","stats.biddable_conversions","stats.cost_per_biddable_conversion","stats.biddable_conversion_value","stats.biddable_conversion_value_per_cost"],[u])
+if(e!=null)C.b.ag(t,e)
+y=new Q.bG()
+y.h()
+x=new B.zc()
+x.h()
+w=V.a4(1)
+x.a.C(5,w)
+y.F(4,x)
+J.E(y.a.B(1,Q.a_),d)
+J.a6(y.a.B(0,u),t)
+if(f!=null)J.a6(y.a.B(12,Q.jO),f)
+v=new L.bg()
+v.h()
+u=new E.bk()
+u.h()
+x=this.r
+w=this.f.ju(x.gb1()).a.k(2,D.eP).a.K(10)
+u.a.C(5,w)
+w=new E.dm()
+w.h()
+x=x.gb1()
+w.a.C(0,x)
+u.F(3,w)
+v.F(1,u)
+v.F(2,y)
+return v},
+e80:function(d,e){return this.bO6(d,null,e)},
+e8_:function(d,e){return this.bO6(d,e,null)},
+Mv:function(d,e){var y=d.w(0,C.k.ew(e,6))
+if(y==null||y==="0"||y==="0.0"||y==="--")return
+return P.n3(y,null)},
+Vv:function(d,e,f){return this.fFH(d,e,f)},
+fFF:function(d,e){return this.Vv(d,e,null)},
+fFC:function(d){return this.Vv(d,null,null)},
+fFD:function(d){return this.Vv(null,d,null)},
+fFE:function(d){return this.Vv(null,null,d)},
+fFH:function(c0,c1,c2){var y=0,x=P.W(Z.aaJ),w,v=this,u,t,s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,b0,b1,b2,b3,b4,b5,b6,b7,b8,b9
+var $async$Vv=P.Q(function(c3,c4){if(c3===1)return P.T(c4,x)
+while(true)switch(y){case 0:if(!v.z.dx){y=1
+break}u=c0==null
+if(u)if(c1==null)t=c2==null||J.be(c2)
+else t=!1
+else t=!1
+if(t){y=1
+break}t=c1==null
+s=t&&!u
+r=t&&u&&c2!=null
+q=v.evE(c0,c1,c2)
+p=new Q.bG()
+p.h()
+u=P.b
+t=[u]
+J.a6(p.a.B(0,u),H.a(["budget_id","budget_amount"],t))
+o=Q.a_
+J.E(p.a.B(1,o),q)
+n=new L.bg()
+n.h()
+m=new E.bk()
+m.h()
+l=new E.dm()
+l.h()
+k=v.r
+j=k.gb1()
+l.a.C(0,j)
+m.F(3,l)
+n.F(1,m)
+n.F(2,p)
+m=v.c
+i=m.b8(n)
+if(r){l=new Q.jO()
+l.h()
+l.a.C(0,"campaign_id")
+l.a.C(1,!0)
+h=v.e80(q,H.a([l],[Q.jO]))}else h=v.e8_(q,H.a(["stats.impression_user_reach"],t))
+p=new Q.bG()
+p.h()
+J.a6(p.a.B(0,u),H.a(["has_conversion_tracking","marketing_objective","advertising_channel_type","advertising_channel_sub_type","bid_config.type"],t))
+J.E(p.a.B(1,o),q)
+n=new L.bg()
+n.h()
+t=new E.bk()
+t.h()
+l=new E.dm()
+l.h()
+j=k.gb1()
+l.a.C(0,j)
+t.F(3,l)
+n.F(1,t)
+n.F(2,p)
+g=m.b8(n)
+f=new P.b1(Date.now(),!1).a26()
+t=H.ca(H.cY(f),H.dy(f)-1,1,0,0,0,0,!1)
+if(typeof t!=="number"||Math.floor(t)!==t)H.S(H.br(t))
+e=C.D.c0(t*0.001)
+d=new Q.a_()
+d.h()
+d.a.C(0,"campaign_start_time")
+d.F(2,C.j2)
+t=d.a.B(2,Q.P)
+l=new Q.P()
+l.h()
+j=V.a4(e)
+l.a.C(1,j)
+J.E(t,l)
+p=new Q.bG()
+p.h()
+J.a6(p.a.B(1,o),H.a([q,d],[o]))
+p.a.C(10,!0)
+J.E(p.a.B(0,u),"campaign_id")
+n=new L.bg()
+n.h()
+l=new E.bk()
+l.h()
+t=v.f.ju(k.gb1()).a.k(2,D.eP).a.K(10)
+l.a.C(5,t)
+t=new E.dm()
+t.h()
+j=k.gb1()
+t.a.C(0,j)
+l.F(3,t)
+n.F(1,l)
+n.F(2,p)
+a0=m.b8(n)
+a1=H.a([i,s?v.d.b8(h):m.b8(h),g,a0],[[E.bY,,,]])
+if(s){p=new Q.bG()
+p.h()
+J.E(p.a.B(0,u),"campaign_count")
+J.E(p.a.B(1,o),q)
+n=new L.bg()
+n.h()
+t=new E.bk()
+t.h()
+o=new E.dm()
+o.h()
+k=k.gb1()
+o.a.C(0,k)
+t.F(3,o)
+n.F(1,t)
+n.F(2,p)
+a1.push(v.d.b8(n))}a2=v.a.fY()
+a2.dM(a1)
+v.y.i9("PerformanceTargetMutateService.RetrievePerformanceTargetMessageData","USER_NON_BLOCKING",null)
+y=3
+return P.L(a2.iO(),$async$Vv)
+case 3:a3=c4
+t=J.bV(a3)
+a4=v.dy9(H.a7(t.gab(a3),"$imp"))
+o=t.w(a3,1)
+a5=s?H.a7(o,"$ia1t"):H.a7(o,"$imp")
+o=a5.gbN(a5)
+if(o.gbc(o)||J.be(a5.gc3()))a6=null
+else{o=a5.gj5().a.B(0,u)
+m=J.au(a5.gc3()).ge3()
+u=P.axJ(o,m.gae(m),u,u)
+a7=v.Mv(u,"stats.clicks")
+a8=v.Mv(u,"stats.cost_per_click")
+a9=v.Mv(u,"stats.biddable_conversions")
+b0=v.Mv(u,"stats.cost_per_biddable_conversion")
+b1=v.Mv(u,"stats.biddable_conversion_value")
+b2=v.Mv(u,"stats.biddable_conversion_value_per_cost")
+b3=v.Mv(u,"stats.impression_user_reach")
+b4=v.Mv(u,"stats.cost")
+b5=H.a([],[X.amJ])
+if(a7!=null)b5.push(new X.amJ(C.hn,a7,a8))
+if(a9!=null)b5.push(new X.amJ(C.h8,a9,b0))
+if(b1!=null)b5.push(new X.amJ(C.hB,b1,b2))
+if(b3!=null)b5.push(new X.amJ(C.jc,b3,null))
+a6=new X.cxS(C.mc,b4,b5)}b6=v.dya(H.a7(t.w(a3,2),"$imp"))
+b7=H.a7(t.w(a3,3),"$imp")
+u=b7.gbN(b7)
+b8=u.gbc(u)?null:b7.a.k(2,E.aI).a.k(2,E.uy).a.K(0)
+if(s){b9=H.a7(t.w(a3,4),"$ia1t")
+u=b9.gbN(b9)
+w=new Z.aaJ(a4,a6,b6,u.gbc(u)||J.be(b9.a.B(0,T.nj))?null:J.au(b9.a.B(0,T.nj)).a.K(6),b8)
+y=1
+break}w=new Z.aaJ(a4,a6,b6,null,b8)
+y=1
+break
+case 1:return P.U(w,x)}})
+return P.V($async$Vv,x)},
+dy9:function(d){var y=d.gbN(d)
+if(y.gbc(y)||J.be(d.a.B(0,O.b_)))y=null
+else{y=V.a3
+y=P.jx(d.a.B(0,O.b_),new T.hoo(),new T.hop(),y,y)
+y=y.gc2(y).hJ(0,new T.hoq())}return y},
+dya:function(d){var y,x,w,v,u,t,s,r,q,p,o,n,m,l,k=d.gbN(d)
+if(!(k.gbc(k)||J.be(d.a.B(0,O.b_)))){k=R.oN
+y=H.a([],[k])
+for(x=J.aJ(d.a.B(0,O.b_)),w=P.h,v=U.bK,u=O.ie,t=D.cV,s=B.jE,r=D.dp;x.ao();){q=x.gav(x)
+p=q.a.ah(128,!1,w)
+y.push(this.drv(q.a.k(6,v),p,q.a.k(23,u).a.k(0,t),q.a.k(83,s),q.a.k(10,r)))}o=P.B(k,P.n)
+for(k=y.length,n=0;n<y.length;y.length===k||(0,H.b4)(y),++n){m=y[n]
+o.p(0,m,o.w(0,m)==null?1:J.dG(o.w(0,m),1))}l=C.b.hJ(y,new T.hor(o))}else l=null
+return l},
+drv:function(d,e,f,g,h){var y,x=this.dm9(f)
+if(x!=null)return x
+if(d===C.bc)return e?C.h8:C.hn
+if(d===C.by){if(g===C.wB)return C.jc
+if(h!==C.up)if(g!==C.v_)y=h===C.kx&&g===C.nu
+else y=!0
+else y=!0
+if(y)return C.hn
+return C.h8}return C.h8},
+dm9:function(d){switch(d){case C.iY:case C.cG:return C.h8
+case C.h9:case C.arC:case C.mz:case C.m_:return C.hn
+case C.kz:case C.f0:return C.hB
+default:return}},
+a5W:function(d,e){return this.do2(d,!1)},
+do2:function(d,e){var y=0,x=P.W(V.a3),w,v=this,u,t,s,r,q,p,o
+var $async$a5W=P.Q(function(f,g){if(f===1)return P.T(g,x)
+while(true)switch(y){case 0:y=3
+return P.L(v.asm(d),$async$a5W)
+case 3:t=g
+s=V.a4(-236747231)
+r=v.a.fY()
+r.dM(H.a([v.bBE(t,s),v.bBV(d,s)],[[E.bY,,,]]))
+q=J
+p=H
+o=J
+y=4
+return P.L(r.iO(),$async$a5W)
+case 4:u=q.cB(p.a7(o.au(g),"$ia1u").a.B(0,T.nj)).a.K(1)
+v.abF(d,u).oq(new T.hon())
+w=u
+y=1
+break
+case 1:return P.U(w,x)}})
+return P.V($async$a5W,x)},
+bBE:function(d,e){var y,x,w,v=new T.nj()
+v.h()
+y=J.aW(this.ch.a.$0())
+x="Campaign Group for Campaign: "+H.o(d)+" ("+y+")"
+v.a.C(2,x)
+v.a.C(7,!0)
+v.a.C(1,e)
+x=H.a7(this.x.gbZ(),"$idP").b
+v.a.C(0,x)
+w=new T.Uj()
+w.h()
+w.F(1,C.b2)
+w.F(3,v)
+x=P.b
+J.a6(w.a.B(1,x),H.a(["is_singleton","name"],[x]))
+x=new T.at8()
+x.h()
+J.E(x.a.B(1,T.Uj),w)
+return this.d.bu(x)},
+bBV:function(d,e){var y,x,w=new O.b_(null)
+w.h()
+y=H.a7(this.x.gbZ(),"$idP").b
+w.a.C(0,y)
+w.a.C(1,d)
+w.a.C(56,e)
+x=new O.fL()
+x.h()
+x.F(1,C.aj)
+x.F(3,w)
+J.E(x.a.B(1,P.b),"campaign_group_id")
+y=new O.q8()
+y.h()
+y.F(1,$.e5f())
+J.E(y.a.B(1,O.fL),x)
+return this.c.bu(y)},
+bBD:function(d,e,f){var y,x,w,v=this,u=new E.jW()
+u.h()
+u.F(11,d)
+u.a.C(1,e)
+y=v.f.ju(v.r.gb1()).a.k(2,D.eP).a.I(21,"")
+u.a.C(13,y)
+y=H.a7(v.x.gbZ(),"$idP").b
+u.a.C(0,y)
+y=new E.a78()
+y.h()
+y.F(1,f?$.m9w():$.e5f())
+x=y.a.B(1,E.FM)
+w=new E.FM()
+w.h()
+w.F(1,C.b2)
+J.a6(w.a.B(1,P.b),$.lv3())
+w.F(3,u)
+J.E(x,w)
+return v.e.bu(y)},
+ddJ:function(d,e){return this.bBD(d,e,!1)},
+aO3:function(){var y,x,w=new E.bk()
+w.h()
+y=new E.dm()
+y.h()
+x=H.a7(this.x.gbZ(),"$idP").b
+y.a.C(0,x)
+w.F(3,y)
+return w}}
+T.doh.prototype={}
+var z=a.updateTypes([{func:1,ret:[S.u,-1],args:[A.ba,P.n]},{func:1,ret:-1,args:[,]},{func:1,ret:-1,args:[P.h]},{func:1,ret:-1,args:[Q.cM]},{func:1,ret:-1},{func:1,ret:-1,args:[N.b8E]},{func:1,ret:-1,args:[N.os]},{func:1,ret:T.aPl,args:[E.fr,L.AY,F.ey,S.Dv,D.Du,M.jd,U.aL,E.f1,T.cO,U.GC,F.bE]},{func:1,ret:[S.u,Q.bcx]},{func:1,ret:[S.u,Y.aod]}])
+Q.hof.prototype={
+$1:function(d){return this.a.aXf(d)},
+$S:4}
+Q.hog.prototype={
+$1:function(d){this.a.aX9(d)},
+$S:5}
+Q.hoh.prototype={
+$1:function(d){this.a.ezQ(d)},
+$S:5}
+Q.hoi.prototype={
+$1:function(d){this.a.bXE(d)},
+$S:5}
+Q.hoj.prototype={
+$1:function(d){var y=null,x=this.a,w=R.oN
+if(x.aU.a.k(6,w)==null||x.aU.a.k(6,w)===C.xx)return P.D(["required",$.d().n("Select a performance metric",y,y,y,y)],P.b,y)
+if(x.b.dx){w=x.r1
+if(!w&&!x.r2&&!x.k4)return P.D(["targetNotSelectedError",$.d().n("Select at least one performance target.",y,y,y,y)],P.b,y)
+if(!(w&&x.db==null))if(!(x.r2&&x.dx==null))x=x.k4&&x.cy==null
+else x=!0
+else x=!0
+if(x)return P.D(["targetValueNotSetError",$.d().n("One or more targets is missing a value. Enter the missing values.",y,y,y,y)],P.b,y)}return},
+$S:52}
+Q.hoe.prototype={
+$1:function(d){var y,x,w=null,v=this.a,u=v.go,t=u==null?C.Jk:V.a4(u.a.a)
+u=v.id
+y=u==null?C.yi:V.a4(u.a.a)
+if(y.d0(t)<0)return P.D(["startDateLaterThanEndDate",$.d().n("The start date must be earlier than the end date",w,w,w,w)],P.b,w)
+if(v.gb6A()){if(v.go==null||v.id==null)return P.D(["required",$.d().n("Enter a start and end date",w,w,w,w)],P.b,w)
+x=y.iG(0,t)
+if(v.fx===C.jc&&x.d0($.rVI())>0)return P.D(["reachPerformanceTargetTooLong",$.d().n('The date range for "Unique users" targets cannot be more than 92 days',w,w,w,w)],P.b,w)
+if(x.d0(C.r.dS(P.d9(366,0,0,0,0,0).a,1000))>0)return P.D(["performanceTargetTooLong",$.d().n("The date range for performance targets cannot be more than 366 days",w,w,w,w)],P.b,w)}return},
+$S:52}
+T.hos.prototype={
+$1:function(d){var y=new Q.P()
+y.h()
+y.a.C(1,d)
+return y},
+$S:45}
+T.hoo.prototype={
+$1:function(d){return d.glV()},
+$S:42}
+T.hop.prototype={
+$1:function(d){return d.gN6()},
+$S:42}
+T.hoq.prototype={
+$2:function(d,e){return d.dF(0,e)},
+$S:1166}
+T.hor.prototype={
+$2:function(d,e){var y=this.a
+return y.w(0,d)>y.w(0,e)?d:e},
+$S:4691}
+T.hon.prototype={
+$1:function(d){},
+$S:5}
+D.lgc.prototype={
+$11:function(d,e,f,g,h,i,j,k,l,m,n){return T.cA4(d,e,f,g,h,i,j,k,l,m,n)},
+$C:"$11",
+$R:11,
+$S:z+7};(function installTearOffs(){var y=a._instance_1u,x=a._instance_0u,w=a._static_2,v=a._static_0
+var u
+y(u=Q.bcx.prototype,"gcym","bi1",3)
+y(u,"gcxj","aGu",3)
+y(u,"gcx9","cxa",3)
+y(u,"gfxC","fxD",5)
+y(u,"gfxv","fxw",2)
+y(u,"gfxy","fxz",2)
+y(u,"gfxt","fxu",2)
+y(u,"gfsZ","ft_",6)
+x(u,"gf5r","f5s",4)
+x(u,"gacq","T7",4)
+w(X,"yfV","B1Y",0)
+w(X,"yg5","B28",0)
+w(X,"yge","B2h",0)
+w(X,"ygf","B2i",0)
+w(X,"ygg","B2j",0)
+w(X,"ygh","B2k",0)
+w(X,"ygi","B2l",0)
+w(X,"ygj","B2m",0)
+w(X,"ygk","B2n",0)
+w(X,"yfW","B1Z",0)
+w(X,"yfX","B2_",0)
+w(X,"yfY","B20",0)
+w(X,"yfZ","B21",0)
+w(X,"yg_","B22",0)
+w(X,"yg0","B23",0)
+w(X,"yg1","B24",0)
+w(X,"yg2","B25",0)
+w(X,"yg3","B26",0)
+w(X,"yg4","B27",0)
+w(X,"yg6","B29",0)
+w(X,"yg7","B2a",0)
+w(X,"yg8","B2b",0)
+w(X,"yg9","B2c",0)
+w(X,"yga","B2d",0)
+w(X,"ygb","B2e",0)
+w(X,"ygc","B2f",0)
+w(X,"ygd","B2g",0)
+v(X,"ygl","B2o",8)
+y(X.dV_.prototype,"gaVn","aVo",1)
+y(X.dUZ.prototype,"gaVn","aVo",1)
+y(Y.aod.prototype,"gfrw","frx",2)
+w(B,"zBN","Bqm",0)
+w(B,"zBO","Bqn",0)
+w(B,"zBP","Bqo",0)
+w(B,"zBQ","Bqp",0)
+w(B,"zBR","Bqq",0)
+w(B,"zBS","Bqr",0)
+w(B,"zBT","Bqs",0)
+v(B,"zBU","Bqt",9)
+y(B.dX0.prototype,"geGI","eGJ",1)
+y(B.dX1.prototype,"ga9A","a9B",1)
+y(B.dX2.prototype,"ga9A","a9B",1)
+y(B.dX3.prototype,"ga9A","a9B",1)})();(function inheritance(){var y=a.inheritMany
+y(P.c,[X.b8G,B.cEb,Q.bcx,Q.bZn,Q.aTJ,Y.cE9,Y.aod,Z.aaJ,T.aPl,T.doh])
+y(H.bW,[Q.hof,Q.hog,Q.hoh,Q.hoi,Q.hoj,Q.hoe,T.hos,T.hoo,T.hop,T.hoq,T.hor,T.hon,D.lgc])
+y(S.u,[X.itQ,X.jVS,X.jW1,X.jWa,X.jWb,X.jWc,X.jWd,X.dV_,X.jWe,X.jWf,X.jVT,X.jVU,X.dUZ,X.jVV,X.jVW,X.jVX,X.jVY,X.jVZ,X.jW_,X.jW0,X.jW2,X.jW3,X.jW4,X.jW5,X.jW6,X.jW7,X.jW8,X.jW9,X.jWg,B.iAA,B.kgF,B.kgG,B.kgH,B.dX0,B.dX1,B.dX2,B.dX3,B.kgI])})();(function constants(){var y=a.makeConstList
+C.dCA=new D.F("target-picker",B.zBU(),[Y.aod])
+C.dKx=new D.F("performance-target-editor",X.ygl(),[Q.bcx])
+C.dVI=new P.ea(79488e8)
+C.zL=H.t(T.aPl)
+C.foH=H.a(y([C.cW,C.PD,C.cX,C.Pn,C.P8,C.fZ,C.aE,C.cY,C.bD,C.JD,C.aV]),[[P.j,P.c]])
+C.c1R=new H.aK(1,{campaignCount:"12"},C.aDn,[P.b,P.c])
+C.chE=new Y.cE9(0,"TargetPickerType.integer")
+C.a16=new Y.cE9(1,"TargetPickerType.currency")
+C.RY=new Y.cE9(2,"TargetPickerType.percent")
+C.chH=new B.cEb(0,"TargetType.spendTarget")
+C.chI=new B.cEb(1,"TargetType.volumeTarget")
+C.chJ=new B.cEb(2,"TargetType.efficiencyTarget")
+C.jdw=H.t(Y.aod)
+C.jgv=H.t(Q.bcx)})();(function staticFields(){$.zt2=[".editor._ngcontent-%ID%{color:rgba(0,0,0,.54);font-size:13px;padding-bottom:16px}.section._ngcontent-%ID%{margin-bottom:24px}.section-label._ngcontent-%ID%{color:rgba(0,0,0,.87);margin-bottom:16px}.label._ngcontent-%ID%{margin-bottom:16px;color:rgba(0,0,0,.54)}.sublabel._ngcontent-%ID%{margin-bottom:8px}.error-label._ngcontent-%ID%{margin-top:8px}.row._ngcontent-%ID%{display:flex}.stats-message._ngcontent-%ID%{margin-left:32px;color:rgba(0,0,0,.54);padding-bottom:8px;display:flex;line-height:15px}.edit.target._ngcontent-%ID%{color:rgba(0,0,0,.87)}.edit.target._ngcontent-%ID% material-input._ngcontent-%ID%{padding:0}.optional._ngcontent-%ID%{color:rgba(0,0,0,.54)}.tips._ngcontent-%ID%{border-left:1px solid rgba(0,0,0,.12);padding-left:16px;margin-left:16px;vertical-align:top;line-height:24px;width:40%}.performance-targets-msg._ngcontent-%ID%{line-height:20px}.inner-column._ngcontent-%ID%{width:60%}material-dropdown-select.selected._ngcontent-%ID%{color:rgba(0,0,0,.87)}.date-range-picker._ngcontent-%ID%{display:flex;margin-bottom:8px}.separator._ngcontent-%ID%{padding:0 8px}material-input.editable._ngcontent-%ID%{color:rgba(0,0,0,.87)}material-datepicker.selected._ngcontent-%ID%{color:rgba(0,0,0,.87)}.tip-icon._ngcontent-%ID%{border-radius:100%;width:24px;height:24px;color:#fff;background-color:#9e9e9e}.tip-icon.complete._ngcontent-%ID%{background-color:#4285f4}.tip-text._ngcontent-%ID%{padding-left:16px}.info-icon._ngcontent-%ID%{color:#4285f4;padding-right:8px;vertical-align:text-bottom}material-yes-no-buttons._ngcontent-%ID%{color:#4285f4}.underline._ngcontent-%ID%{height:1px;overflow:visible}.custom-recurrence-picker._ngcontent-%ID%{padding-top:16px;display:flex;flex-direction:column}.custom-period-picker._ngcontent-%ID%{display:flex}.custom-period-picker._ngcontent-%ID% > div._ngcontent-%ID%{margin-right:32px}.recurrence-length-picker._ngcontent-%ID%{display:flex}.recurrence-length-picker._ngcontent-%ID% material-input._ngcontent-%ID%{padding:0;width:64px}material-checkbox._ngcontent-%ID%{margin:0 0 8px -2px}.picker-fields._ngcontent-%ID%{margin-left:32px}.target-picker._ngcontent-%ID%{flex-direction:column}.symbol._ngcontent-%ID%{margin:0 16px 0 8px;display:inline-flex;color:rgba(0,0,0,.87)}material-radio._ngcontent-%ID%{margin:0 4px}.link-style._ngcontent-%ID%{color:#3367d6;cursor:pointer;text-decoration:none}.switch-link._ngcontent-%ID%{margin-bottom:16px}help-tooltip-icon._ngcontent-%ID%{margin-left:4px}.move-campaign-message._ngcontent-%ID%{color:rgba(0,0,0,.54);padding-bottom:16px}.partial-stats-message._ngcontent-%ID%{padding-bottom:24px}"]
+$.nnS=null
+$.o8Z=!1
+$.zt1=["material-input._ngcontent-%ID%{margin-left:4px;padding-bottom:8px}material-input.editable._ngcontent-%ID%{color:rgba(0,0,0,.87)}.picker-fields._ngcontent-%ID%{margin-left:32px}.improved-symbol._ngcontent-%ID%{margin:0 16px 0 8px;display:inline-flex;color:rgba(0,0,0,.87)}material-checkbox._ngcontent-%ID%{margin:0 0 8px -2px}"]
+$.nvh=null
+$.o9_=!1
+$.o8Y=!1
+$.z5L=[$.zt2]
+$.zax=[$.zt1]})();(function lazyInitializers(){var y=a.lazy
+y($,"DOJ","rVI",function(){return C.dVI.gTS()})
+y($,"D_l","rdH",function(){return T.tOR()})
+y($,"D_m","lv3",function(){return H.a(["campaign_group_id","campaign_group_performance_target_id","performance_target.efficiency_target_type","performance_target.efficiency_target_value","performance_target.end_time","performance_target.recurrence","performance_target.spend_target","performance_target.spend_target_type","performance_target.start_time","performance_target.volume_goal_type","performance_target.volume_target_value"],[P.b])})
+y($,"D_G","e5f",function(){var x=E.bF4(),w=E.bC_()
+w.sW3(!1)
+x.sBo(w)
+return x})
+y($,"D_F","m9w",function(){var x=E.bF4(),w=E.bC_()
+w.sW3(!0)
+x.sBo(w)
+return x})})()}
+$__dart_deferred_initializers__["dttfdBuMzZRDwPvuS1RJgaUQQKs="] = $__dart_deferred_initializers__.current
+//# sourceMappingURL=cm_shell_main.dart.js_285.part.js.map

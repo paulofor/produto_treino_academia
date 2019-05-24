@@ -1,0 +1,419 @@
+self.$__dart_deferred_initializers__=self.$__dart_deferred_initializers__||Object.create(null)
+$__dart_deferred_initializers__.current=function(a,b,c,$){var C,H,J,P,W,V,G,M,B,S,Q,K,O,X,R,Y,Z,U,L,F,E,T={
+e7z:function(d,e,f,g){var y=new T.BE(!0,T.dB(f,T.aCn(),T.e9()),new P.e7(""))
+y.pA(f,new T.b7q(d),null,g,e,!0,null)
+return y},
+b7q:function b7q(d){this.a=d}},N,A,D={
+A2:function(d,e){var y=new D.aRw(d)
+y.a3h(d,null,e)
+return y},
+er6:function(d,e,f){var y,x,w,v,u=C.c.jF(d,e.r)
+if(u!==-1){y=u+1
+x=d.length
+for(w=y;w<x;){v=C.c.cC(d,w)
+if(v<48||v>57)break;++w}if(f===0)d=C.c.b_(d,0,u)+C.c.bF(d,w)
+else if(f<w-u-1)d=C.c.b_(d,0,y)+C.c.b_(d,y,y+f)}return d},
+eol:function(d,e){var y=new D.WO(d)
+y.a4R(d,e)
+return y},
+aRw:function aRw(d){var _=this
+_.e=_.d=_.c=_.b=_.a=null
+_.f=d
+_.r=-1
+_.x=null},
+WO:function WO(d){var _=this
+_.a=d
+_.y=_.x=_.r=_.d=_.c=_.b=null}}
+a.setFunctionNamesIfNecessary([T,D])
+C=c[0]
+H=c[1]
+J=c[2]
+P=c[3]
+W=c[4]
+V=c[5]
+G=c[6]
+M=c[7]
+B=c[8]
+S=c[9]
+Q=c[10]
+K=c[11]
+O=c[12]
+X=c[13]
+R=c[14]
+Y=c[15]
+Z=c[16]
+U=c[17]
+L=c[18]
+F=c[19]
+E=c[20]
+T=a.updateHolder(c[21],T)
+N=c[22]
+A=c[23]
+D=a.updateHolder(c[24],D)
+D.aRw.prototype={
+a3h:function(d,e,f){var y,x,w,v,u=this,t="#,##0.00"
+if(T.hl()==null)$.Ky="en_US"
+y=T.hl()
+u.c=T.afO(y)
+if(!$.cav){$.cav=!0
+for(y=J.av(C.yP.gaI(C.yP));y.a5();){x=y.gaf(y)
+$.aRy.l(0,T.afO(x),C.yP.i(0,x))}}if(!$.aRy.aj(0,u.c))throw H.m(P.os("Currency data for "+H.k(u.c)+" not loaded."))
+y=$.aRy.i(0,u.c)
+u.a=y
+x=u.f
+if(x==null||x.length===0){y=new D.WO("")
+y.c=""
+y.d=2
+y.r="."
+y.x=t
+y.y="#,##0.00;"+y.Jp(t)
+u.b=y
+return}if(!J.rF(y,x))throw H.m(P.f8(x,null,null))
+y=$.aRx
+if(y==null)y=$.aRx=P.N(P.a,[P.c,P.a,D.WO])
+w=u.c
+if(y.i(0,w)==null)y.l(0,w,P.N(P.a,D.WO))
+v=$.aRx.i(0,u.c).i(0,x)
+if(v==null)v=J.ar(u.a,x)
+if(v instanceof D.WO)u.b=v
+else{u.b=D.eol(x,v)
+$.aRx.i(0,u.c).l(0,x,u.b)}},
+xh:function(d,e,f,g){var y,x,w,v,u,t=this
+if(d==null)return""
+y=t.d
+if(y==null){y=t.c
+x=t.b
+w=x.c
+v=x.d
+w=t.d=T.e7z(x.x,v,y,w)
+y=w}u=y.aL(d)
+y=t.r
+if(y!==-1&&y<t.b.d)u=D.er6(u,t.b,y)
+if(g||f)u=t.amc(u)
+if(f){y=P.br("[\u200f\u202b\u202c\u200e\u202a]",!0,!1)
+u=H.cA(u,y,"")}return u},
+aL:function(d){return this.xh(d,!1,!1,!1)},
+as5:function(d,e){return this.xh(d,e,!1,!1)},
+as6:function(d,e){return this.xh(d,!1,!1,e)},
+TD:function(d,e){return this.xh(d,!1,e,!1)},
+amc:function(d){var y=this.b.c
+if(y.length!==0)return C.c.bC(C.c.h7(d,y,""))
+return d},
+gcD:function(){return this.f}}
+D.WO.prototype={
+a4R:function(d,e){var y,x,w,v=this,u=J.aq(e)
+v.b=u.i(e,"name")
+y=u.i(e,"symbol")
+v.c=y==null?v.a:y
+y=u.i(e,"digits")
+v.d=y==null?2:y
+u.i(e,"cash")
+if(!u.aj(e,"sep"))v.r="."
+else v.r=u.i(e,"sep")[1]
+y=v.x=u.i(e,"fmt")
+if(y==null){x=v.d
+if(x>0)for(y="\xa4#,##0.";x>0;--x)y+="0"
+else y="\xa4#,##0"
+y=v.x=y.charCodeAt(0)==0?y:y}w=v.agu(y,"\xa4")
+u=u.i(e,"fmtacc")
+v.y=u==null?H.k(v.x)+";"+v.Jp(v.x):u
+v.x=H.k(v.x)+";"+w},
+Jp:function(d){var y,x,w,v="#0,.%E+-",u=d.length
+for(y=0;y<u;){x=d[y]
+if(H.Dh(v,x,0))break;++y}w=u-1
+for(;w>=0;){x=d[w]
+if(H.Dh(v,x,0))break;--w}if(y===u||w===-1)return"("+d+")"
+x=w+1
+return C.c.b_(d,0,y)+"("+C.c.b_(d,y,x)+")"+C.c.bF(d,x)},
+agu:function(d,e){var y,x,w=d.length
+for(y=0;y<w;){x=d[y]
+if(H.Dh("#0,.%E+-",x,0)||d[y]===e)break;++y}if(y===w)return"-"+H.k(d)+")"
+return J.eq(d).b_(d,0,y)+"-"+C.c.bF(d,y)},
+gcD:function(){return this.a}}
+var z=a.updateTypes([])
+T.b7q.prototype={
+$1:function(d){var y=this.a
+return y==null?d.db:y},
+$S:73};(function inheritance(){var y=a.inheritMany,x=a.inherit
+y(P.e,[D.aRw,D.WO])
+x(T.b7q,H.bx)})();(function constants(){var y=a.makeConstList
+C.b30=y(["en-US"])
+C.b16=H.b(y(["ADP","AED","AFA","AFN","ALK","ALL","AMD","ANG","AOA","AOK","AON","AOR","ARA","ARL","ARM","ARP","ARS","ATS","AUD","AWG","AZM","AZN","BAD","BAM","BAN","BBD","BDT","BEF","BGL","BGM","BGN","BGO","BHD","BIF","BMD","BND","BOB","BOL","BOP","BRB","BRC","BRE","BRL","BRN","BRR","BRZ","BSD","BTN","BUK","BWP","BYB","BYN","BYR","BZD","CAD","CDF","CHF","CLE","CLF","CLP","CNY","COP","CRC","CSD","CSK","CUC","CUP","CVE","CYP","CZK","DDM","DEM","DJF","DKK","DOP","DZD","ECS","EEK","EGP","ERN","ESP","ETB","EUR","FIM","FJD","FKP","FRF","GBP","GEK","GEL","GHC","GHP","GHS","GIP","GMD","GNF","GNS","GQE","GRD","GTQ","GWE","GWP","GYD","HKD","HNL","HRD","HRK","HTG","HUF","IDR","IEP","ILP","ILR","ILS","INR","IQD","IRR","ISJ","ISK","ITL","JMD","JOD","JPY","KES","KGS","KHR","KMF","KPW","KRH","KRO","KRW","KWD","KYD","KZT","LAK","LBP","LKR","LRD","LSL","LTL","LTT","LUF","LVL","LVR","LYD","MAD","MAF","MCF","MDC","MDL","MGA","MGF","MKD","MKN","MLF","MMK","MNT","MOP","MRO","MRU","MTL","MTP","MUR","MVP","MVR","MWK","MXN","MXP","MYR","MZE","MZM","MZN","NAD","NGN","NIC","NIO","NLG","NOK","NPR","NZD","OMR","PAB","PEI","PEN","PES","PGK","PHP","PKR","PLN","PLZ","PTE","PYG","QAR","RHD","ROL","RON","RSD","RUB","RUR","RWF","SAR","SBD","SCR","SDD","SDG","SDP","SEK","SGD","SHP","SIT","SKK","SLL","SOS","SRD","SRG","SSP","STD","STN","SUR","SVC","SYP","SZL","THB","TJR","TJS","TMM","TMT","TND","TOP","TPE","TRL","TRY","TTD","TWD","TZS","UAH","UAK","UGS","UGX","USD","UYP","UYU","UZS","VEB","VEF","VES","VND","VNN","VUV","WST","XAF","XCD","XOF","XPF","XXX","YDD","YER","YUD","YUM","YUN","YUR","ZAR","ZMK","ZMW","ZRN","ZRZ","ZWD","ZWL","ZWR"]),[P.a])
+C.h=H.b(y(["name","digits","fmt"]),[P.a])
+C.bbN=new H.G(3,{name:"Andorran Peseta",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bcc=new H.G(3,{name:"United Arab Emirates Dirham",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baN=new H.G(3,{name:"Afghan Afghani (1927\u20132002)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bb1=new H.G(3,{name:"Afghan Afghani",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bbV=new H.G(3,{name:"Albanian Lek (1946\u20131965)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baO=new H.G(3,{name:"Albanian Lek",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.c3=H.b(y(["name","digits","cash","fmt"]),[P.a])
+C.bew=new H.G(4,{name:"Armenian Dram",digits:2,cash:0,fmt:"\xa4#,##0.00"},C.c3,[P.a,P.e])
+C.baK=new H.G(3,{name:"Netherlands Antillean Guilder",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdS=new H.G(3,{name:"Angolan Kwanza",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdz=new H.G(3,{name:"Angolan Kwanza (1977\u20131991)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcW=new H.G(3,{name:"Angolan New Kwanza (1990\u20132000)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baQ=new H.G(3,{name:"Angolan Readjusted Kwanza (1995\u20131999)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bb9=new H.G(3,{name:"Argentine Austral",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdB=new H.G(3,{name:"Argentine Peso Ley (1970\u20131983)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bb2=new H.G(3,{name:"Argentine Peso (1881\u20131970)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bb_=new H.G(3,{name:"Argentine Peso (1983\u20131985)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdx=new H.G(3,{name:"Argentine Peso",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdk=new H.G(3,{name:"Austrian Schilling",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bg=H.b(y(["name","symbol","digits","fmt"]),[P.a])
+C.b6Z=new H.G(4,{name:"Australian Dollar",symbol:"A$",digits:2,fmt:"\xa4#,##0.00"},C.bg,[P.a,P.e])
+C.bdX=new H.G(3,{name:"Aruban Florin",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbJ=new H.G(3,{name:"Azerbaijani Manat (1993\u20132006)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcq=new H.G(3,{name:"Azerbaijani Manat",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bc6=new H.G(3,{name:"Bosnia-Herzegovina Dinar (1992\u20131994)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdN=new H.G(3,{name:"Bosnia-Herzegovina Convertible Mark",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdQ=new H.G(3,{name:"Bosnia-Herzegovina New Dinar (1994\u20131997)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bd_=new H.G(3,{name:"Barbadian Dollar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdw=new H.G(3,{name:"Bangladeshi Taka",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdv=new H.G(3,{name:"Belgian Franc",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcY=new H.G(3,{name:"Bulgarian Hard Lev",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdH=new H.G(3,{name:"Bulgarian Socialist Lev",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdn=new H.G(3,{name:"Bulgarian Lev",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcU=new H.G(3,{name:"Bulgarian Lev (1879\u20131952)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcs=new H.G(3,{name:"Bahraini Dinar",digits:3,fmt:"\xa4#,##0.000"},C.h,[P.a,P.e])
+C.bb4=new H.G(3,{name:"Burundian Franc",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bdA=new H.G(3,{name:"Bermudan Dollar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdr=new H.G(3,{name:"Brunei Dollar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdT=new H.G(3,{name:"Bolivian Boliviano",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdo=new H.G(3,{name:"Bolivian Boliviano (1863\u20131963)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbO=new H.G(3,{name:"Bolivian Peso",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcQ=new H.G(3,{name:"Brazilian New Cruzeiro (1967\u20131986)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdg=new H.G(3,{name:"Brazilian Cruzado (1986\u20131989)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbf=new H.G(3,{name:"Brazilian Cruzeiro (1990\u20131993)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.b6Y=new H.G(4,{name:"Brazilian Real",symbol:"R$",digits:2,fmt:"\xa4#,##0.00"},C.bg,[P.a,P.e])
+C.bc0=new H.G(3,{name:"Brazilian New Cruzado (1989\u20131990)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bby=new H.G(3,{name:"Brazilian Cruzeiro (1993\u20131994)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bd9=new H.G(3,{name:"Brazilian Cruzeiro (1942\u20131967)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdY=new H.G(3,{name:"Bahamian Dollar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baR=new H.G(3,{name:"Bhutanese Ngultrum",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdl=new H.G(3,{name:"Burmese Kyat",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baT=new H.G(3,{name:"Botswanan Pula",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baW=new H.G(3,{name:"Belarusian Ruble (1994\u20131999)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bal=new H.G(3,{name:"Belarusian Ruble",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baB=new H.G(3,{name:"Belarusian Ruble (2000\u20132016)",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bbX=new H.G(3,{name:"Belize Dollar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.b72=new H.G(4,{name:"Canadian Dollar",symbol:"CA$",digits:2,fmt:"\xa4#,##0.00"},C.bg,[P.a,P.e])
+C.bbE=new H.G(3,{name:"Congolese Franc",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcE=new H.G(3,{name:"Swiss Franc",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcX=new H.G(3,{name:"Chilean Escudo",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcT=new H.G(3,{name:"Chilean Unit of Account (UF)",digits:4,fmt:"\xa4#,##0.0000"},C.h,[P.a,P.e])
+C.bbA=new H.G(3,{name:"Chilean Peso",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.b6R=new H.G(4,{name:"Chinese Yuan",symbol:"CN\xa5",digits:2,fmt:"\xa4#,##0.00"},C.bg,[P.a,P.e])
+C.bep=new H.G(4,{name:"Colombian Peso",digits:2,cash:0,fmt:"\xa4#,##0.00"},C.c3,[P.a,P.e])
+C.bek=new H.G(4,{name:"Costa Rican Col\xf3n",digits:2,cash:0,fmt:"\xa4#,##0.00"},C.c3,[P.a,P.e])
+C.bcr=new H.G(3,{name:"Serbian Dinar (2002\u20132006)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bda=new H.G(3,{name:"Czechoslovak Hard Koruna",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bc8=new H.G(3,{name:"Cuban Convertible Peso",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baS=new H.G(3,{name:"Cuban Peso",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdm=new H.G(3,{name:"Cape Verdean Escudo",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcI=new H.G(3,{name:"Cypriot Pound",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.beq=new H.G(4,{name:"Czech Koruna",digits:2,cash:0,fmt:"\xa4#,##0.00"},C.c3,[P.a,P.e])
+C.bdi=new H.G(3,{name:"East German Mark",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbD=new H.G(3,{name:"German Mark",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcG=new H.G(3,{name:"Djiboutian Franc",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bcd=new H.G(3,{name:"Danish Krone",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdE=new H.G(3,{name:"Dominican Peso",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baD=new H.G(3,{name:"Algerian Dinar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bb3=new H.G(3,{name:"Ecuadorian Sucre",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbB=new H.G(3,{name:"Estonian Kroon",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbi=new H.G(3,{name:"Egyptian Pound",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbg=new H.G(3,{name:"Eritrean Nakfa",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcZ=new H.G(3,{name:"Spanish Peseta",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bbS=new H.G(3,{name:"Ethiopian Birr",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.b7_=new H.G(4,{name:"Euro",symbol:"\u20ac",digits:2,fmt:"\xa4#,##0.00"},C.bg,[P.a,P.e])
+C.bci=new H.G(3,{name:"Finnish Markka",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbd=new H.G(3,{name:"Fijian Dollar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdj=new H.G(3,{name:"Falkland Islands Pound",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcz=new H.G(3,{name:"French Franc",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.b6V=new H.G(4,{name:"British Pound",symbol:"\xa3",digits:2,fmt:"\xa4#,##0.00"},C.bg,[P.a,P.e])
+C.bca=new H.G(3,{name:"Georgian Kupon Larit",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbH=new H.G(3,{name:"Georgian Lari",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bd4=new H.G(3,{name:"Ghanaian Cedi (1979\u20132007)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcS=new H.G(3,{name:"GHP",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdq=new H.G(3,{name:"Ghanaian Cedi",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcb=new H.G(3,{name:"Gibraltar Pound",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcN=new H.G(3,{name:"Gambian Dalasi",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bam=new H.G(3,{name:"Guinean Franc",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bdp=new H.G(3,{name:"Guinean Syli",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcg=new H.G(3,{name:"Equatorial Guinean Ekwele",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdM=new H.G(3,{name:"Greek Drachma",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bd5=new H.G(3,{name:"Guatemalan Quetzal",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bc7=new H.G(3,{name:"Portuguese Guinea Escudo",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bax=new H.G(3,{name:"Guinea-Bissau Peso",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.ber=new H.G(4,{name:"Guyanaese Dollar",digits:2,cash:0,fmt:"\xa4#,##0.00"},C.c3,[P.a,P.e])
+C.b6T=new H.G(4,{name:"Hong Kong Dollar",symbol:"HK$",digits:2,fmt:"\xa4#,##0.00"},C.bg,[P.a,P.e])
+C.bce=new H.G(3,{name:"Honduran Lempira",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baV=new H.G(3,{name:"Croatian Dinar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbP=new H.G(3,{name:"Croatian Kuna",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baq=new H.G(3,{name:"Haitian Gourde",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bes=new H.G(4,{name:"Hungarian Forint",digits:2,cash:0,fmt:"\xa4#,##0.00"},C.c3,[P.a,P.e])
+C.beu=new H.G(4,{name:"Indonesian Rupiah",digits:2,cash:0,fmt:"\xa4#,##0.00"},C.c3,[P.a,P.e])
+C.bdU=new H.G(3,{name:"Irish Pound",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbb=new H.G(3,{name:"Israeli Pound",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdD=new H.G(3,{name:"Israeli Shekel (1980\u20131985)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.b6Q=new H.G(4,{name:"Israeli New Shekel",symbol:"\u20aa",digits:2,fmt:"\xa4#,##0.00"},C.bg,[P.a,P.e])
+C.b76=new H.G(4,{name:"Indian Rupee",symbol:"\u20b9",digits:2,fmt:"\xa4#,##0.00"},C.bg,[P.a,P.e])
+C.bau=new H.G(3,{name:"Iraqi Dinar",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bdR=new H.G(3,{name:"Iranian Rial",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bcA=new H.G(3,{name:"Icelandic Kr\xf3na (1918\u20131981)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcD=new H.G(3,{name:"Icelandic Kr\xf3na",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.baI=new H.G(3,{name:"Italian Lira",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bcC=new H.G(3,{name:"Jamaican Dollar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbx=new H.G(3,{name:"Jordanian Dinar",digits:3,fmt:"\xa4#,##0.000"},C.h,[P.a,P.e])
+C.b77=new H.G(4,{name:"Japanese Yen",symbol:"\xa5",digits:0,fmt:"\xa4#,##0"},C.bg,[P.a,P.e])
+C.bdI=new H.G(3,{name:"Kenyan Shilling",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdd=new H.G(3,{name:"Kyrgystani Som",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdZ=new H.G(3,{name:"Cambodian Riel",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bat=new H.G(3,{name:"Comorian Franc",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bd2=new H.G(3,{name:"North Korean Won",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bcH=new H.G(3,{name:"South Korean Hwan (1953\u20131962)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbW=new H.G(3,{name:"South Korean Won (1945\u20131953)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.b6W=new H.G(4,{name:"South Korean Won",symbol:"\u20a9",digits:0,fmt:"\xa4#,##0"},C.bg,[P.a,P.e])
+C.bdh=new H.G(3,{name:"Kuwaiti Dinar",digits:3,fmt:"\xa4#,##0.000"},C.h,[P.a,P.e])
+C.bct=new H.G(3,{name:"Cayman Islands Dollar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbL=new H.G(3,{name:"Kazakhstani Tenge",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bb6=new H.G(3,{name:"Laotian Kip",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bbU=new H.G(3,{name:"Lebanese Pound",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bbq=new H.G(3,{name:"Sri Lankan Rupee",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcB=new H.G(3,{name:"Liberian Dollar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcR=new H.G(3,{name:"Lesotho Loti",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdy=new H.G(3,{name:"Lithuanian Litas",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdW=new H.G(3,{name:"Lithuanian Talonas",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baM=new H.G(3,{name:"Luxembourgian Franc",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bd0=new H.G(3,{name:"Latvian Lats",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbk=new H.G(3,{name:"Latvian Ruble",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baF=new H.G(3,{name:"Libyan Dinar",digits:3,fmt:"\xa4#,##0.000"},C.h,[P.a,P.e])
+C.bbz=new H.G(3,{name:"Moroccan Dirham",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baC=new H.G(3,{name:"Moroccan Franc",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.be1=new H.G(3,{name:"Monegasque Franc",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.be_=new H.G(3,{name:"Moldovan Cupon",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbZ=new H.G(3,{name:"Moldovan Leu",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baw=new H.G(3,{name:"Malagasy Ariary",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bdJ=new H.G(3,{name:"Malagasy Franc",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bds=new H.G(3,{name:"Macedonian Denar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bde=new H.G(3,{name:"Macedonian Denar (1992\u20131993)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdG=new H.G(3,{name:"Malian Franc",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baG=new H.G(3,{name:"Myanmar Kyat",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bex=new H.G(4,{name:"Mongolian Tugrik",digits:2,cash:0,fmt:"\xa4#,##0.00"},C.c3,[P.a,P.e])
+C.bd1=new H.G(3,{name:"Macanese Pataca",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcM=new H.G(3,{name:"Mauritanian Ouguiya (1973\u20132017)",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bco=new H.G(3,{name:"Mauritanian Ouguiya",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baL=new H.G(3,{name:"Maltese Lira",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bar=new H.G(3,{name:"Maltese Pound",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bel=new H.G(4,{name:"Mauritian Rupee",digits:2,cash:0,fmt:"\xa4#,##0.00"},C.c3,[P.a,P.e])
+C.bcF=new H.G(3,{name:"Maldivian Rupee (1947\u20131981)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baH=new H.G(3,{name:"Maldivian Rufiyaa",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcl=new H.G(3,{name:"Malawian Kwacha",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.b6U=new H.G(4,{name:"Mexican Peso",symbol:"MX$",digits:2,fmt:"\xa4#,##0.00"},C.bg,[P.a,P.e])
+C.bcm=new H.G(3,{name:"Mexican Silver Peso (1861\u20131992)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bc2=new H.G(3,{name:"Malaysian Ringgit",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbQ=new H.G(3,{name:"Mozambican Escudo",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bck=new H.G(3,{name:"Mozambican Metical (1980\u20132006)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bb7=new H.G(3,{name:"Mozambican Metical",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.ban=new H.G(3,{name:"Namibian Dollar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bba=new H.G(3,{name:"Nigerian Naira",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcf=new H.G(3,{name:"Nicaraguan C\xf3rdoba (1988\u20131991)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcv=new H.G(3,{name:"Nicaraguan C\xf3rdoba",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdL=new H.G(3,{name:"Dutch Guilder",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bey=new H.G(4,{name:"Norwegian Krone",digits:2,cash:0,fmt:"\xa4#,##0.00"},C.c3,[P.a,P.e])
+C.bdP=new H.G(3,{name:"Nepalese Rupee",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.b71=new H.G(4,{name:"New Zealand Dollar",symbol:"NZ$",digits:2,fmt:"\xa4#,##0.00"},C.bg,[P.a,P.e])
+C.bbh=new H.G(3,{name:"Omani Rial",digits:3,fmt:"\xa4#,##0.000"},C.h,[P.a,P.e])
+C.bb5=new H.G(3,{name:"Panamanian Balboa",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbF=new H.G(3,{name:"Peruvian Inti",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdK=new H.G(3,{name:"Peruvian Sol",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baP=new H.G(3,{name:"Peruvian Sol (1863\u20131965)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bap=new H.G(3,{name:"Papua New Guinean Kina",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bav=new H.G(3,{name:"Philippine Piso",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bet=new H.G(4,{name:"Pakistani Rupee",digits:2,cash:0,fmt:"\xa4#,##0.00"},C.c3,[P.a,P.e])
+C.bdV=new H.G(3,{name:"Polish Zloty",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bas=new H.G(3,{name:"Polish Zloty (1950\u20131995)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baJ=new H.G(3,{name:"Portuguese Escudo",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbC=new H.G(3,{name:"Paraguayan Guarani",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.baU=new H.G(3,{name:"Qatari Rial",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bc4=new H.G(3,{name:"Rhodesian Dollar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcw=new H.G(3,{name:"Romanian Leu (1952\u20132006)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.be0=new H.G(3,{name:"Romanian Leu",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbm=new H.G(3,{name:"Serbian Dinar",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bcj=new H.G(3,{name:"Russian Ruble",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcu=new H.G(3,{name:"Russian Ruble (1991\u20131998)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbe=new H.G(3,{name:"Rwandan Franc",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bbM=new H.G(3,{name:"Saudi Riyal",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baE=new H.G(3,{name:"Solomon Islands Dollar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbp=new H.G(3,{name:"Seychellois Rupee",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bd3=new H.G(3,{name:"Sudanese Dinar (1992\u20132007)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcO=new H.G(3,{name:"Sudanese Pound",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcx=new H.G(3,{name:"Sudanese Pound (1957\u20131998)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.beo=new H.G(4,{name:"Swedish Krona",digits:2,cash:0,fmt:"\xa4#,##0.00"},C.c3,[P.a,P.e])
+C.bc_=new H.G(3,{name:"Singapore Dollar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcP=new H.G(3,{name:"St. Helena Pound",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdO=new H.G(3,{name:"Slovenian Tolar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baY=new H.G(3,{name:"Slovak Koruna",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbn=new H.G(3,{name:"Sierra Leonean Leone",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bc9=new H.G(3,{name:"Somali Shilling",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bbK=new H.G(3,{name:"Surinamese Dollar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbv=new H.G(3,{name:"Surinamese Guilder",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbu=new H.G(3,{name:"South Sudanese Pound",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbT=new H.G(3,{name:"S\xe3o Tom\xe9 & Pr\xedncipe Dobra (1977\u20132017)",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bdb=new H.G(3,{name:"S\xe3o Tom\xe9 & Pr\xedncipe Dobra",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcn=new H.G(3,{name:"Soviet Rouble",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcJ=new H.G(3,{name:"Salvadoran Col\xf3n",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcV=new H.G(3,{name:"Syrian Pound",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bbj=new H.G(3,{name:"Swazi Lilangeni",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdF=new H.G(3,{name:"Thai Baht",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbs=new H.G(3,{name:"Tajikistani Ruble",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baX=new H.G(3,{name:"Tajikistani Somoni",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bao=new H.G(3,{name:"Turkmenistani Manat (1993\u20132009)",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bd6=new H.G(3,{name:"Turkmenistani Manat",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baZ=new H.G(3,{name:"Tunisian Dinar",digits:3,fmt:"\xa4#,##0.000"},C.h,[P.a,P.e])
+C.bbl=new H.G(3,{name:"Tongan Pa\u02bbanga",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcK=new H.G(3,{name:"Timorese Escudo",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdC=new H.G(3,{name:"Turkish Lira (1922\u20132005)",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bbG=new H.G(3,{name:"Turkish Lira",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbY=new H.G(3,{name:"Trinidad & Tobago Dollar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.aWg=H.b(y(["name","symbol","digits","cash","fmt"]),[P.a])
+C.b6J=new H.G(5,{name:"New Taiwan Dollar",symbol:"NT$",digits:2,cash:0,fmt:"\xa4#,##0.00"},C.aWg,[P.a,P.e])
+C.ben=new H.G(4,{name:"Tanzanian Shilling",digits:2,cash:0,fmt:"\xa4#,##0.00"},C.c3,[P.a,P.e])
+C.bcL=new H.G(3,{name:"Ukrainian Hryvnia",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bch=new H.G(3,{name:"Ukrainian Karbovanets",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdf=new H.G(3,{name:"Ugandan Shilling (1966\u20131987)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdu=new H.G(3,{name:"Ugandan Shilling",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.b6S=new H.G(4,{name:"US Dollar",symbol:"$",digits:2,fmt:"\xa4#,##0.00"},C.bg,[P.a,P.e])
+C.bbo=new H.G(3,{name:"Uruguayan Peso (1975\u20131993)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bcp=new H.G(3,{name:"Uruguayan Peso",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bem=new H.G(4,{name:"Uzbekistani Som",digits:2,cash:0,fmt:"\xa4#,##0.00"},C.c3,[P.a,P.e])
+C.bb8=new H.G(3,{name:"Venezuelan Bol\xedvar (1871\u20132008)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bev=new H.G(4,{name:"Venezuelan Bol\xedvar (2008\u20132018)",digits:2,cash:0,fmt:"\xa4#,##0.00"},C.c3,[P.a,P.e])
+C.bc3=new H.G(3,{name:"Venezuelan Bol\xedvar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.b70=new H.G(4,{name:"Vietnamese Dong",symbol:"\u20ab",digits:0,fmt:"\xa4#,##0"},C.bg,[P.a,P.e])
+C.bbI=new H.G(3,{name:"Vietnamese Dong (1978\u20131985)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bd8=new H.G(3,{name:"Vanuatu Vatu",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bcy=new H.G(3,{name:"Samoan Tala",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.b6X=new H.G(4,{name:"Central African CFA Franc",symbol:"FCFA",digits:0,fmt:"\xa4#,##0"},C.bg,[P.a,P.e])
+C.b73=new H.G(4,{name:"East Caribbean Dollar",symbol:"EC$",digits:2,fmt:"\xa4#,##0.00"},C.bg,[P.a,P.e])
+C.b78=new H.G(4,{name:"West African CFA Franc",symbol:"CFA",digits:0,fmt:"\xa4#,##0"},C.bg,[P.a,P.e])
+C.b75=new H.G(4,{name:"CFP Franc",symbol:"CFPF",digits:0,fmt:"\xa4#,##0"},C.bg,[P.a,P.e])
+C.b74=new H.G(4,{name:"Unknown Currency",symbol:"\xa4",digits:2,fmt:"\xa4#,##0.00"},C.bg,[P.a,P.e])
+C.bdc=new H.G(3,{name:"Yemeni Dinar",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bc5=new H.G(3,{name:"Yemeni Rial",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bb0=new H.G(3,{name:"Yugoslavian Hard Dinar (1966\u20131990)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbr=new H.G(3,{name:"Yugoslavian New Dinar (1994\u20132002)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbw=new H.G(3,{name:"Yugoslavian Convertible Dinar (1990\u20131992)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bdt=new H.G(3,{name:"Yugoslavian Reformed Dinar (1992\u20131993)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bay=new H.G(3,{name:"South African Rand",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbt=new H.G(3,{name:"Zambian Kwacha (1968\u20132012)",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.bd7=new H.G(3,{name:"Zambian Kwacha",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbc=new H.G(3,{name:"Zairean New Zaire (1993\u20131998)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bc1=new H.G(3,{name:"Zairean Zaire (1971\u20131993)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.bbR=new H.G(3,{name:"Zimbabwean Dollar (1980\u20132008)",digits:0,fmt:"\xa4#,##0"},C.h,[P.a,P.e])
+C.baz=new H.G(3,{name:"Zimbabwean Dollar (2009)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.baA=new H.G(3,{name:"Zimbabwean Dollar (2008)",digits:2,fmt:"\xa4#,##0.00"},C.h,[P.a,P.e])
+C.beb=new H.G(269,{ADP:C.bbN,AED:C.bcc,AFA:C.baN,AFN:C.bb1,ALK:C.bbV,ALL:C.baO,AMD:C.bew,ANG:C.baK,AOA:C.bdS,AOK:C.bdz,AON:C.bcW,AOR:C.baQ,ARA:C.bb9,ARL:C.bdB,ARM:C.bb2,ARP:C.bb_,ARS:C.bdx,ATS:C.bdk,AUD:C.b6Z,AWG:C.bdX,AZM:C.bbJ,AZN:C.bcq,BAD:C.bc6,BAM:C.bdN,BAN:C.bdQ,BBD:C.bd_,BDT:C.bdw,BEF:C.bdv,BGL:C.bcY,BGM:C.bdH,BGN:C.bdn,BGO:C.bcU,BHD:C.bcs,BIF:C.bb4,BMD:C.bdA,BND:C.bdr,BOB:C.bdT,BOL:C.bdo,BOP:C.bbO,BRB:C.bcQ,BRC:C.bdg,BRE:C.bbf,BRL:C.b6Y,BRN:C.bc0,BRR:C.bby,BRZ:C.bd9,BSD:C.bdY,BTN:C.baR,BUK:C.bdl,BWP:C.baT,BYB:C.baW,BYN:C.bal,BYR:C.baB,BZD:C.bbX,CAD:C.b72,CDF:C.bbE,CHF:C.bcE,CLE:C.bcX,CLF:C.bcT,CLP:C.bbA,CNY:C.b6R,COP:C.bep,CRC:C.bek,CSD:C.bcr,CSK:C.bda,CUC:C.bc8,CUP:C.baS,CVE:C.bdm,CYP:C.bcI,CZK:C.beq,DDM:C.bdi,DEM:C.bbD,DJF:C.bcG,DKK:C.bcd,DOP:C.bdE,DZD:C.baD,ECS:C.bb3,EEK:C.bbB,EGP:C.bbi,ERN:C.bbg,ESP:C.bcZ,ETB:C.bbS,EUR:C.b7_,FIM:C.bci,FJD:C.bbd,FKP:C.bdj,FRF:C.bcz,GBP:C.b6V,GEK:C.bca,GEL:C.bbH,GHC:C.bd4,GHP:C.bcS,GHS:C.bdq,GIP:C.bcb,GMD:C.bcN,GNF:C.bam,GNS:C.bdp,GQE:C.bcg,GRD:C.bdM,GTQ:C.bd5,GWE:C.bc7,GWP:C.bax,GYD:C.ber,HKD:C.b6T,HNL:C.bce,HRD:C.baV,HRK:C.bbP,HTG:C.baq,HUF:C.bes,IDR:C.beu,IEP:C.bdU,ILP:C.bbb,ILR:C.bdD,ILS:C.b6Q,INR:C.b76,IQD:C.bau,IRR:C.bdR,ISJ:C.bcA,ISK:C.bcD,ITL:C.baI,JMD:C.bcC,JOD:C.bbx,JPY:C.b77,KES:C.bdI,KGS:C.bdd,KHR:C.bdZ,KMF:C.bat,KPW:C.bd2,KRH:C.bcH,KRO:C.bbW,KRW:C.b6W,KWD:C.bdh,KYD:C.bct,KZT:C.bbL,LAK:C.bb6,LBP:C.bbU,LKR:C.bbq,LRD:C.bcB,LSL:C.bcR,LTL:C.bdy,LTT:C.bdW,LUF:C.baM,LVL:C.bd0,LVR:C.bbk,LYD:C.baF,MAD:C.bbz,MAF:C.baC,MCF:C.be1,MDC:C.be_,MDL:C.bbZ,MGA:C.baw,MGF:C.bdJ,MKD:C.bds,MKN:C.bde,MLF:C.bdG,MMK:C.baG,MNT:C.bex,MOP:C.bd1,MRO:C.bcM,MRU:C.bco,MTL:C.baL,MTP:C.bar,MUR:C.bel,MVP:C.bcF,MVR:C.baH,MWK:C.bcl,MXN:C.b6U,MXP:C.bcm,MYR:C.bc2,MZE:C.bbQ,MZM:C.bck,MZN:C.bb7,NAD:C.ban,NGN:C.bba,NIC:C.bcf,NIO:C.bcv,NLG:C.bdL,NOK:C.bey,NPR:C.bdP,NZD:C.b71,OMR:C.bbh,PAB:C.bb5,PEI:C.bbF,PEN:C.bdK,PES:C.baP,PGK:C.bap,PHP:C.bav,PKR:C.bet,PLN:C.bdV,PLZ:C.bas,PTE:C.baJ,PYG:C.bbC,QAR:C.baU,RHD:C.bc4,ROL:C.bcw,RON:C.be0,RSD:C.bbm,RUB:C.bcj,RUR:C.bcu,RWF:C.bbe,SAR:C.bbM,SBD:C.baE,SCR:C.bbp,SDD:C.bd3,SDG:C.bcO,SDP:C.bcx,SEK:C.beo,SGD:C.bc_,SHP:C.bcP,SIT:C.bdO,SKK:C.baY,SLL:C.bbn,SOS:C.bc9,SRD:C.bbK,SRG:C.bbv,SSP:C.bbu,STD:C.bbT,STN:C.bdb,SUR:C.bcn,SVC:C.bcJ,SYP:C.bcV,SZL:C.bbj,THB:C.bdF,TJR:C.bbs,TJS:C.baX,TMM:C.bao,TMT:C.bd6,TND:C.baZ,TOP:C.bbl,TPE:C.bcK,TRL:C.bdC,TRY:C.bbG,TTD:C.bbY,TWD:C.b6J,TZS:C.ben,UAH:C.bcL,UAK:C.bch,UGS:C.bdf,UGX:C.bdu,USD:C.b6S,UYP:C.bbo,UYU:C.bcp,UZS:C.bem,VEB:C.bb8,VEF:C.bev,VES:C.bc3,VND:C.b70,VNN:C.bbI,VUV:C.bd8,WST:C.bcy,XAF:C.b6X,XCD:C.b73,XOF:C.b78,XPF:C.b75,XXX:C.b74,YDD:C.bdc,YER:C.bc5,YUD:C.bb0,YUM:C.bbr,YUN:C.bbw,YUR:C.bdt,ZAR:C.bay,ZMK:C.bbt,ZMW:C.bd7,ZRN:C.bbc,ZRZ:C.bc1,ZWD:C.bbR,ZWL:C.baz,ZWR:C.baA},C.b16,[P.a,[P.c,P.a,P.e]])
+C.yP=new H.G(1,{"en-US":C.beb},C.b30,[null,null])})();(function staticFields(){$.cav=!1
+$.aRx=null})()}
+$__dart_deferred_initializers__["YjHNq9L02DiY8Kce/b8xLxVyl0E="] = $__dart_deferred_initializers__.current
+//# sourceMappingURL=blend_main.dart.js_84.part.js.map
