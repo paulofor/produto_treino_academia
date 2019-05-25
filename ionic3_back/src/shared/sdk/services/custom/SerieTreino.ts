@@ -114,4 +114,11 @@ export class SerieTreinoApi extends BaseLoopBackApi {
 	}
 
   
+
+  // aprender mais para fazer algo que trate falha de conexao --> 25/05/2019
+  public createDg<SerieTreino>(data: SerieTreino, erroMsg? :string, customHeaders?: Function): Observable<SerieTreino> {
+    let result : Observable<SerieTreino> = this.create(data,customHeaders);
+    //result.subscribe((result:SerieTreino) => {}, (erro:any) => {}); // com isso duplica
+    return result;
+  }
 }

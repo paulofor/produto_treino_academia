@@ -16,7 +16,7 @@ export class InicioTreinoDiaPage extends InicioTreinoDiaPageBase {
 
 
   protected posItemLoad() {
-    
+
   }
 
 
@@ -44,14 +44,18 @@ export class InicioTreinoDiaPage extends InicioTreinoDiaPageBase {
   protected preInicializaItem() {
     // findOne da erro quando nao encontra
     this.srvDia.find(this.getFiltroDia(this.usuario))
-      .subscribe((result: DiaTreino[]) => {
-        console.log('Dia recuperado: ', result);
-        if (result.length > 0) {
-          this.navCtrl.push(ExecutaTreinoPage, {
-            id: result[0].id
-          })
-        }
-      })
+      .subscribe(
+        (result: DiaTreino[]) => {
+          console.log('Dia recuperado: ', result);
+          if (result.length > 0) {
+            this.navCtrl.push(ExecutaTreinoPage, {
+              id: result[0].id
+            })
+          }
+        },
+        (erro: any) => {
+          this.verificaConexao(erro);
+        })
   }
 
   getFiltroDia(usuario: Usuario): LoopBackFilter {
@@ -74,14 +78,18 @@ export class InicioTreinoDiaPage extends InicioTreinoDiaPageBase {
     novo.serieTreinoId = this.item.id;
     novo.usuarioId = this.usuario.id;
     this.srvDia.create(novo)
-      .subscribe((result: DiaTreino) => {
-        this.navCtrl.push(ExecutaTreinoPage, {
-          id: result.id
+      .subscribe(
+        (result: DiaTreino) => {
+          this.navCtrl.push(ExecutaTreinoPage, {
+            id: result.id
+          })
+        },
+        (erro: any) => {
+          this.verificaConexao(erro);
         })
-      })
   }
 
-  existeMaisSerie():boolean {
+  existeMaisSerie(): boolean {
     return false;
     //return this.listaLoadOne.length > 1;
   }

@@ -1,6 +1,7 @@
 import { ItemSerie, ItemSerieApi , LoopBackFilter, Usuario } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { MSG_SEM_INTERNET } from '../../app/const';
 
 // Tipo: DETALHE
 export abstract class SerieEditaExecucaoPageBase {
@@ -26,6 +27,8 @@ export abstract class SerieEditaExecucaoPageBase {
   protected listaLoadOne : ItemSerie[];
   protected itemNaoEncontrado: boolean;
   
+  
+  protected erroMsg: string;
  
   constructor(	public navParams: NavParams,
   				public navCtrl: NavController,
@@ -46,7 +49,12 @@ export abstract class SerieEditaExecucaoPageBase {
 							this.posItemLoad();
 							console.log('item: ' , this.item)
 						},
-						(erro: any) => console.log('SerieEditaExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
+						(erro: any) => {
+							console.log('SerieEditaExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro));
+							if (erro == 'Server error') {
+								this.erroMsg = MSG_SEM_INTERNET;
+							}
+						}
 					)
 			} else  {
 				console.log('ItemSerie.findOne , filtroLoadOne: ' , JSON.stringify(this.filtroLoadOne()));
@@ -66,7 +74,12 @@ export abstract class SerieEditaExecucaoPageBase {
 							}
 								//if (!this.item) this.itemNaoEncontrado();
 						},
-						(erro: any) => console.log('SerieEditaExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro))
+						(erro: any) => {
+							console.log('SerieEditaExecucaoPageBase:LoadId(Erro): ' , JSON.stringify(erro));
+							if (erro == 'Server error') {
+								this.erroMsg = MSG_SEM_INTERNET;
+							}
+						}
 					)
 			}
 		} else {
@@ -90,6 +103,12 @@ export abstract class SerieEditaExecucaoPageBase {
 	}
   
 	ionViewDidLoad() {
+	}
+	
+	protected verificaConexao(erro: any) {
+		if (erro == 'Server error') {
+			this.erroMsg = MSG_SEM_INTERNET;
+		}
 	}
 }
     

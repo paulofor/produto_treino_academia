@@ -49,3 +49,12 @@
     margin: 0 auto;
     display: block;
 }
+
+.erroMsg {
+    color: red !important;
+}
+
+.itemListaCard {
+    border-bottom: 2px solid #f2ceab !important; // faz divisao nos itens da lista
+    padding: 0px !important; // coloca o texto igual ao h3 de um card, para dar uniformidade
+}

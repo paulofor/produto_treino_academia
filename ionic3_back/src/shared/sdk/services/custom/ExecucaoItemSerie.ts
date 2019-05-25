@@ -109,4 +109,11 @@ export class ExecucaoItemSerieApi extends BaseLoopBackApi {
     	let result = this.request(_method, _url, _routeParams, _urlParams, _postBody, null, customHeaders);
     	return result;
 	}
+
+  // aprender mais para fazer algo que trate falha de conexao --> 25/05/2019
+  public createDg<ExecucaoItemSerie>(data: ExecucaoItemSerie, erroMsg? :string, customHeaders?: Function): Observable<ExecucaoItemSerie> {
+    let result : Observable<ExecucaoItemSerie> = this.create(data,customHeaders);
+    //result.subscribe((result:ExecucaoItemSerie) => {}, (erro:any) => {}); // com isso duplica
+    return result;
+  }
 }

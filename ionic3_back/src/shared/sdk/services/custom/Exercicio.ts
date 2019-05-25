@@ -106,4 +106,11 @@ export class ExercicioApi extends BaseLoopBackApi {
 	}
 
   
+
+  // aprender mais para fazer algo que trate falha de conexao --> 25/05/2019
+  public createDg<Exercicio>(data: Exercicio, erroMsg? :string, customHeaders?: Function): Observable<Exercicio> {
+    let result : Observable<Exercicio> = this.create(data,customHeaders);
+    //result.subscribe((result:Exercicio) => {}, (erro:any) => {}); // com isso duplica
+    return result;
+  }
 }

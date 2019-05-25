@@ -98,4 +98,11 @@ export class GrupoMuscularApi extends BaseLoopBackApi {
 
 
   
+
+  // aprender mais para fazer algo que trate falha de conexao --> 25/05/2019
+  public createDg<GrupoMuscular>(data: GrupoMuscular, erroMsg? :string, customHeaders?: Function): Observable<GrupoMuscular> {
+    let result : Observable<GrupoMuscular> = this.create(data,customHeaders);
+    //result.subscribe((result:GrupoMuscular) => {}, (erro:any) => {}); // com isso duplica
+    return result;
+  }
 }

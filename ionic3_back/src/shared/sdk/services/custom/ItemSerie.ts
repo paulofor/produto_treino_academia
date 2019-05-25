@@ -132,4 +132,11 @@ export class ItemSerieApi extends BaseLoopBackApi {
     	return result;
 	}
   
+
+  // aprender mais para fazer algo que trate falha de conexao --> 25/05/2019
+  public createDg<ItemSerie>(data: ItemSerie, erroMsg? :string, customHeaders?: Function): Observable<ItemSerie> {
+    let result : Observable<ItemSerie> = this.create(data,customHeaders);
+    //result.subscribe((result:ItemSerie) => {}, (erro:any) => {}); // com isso duplica
+    return result;
+  }
 }

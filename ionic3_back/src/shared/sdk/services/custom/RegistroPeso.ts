@@ -98,4 +98,11 @@ export class RegistroPesoApi extends BaseLoopBackApi {
 
 
   
+
+  // aprender mais para fazer algo que trate falha de conexao --> 25/05/2019
+  public createDg<RegistroPeso>(data: RegistroPeso, erroMsg? :string, customHeaders?: Function): Observable<RegistroPeso> {
+    let result : Observable<RegistroPeso> = this.create(data,customHeaders);
+    //result.subscribe((result:RegistroPeso) => {}, (erro:any) => {}); // com isso duplica
+    return result;
+  }
 }

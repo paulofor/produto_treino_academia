@@ -9,13 +9,15 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { VerticalBalancePage } from '../pages/vertical-balance/vertical-balance';
+import { TesteListaPage } from '../pages/teste-lista/teste-lista';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    VerticalBalancePage
+    VerticalBalancePage,
+    TesteListaPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { VerticalBalancePage } from '../pages/vertical-balance/vertical-balance'
     MyApp,
     HomePage,
     ListPage,
-    VerticalBalancePage
+    VerticalBalancePage,
+    TesteListaPage
   ],
   providers: [
     StatusBar,

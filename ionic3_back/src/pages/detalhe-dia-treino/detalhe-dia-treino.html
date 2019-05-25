@@ -5,31 +5,39 @@
 </ion-header>
 
 <ion-content padding class="quadroBase">
+
   <ng-container *ngIf="!item">
     Aguarde...
   </ng-container>
+
+
   <ng-container *ngIf="item">
 
     <ion-card>
-      <div class="card-title">Início: {{item.data | date : 'hh:mm:ss'}}</div>
-      <div class="card-subtitle">Quantidade de Exercícios: {{item.serieTreino.listaItemSerie.length}}</div>
-      <div class="card-subtitle">Série criada em : {{item.serieTreino.dataCriacao | date : 'dd-MM-yyyy'}}</div>
+      <ion-card-content>
+        <h3 class="linha1">Início: {{item.data | date : 'hh:mm:ss'}}</h3>
+        <h3 class="linhan">Quantidade de Exercícios: {{item.serieTreino.listaItemSerie.length}}</h3>
+        <h3 class="linhan">Série criada em : {{item.serieTreino.dataCriacao | date : 'dd-MM-yyyy'}}</h3>
+      </ion-card-content>
+    </ion-card>
 
-      <div class="card-content">
+    <ion-card>
+      <ion-card-content>
         <ion-list>
-          <ion-item *ngFor="let itemSerie of item.serieTreino.listaItemSerie">
-            <h2 class="linha1">Exercício: {{itemSerie.exercicio.titulo}}</h2>
-            <h2 class="linhan">Hora Execução: {{itemSerie.listaExecucaoItemSerie[0].dataHoraFinalizacao | date : 'hh:mm:ss'}}</h2>
+          <ion-item class="itemListaCard" *ngFor="let itemSerie of item.serieTreino.listaItemSerie">
+            <h3 class="linha1">Exercício: {{itemSerie.exercicio.titulo}}</h3>
+            <h3 class="linhan">Hora Execução:
+              {{itemSerie.listaExecucaoItemSerie[0].dataHoraFinalizacao | date : 'hh:mm:ss'}}</h3>
             <ng-container *ngFor="let cargaExecucao of itemSerie.listaExecucaoItemSerie[0].listaExecucaoCarga">
-              <h2>Carga: {{cargaExecucao.valorCarga}} - Repetições: {{cargaExecucao.repeticao}}</h2>
+              <h4>Carga: {{cargaExecucao.valorCarga}} - Repetições: {{cargaExecucao.repeticao}}</h4>
             </ng-container>
           </ion-item>
         </ion-list>
-      </div>
-
-
+      </ion-card-content>
     </ion-card>
 
 
   </ng-container>
+
+
 </ion-content>

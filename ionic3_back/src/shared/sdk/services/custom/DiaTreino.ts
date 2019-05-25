@@ -110,4 +110,11 @@ export class DiaTreinoApi extends BaseLoopBackApi {
 	}
 
   
+
+  // aprender mais para fazer algo que trate falha de conexao --> 25/05/2019
+  public createDg<DiaTreino>(data: DiaTreino, erroMsg? :string, customHeaders?: Function): Observable<DiaTreino> {
+    let result : Observable<DiaTreino> = this.create(data,customHeaders);
+    //result.subscribe((result:DiaTreino) => {}, (erro:any) => {}); // com isso duplica
+    return result;
+  }
 }

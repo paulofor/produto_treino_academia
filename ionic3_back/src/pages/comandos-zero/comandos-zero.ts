@@ -39,22 +39,32 @@ export class ComandosZeroPage extends ComandosZeroPageBase {
     this.srvSerie.find(
       { "limit": 1, "where": { "and": [{ "usuarioId": this.usuario.id, "ativo": 1 }] } }
     )
-      .subscribe((result: SerieTreino[]) => {
-        this.existeDiaTreino = (result.length > 0);
-      })
+      .subscribe(
+        (result: SerieTreino[]) => {
+          this.existeDiaTreino = (result.length > 0);
+        },
+        (erro: any) => {
+          this.verificaConexao(erro);
+        }
+      )
   }
 
   verificaDiaTreino() {
     this.srvDiaTreino.find(
-      { "limit": 1, "where": { "and": [{ "usuarioId": this.usuario.id}] } }
+      { "limit": 1, "where": { "and": [{ "usuarioId": this.usuario.id }] } }
     )
-      .subscribe((result: SerieTreino[]) => {
-        this.existeConsulta = (result.length > 0);
-      })
+      .subscribe(
+        (result: SerieTreino[]) => {
+          this.existeConsulta = (result.length > 0);
+        },
+        (erro: any) => {
+          this.verificaConexao(erro);
+        }
+      )
   }
 
 
- 
+
 
 
   protected getNomeAplicacao(): string {
@@ -74,7 +84,7 @@ export class ComandosZeroPage extends ComandosZeroPageBase {
 
     });
   }
- 
+
 
   executaSerie() {
     this.navCtrl.push(ListaSerieTreinoPage, {

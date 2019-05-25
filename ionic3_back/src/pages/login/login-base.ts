@@ -4,6 +4,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { Storage } from '@ionic/storage';
 import { Usuario, UsuarioApi, LoopBackFilter, AcaoApi, Acao } from '../../shared/sdk';
 import { Page } from 'ionic-angular/navigation/nav-util';
+import { MSG_SEM_INTERNET, MSG_ERRO_LOGIN } from '../../app/const';
 
 
 
@@ -14,7 +15,7 @@ export abstract class LoginPageBase {
   protected erroMsg: string;
   
   abstract getPaginaInicial() : Page;
-  abstract getMensagemNaoEncontrado() : string;
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
     protected formBuilder: FormBuilder, protected srv: UsuarioApi, protected srvAcao: AcaoApi, protected storage: Storage) {
@@ -43,10 +44,17 @@ export abstract class LoginPageBase {
             this.mudaTela();
           })
         },
-        (erro) => {
+        (erro: any) => {
           console.log('Erro login: ' , erro);
-          this.errouLogin();
-          this.erroMsg = this.getMensagemNaoEncontrado();
+          if (erro=='Server error') {
+             this.erroMsg = MSG_SEM_INTERNET;
+          } else {
+            if (erro.status==404) {
+               this.erroMsg = MSG_ERRO_LOGIN;
+               this.errouLogin();
+            }
+          }
+          		         
         }
       )
   }

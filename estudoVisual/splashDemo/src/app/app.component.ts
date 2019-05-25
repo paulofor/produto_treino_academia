@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 
 import { timer } from 'rxjs/observable/timer';
 import { VerticalBalancePage } from '../pages/vertical-balance/vertical-balance';
+import { TesteListaPage } from '../pages/teste-lista/teste-lista';
 
 @Component({
   templateUrl: 'app.html'
@@ -27,6 +28,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Balanco Vertical', component: VerticalBalancePage},
+      { title: 'Teste Lista', component: TesteListaPage},
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage }
     ];

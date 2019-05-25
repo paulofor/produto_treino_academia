@@ -6,6 +6,13 @@
 
 <ion-content padding class="quadroBase">
 
+
+  <ion-card *ngIf="erroMsg">
+    <ion-card-content>
+      <p class="erroMsg">{{erroMsg}}</p>
+    </ion-card-content>
+  </ion-card>
+
   <ng-container *ngIf="item">
 
     <ion-card>

@@ -5,6 +5,7 @@ import { NavController } from 'ionic-angular';
 import { Page } from 'ionic-angular/umd/navigation/nav-util';
 import { DetalheDiaTreinoPage } from '../detalhe-dia-treino/detalhe-dia-treino';
 import { Storage } from '@ionic/storage';
+import { MSG_SEM_INTERNET } from '../../app/const';
 
 // Tipo: LISTA_ITEM
 export abstract class ConsultaListaDiaTreinoPageBase {
@@ -14,6 +15,7 @@ export abstract class ConsultaListaDiaTreinoPageBase {
 	protected listaItem: DiaTreino[];
 	protected abstract inicializacao();
 	protected abstract getFiltro(): LoopBackFilter;
+	protected erroMsg: string;
 	
 	 
 	getPageEdicao(): Page {
@@ -44,7 +46,13 @@ export abstract class ConsultaListaDiaTreinoPageBase {
   			.subscribe((resultado: DiaTreino[]) => {
   				console.log('Result:' , resultado);
   				this.listaItem = resultado;
-  			})
+  				this.erroMsg = '';
+  			},
+			(erro: any) => {
+				if (erro == 'Server error') {
+					this.erroMsg = MSG_SEM_INTERNET;
+				}
+			})
   	}
   	  carregaUsuario() {
 		this.storage.get('user').then((val: Usuario) => {
@@ -65,5 +73,11 @@ export abstract class ConsultaListaDiaTreinoPageBase {
   	}
   	protected novo() {
 		this.navCtrl.push(this.getPageEdicao());
+	}
+	
+	protected verificaConexao(erro: any) {
+		if (erro == 'Server error') {
+			this.erroMsg = MSG_SEM_INTERNET;
+		}
 	}
 }

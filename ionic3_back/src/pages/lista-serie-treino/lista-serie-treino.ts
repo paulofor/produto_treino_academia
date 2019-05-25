@@ -36,7 +36,7 @@ export class ListaSerieTreinoPage extends ListaSerieTreinoPageBase {
     serieNova.ativa = 1;
     serieNova.qtdeExecucao = 0;
     serieNova.usuarioId = this.usuario.id;
-    this.srv.create(serieNova)
+    this.srv.createDg(serieNova)
       .subscribe((result:SerieTreino) => {
         this.navCtrl.push(this.getPageEdicao(), {
             id : result.id

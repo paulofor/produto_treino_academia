@@ -1,10 +1,10 @@
 import { Usuario } from "../../shared/sdk";
 import { Storage } from '@ionic/storage';
-
+import { MSG_SEM_INTERNET } from '../../app/const';
 
 export abstract class ComandosZeroPageBase {
 
-
+  protected erroMsg: string;
 
   usuario: Usuario;
 
@@ -25,5 +25,10 @@ export abstract class ComandosZeroPageBase {
     })
   }
 
+  protected verificaConexao(erro: any) {
+    if (erro == 'Server error') {
+      this.erroMsg = MSG_SEM_INTERNET;
+    }
+  }
 
 }

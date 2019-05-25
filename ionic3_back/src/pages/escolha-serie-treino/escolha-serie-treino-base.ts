@@ -4,6 +4,7 @@ import { LoopBackFilter } from '../../shared/sdk';
 import { NavController } from 'ionic-angular';
 import { Page } from 'ionic-angular/umd/navigation/nav-util';
 import { Storage } from '@ionic/storage';
+import { MSG_SEM_INTERNET } from '../../app/const';
 
 // Tipo: LISTA_ITEM
 export abstract class EscolhaSerieTreinoPageBase {
@@ -13,6 +14,7 @@ export abstract class EscolhaSerieTreinoPageBase {
 	protected listaItem: SerieTreino[];
 	protected abstract inicializacao();
 	protected abstract getFiltro(): LoopBackFilter;
+	protected erroMsg: string;
 	
 	 
 	getPageEdicao(): Page {
@@ -43,7 +45,13 @@ export abstract class EscolhaSerieTreinoPageBase {
   			.subscribe((resultado: SerieTreino[]) => {
   				console.log('Result:' , resultado);
   				this.listaItem = resultado;
-  			})
+  				this.erroMsg = '';
+  			},
+			(erro: any) => {
+				if (erro == 'Server error') {
+					this.erroMsg = MSG_SEM_INTERNET;
+				}
+			})
   	}
   	  carregaUsuario() {
 		this.storage.get('user').then((val: Usuario) => {
@@ -64,5 +72,11 @@ export abstract class EscolhaSerieTreinoPageBase {
   	}
   	protected novo() {
 		this.navCtrl.push(this.getPageEdicao());
+	}
+	
+	protected verificaConexao(erro: any) {
+		if (erro == 'Server error') {
+			this.erroMsg = MSG_SEM_INTERNET;
+		}
 	}
 }

@@ -98,4 +98,11 @@ export class AcaoApi extends BaseLoopBackApi {
 
 
   
+
+  // aprender mais para fazer algo que trate falha de conexao --> 25/05/2019
+  public createDg<Acao>(data: Acao, erroMsg? :string, customHeaders?: Function): Observable<Acao> {
+    let result : Observable<Acao> = this.create(data,customHeaders);
+    //result.subscribe((result:Acao) => {}, (erro:any) => {}); // com isso duplica
+    return result;
+  }
 }

@@ -98,4 +98,11 @@ export class ExecucaoCargaApi extends BaseLoopBackApi {
 
 
   
+
+  // aprender mais para fazer algo que trate falha de conexao --> 25/05/2019
+  public createDg<ExecucaoCarga>(data: ExecucaoCarga, erroMsg? :string, customHeaders?: Function): Observable<ExecucaoCarga> {
+    let result : Observable<ExecucaoCarga> = this.create(data,customHeaders);
+    //result.subscribe((result:ExecucaoCarga) => {}, (erro:any) => {}); // com isso duplica
+    return result;
+  }
 }

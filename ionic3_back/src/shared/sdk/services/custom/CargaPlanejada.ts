@@ -98,4 +98,11 @@ export class CargaPlanejadaApi extends BaseLoopBackApi {
 
 
   
+
+  // aprender mais para fazer algo que trate falha de conexao --> 25/05/2019
+  public createDg<CargaPlanejada>(data: CargaPlanejada, erroMsg? :string, customHeaders?: Function): Observable<CargaPlanejada> {
+    let result : Observable<CargaPlanejada> = this.create(data,customHeaders);
+    //result.subscribe((result:CargaPlanejada) => {}, (erro:any) => {}); // com isso duplica
+    return result;
+  }
 }
