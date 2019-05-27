@@ -3,12 +3,12 @@ import { IonicPage, ModalController, NavController, NavParams } from 'ionic-angu
 import { DetalheDiaTreinoPageBase } from './detalhe-dia-treino-base';
 import { DiaTreinoApi, LoopBackFilter, ExecucaoItemSerie, ItemSerie } from '../../shared/sdk/index';
 import { DatePipe } from '@angular/common';
-import localePtBr from '@angular/common/locales/pt';
+
 import { Storage } from '@ionic/storage';
 
-import { registerLocaleData } from '@angular/common';
 
-registerLocaleData(localePtBr);
+
+
 
 @IonicPage()
 @Component({

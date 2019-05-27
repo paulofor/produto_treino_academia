@@ -19,7 +19,9 @@ import { PrincipalPerformancePage } from "../principal-performance/principal-per
 })
 export class ComandosZeroPage extends ComandosZeroPageBase {
 
-
+  recebeuExisteConsulta = false;
+  recebeuExisteDiaTreino = false;
+  recebeuExisteSerie = true;
 
   existeConsulta = false;
   existeDiaTreino = false;
@@ -40,12 +42,13 @@ export class ComandosZeroPage extends ComandosZeroPageBase {
       { "limit": 1, "where": { "and": [{ "usuarioId": this.usuario.id, "ativo": 1 }] } }
     )
       .subscribe(
-        (result: SerieTreino[]) => {
-          this.existeDiaTreino = (result.length > 0);
-        },
-        (erro: any) => {
-          this.verificaConexao(erro);
-        }
+      (result: SerieTreino[]) => {
+        this.existeDiaTreino = (result.length > 0);
+        this.recebeuExisteConsulta = true;
+      },
+      (erro: any) => {
+        this.verificaConexao(erro);
+      }
       )
   }
 
@@ -54,12 +57,13 @@ export class ComandosZeroPage extends ComandosZeroPageBase {
       { "limit": 1, "where": { "and": [{ "usuarioId": this.usuario.id }] } }
     )
       .subscribe(
-        (result: SerieTreino[]) => {
-          this.existeConsulta = (result.length > 0);
-        },
-        (erro: any) => {
-          this.verificaConexao(erro);
-        }
+      (result: SerieTreino[]) => {
+        this.existeConsulta = (result.length > 0);
+        this.recebeuExisteDiaTreino = true;
+      },
+      (erro: any) => {
+        this.verificaConexao(erro);
+      }
       )
   }
 

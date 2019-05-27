@@ -43,7 +43,11 @@ import { RegistroPesoApi } from '../shared/sdk';
 import { UsuarioApi } from '../shared/sdk';
 import { ExecucaoCargaApi } from '../shared/sdk';
 import { AcaoApi } from '../shared/sdk';
+import { LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
 
+registerLocaleData(localePt, 'pt-BR');
 
 @NgModule({
   declarations: [
@@ -157,7 +161,8 @@ import { AcaoApi } from '../shared/sdk';
 	AcaoApi,
 	
     Screenshot,
-    Storage
+    Storage,
+    { provide: LOCALE_ID, useValue: 'pt-BR' } 
   ]
 })
 export class AppModule {}
