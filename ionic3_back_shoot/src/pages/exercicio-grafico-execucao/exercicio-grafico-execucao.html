@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar color="titulo">
+    <ion-title *ngIf="item">{{item.titulo}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="quadroBase">
+
+  <ng-container *ngIf="item">
+
+    <ion-card *ngIf="item.listaExecucaoItemSerie.length==0">
+      <ion-card-header>
+        Exercício não teve ainda nenhuma execução
+      </ion-card-header>
+      <ion-card-content>
+        Inicie um treino com ele em sua série.
+      </ion-card-content>
+    </ion-card>
+
+
+
+    <ion-grid *ngIf="item.listaExecucaoItemSerie.length>0">
+
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <h2>{{item.titulo}}</h2>
+              <h2>{{item.subtitulo}}</h2>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <p>Execuções: {{item.listaExecucaoItemSerie.length}}</p>
+              <p>Data mais recente: {{item.listaExecucaoItemSerie[0].dataHoraFinalizacao | date : 'dd/MM/yyyy'}}</p>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col id="item">
+          <ion-card>
+            <canvas id="cv01" baseChart height="250" [datasets]="dados" [labels]="rotulos"
+              [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType"></canvas>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+  </ng-container>
+
+</ion-content>

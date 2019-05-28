@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-navbar color="titulo">
+    <ion-title>Adicionando Exercício</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="quadroBase">
+  <ion-card *ngIf="item && listaGrupo">
+
+    <form novalidate #itemSerieForm="ngForm" (submit)="submit()" class="quadroBase">
+
+      <ion-item-group class="itemForm">
+        <ion-item>
+          <ion-label floating>Grupo Muscular</ion-label>
+          <ion-select (ionChange)="onEscolheGrupo($event);" [(ngModel)]="item.exercicio.grupoMuscularId"
+            name="grupoMuscularId" #grupoMuscularId="ngModel" required>
+            <ion-option *ngFor="let grupo of listaGrupo" value="{{grupo.id}}">{{grupo.nome}}</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item *ngIf="msgGrupo">
+          <p style="color: rgb(8, 65, 158)">Escolha o grupo muscular do exercício.</p>
+        </ion-item>
+      </ion-item-group>
+
+      <ion-item-group class="itemForm" text-wrap> 
+        <ion-item *ngIf="!getNovo()">
+          <ion-label stacked>Exercicio</ion-label>
+          <ion-select (ionChange)="onEscolheExercicio($event);" [(ngModel)]="item.exercicio.id" name="exercicioId"
+            #exercicioId="ngModel">
+            <ion-option value="0">Novo</ion-option>
+            <ion-option *ngFor="let exercicio of listaExercicio" value="{{exercicio.id}}">{{exercicio.titulo}}
+            </ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item *ngIf="msgExercicio && !getNovo()">
+          <div style="color: rgb(8, 65, 158)">Selecione o exercício ou a opção 'novo' para criar um.</div>
+        </ion-item>
+        <ion-item *ngIf="getNovo()" class="itemForm">
+          <ion-label stacked>Nome do Exercício</ion-label>
+          <ion-input name="titulo" type="text" [(ngModel)]="item.exercicio.titulo" #tituloExercicio="ngModel" required>
+          </ion-input>
+        </ion-item>
+        <ion-item *ngIf="msgExercicio && getNovo()">
+          <p style="color: rgb(8, 65, 158)" class="item-text-wrap">Digite o exercício.</p>
+        </ion-item>
+      </ion-item-group>
+
+      <ion-item-group class="itemForm">
+        <ion-item>
+          <ion-label floating>Execuções</ion-label>
+          <ion-select (ionChange)="alteraQuantidade($event);" [(ngModel)]="qtdeExecucao"
+            [ngModelOptions]="{standalone: true}">
+            <ion-option>0</ion-option>
+            <ion-option>1</ion-option>
+            <ion-option>2</ion-option>
+            <ion-option>3</ion-option>
+            <ion-option>4</ion-option>
+            <ion-option>5</ion-option>
+            <ion-option>6</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item *ngIf="msgExecucoes">
+          <p style="color: rgb(8, 65, 158)">Selecione quantas execuções do exercício</p>
+        </ion-item>
+      </ion-item-group>
+
+      <ion-item-group *ngFor="let carga of item.listaCargaPlanejada" class="itemForm">
+        <ion-item-divider color="light">
+          <ion-label>Execução {{carga.ordemRepeticao}}</ion-label>
+        </ion-item-divider>
+        <ion-item>
+          <ion-label floating>Carga (Kg)</ion-label>
+          <ion-input type="number" [(ngModel)]="carga.valorCarga" name="valorCarga"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Repetições (Qtde)</ion-label>
+          <ion-input type="number" [(ngModel)]="carga.quantidadeRepeticao" name="quantidadeRepeticao"></ion-input>
+        </ion-item>
+      </ion-item-group>
+
+
+
+      <button ion-button type="submit" block [disabled]="itemSerieForm.form.invalid">Enviar</button>
+    </form>
+  </ion-card>
+</ion-content>
