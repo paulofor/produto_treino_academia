@@ -12,6 +12,7 @@ export abstract class SignupPageBase {
   protected usuario: Usuario;
   protected signupForm: FormGroup;
   protected erroMsg: string;
+  protected enviando: boolean;
 
   constructor(public navCtrl: NavController, protected formBuilder: FormBuilder, protected storage: Storage, protected srv: UsuarioApi) {
     this.signupForm = this.formBuilder.group({

@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Usuario, UsuarioApi, AcaoApi } from '../../shared/sdk/index';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { UsuarioApi, AcaoApi } from '../../shared/sdk/index';
+import { FormBuilder } from '@angular/forms';
 import { LoginPageBase } from './login-base';
-import { SignupPage } from '../signup/signup';
 import { Storage } from '@ionic/storage';
 import { Page } from 'ionic-angular/navigation/nav-util';
 import { ComandosZeroPage } from '../comandos-zero/comandos-zero';
-
 
 
 /**
@@ -45,7 +43,5 @@ export class LoginPage extends LoginPageBase {
   }
 
 
-  criarConta() {
-    this.navCtrl.push(SignupPage);
-  }
+
 }

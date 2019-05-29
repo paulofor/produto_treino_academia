@@ -5,6 +5,7 @@ import { Storage } from '@ionic/storage';
 import { Usuario, UsuarioApi, LoopBackFilter, AcaoApi, Acao } from '../../shared/sdk';
 import { Page } from 'ionic-angular/navigation/nav-util';
 import { MSG_SEM_INTERNET, MSG_ERRO_LOGIN } from '../../app/const';
+import { SignupPage } from '../signup/signup';
 
 
 
@@ -92,6 +93,8 @@ export abstract class LoginPageBase {
     });
   }
 
-
+  criarConta() {
+    this.navCtrl.push(SignupPage);
+  }
 
 }
