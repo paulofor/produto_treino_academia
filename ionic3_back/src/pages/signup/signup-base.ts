@@ -29,7 +29,7 @@ export abstract class SignupPageBase {
   ionViewWillEnter() {
     console.log('');
     console.log('Tela: SignupPage');
-  }
+  }ado
 
   verificado(): boolean {
     let saida = (this.signupForm.get('login').valid) &&
