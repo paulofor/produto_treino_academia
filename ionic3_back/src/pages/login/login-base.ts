@@ -21,11 +21,12 @@ export abstract class LoginPageBase extends ComponenteBase{
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
     protected formBuilder: FormBuilder, protected srv: UsuarioApi, protected srvAcao: AcaoApi, protected storage: Storage) {
+    super();
     this.loginForm = this.formBuilder.group({
       login: '',
       senha: ''
     });
-    super();
+    
   }
 
   ionViewDidLoad() {

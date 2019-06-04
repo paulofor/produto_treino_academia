@@ -4,10 +4,10 @@ import { Usuario, UsuarioApi } from "../../shared/sdk/index";
 import { HomePage } from "../home/home";
 import { Storage } from '@ionic/storage';
 import { ComandosZeroPage } from "../comandos-zero/comandos-zero";
+import { ComponenteBase } from '../componente-base';
 
 
-
-export abstract class SignupPageBase {
+export abstract class SignupPageBase extends ComponenteBase{
 
   protected usuario: Usuario;
   protected signupForm: FormGroup;
@@ -15,6 +15,7 @@ export abstract class SignupPageBase {
   protected enviando: boolean;
 
   constructor(public navCtrl: NavController, protected formBuilder: FormBuilder, protected storage: Storage, protected srv: UsuarioApi) {
+    super();
     this.signupForm = this.formBuilder.group({
       login: ['', Validators.email],
       senha1: ['' , Validators.compose( [Validators.minLength(8) , Validators.required]) ] ,

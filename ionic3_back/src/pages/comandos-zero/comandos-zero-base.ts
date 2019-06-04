@@ -1,6 +1,8 @@
 import { Usuario } from "../../shared/sdk";
 import { Storage } from '@ionic/storage';
 import { MSG_SEM_INTERNET } from '../../app/const';
+import { ComponenteBase } from '../componente-base';
+
 
 export abstract class ComandosZeroPageBase {
 
@@ -11,6 +13,7 @@ export abstract class ComandosZeroPageBase {
   protected abstract inicializacao();
 
   constructor(protected storage: Storage) {
+  	super();
   }
 
   protected abstract getNomeAplicacao() : string;
