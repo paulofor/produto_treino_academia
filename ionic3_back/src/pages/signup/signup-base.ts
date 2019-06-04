@@ -4,7 +4,6 @@ import { Usuario, UsuarioApi } from "../../shared/sdk/index";
 import { HomePage } from "../home/home";
 import { Storage } from '@ionic/storage';
 import { ComandosZeroPage } from "../comandos-zero/comandos-zero";
-import { MSG_CADASTRO_TAMANHO_SENHA, MSG_CADASTRO_EMAIL } from "../../app/const";
 
 
 
@@ -15,11 +14,7 @@ export abstract class SignupPageBase {
   protected erroMsg: string;
   protected enviando: boolean;
 
-  protected msgSenha:string = MSG_CADASTRO_TAMANHO_SENHA;
-  protected msgEmail:string = MSG_CADASTRO_EMAIL;
-
   constructor(public navCtrl: NavController, protected formBuilder: FormBuilder, protected storage: Storage, protected srv: UsuarioApi) {
-    console.log('msgEmail: ' , this.msgEmail);
     this.signupForm = this.formBuilder.group({
       login: ['', Validators.email],
       senha1: ['' , Validators.compose( [Validators.minLength(8) , Validators.required]) ] ,

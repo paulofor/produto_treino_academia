@@ -6,9 +6,11 @@ import { Page } from 'ionic-angular/umd/navigation/nav-util';
 import { ExercicioGraficoExecucaoPage } from '../exercicio-grafico-execucao/exercicio-grafico-execucao';
 import { Storage } from '@ionic/storage';
 import { MSG_SEM_INTERNET } from '../../app/const';
+import { ComponenteBase } from '../componente-base';
+
 
 // Tipo: LISTA_ITEM
-export abstract class ConsultaListaExercicioPageBase {
+export abstract class ConsultaListaExercicioPageBase extends ComponenteBase{
 
     protected usuario: Usuario;
 
@@ -30,6 +32,7 @@ export abstract class ConsultaListaExercicioPageBase {
   	}
 
 	constructor(public navCtrl: NavController, protected srv: ExercicioApi,protected storage: Storage) {
+		super();
 	}
 
 	ionViewWillEnter() {

@@ -3,9 +3,10 @@ import { SerieTreino, SerieTreinoApi } from '../../shared/sdk';
 import { Exercicio, ExercicioApi } from '../../shared/sdk';
 import { NavParams, NavController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { ComponenteBase } from '../componente-base';
 
 // Tipo: EDITA
-export abstract class CriaSeriePageBase {
+export abstract class CriaSeriePageBase extends ComponenteBase{
 
   protected usuario: Usuario;
   
@@ -36,6 +37,7 @@ export abstract class CriaSeriePageBase {
 				public srvSerieTreino : SerieTreinoApi,
 				public srvExercicio : ExercicioApi,
   				) {
+  				super();
   }
   private inicializaItem() {
 	this.item = this.navParams.get('item');

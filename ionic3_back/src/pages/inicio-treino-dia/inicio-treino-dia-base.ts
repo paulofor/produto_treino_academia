@@ -2,9 +2,10 @@ import { SerieTreino, SerieTreinoApi , LoopBackFilter, Usuario } from '../../sha
 import { NavParams, NavController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { MSG_SEM_INTERNET } from '../../app/const';
+import { ComponenteBase } from '../componente-base';
 
 // Tipo: DETALHE
-export abstract class InicioTreinoDiaPageBase {
+export abstract class InicioTreinoDiaPageBase extends ComponenteBase{ 
 
   protected usuario: Usuario;
   
@@ -34,6 +35,7 @@ export abstract class InicioTreinoDiaPageBase {
   				public navCtrl: NavController,
 				public srv: SerieTreinoApi,
 				protected storage: Storage) {
+		super();
   } 
   
 	private inicializaItem() {

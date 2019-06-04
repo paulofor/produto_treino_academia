@@ -6,9 +6,11 @@ import { Page } from 'ionic-angular/umd/navigation/nav-util';
 import { DetalheDiaTreinoPage } from '../detalhe-dia-treino/detalhe-dia-treino';
 import { Storage } from '@ionic/storage';
 import { MSG_SEM_INTERNET } from '../../app/const';
+import { ComponenteBase } from '../componente-base';
+
 
 // Tipo: LISTA_ITEM
-export abstract class ConsultaListaDiaTreinoPageBase {
+export abstract class ConsultaListaDiaTreinoPageBase extends ComponenteBase{
 
     protected usuario: Usuario;
 
@@ -30,6 +32,7 @@ export abstract class ConsultaListaDiaTreinoPageBase {
   	}
 
 	constructor(public navCtrl: NavController, protected srv: DiaTreinoApi,protected storage: Storage) {
+		super();
 	}
 
 	ionViewWillEnter() {

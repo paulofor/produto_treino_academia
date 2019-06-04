@@ -6,10 +6,11 @@ import { Usuario, UsuarioApi, LoopBackFilter, AcaoApi, Acao } from '../../shared
 import { Page } from 'ionic-angular/navigation/nav-util';
 import { MSG_SEM_INTERNET, MSG_ERRO_LOGIN } from '../../app/const';
 import { SignupPage } from '../signup/signup';
+import { ComponenteBase } from '../componente-base';
 
 
 
-export abstract class LoginPageBase {
+export abstract class LoginPageBase extends ComponenteBase{
 
   protected usuario: Usuario;
   protected loginForm: FormGroup;
@@ -24,6 +25,7 @@ export abstract class LoginPageBase {
       login: '',
       senha: ''
     });
+    super();
   }
 
   ionViewDidLoad() {

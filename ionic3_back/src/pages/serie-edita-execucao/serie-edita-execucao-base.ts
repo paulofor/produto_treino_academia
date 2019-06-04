@@ -2,9 +2,10 @@ import { ItemSerie, ItemSerieApi , LoopBackFilter, Usuario } from '../../shared/
 import { NavParams, NavController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { MSG_SEM_INTERNET } from '../../app/const';
+import { ComponenteBase } from '../componente-base';
 
 // Tipo: DETALHE
-export abstract class SerieEditaExecucaoPageBase {
+export abstract class SerieEditaExecucaoPageBase extends ComponenteBase{ 
 
   protected usuario: Usuario;
   
@@ -34,6 +35,7 @@ export abstract class SerieEditaExecucaoPageBase {
   				public navCtrl: NavController,
 				public srv: ItemSerieApi,
 				protected storage: Storage) {
+		super();
   } 
   
 	private inicializaItem() {
