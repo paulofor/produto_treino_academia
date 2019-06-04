@@ -6,9 +6,11 @@ import { Page } from 'ionic-angular/umd/navigation/nav-util';
 import { SerieTreinoEdicaoPage } from '../serie-treino-edicao/serie-treino-edicao';
 import { Storage } from '@ionic/storage';
 import { MSG_SEM_INTERNET } from '../../app/const';
+import { ComponenteBase } from '../componente-base';
+
 
 // Tipo: LISTA_ITEM
-export abstract class ListaSerieTreinoPageBase {
+export abstract class ListaSerieTreinoPageBase extends ComponenteBase{
 
     protected usuario: Usuario;
 
@@ -30,6 +32,7 @@ export abstract class ListaSerieTreinoPageBase {
   	}
 
 	constructor(public navCtrl: NavController, protected srv: SerieTreinoApi,protected storage: Storage) {
+		super();
 	}
 
 	ionViewWillEnter() {

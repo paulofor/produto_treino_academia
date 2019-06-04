@@ -2,9 +2,10 @@ import { DiaTreino, DiaTreinoApi , LoopBackFilter, Usuario } from '../../shared/
 import { NavParams, NavController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { MSG_SEM_INTERNET } from '../../app/const';
+import { ComponenteBase } from '../componente-base';
 
 // Tipo: DETALHE
-export abstract class DetalheDiaTreinoPageBase {
+export abstract class DetalheDiaTreinoPageBase extends ComponenteBase{ 
 
   protected usuario: Usuario;
   
@@ -34,6 +35,7 @@ export abstract class DetalheDiaTreinoPageBase {
   				public navCtrl: NavController,
 				public srv: DiaTreinoApi,
 				protected storage: Storage) {
+		super();
   } 
   
 	private inicializaItem() {

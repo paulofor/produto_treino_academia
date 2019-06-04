@@ -1,11 +1,11 @@
 <ion-content padding>
 
-  <div id="logo" class="quadro30">
+  <div id="logo" class="quadro20">
     <img width="100%" heigth="100%" src="assets/imgs/logoTela.png" />
   </div>
 
 
-  <form padding [formGroup]="signupForm" (ngSubmit)="onSubmit()" novalidate class="quadro70">
+  <form padding [formGroup]="signupForm" (ngSubmit)="onSubmit()" novalidate class="quadro80">
     <ion-list>
 
       <ion-item>
@@ -14,7 +14,7 @@
       </ion-item>
       <ion-item *ngIf="signupForm.get('login').invalid && signupForm.get('login').dirty">
         <p style="color:red">
-          {{msgEmail}}
+          Digite seu email.
         </p>
       </ion-item>
 
@@ -24,7 +24,7 @@
       </ion-item>
       <ion-item *ngIf="signupForm.get('senha1').invalid && signupForm.get('senha1').dirty">
         <p style="color:red">
-          {{msgSenha}}
+          M�nimo de 8 caracteres.
         </p>
       </ion-item>
 
@@ -34,7 +34,7 @@
       </ion-item>
       <ion-item *ngIf="signupForm.get('senha2').invalid && signupForm.get('senha2').dirty">
         <p style="color:red">
-          {{msgSenha}}
+          M�nimo de 8 caracteres.
         </p>
       </ion-item>
 
