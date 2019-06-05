@@ -4,7 +4,7 @@ import { MSG_SEM_INTERNET } from '../../app/const';
 import { ComponenteBase } from '../componente-base';
 
 
-export abstract class ComandosZeroPageBase {
+export abstract class ComandosZeroPageBase extends ComponenteBase{
 
   protected erroMsg: string;
 
