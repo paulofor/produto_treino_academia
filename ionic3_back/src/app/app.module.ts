@@ -14,6 +14,7 @@ import { LoginPage } from '../pages/login/login';
 import { ComandosZeroPage } from '../pages/comandos-zero/comandos-zero';
 import { IonicStorageModule } from '@ionic/storage';
 import { BrMaskerModule } from 'brmasker-ionic-3';
+import { PagSeguroApi } from '../shared/sdk/services/integracao/PagSeguro';
 
 import { SerieEditaExecucaoPage } from '../pages/serie-edita-execucao/serie-edita-execucao';
 import { ExercicioGraficoExecucaoPage } from '../pages/exercicio-grafico-execucao/exercicio-grafico-execucao';
@@ -138,6 +139,7 @@ registerLocaleData(localePt, 'pt-BR');
     SDKModels,
     LoopBackAuth,
     InternalStorage,
+    PagSeguroApi,
 	GrupoMuscularApi,
 	
 	SerieTreinoApi,

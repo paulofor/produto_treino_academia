@@ -18,6 +18,7 @@ import { UsuarioApi } from '../shared/sdk';
 import { ExecucaoCargaApi } from '../shared/sdk';
 import { AcaoApi } from '../shared/sdk';
 
+// Nao tem PagSeguroApi pq parece nao ser usado em lugar nenhum.
 
 @NgModule({
 	imports: [
