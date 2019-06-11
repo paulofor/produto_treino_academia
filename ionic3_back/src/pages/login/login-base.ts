@@ -17,7 +17,7 @@ export abstract class LoginPageBase extends ComponenteBase{
   protected erroMsg: string;
   
   abstract getPaginaInicial() : Page;
-
+  abstract verificaAssinatura(usuario:Usuario) 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
     protected formBuilder: FormBuilder, protected srv: UsuarioApi, protected srvAcao: AcaoApi, protected storage: Storage) {
@@ -44,6 +44,7 @@ export abstract class LoginPageBase extends ComponenteBase{
         (result:Usuario) => {
           console.log('UserLogin: ' , result);
           this.executouLogin(result);
+          this.verificaAssinatura(result);
           this.storage.set("user",result).then((successData)=>{
             this.mudaTela();
           })
