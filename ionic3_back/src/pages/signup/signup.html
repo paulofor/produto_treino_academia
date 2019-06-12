@@ -14,7 +14,7 @@
       </ion-item>
       <ion-item *ngIf="signupForm.get('login').invalid && signupForm.get('login').dirty">
         <p style="color:red">
-          Digite seu email.
+          {{msgEmail}}
         </p>
       </ion-item>
 
@@ -24,7 +24,7 @@
       </ion-item>
       <ion-item *ngIf="signupForm.get('senha1').invalid && signupForm.get('senha1').dirty">
         <p style="color:red">
-          M�nimo de 8 caracteres.
+          {{msgSenha}}
         </p>
       </ion-item>
 
@@ -34,7 +34,7 @@
       </ion-item>
       <ion-item *ngIf="signupForm.get('senha2').invalid && signupForm.get('senha2').dirty">
         <p style="color:red">
-          M�nimo de 8 caracteres.
+          {{msgSenha}}
         </p>
       </ion-item>
 

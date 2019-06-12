@@ -26,7 +26,7 @@ export class ListaSerieTreinoPage extends ListaSerieTreinoPageBase {
 
 
   protected getFiltro(): LoopBackFilter {
-    //console.log('Usuario' , this.usuario);
+    console.log('Usuario' , this.usuario);
     return { 'where' : {'usuarioId' : this.usuario.id } , 'counts' : 'listaItemSerie' };
   }
 

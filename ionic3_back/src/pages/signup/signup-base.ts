@@ -5,6 +5,7 @@ import { HomePage } from "../home/home";
 import { Storage } from '@ionic/storage';
 import { ComandosZeroPage } from "../comandos-zero/comandos-zero";
 import { ComponenteBase } from '../componente-base';
+import { MSG_CADASTRO_TAMANHO_SENHA, MSG_CADASTRO_EMAIL } from "../../app/const";
 
 
 export abstract class SignupPageBase extends ComponenteBase{
@@ -13,6 +14,9 @@ export abstract class SignupPageBase extends ComponenteBase{
   protected signupForm: FormGroup;
   protected erroMsg: string;
   protected enviando: boolean;
+  
+  protected msgSenha:string = MSG_CADASTRO_TAMANHO_SENHA;
+  protected msgEmail:string = MSG_CADASTRO_EMAIL;
 
   constructor(public navCtrl: NavController, protected formBuilder: FormBuilder, protected storage: Storage, protected srv: UsuarioApi) {
     super();
@@ -30,7 +34,7 @@ export abstract class SignupPageBase extends ComponenteBase{
   ionViewWillEnter() {
     console.log('');
     console.log('Tela: SignupPage');
-  }ado
+  }
 
   verificado(): boolean {
     let saida = (this.signupForm.get('login').valid) &&
