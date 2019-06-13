@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar color="titulo">
+    <ion-title>Adicionando Exercício</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="quadroBase">
+  <ion-card *ngIf="item && listaGrupo">
+    <form [formGroup]="myForm" (submit)="submit()">
+
+      <ion-item>
+        <ion-label floating>Nome do Exercício</ion-label>
+        <ion-input type="text" formControlName="titulo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Grupo Muscular</ion-label>
+        <ion-select formControlName="grupoMuscularId">
+          <ion-option *ngFor="let grupo of listaGrupo" value="{{grupo.id}}">{{grupo.nome}}</ion-option>
+        </ion-select>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>Execuções</ion-label>
+        <ion-select (ionChange)="alteraQuantidade($event);" formControlName="qtdeExecucao">
+          <ion-option>1</ion-option>
+          <ion-option>2</ion-option>
+          <ion-option>3</ion-option>
+          <ion-option>4</ion-option>
+          <ion-option>5</ion-option>
+          <ion-option>6</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item-group *ngFor="let carga of item.listaCargaPlanejada;let i=index">
+        <ion-item-divider color="light">
+          <ion-label>Execução {{carga.ordemRepeticao}}</ion-label>
+        </ion-item-divider>
+        <ion-item>
+          <ion-label floating>Carga (Kg)</ion-label>
+          <ion-input formControlName="valorCarga"  type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Repetições (Qtde)</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </ion-item-group>
+
+      <button ion-button type="submit" block [disabled]="myForm.invalid">Adicionar</button>
+    </form>
+  </ion-card>
+</ion-content>

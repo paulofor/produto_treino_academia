@@ -1,0 +1,57 @@
+<ion-content padding>
+
+  <div id="logo" class="quadro20">
+    <img width="100%" heigth="100%" src="assets/imgs/logoTela.png" />
+  </div>
+
+
+  <form padding [formGroup]="signupForm" (ngSubmit)="onSubmit()" novalidate class="quadro80">
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="email" formControlName="login"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="signupForm.get('login').invalid && signupForm.get('login').dirty">
+        <p style="color:red">
+          {{msgEmail}}
+        </p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Senha</ion-label>
+        <ion-input type="{{tipo}}" formControlName="senha1"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="signupForm.get('senha1').invalid && signupForm.get('senha1').dirty">
+        <p style="color:red">
+          {{msgSenha}}
+        </p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Repetir Senha</ion-label>
+        <ion-input type="{{tipo}}" formControlName="senha2"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="signupForm.get('senha2').invalid && signupForm.get('senha2').dirty">
+        <p style="color:red">
+          {{msgSenha}}
+        </p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Mostrar Senha</ion-label>
+        <ion-checkbox [(ngModel)]="passwordCheckbox" (ionChange)="mudaStatusSenha()" [ngModelOptions]="{standalone: true}"></ion-checkbox>
+      </ion-item>
+
+      <ion-item *ngIf="erroMsg">
+        <p style="color:red">{{erroMsg}}</p>
+      </ion-item>
+    </ion-list>
+
+    <div width="100%" style="align-content: center;">
+      <button ion-button round class="botaoPrincipal" type="submit" [disabled]="signupForm.invalid">Enviar</button>
+    </div>
+  </form>
+
+
+</ion-content>

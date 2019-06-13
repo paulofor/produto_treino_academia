@@ -1,0 +1,29 @@
+<!--
+  Generated template for the TesteEditPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>TesteEdit</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form [formGroup]="myForm" novalidate (submit)="submit()">
+
+    <ion-item>
+      <ion-label floating>Nome do Exercício</ion-label>
+      <ion-input required [(ngModel)]="item.exercicio.titulo" name="titulo" type="text" formControlName="titulo"></ion-input>
+    </ion-item>
+
+
+    <button ion-button type="submit" block  [disabled]="myForm.invalid">Adicionar</button>
+  </form>
+
+</ion-content>
