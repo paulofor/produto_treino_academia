@@ -1,8 +1,4 @@
-<ion-header>
-  <ion-navbar hideBackButton color="titulo">
-    <ion-title>{{getNomeAplicacao()}}</ion-title>
-  </ion-navbar>
-</ion-header>
+
 
 <ion-content class="quadroBase" *ngIf="usuario" padding>
 
@@ -20,8 +16,8 @@
   <ion-list class="quadro60">
     <ion-item class="quadroBase">
      <div width="100%" id="botao1" style="background-color: aquamarine;height: 140px; border-radius: 5px;">
-        <span>PERFORMANCE DOS TREINOS</span>
-        <button>CONSULTAR</button>
+        <span style="display: block">PERFORMANCE DOS TREINOS</span>
+        <button ion-button round style="background-color: white ; color:black">CONSULTAR</button>
      </div>
     </ion-item>
     <ion-item class="quadroBase">
