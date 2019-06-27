@@ -67,7 +67,7 @@ export abstract class SignupPageBase extends ComponenteBase{
       this.srv.create(this.usuario)
         .subscribe(
           (result) => {
-            this.storage.set('user' , this.usuario);
+            this.storage.set('user' , result);
             console.log('SignUp: ' , result);
             this.navCtrl.push(ComandosZeroPage);
           },

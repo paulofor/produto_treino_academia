@@ -17,6 +17,7 @@ export interface UsuarioInterface {
 	"dataHoraCriacao"?: Date;
 	"dataHoraUltimoAcesso"?: Date;
 	"codigoPagamento"?: string;
+	"statusPagamento"?: string;
 	listaSerieTreino?: SerieTreino[];
 	listaSerieTreinoCount?: number;
 	listaExercicio?: Exercicio[];
@@ -37,6 +38,7 @@ export class Usuario implements UsuarioInterface {
 	dataHoraCriacao?: Date;
 	dataHoraUltimoAcesso?: Date;
 	codigoPagamento?: string;
+	statusPagamento?: string;
 	listaSerieTreino?: SerieTreino[];
 	listaSerieTreinoCount?: number;
 	listaExercicio?: Exercicio[];
@@ -107,6 +109,10 @@ export class Usuario implements UsuarioInterface {
         },
         "codigoPagamento" : {
         	name : "codigoPagamento",
+        	type : "string"
+        },
+        "statusPagamento" : {
+        	name : "statusPagamento",
         	type : "string"
         },
       },

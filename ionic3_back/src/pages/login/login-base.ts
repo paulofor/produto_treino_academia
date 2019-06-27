@@ -7,20 +7,22 @@ import { Page } from 'ionic-angular/navigation/nav-util';
 import { MSG_SEM_INTERNET, MSG_ERRO_LOGIN } from '../../app/const';
 import { SignupPage } from '../signup/signup';
 import { ComponenteBase } from '../componente-base';
-
+import { PagSeguroApi } from '../../shared/sdk/services/integracao/PagSeguro';
 
 
 export abstract class LoginPageBase extends ComponenteBase{
 
   protected usuario: Usuario;
+  private usuarioLogado: Usuario;
   protected loginForm: FormGroup;
   protected erroMsg: string;
   
   abstract getPaginaInicial() : Page;
-  abstract verificaAssinatura(usuario:Usuario) 
+ 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
-    protected formBuilder: FormBuilder, protected srv: UsuarioApi, protected srvAcao: AcaoApi, protected storage: Storage) {
+    protected formBuilder: FormBuilder, protected srv: UsuarioApi, protected srvAcao: AcaoApi, protected storage: Storage
+    , protected pagSeguro:PagSeguroApi) {
     super();
     this.loginForm = this.formBuilder.group({
       login: '',
@@ -43,11 +45,10 @@ export abstract class LoginPageBase extends ComponenteBase{
       .subscribe(
         (result:Usuario) => {
           console.log('UserLogin: ' , result);
-          this.executouLogin(result);
-          this.verificaAssinatura(result);
-          this.storage.set("user",result).then((successData)=>{
-            this.mudaTela();
-          })
+          this.usuarioLogado = result;
+          this.executouLogin();
+          this.verificaAssinatura();
+         
         },
         (erro: any) => {
           console.log('Erro login: ' , erro);
@@ -64,11 +65,17 @@ export abstract class LoginPageBase extends ComponenteBase{
       )
   }
 
-  executouLogin(usuario: Usuario) {
+  armazenaUsuarioESegue() {
+    this.storage.set("user",this.usuarioLogado).then((successData)=>{
+      this.mudaTela();
+    })
+  }
+
+  executouLogin() {
     let acao:Acao = new Acao();
     acao.dataHora = new Date();
     acao.nome = 'LoginOk';
-    acao.usuarioId = usuario.id;
+    acao.usuarioId = this.usuarioLogado.id;
     acao.objeto = 'Login';
     console.log('Acao: ' , JSON.stringify(acao));
     this.srvAcao.create(acao)
@@ -99,6 +106,21 @@ export abstract class LoginPageBase extends ComponenteBase{
 
   criarConta() {
     this.navCtrl.push(SignupPage);
+  }
+  
+  
+  verificaAssinatura() {
+    console.log('CodigoPagamento:' , this.usuarioLogado.codigoPagamento);
+    if (this.usuarioLogado.codigoPagamento) {
+      this.pagSeguro.VerificaPagamento(this.usuarioLogado.codigoPagamento) 
+        .subscribe((result) => {
+          console.log('VerificaPagamento: ' , result);
+          this.usuarioLogado.statusPagamento = result.status;
+          this.armazenaUsuarioESegue();
+        })
+    } else {
+      this.armazenaUsuarioESegue();
+    }
   }
 
 }
