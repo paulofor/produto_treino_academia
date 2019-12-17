@@ -24,6 +24,14 @@ import { PagSeguroApi } from '../../shared/sdk/services/integracao/PagSeguro';
 export class LoginPage extends LoginPageBase {
 
 
+  verificaAssinatura(usuario: Usuario) {
+    //if (usuario.codigoPagamento) {
+    //  this.pagSeguro.VerificaPagamento(usuario.codigoPagamento) 
+    //    .subscribe((result) => {
+    //      console.log('Resultado: ' , result);
+    //    })
+    //}
+  }
 
 
 
@@ -39,7 +47,7 @@ export class LoginPage extends LoginPageBase {
   constructor(public navCtrl: NavController, public navParams: NavParams, 
     protected formBuilder: FormBuilder, protected srv: UsuarioApi, 
     protected srvACao: AcaoApi, protected storage: Storage, protected pagSeguro:PagSeguroApi) {
-    super(navCtrl, navParams, formBuilder, srv, srvACao, storage, pagSeguro);
+    super(navCtrl, navParams, formBuilder, srv, srvACao, storage);
   }
 
   ionViewDidLoad() {

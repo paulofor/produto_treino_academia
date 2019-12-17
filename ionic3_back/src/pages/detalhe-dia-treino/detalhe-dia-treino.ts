@@ -20,6 +20,8 @@ export class DetalheDiaTreinoPage extends DetalheDiaTreinoPageBase {
 
   protected posItemLoad() {
     this.item.serieTreino.listaItemSerie.sort( function (item1:ItemSerie, item2:ItemSerie)  {
+      if (item1.listaExecucaoItemSerie.length==0) return 1;
+      if (item2.listaExecucaoItemSerie.length==0) return -1;
       if (item1.listaExecucaoItemSerie[0].dataHoraFinalizacao < item2.listaExecucaoItemSerie[0].dataHoraFinalizacao)
         return -1;
       else

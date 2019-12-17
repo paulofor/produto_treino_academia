@@ -26,10 +26,12 @@
         <ion-list>
           <ion-item class="itemListaCard" *ngFor="let itemSerie of item.serieTreino.listaItemSerie">
             <h3 class="linha1">Exercício: {{itemSerie.exercicio.titulo}}</h3>
-            <h3 class="linhan">Hora Execução:
-              {{itemSerie.listaExecucaoItemSerie[0].dataHoraFinalizacao | date : 'hh:mm:ss'}}</h3>
-            <ng-container *ngFor="let cargaExecucao of itemSerie.listaExecucaoItemSerie[0].listaExecucaoCarga">
-              <h4>Carga: {{cargaExecucao.valorCarga}} - Repetições: {{cargaExecucao.repeticao}}</h4>
+            <ng-container *ngIf="itemSerie.listaExecucaoItemSerie.length>0">
+              <h3 class="linhan">Hora Execução:
+                {{itemSerie.listaExecucaoItemSerie[0].dataHoraFinalizacao | date : 'hh:mm:ss'}}</h3>
+              <ng-container *ngFor="let cargaExecucao of itemSerie.listaExecucaoItemSerie[0].listaExecucaoCarga">
+                <h4>Carga: {{cargaExecucao.valorCarga}} - Repetições: {{cargaExecucao.repeticao}}</h4>
+              </ng-container>
             </ng-container>
           </ion-item>
         </ion-list>

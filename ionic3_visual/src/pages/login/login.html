@@ -1,0 +1,38 @@
+<ion-content>
+
+  <div id="logo">
+    <img width="100%" heigth="100%" src="assets/imgs/logoTela.png" (click)="criaFoto()"/>
+  </div>
+
+
+  <form padding [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+    <ion-list>
+
+
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="email" formControlName="login" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Senha</ion-label>
+        <ion-input type="password" formControlName="senha" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <!-- bug de inputs -->
+      </ion-item>
+
+      <ion-item *ngIf="erroMsg">
+        <p class="erroMsg">{{erroMsg}}</p>
+      </ion-item>
+    </ion-list>
+    <div width="100%" style="align-content: center;">
+      <button ion-button round class="botaoPrincipal" type="submit">Entrar</button>
+    </div>
+
+  </form>
+
+
+  <button class="criaEsquece" ion-button (click)="criarConta()" color="primary" outline >Primeiro Acesso</button>
+
+</ion-content>

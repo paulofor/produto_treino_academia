@@ -1,0 +1,32 @@
+
+
+<ion-content class="quadroBase" *ngIf="usuario" padding>
+
+
+
+  <div padding class="quadro40" >
+    <img style="margin-top:36px;" src="assets/imgs/logoTela.png" />
+    <ion-card *ngIf="erroMsg" padding>
+      <ion-card-content>
+        <p class="erroMsg">{{erroMsg}}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-list class="quadro60">
+    <ion-item class="quadroBase">
+     <div width="100%" id="botao1" style="background-color: aquamarine;height: 140px; border-radius: 5px;">
+        <span style="display: block">PERFORMANCE DOS TREINOS</span>
+        <button ion-button round style="background-color: white ; color:black">CONSULTAR</button>
+     </div>
+    </ion-item>
+    <ion-item class="quadroBase">
+
+    </ion-item>
+    <ion-item class="quadroBase">
+
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>
