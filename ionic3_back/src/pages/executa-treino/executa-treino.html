@@ -12,6 +12,7 @@
 
     <ion-item>
       <h3 class="linha1">Série de: {{item.serieTreino.dataCriacao | date : 'dd/MM/yyyy'}}</h3>
+      <button ion-button outline (click)="finalizar()">finalizar</button>
       <h3 class="linhan" *ngIf="item.serieTreino.listaItemSerie.length==0">Nenhum exercício nessa série</h3>
     </ion-item>
 

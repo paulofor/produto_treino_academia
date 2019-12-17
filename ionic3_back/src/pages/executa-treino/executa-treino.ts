@@ -109,4 +109,8 @@ export class ExecutaTreinoPage extends ExecutaTreinoPageBase {
     return total;
   }
 
+  finalizar() {
+    console.log('Chamou finalizar');
+  }
+
 }
