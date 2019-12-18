@@ -80,7 +80,7 @@ export abstract class BaseLoopBackApi {
     Object.keys(routeParams).forEach((key: string) => {
       url = url.replace(new RegExp(":" + key + "(\/|$)", "g"), routeParams[key] + "$1")
     });
-    url = 'https:' + url;
+    //url = 'https:' + url;
     if (pubsub) {
       if (url.match(/fk/)) {
         let arr = url.split('/'); arr.pop();
