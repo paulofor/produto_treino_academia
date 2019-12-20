@@ -117,4 +117,17 @@ export class DiaTreinoApi extends BaseLoopBackApi {
     //result.subscribe((result:DiaTreino) => {}, (erro:any) => {}); // com isso duplica
     return result;
   }
+
+
+  public finalizaDia(IdDiaTreino : any , customHeaders?: Function) : Observable<DiaTreino> {
+    let _method: string = "POST";
+		let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
+    		"/TreinoAcademia_DiaTreinos/finalizaDia";
+    	let _routeParams: any = {};
+    	let _postBody: any = {};
+    	let _urlParams: any = {};
+    	if (typeof IdDiaTreino !== 'undefined' && IdDiaTreino !== null) _urlParams.IdDiaTreino = IdDiaTreino;
+    	let result = this.request(_method, _url, _routeParams, _urlParams, _postBody, null, customHeaders);
+    	return result;
+	}
 }

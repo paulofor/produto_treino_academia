@@ -110,7 +110,10 @@ export class ExecutaTreinoPage extends ExecutaTreinoPageBase {
   }
 
   finalizar() {
-    console.log('Chamou finalizar');
+    this.srv.finalizaDia(this.item.id)
+      .subscribe((result:any) => {
+
+      })
   }
 
 }
