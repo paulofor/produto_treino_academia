@@ -2,6 +2,9 @@
 import { Injectable } from '@angular/core';
 import { Container } from '../../models/Container';
 import { User } from '../../models/User';
+import { Visitante } from '../../models/Visitante';
+import { DispositivoUsuario } from '../../models/DispositivoUsuario';
+import { VisitaApp } from '../../models/VisitaApp';
 import { GrupoMuscular } from '../../models/GrupoMuscular';
 import { SerieTreino } from '../../models/SerieTreino';
 import { Exercicio } from '../../models/Exercicio';
@@ -31,7 +34,10 @@ export class SDKModels {
 	ExecucaoCarga: ExecucaoCarga,
 	Acao: Acao,
 	User: User,
-    Container: Container
+    Container: Container,
+    Visitante : Visitante,
+    DispositivoUsuario : DispositivoUsuario,
+    VisitaApp : VisitaApp
   };
 
   public get(modelName: string): any {

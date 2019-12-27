@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-navbar color="titulo">
+    <ion-title (click)="preencher()">Endereço (2 de 4)</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-label padding>Assinatura: R$ 4,99 / mês</ion-label>
+  <form>
+    <ion-item>
+      <ion-label floating>Rua*</ion-label>
+      <ion-input [(ngModel)]="address.street" name="street"></ion-input>
+    </ion-item>
+    <ion-item no-lines *ngIf="erroRua">
+      <p class="erroMsg">{{erroRua}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Número*</ion-label>
+      <ion-input [(ngModel)]="address.number" name="number"></ion-input>
+    </ion-item>
+    <ion-item no-lines *ngIf="erroNumero">
+      <p class="erroMsg">{{erroNumero}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Complemento</ion-label>
+      <ion-input [(ngModel)]="address.complement" name="complement"></ion-input>
+    </ion-item>
+    <ion-item no-lines *ngIf="erroComplemento">
+      <p class="erroMsg">{{erroComplemento}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Bairro*</ion-label>
+      <ion-input [(ngModel)]="address.district" name="district"></ion-input>
+    </ion-item>
+    <ion-item no-lines *ngIf="erroBairro">
+      <p class="erroMsg">{{erroBairro}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Município*</ion-label>
+      <ion-input [(ngModel)]="address.city" name="city"></ion-input>
+    </ion-item>
+    <ion-item no-lines *ngIf="erroCidade">
+      <p class="erroMsg">{{erroCidade}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Estado*</ion-label>
+      <ion-select  [(ngModel)]="address.state" name="state">  
+        <ion-option value="AC">AC</ion-option>\ 
+        <ion-option value="AL">AL</ion-option>\ 
+        <ion-option value="AP">AP</ion-option>\ 
+        <ion-option value="AM">AM</ion-option>\ 
+        <ion-option value="BA">BA</ion-option>\ 
+        <ion-option value="CE">CE</ion-option>\ 
+        <ion-option value="DF">DF</ion-option>\ 
+        <ion-option value="ES">ES</ion-option>\ 
+        <ion-option value="GO">GO</ion-option>\ 
+        <ion-option value="MA">MA</ion-option>\ 
+        <ion-option value="MT">MT</ion-option>\ 
+        <ion-option value="MS">MS</ion-option>\ 
+        <ion-option value="MG">MG</ion-option>\ 
+        <ion-option value="PA">PA</ion-option>\ 
+        <ion-option value="PB">PB</ion-option>\ 
+        <ion-option value="PR">PR</ion-option>\ 
+        <ion-option value="PE">PE</ion-option>\ 
+        <ion-option value="PI">PI</ion-option>\ 
+        <ion-option value="RJ">RJ</ion-option>\ 
+        <ion-option value="RN">RN</ion-option>\ 
+        <ion-option value="RS">RS</ion-option>\ 
+        <ion-option value="RO">RO</ion-option>\ 
+        <ion-option value="RR">RR</ion-option>\ 
+        <ion-option value="SC">SC</ion-option>\ 
+        <ion-option value="SP">SP</ion-option>\ 
+        <ion-option value="SE">SE</ion-option>\ 
+        <ion-option value="TO">TO</ion-option>\ 
+    </ion-select>
+    </ion-item>
+    <ion-item no-lines *ngIf="erroEstado">
+      <p class="erroMsg">{{erroEstado}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>CEP* (somente números)</ion-label>
+      <ion-input maxlength="8" [(ngModel)]="address.postalCode" name="postalCode"></ion-input>
+    </ion-item>
+    <ion-item no-lines *ngIf="erroCep">
+      <p class="erroMsg">{{erroCep}}</p>
+    </ion-item>
+    <button ion-button (click)="voltar()">Voltar</button>
+    <button ion-button (click)="avancar()">Avançar</button>
+  </form>
+</ion-content>

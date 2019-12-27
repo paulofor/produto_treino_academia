@@ -30,7 +30,8 @@ export abstract class EscolhaSerieTreinoPageBase extends ComponenteBase{
     	
   	}
 
-	constructor(public navCtrl: NavController, protected srv: SerieTreinoApi,protected storage: Storage) {
+	constructor(public navCtrl: NavController, protected srv: SerieTreinoApi
+				,protected storage: Storage, protected fcmSrv: Acessa) {
 		super();
 	}
 

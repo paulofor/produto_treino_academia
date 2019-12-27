@@ -8,6 +8,7 @@ import { SDKBrowserModule, SDKModels, LoopBackAuth, InternalStorage } from '../s
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Screenshot } from '@ionic-native/screenshot';
+import { Device } from '@ionic-native/device';
 import { ChartsModule } from 'ng2-charts';
 import { SignupPage } from '../pages/signup/signup';
 import { LoginPage } from '../pages/login/login';
@@ -15,7 +16,19 @@ import { ComandosZeroPage } from '../pages/comandos-zero/comandos-zero';
 import { IonicStorageModule } from '@ionic/storage';
 import { BrMaskerModule } from 'brmasker-ionic-3';
 import { PagSeguroApi } from '../shared/sdk/services/integracao/PagSeguro';
-
+import { VisitanteApi } from '../shared/sdk/services/custom/Visitante';
+import { CookieService } from 'ngx-cookie-service';
+import { FCM } from '@ionic-native/fcm';
+import { AcessaFcmService } from '../servico/acessa-fcm-service';
+import { DispositivoUsuarioApi } from '../shared/sdk/services/custom/DispositivoUsuario';
+import { VisitaAppApi } from '../shared/sdk/services/custom/VisitaApp';
+import { NotificacaoAppApi } from '../shared/sdk/services/custom/NotificacaoApp';
+import { UsuarioProdutoApi } from '../shared/sdk/services/custom/UsuarioProduto';
+import { PagSeguroAssinaturaDadoIdentificacaoPage } from '../pages/pag-seguro-assinatura-dado-identificacao/pag-seguro-assinatura-dado-identificacao';
+import { PagSeguroAssinaturaDadoClientePage } from '../pages/pag-seguro-assinatura-dado-cliente/pag-seguro-assinatura-dado-cliente';
+import { PagSeguroAssinaturaDadoCartaoPage } from '../pages/pag-seguro-assinatura-dado-cartao/pag-seguro-assinatura-dado-cartao';
+import { PagSeguroAssinaturaConfirmacaoPage } from '../pages/pag-seguro-assinatura-confirmacao/pag-seguro-assinatura-confirmacao';
+import { PagSeguroAssinaturaSucessoPage } from '../pages/pag-seguro-assinatura-sucesso/pag-seguro-assinatura-sucesso';
 import { SerieEditaExecucaoPage } from '../pages/serie-edita-execucao/serie-edita-execucao';
 import { ExercicioGraficoExecucaoPage } from '../pages/exercicio-grafico-execucao/exercicio-grafico-execucao';
 import { ConsultaListaDiaTreinoPage } from '../pages/consulta-lista-dia-treino/consulta-lista-dia-treino';
@@ -57,6 +70,11 @@ registerLocaleData(localePt, 'pt-BR');
     LoginPage,
     SignupPage,
     ComandosZeroPage,
+    PagSeguroAssinaturaDadoIdentificacaoPage,
+    PagSeguroAssinaturaDadoClientePage,
+    PagSeguroAssinaturaDadoCartaoPage,
+    PagSeguroAssinaturaConfirmacaoPage,
+    PagSeguroAssinaturaSucessoPage,
     SerieEditaExecucaoPage,
 	
     ExercicioGraficoExecucaoPage,
@@ -102,6 +120,11 @@ registerLocaleData(localePt, 'pt-BR');
     LoginPage,
     SignupPage,
     ComandosZeroPage,
+    PagSeguroAssinaturaDadoIdentificacaoPage,
+    PagSeguroAssinaturaDadoClientePage,
+    PagSeguroAssinaturaDadoCartaoPage,
+    PagSeguroAssinaturaConfirmacaoPage,
+    PagSeguroAssinaturaSucessoPage,
     SerieEditaExecucaoPage,
 	
     ExercicioGraficoExecucaoPage,
@@ -140,6 +163,9 @@ registerLocaleData(localePt, 'pt-BR');
     LoopBackAuth,
     InternalStorage,
     PagSeguroApi,
+    VisitanteApi,
+ 	NotificacaoAppApi,
+  	UsuarioProdutoApi,
 	GrupoMuscularApi,
 	
 	SerieTreinoApi,
@@ -163,8 +189,13 @@ registerLocaleData(localePt, 'pt-BR');
 	AcaoApi,
 	
     Screenshot,
-    Storage,
-    { provide: LOCALE_ID, useValue: 'pt-BR' } 
+    Device,
+    { provide: LOCALE_ID, useValue: 'pt-BR' },
+    CookieService,
+    FCM,
+    AcessaFcmService,
+    DispositivoUsuarioApi,
+    VisitaAppApi
   ]
 })
 export class AppModule {}

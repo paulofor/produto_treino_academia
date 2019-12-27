@@ -31,7 +31,8 @@ export abstract class ConsultaListaExercicioPageBase extends ComponenteBase{
     	
   	}
 
-	constructor(public navCtrl: NavController, protected srv: ExercicioApi,protected storage: Storage) {
+	constructor(public navCtrl: NavController, protected srv: ExercicioApi
+				,protected storage: Storage, protected fcmSrv: Acessa) {
 		super();
 	}
 

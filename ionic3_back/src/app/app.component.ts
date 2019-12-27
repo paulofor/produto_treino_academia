@@ -6,6 +6,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+import { AcessaFcmService } from '../servico/acessa-fcm-service';
+import { VERSAO_APP_ID } from './const';
+
 import { SerieEditaExecucaoPage } from '../pages/serie-edita-execucao/serie-edita-execucao';
 import { ExercicioGraficoExecucaoPage } from '../pages/exercicio-grafico-execucao/exercicio-grafico-execucao';
 import { ConsultaListaDiaTreinoPage } from '../pages/consulta-lista-dia-treino/consulta-lista-dia-treino';
@@ -33,7 +36,8 @@ export class MyApp {
   pages: Array<{title: string, component: any}>;
   showSplash = true;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,
+  				private fcmSrv:AcessaFcmService ) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -55,6 +59,7 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
+      this.fcmSrv.executaValidacao(VERSAO_APP_ID);
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       timer(3000).subscribe(() => this.showSplash = false)

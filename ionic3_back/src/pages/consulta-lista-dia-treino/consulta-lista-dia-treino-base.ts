@@ -31,7 +31,8 @@ export abstract class ConsultaListaDiaTreinoPageBase extends ComponenteBase{
     	
   	}
 
-	constructor(public navCtrl: NavController, protected srv: DiaTreinoApi,protected storage: Storage) {
+	constructor(public navCtrl: NavController, protected srv: DiaTreinoApi
+				,protected storage: Storage, protected fcmSrv: Acessa) {
 		super();
 	}
 
