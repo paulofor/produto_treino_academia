@@ -44,7 +44,7 @@
     "@ionic/app-scripts": "3.2.1",
     "@ionic/lab": "1.0.16",
     "typescript": "~2.6.2",
-    "socket.io": "^2.1.1"
+    "socket.io": "^2.5.0"
   },
   "description": "An Ionic project",
   "cordova": {
